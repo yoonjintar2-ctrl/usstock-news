@@ -76,7 +76,7 @@ td:first-child,th:first-child{text-align:left}
 .chart{display:grid;gap:10px 22px;grid-template-columns:minmax(0,1fr);padding-bottom:22px;border-bottom:1px solid var(--line)}
 .chart:last-child{border-bottom:0}
 @media(min-width:900px){.chart{grid-template-columns:minmax(0,1fr) 300px}}
-.cscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:700px){.cscroll svg{min-width:640px}}
+.cscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:700px){.cscroll svg{width:100%;height:auto}}
 .chart .side h4{font-family:'Noto Serif KR',serif;font-size:22px;margin:0 0 2px;display:block}
 .chart .side .px{font-size:15px;margin-bottom:6px}
 .chart h4{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
@@ -287,44 +287,53 @@ const MAC={5:'#f59e0b',20:'#2563eb',60:'#9333ea',120:'#6b7280',200:'#141414'};
 
 /* 캔들 차트 */
 function candleSVG(c){
- const K=c.candle,n=K.n,M=K.mas.length,per=4+M,b=unb64(K.b),vb=unb64(K.vb);
+ let K=c.candle,n=K.n;const M=K.mas.length,per=4+M,b=unb64(K.b);let vb=Array.from(unb64(K.vb));
  const q=x=>x===255?null:K.mn+x/254*(K.mx-K.mn);
  const O=[],Hh=[],Lw=[],Cc=[],MA=K.mas.map(()=>[]);
  for(let i=0;i<n;i++){const o=i*per;O.push(q(b[o]));Hh.push(q(b[o+1]));Lw.push(q(b[o+2]));Cc.push(q(b[o+3]));K.mas.forEach((m,j)=>MA[j].push(q(b[o+4+j])))}
  Cc[n-1]=c.close.v; // 마지막 종가는 정확한 값
- const PADN=14,W=900,H=400,PT=20,PH=262,VT=300,VH=70,L=8,R=78;
- let lo=K.mn,hi=K.mx;const pad=(hi-lo)*.05;lo-=pad;hi+=pad*1.4;
+ // 최근 3개월(약 63거래일)만 표시 — 모바일에서 캔들이 너무 작아 보여서(11/19). 이평선 값은 전체 기간으로 계산된 것 그대로 사용
+ const VIEW=63,s0=Math.max(0,n-VIEW);if(s0>0){[O,Hh,Lw,Cc].forEach(a=>a.splice(0,s0));MA.forEach(a=>a.splice(0,s0));K=Object.assign({},K,{dates:K.dates.slice(s0)});vb=vb.slice(s0);n=n-s0}
+ // 모바일: 화면 폭에 다 들어오게 좁은 캔버스 + 글자 키움(가로 스크롤 없이 3개월 전체가 보이게)
+ const MOB=window.matchMedia&&matchMedia('(max-width:700px)').matches,FS=MOB?1.45:1;
+ const PADN=MOB?5:8,W=MOB?560:900,H=MOB?460:400,PT=20,PH=MOB?300:262,VT=MOB?340:300,VH=MOB?80:70,L=8,R=MOB?104:78;
+ const rng=[...Hh,...Lw].filter(v=>v!=null);K.mas.forEach((m,j)=>{if(m<=60)MA[j].forEach(v=>{if(v!=null)rng.push(v)})});
+ let lo=Math.min(...rng),hi=Math.max(...rng);const pad=(hi-lo)*.06;lo-=pad;hi+=pad*1.5;
  const x=i=>L+(W-L-R)*(i+.5)/(n+PADN),y=v=>PT+PH*(1-(v-lo)/(hi-lo)),cw=(W-L-R)/(n+PADN)*.62;
  const f=v=>c.unit==='달러'?v.toFixed(2):Math.round(v).toLocaleString('ko-KR');
  const md=d=>`${+d.slice(5,7)}/${+d.slice(8,10)}`;
  const lastY=y(Cc[n-1]);
- let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.name)} 일봉 캔들 차트" font-family="Pretendard,sans-serif">`;
- for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e4dfd2"/>`+(Math.abs(y(v)-lastY)<14?'':`<text x="${W-R+6}" y="${y(v)+4}" font-size="11" fill="#8a857a">${f(v)}</text>`)}
+ const cid='cp'+Math.random().toString(36).slice(2,8);
+ let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.name)} 일봉 캔들 차트(최근 3개월)" font-family="Pretendard,sans-serif"><defs><clipPath id="${cid}"><rect x="${L}" y="${PT}" width="${W-R-L}" height="${PH}"/></clipPath></defs>`;
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e4dfd2"/>`+(Math.abs(y(v)-lastY)<14*FS?'':`<text x="${W-R+6}" y="${y(v)+4}" font-size="11" fill="#8a857a">${f(v)}</text>`)}
  let pm='';K.dates.forEach((d,i)=>{const m=d.slice(5,7);if(m!==pm&&i>0){g+=`<line x1="${x(i)-cw}" x2="${x(i)-cw}" y1="${PT}" y2="${VT+VH}" stroke="#e7e1d3"/><text x="${x(i)}" y="${H-3}" font-size="11" fill="#8a857a">${+m}월</text>`}pm=m});
  // 거래량
  const vmaxI=vb.indexOf(Math.max(...vb));
- for(let i=0;i<n;i++){const h=VH*vb[i]/255,col=Cc[i]>=O[i]?UP:DN;g+=`<rect x="${(x(i)-cw/2).toFixed(1)}" y="${(VT+VH-h).toFixed(1)}" width="${cw.toFixed(1)}" height="${h.toFixed(1)}" fill="${col}" opacity="${i===vmaxI?1:.45}"/>`}
+ for(let i=0;i<n;i++){const h=VH*vb[i]/Math.max(1,vb[vmaxI]),col=Cc[i]>=O[i]?UP:DN;g+=`<rect x="${(x(i)-cw/2).toFixed(1)}" y="${(VT+VH-h).toFixed(1)}" width="${cw.toFixed(1)}" height="${h.toFixed(1)}" fill="${col}" opacity="${i===vmaxI?1:.45}"/>`}
  g+=`<text x="${L+3}" y="${VT+10}" font-size="11" fill="#8a857a">거래량(${esc(c.vol_sym)})</text>`;
- g+=x(vmaxI)<200?`<text x="${x(vmaxI)+7}" y="${VT+24}" font-size="11.5" font-weight="700">← 거래량 최대 ${md(K.dates[vmaxI])}</text>`:`<text x="${x(vmaxI)-7}" y="${VT+12}" text-anchor="end" font-size="11.5" font-weight="700">거래량 최대 ${md(K.dates[vmaxI])} →</text>`;
+ g+=x(vmaxI)<W*.3?`<text x="${x(vmaxI)+7}" y="${VT+24}" font-size="11.5" font-weight="700">← 3개월 거래량 최대 ${md(K.dates[vmaxI])}</text>`:`<text x="${x(vmaxI)-7}" y="${VT+12}" text-anchor="end" font-size="11.5" font-weight="700">3개월 거래량 최대 ${md(K.dates[vmaxI])} →</text>`;
  // 이평선
- g+=`<rect x="${x(n-.5)}" y="${PT}" width="${W-R-x(n-.5)}" height="${PH}" fill="#f3efe4"/><text x="${(x(n-.5)+W-R)/2}" y="${PT+PH-6}" text-anchor="middle" font-size="10.5" fill="#a39d90">추세 연장(점선)</text>`;
- K.mas.forEach((m,j)=>{const pts=MA[j].map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);g+=`<path d="${pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join('')}" fill="none" stroke="${MAC[m]}" stroke-width="${m===200?2.4:1.5}" ${m===200?'stroke-dasharray="7 4"':''}/>`;
-  const a=MA[j],v1=a[n-1],v0=a[n-6];if(v1!=null&&v0!=null){const sl=(v1-v0)/5;const ve=Math.max(lo,Math.min(hi,v1+sl*PADN));g+=`<path d="M${x(n-1)} ${y(v1)} L${x(n-1+PADN)} ${y(ve)}" fill="none" stroke="${MAC[m]}" stroke-width="1.5" stroke-dasharray="2 4" opacity=".85"/>`}});
+ g+=`<rect x="${x(n-.5)}" y="${PT}" width="${W-R-x(n-.5)}" height="${PH}" fill="#f3efe4"/>${MOB?'':`<text x="${(x(n-.5)+W-R)/2}" y="${PT+PH-6}" text-anchor="middle" font-size="10.5" fill="#a39d90">추세 연장(점선)</text>`}`;
+ K.mas.forEach((m,j)=>{const pts=MA[j].map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);g+=`<path clip-path="url(#${cid})" d="${pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join('')}" fill="none" stroke="${MAC[m]}" stroke-width="${m===200?2.4:1.5}" ${m===200?'stroke-dasharray="7 4"':''}/>`;
+  const a=MA[j],v1=a[n-1],v0=a[n-6];if(v1!=null&&v0!=null){const sl=(v1-v0)/5;const ve=Math.max(lo,Math.min(hi,v1+sl*PADN));g+=`<path clip-path="url(#${cid})" d="M${x(n-1)} ${y(v1)} L${x(n-1+PADN)} ${y(ve)}" fill="none" stroke="${MAC[m]}" stroke-width="1.5" stroke-dasharray="2 4" opacity=".85"/>`}});
  // 캔들
  for(let i=0;i<n;i++){const up=Cc[i]>=O[i],col=up?UP:DN,top=y(Math.max(O[i],Cc[i])),bot=y(Math.min(O[i],Cc[i]));g+=`<line x1="${x(i)}" x2="${x(i)}" y1="${y(Hh[i])}" y2="${y(Lw[i])}" stroke="${col}" stroke-width="1.1"/><rect x="${(x(i)-cw/2).toFixed(1)}" y="${top.toFixed(1)}" width="${cw.toFixed(1)}" height="${Math.max(1,bot-top).toFixed(1)}" fill="${col}"/>`}
  // 돌파·지지
- const W2=c.watch;if(W2){const near=Math.abs(y(W2.up.v)-y(W2.down.v))<20,upAbove=y(W2.up.v)<=y(W2.down.v);
-  const hl2=(v,t,col,dash,below)=>{const ty=below?y(v)+15:y(v)-5;return `<line x1="${x(n-104)}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.6" stroke-dasharray="${dash}"/><rect x="${x(n-104)-2}" y="${ty-12}" width="${t.length*6.8+12}" height="15" fill="#fbfaf5"/><text x="${x(n-104)+4}" y="${ty}" font-size="12" font-weight="800" fill="${col}">${t}</text>`};
+ const WY=[];const W2=c.watch;if(W2){const near=Math.abs(y(W2.up.v)-y(W2.down.v))<20,upAbove=y(W2.up.v)<=y(W2.down.v);
+  const hl2=(v0,t,col,dash,below)=>{const out=v0<lo?'아래':v0>hi?'위':'';const v=Math.max(lo+(hi-lo)*.03,Math.min(hi-(hi-lo)*.03,v0));if(out){t+=` · 차트 ${out}쪽`;dash='1 5'}WY.push(y(v));const ty=below?y(v)+15*FS:y(v)-5;return `<line x1="${x(0)}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.6" stroke-dasharray="${dash}"/><rect x="${x(0)-2}" y="${ty-12*FS}" width="${(t.length*6.8+12)*FS}" height="${15*FS}" fill="#fbfaf5"/><text x="${x(0)+4}" y="${ty}" font-size="12" font-weight="800" fill="${col}">${t}</text>`};
   g+=hl2(W2.up.v,`▲ 돌파 볼 자리 ${f(W2.up.v)} (${W2.up.name})`,'#141414','6 3',near&&!upAbove);
   g+=hl2(W2.down.v,`▼ 지지 ${f(W2.down.v)} (${W2.down.name})`,'#6b675e','2 3',near?upAbove:false)}
  // 고점
  let hiI=0;Hh.forEach((v,i)=>{if(v>Hh[hiI])hiI=i});const dd=(Cc[n-1]/Hh[hiI]-1)*100;
- g+=`<text x="${Math.min(Math.max(x(hiI)-60,L+2),W-R-170)}" y="${y(Hh[hiI])-8}" font-size="12" font-weight="800">6개월 고점 ${f(Hh[hiI])} · 지금 ${dd.toFixed(1)}%</text>`;
+ g+=`<text x="${Math.min(Math.max(x(hiI)-60,L+2),W-R-170*FS)}" y="${y(Hh[hiI])-8}" font-size="12" font-weight="800">3개월 고점 ${f(Hh[hiI])} · 지금 ${dd.toFixed(1)}%</text>`;
  // 200일선 이탈
  const m200=MA[K.mas.indexOf(200)];let xI=-1;for(let i=n-1;i>0;i--){if(m200[i]!=null&&m200[i-1]!=null&&Cc[i]<m200[i]&&Cc[i-1]>=m200[i-1]){xI=i;break}}
- if(xI>0){const cx=x(xI),cy=y(Cc[xI]),lx=Math.min(cx,W-R-150);g+=`<circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="#141414" stroke-width="2.2"/><line x1="${cx}" y1="${cy-11}" x2="${cx}" y2="${cy-36}" stroke="#141414" stroke-width="1.3"/><line x1="${cx}" y1="${cy-36}" x2="${lx}" y2="${cy-36}" stroke="#141414" stroke-width="1.3"/><rect x="${lx-64}" y="${cy-54}" width="128" height="18" fill="#141414"/><text x="${lx}" y="${cy-41}" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">200일선 이탈 ${md(K.dates[xI])}</text>`}
- g+=`<line x1="${x(n-1)+cw}" x2="${W-R}" y1="${lastY}" y2="${lastY}" stroke="${Cc[n-1]>=Cc[n-2]?UP:DN}" stroke-width="1" stroke-dasharray="1 3"/><rect x="${x(n-1)+cw+2}" y="${lastY-20}" width="${(f(Cc[n-1]).length+3)*7.2}" height="16" fill="#fbfaf5" opacity=".92"/><text x="${x(n-1)+cw+4}" y="${lastY-7}" font-size="11.5" font-weight="800" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}">현재 ${f(Cc[n-1])}</text><rect x="${W-R+2}" y="${lastY-10}" width="${R-4}" height="20" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}"/><text x="${W-R+7}" y="${lastY+4.5}" font-size="12.5" font-weight="800" fill="#fff">${f(Cc[n-1])}</text>`;
- return g+'</svg>';
+ if(xI>0){const cx=x(xI),cy=y(Cc[xI]),lx=Math.min(Math.max(cx,L+64*FS),W-R-70*FS);const hB=18*FS;
+  const clash=ly=>WY.some(w=>w>ly-hB-6&&w<ly+6);let ly=cy-36;if(ly-hB<PT||clash(ly))ly=cy+36+hB;if(clash(ly))ly=cy-36;
+  g+=`<circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="#141414" stroke-width="2.2"/><line x1="${cx}" y1="${ly<cy?cy-11:cy+11}" x2="${cx}" y2="${ly<cy?ly:ly-hB}" stroke="#141414" stroke-width="1.3"/><line x1="${cx}" y1="${ly<cy?ly:ly-hB}" x2="${lx}" y2="${ly<cy?ly:ly-hB}" stroke="#141414" stroke-width="1.3"/><rect x="${lx-64*FS}" y="${ly-hB}" width="${128*FS}" height="${hB}" fill="#141414"/><text x="${lx}" y="${ly-5*FS}" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">200일선 이탈 ${md(K.dates[xI])}</text>`}
+ g+=`<line x1="${x(n-1)+cw}" x2="${W-R}" y1="${lastY}" y2="${lastY}" stroke="${Cc[n-1]>=Cc[n-2]?UP:DN}" stroke-width="1" stroke-dasharray="1 3"/>${MOB?'':`<rect x="${x(n-1)+cw+2}" y="${lastY-20*FS}" width="${(f(Cc[n-1]).length+3)*7.2*FS}" height="${16*FS}" fill="#fbfaf5" opacity=".92"/><text x="${x(n-1)+cw+4}" y="${lastY-7}" font-size="11.5" font-weight="800" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}">현재 ${f(Cc[n-1])}</text>`}<rect x="${W-R+2}" y="${lastY-10*FS}" width="${R-4}" height="${20*FS}" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}"/><text x="${W-R+7}" y="${lastY+4.5*FS}" font-size="12.5" font-weight="800" fill="#fff">${f(Cc[n-1])}</text>`;
+ g+='</svg>';
+ return FS===1?g:g.replace(/font-size="([\d.]+)"/g,(m,v)=>`font-size="${(+v*FS).toFixed(1)}"`);
 }
 
 /* 트리맵(구역별 squarify) */
@@ -401,7 +410,7 @@ function mine(Q){
 }
 
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=4;
+const SITE_V=5;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
