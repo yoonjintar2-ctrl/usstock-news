@@ -512,5 +512,42 @@ for c in JL['cards']:
      'img':f'https://stock.jintar.co.kr/c/{num}.jpg' if num else '','u':f'https://stock.jintar.co.kr/c/{num}/' if num else 'https://stock.jintar.co.kr/'})
 issue['jintari']={'cards':JC,'cash':[{'t':x['n'],'kn':x['kn'],'s':x['s']} for x in JL.get('cond',[])],
  'note':'발행인이 직접 만든 규칙 카드입니다. 정해진 조건이 켜졌다는 기록일 뿐 투자 권유가 아니며, 결과는 본인 책임입니다.','u':'https://stock.jintar.co.kr/','asof':'2026-11-18 장 종료 기준 신호'}
+
+# ── v9: 종목별 큰 한 줄 의견 ──
+HL={
+ 'SOXL':'한 주 만에 25% 빠진 3배 상품, 반등 신호는 켜졌지만 흔들림도 3배',
+ 'NVDA':'실적은 이겼는데 5일째 하락, CEO 공백이 숫자를 누르는 중',
+ 'SNDK':'3개월 새 반 토막, 20일 저점 749달러(약 100만 원) 지키는지가 먼저',
+ 'SNXX':'샌디스크 하락을 2배로 맞은 상품, 원금 회복이 가장 어려운 구간',
+ 'MU':'메모리 조정 한가운데, 650달러(약 86만 원)대 바닥을 시험하는 중',
+ 'TSLA':'대형 기술주 중 드물게 50·200일선 위, 시장보다 강한 흐름',
+ 'INTC':'11월에만 18% 하락, 지분 매도·소송이 겹친 무거운 수급',
+ 'SPCX':'고점 대비 -36%지만 이번 주는 나스닥보다 강세, 12월 보호예수 해제가 변수',
+ 'PLTR':'200일선은 지키지만 20일선 아래, 단기 힘이 빠진 상태',
+ 'QQQ':'200일선 3% 아래, 앤트로픽 첫날이 방향을 가를 자리',
+ 'SOXX':'이틀째 소폭 반등, 아직은 바닥 다지기',
+ 'UNH':'규정안 하나에 하루 -10%, 평소 3.5배 거래량이 실린 충격',
+ 'PANW':'취약점 경고와 실적 호조가 겹친 +9.9%, 시간외 반응이 관건',
+ 'CRWD':'보안주 강세 타고 +8%, 200일선 위로 올라선 흐름',
+ 'AMD':'엔비디아와 반대로 +5.3%, AI 칩 안에서도 갈린 하루',
+ 'AVGO':'+3.6%로 20·50일선 회복, 200일선이 다음 고비',
+ 'WMT':'1달 +8% 방어주, 오늘 밤 실적이 연말 소비를 보여줄 차례',
+ 'AAPL':'고점 2% 아래, 기술주 약세장 속 피난처 역할',
+ 'GOOGL':'1달 -17%로 이평선 모두 이탈, 200일선 회복이 먼저',
+ 'MSFT':'200일선은 지키는 중, 빅테크 중 낙폭이 작은 편',
+ 'META':'1달 -11%, AI 비용 논쟁에 거래량도 줄어든 약세',
+ 'AMZN':'+3.8%로 이평선 모두 회복, 기술주 중 가장 강한 하루',
+}
+def auto_h(q):
+    m=q.get('mini') or {}; c=q['c']
+    below=sum(1 for k in ('ma20','ma50','ma200') if m.get(k) and c<m[k])
+    trend='이평선 모두 아래 약세' if below==3 else '이평선 위 추세 유지' if below==0 else '이평선 사이에서 방향 탐색'
+    day=f"어제 {q['ch']:+.2f}%"
+    tail=' · 과매도 구간' if q['rsi']<30 else ' · 과열 구간' if q['rsi']>70 else ''
+    return f"{day}, 1달 {q['m1']:+}% · {trend}{tail}"
+for q in issue['quotes']['list']:
+    q['h']=HL.get(q['t']) or auto_h(q)
+for c in issue['jintari']['cards']:
+    c['h']='빠르게 빠진 반도체는 다시 오르는 일이 많았다 — ⑨ 급락 반등 신호가 켜졌어요'
 json.dump(issue, open(f'drafts/{D}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('ok')

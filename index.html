@@ -240,7 +240,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .mine .qsel{margin-bottom:12px}
 .mine .card{border:1.5px solid var(--ink);padding:14px;background:#fff}
 .mine .card .hd{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
-.mine .card .hd b{font-family:'Noto Serif KR',serif;font-size:24px}
+.mine .card .hd b{font-family:'Noto Serif KR',serif;font-size:17px}
 .mine .card .px{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
 .mine .cols{display:grid;gap:12px 20px;grid-template-columns:minmax(0,1fr);margin-top:10px}
 @media(min-width:760px){.mine .cols{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
@@ -265,7 +265,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .stbl{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
 
 .jcard{border:1.5px solid var(--ink);background:#fff;padding:10px 12px;margin-top:6px}.jcard img{width:100%;display:block;border:1px solid var(--line);margin-bottom:8px}
-.jcard .jh{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.jcard .jh b{font-size:20px}.jcard .jh svg{margin-left:auto}
+.jcard .jh{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.jcard .jh b{font-size:16px}.jcard .jh svg{margin-left:auto}
 .jcard .jg{background:var(--ink);color:#fff;font-weight:800;font-size:13px;padding:1px 7px}
 .jcard .js{font-size:13px;font-weight:700;margin:3px 0 6px}
 .jcard table{width:100%;border-collapse:collapse;font-size:13px}.jcard th{text-align:left;font-weight:600;color:var(--muted);white-space:nowrap;padding:4px 8px 4px 0;border-bottom:1px dotted var(--line);font-size:12px}.jcard td{padding:4px 0;border-bottom:1px dotted var(--line)}
@@ -276,6 +276,8 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .news4 h4{margin:0 0 2px;font-size:15.5px;line-height:1.35}.news4 h4 .tag{margin-right:6px}.news4 p{margin:0;font-size:13.5px;line-height:1.5;color:#333}
 .brk td{vertical-align:top}.brk .rup{font-size:12px;font-weight:700}.brk .rdn{font-size:12px;font-weight:700;color:#2563a6}
 .r5b{align-items:start}
+.mh{font-family:'Noto Serif KR',serif;font-weight:800;font-size:clamp(19px,2.2vw,25px);line-height:1.4;margin:6px 0 4px}
+.jcard .jh b{font-size:16px!important}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -449,7 +451,7 @@ function mine(Q){
   <p class="src">${Q.list.length}개 인기 종목 · ${esc(Q.asof)} · 원화는 ${Q.fx}원/달러 · 출처: 야후 파이낸스, 각 기사</p>`;
  const draw=()=>{const x=by[cur];[...box.querySelectorAll('[data-pick]')].forEach(b=>b.classList.toggle('on',b.dataset.pick===cur));
   const li=a=>a.length?`<ul>${a.map(n=>`<li>${esc(n.t)} <a class="src" href="${esc(n.u)}" target="_blank" rel="noopener">${esc(host(n.u))}</a></li>`).join('')}</ul>`:'<p class="none">수집된 소식이 없습니다.</p>';
-  $('mcard').innerHTML=`<div class="card"><div class="hd"><span><b>${esc(x.n)}</b> <span class="muted">${esc(x.t)}</span></span><span class="px">${fmt(x.c,2)}달러 ${chgv(x.ch)} <span class="small muted">${won(x.won)}</span></span></div>
+  $('mcard').innerHTML=`<div class="card"><div class="hd"><span><b>${esc(x.n)}</b> <span class="muted">${esc(x.t)}</span></span><span class="px">${fmt(x.c,2)}달러 ${chgv(x.ch)} <span class="small muted">${won(x.won)}</span></span></div>${x.h?`<p class="mh">${esc(x.h)}</p>`:''}
    <div class="cols"><div>${miniSVG(x.mini,x.c)}${x.mini&&x.mini.note?`<p class="src">${esc(x.mini.note)} 기준</p>`:''}<h5>숫자로 보기</h5><ul class="small">${mineAnalysis(x).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
    <div><h5 style="margin-top:0">AI 종합 의견</h5><p class="aiop">${esc(x.ai||'')}</p><p class="src">데이터·뉴스를 바탕으로 AI가 쓴 요약이며 투자 권유가 아닙니다.</p><h5>어제 이슈</h5>${li(x.news.y)}${x.why&&!x.news.y.length?`<p class="small">${esc(x.why)}</p>`:''}<h5>오늘 일정</h5>${li(x.news.t)}</div></div></div>`};
  const pick=v=>{v=(v||'').trim();if(!v)return;const t=by[v.toUpperCase()]?v.toUpperCase():(Q.list.find(x=>x.n.toLowerCase().includes(v.toLowerCase())||x.t.toLowerCase()===v.toLowerCase())||{}).t;if(t){cur=t;try{localStorage.setItem('usn_mine2',t)}catch(e){}draw()}else{$('mcard').innerHTML=`<p class="none">'${esc(v)}'는 아직 목록에 없는 종목입니다. 지원 종목: ${Q.list.length}개</p>`}};
@@ -505,7 +507,7 @@ function render(D){
  safe('jin',()=>{const J=D.jintari;if(!J){$('jin').innerHTML='<p class="none">오늘은 카드가 없습니다.</p>';return}$('jin-asof').textContent=J.asof;
   const spark=a=>{if(!a||a.length<2)return '';const mn=Math.min(...a),mx=Math.max(...a),W=120,H=34;return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline fill="none" stroke="#141414" stroke-width="1.6" points="${a.map((v,i)=>`${(i/(a.length-1)*W).toFixed(1)},${(H-2-(v-mn)/(mx-mn||1)*(H-4)).toFixed(1)}`).join(' ')}"/></svg>`};
   $('jin').innerHTML=J.cards.map(c=>`<div class="jcard">${c.img?`<a href="${esc(c.u)}" target="_blank" rel="noopener"><img src="${esc(c.img)}" alt="${esc(c.s)} 카드" loading="lazy"></a>`:''}
-   <div class="jh"><span class="jg">${esc(c.g)}</span><b>${esc(c.t)}</b> <span class="muted">${esc(c.kn)}</span>${spark(c.ln)}</div><div class="js">${esc(c.s)}</div>
+   ${c.h?`<p class="mh">${esc(c.h)}</p>`:''}<div class="jh"><span class="jg">${esc(c.g)}</span><b>${esc(c.t)}</b> <span class="muted">${esc(c.kn)}</span>${spark(c.ln)}</div><div class="js">${esc(c.s)}</div>
    <table>${c.rows.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join('')}</table><p class="small">${esc(c.why)}</p>
    <a class="golink" href="${esc(c.u)}" target="_blank" rel="noopener">카드 자세히 보기 ▶</a></div>`).join('')+(J.cash||[]).map(x=>`<p class="small muted" style="margin:6px 0 0">대기 자금 카드: ${esc(x.s)} · ${esc(x.t)} (${esc(x.kn)})</p>`).join('')+`<p class="src">${esc(J.note)} · <a href="${esc(J.u)}" target="_blank" rel="noopener">stock.jintar.co.kr</a></p>`});
 
