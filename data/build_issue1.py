@@ -305,7 +305,7 @@ for q in issue['quotes']['list']:
     n=TN.get(q['t'],{'y':[],'t':[]}); q['news']={'y':[{'t':a,'u':b} for a,b in n['y']],'t':[{'t':a,'u':b} for a,b in n['t']]}
     q['n']=KO.get(q['t'],q['n'])
 issue['quotes']['default']=['NVDA']
-issue['site_v']=4
+issue['site_v']=5
 issue['top']['img']='img/2026-11-19-ipo.jpg'
 
 # ── v4: AI 종합 의견 ───────────────────────────────────
