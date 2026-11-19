@@ -18,7 +18,7 @@
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#141414;--paper:#f6f3ea;--rule:#141414;--muted:#6b675e;--line:#cfc9bb;--navy:#102A43;--coral:#E0533F;--soft:#ece7da}
+:root{--ink:#141414;--paper:#EDEDED;--rule:#141414;--muted:#5c5c5c;--line:#d2d2d2;--navy:#102A43;--coral:#E0533F;--soft:#ffffff}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Pretendard,AppleGothic,sans-serif;line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -92,13 +92,13 @@ td:first-child,th:first-child{text-align:left}
 .chart .side .px{font-size:15px;margin-bottom:6px}
 .chart h4{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
 .chart h4 small{font-weight:400;font-size:12px}
-.chart svg{width:100%;height:auto;display:block;background:#fbfaf5;border:1px solid var(--line)}
+.chart svg{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line)}
 .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:var(--muted);margin:5px 0 8px}
 .legend i{display:inline-block;width:18px;height:0;border-top:2px solid;vertical-align:middle;margin-right:4px}
 .pts{margin:0;padding:0;list-style:none;font-size:13.5px}
 .pts li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:8px;padding:5px 0;border-bottom:1px dotted var(--line)}
 .pts li b{font-size:12px}
-.csum{font-size:15px;margin:0 0 12px;padding:10px 12px;border:1px solid var(--ink);background:#fbfaf5}
+.csum{font-size:15px;margin:0 0 12px;padding:10px 12px;border:1px solid var(--ink);background:#fff}
 /* 뉴스 */
 .news{display:grid;gap:0 26px;grid-template-columns:minmax(0,1fr)}
 @media(min-width:720px){.news{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -138,7 +138,7 @@ td:first-child,th:first-child{text-align:left}
 /* 차트 하이라이트 */
 .chips{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;align-content:flex-start;align-items:flex-start}
 .chip{font-size:12.5px;font-weight:600;padding:2px 8px;border:1px solid var(--line);background:#fff}
-.chip.hl{background:#ffe08a;border-color:#e3b93a}
+.chip.hl{background:#fff;border-color:var(--ink);font-weight:800}
 mark{background:linear-gradient(transparent 45%,#ffe08a 45%);color:inherit;padding:0 1px;font-weight:700}
 .watchlv{display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--ink);margin-top:6px}
 .watchlv div{padding:7px 10px}.watchlv div+div{border-left:1px solid var(--ink)}
@@ -171,7 +171,7 @@ mark{background:linear-gradient(transparent 45%,#ffe08a 45%);color:inherit;paddi
 .cal .day{min-height:112px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:5px 6px;font-size:12.5px}
 .cal .day .dn{font-family:'Noto Serif KR',serif;font-weight:900;font-size:17px;line-height:1}
 .cal .day.past{color:var(--muted);background:rgba(0,0,0,.025)}
-.cal .day.today{outline:2.5px solid var(--ink);outline-offset:-2px;background:#fffdf5}
+.cal .day.today{outline:2.5px solid var(--ink);outline-offset:-2px;background:#fff}
 .cal .day .dn{white-space:nowrap}
 .cal .day.today .dn::after{content:'오늘';font-family:Pretendard,sans-serif;font-size:11px;background:var(--ink);color:var(--paper);padding:0 5px;margin-left:4px;vertical-align:3px}
 .cal .ev{margin-top:4px;line-height:1.35}.cal .ev i{font-style:normal;font-size:10.5px;border:1px solid currentColor;padding:0 3px;margin-right:3px}
@@ -185,9 +185,9 @@ footer{border-top:5px double var(--rule);margin-top:28px;padding-top:10px;font-s
 .topw3 h3{font-size:clamp(26px,3.4vw,40px);margin:4px 0 16px}
 .topw3 .grid{display:grid;gap:14px 26px;grid-template-columns:minmax(0,1fr)}
 @media(min-width:860px){.topw3 .grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}}
-.topw3 img{width:100%;aspect-ratio:8/5;object-fit:contain;background:#ececec;border:1px solid var(--ink);display:block}
+.topw3 img{width:100%;aspect-ratio:8/5;object-fit:contain;background:#fff;border:1px solid var(--ink);display:block}
 .topw3 .figs{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:560px){.topw3 .figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.topw3 .kpts{margin:4px 0 14px;padding-left:18px;font-size:15.5px;line-height:1.6}.topw3 .kpts li{margin:3px 0}.topw3 .kpts.kr li::marker{content:'– ';color:#8a857a}.topw3 .kpts.kr{color:#3b3934}
+.topw3 .kpts{margin:4px 0 14px;padding-left:18px;font-size:15.5px;line-height:1.6}.topw3 .kpts li{margin:3px 0}.topw3 .kpts.kr li::marker{content:'– ';color:#777}.topw3 .kpts.kr{color:#333}
 .topw3 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:8px}.topw3 .foot .src{margin:0}
 /* 접는 목록 */
 details.it{border-bottom:1px solid var(--line)}
@@ -200,10 +200,10 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .sch3 summary{grid-template-columns:58px minmax(0,1fr) auto 12px}
 .sch3 .t{font-weight:800;font-variant-numeric:tabular-nums}
 .sch3 .nm{font-weight:600}
-.sch3 .body{padding-left:68px;color:#3b3934}
+.sch3 .body{padding-left:68px;color:#333}
 .stars5{letter-spacing:-1px;font-size:12.5px;white-space:nowrap}.stars5 b{color:#141414}.stars5 i{font-style:normal;color:#cfc9bb}
 .news3 summary{grid-template-columns:76px minmax(0,1fr) 12px}
-.news3 summary img{width:76px;height:48px;object-fit:contain;background:#ececec;border:1px solid var(--ink);display:block}
+.news3 summary img{width:76px;height:48px;object-fit:contain;background:#fff;border:1px solid var(--ink);display:block}
 .news3 summary h4{margin:0;font-size:15px}
 .news3 .body{padding-left:86px}
 .news3{display:grid;gap:0 26px;grid-template-columns:minmax(0,1fr)}@media(min-width:860px){.news3{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -213,7 +213,8 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .cblock{padding:14px 16px 16px;border:1.5px solid var(--ink);background:#fff;margin-bottom:20px}
 @media(max-width:600px){.cblock{padding:10px 10px 12px}}
 .cblock .hline{font-family:'Noto Serif KR',serif;font-weight:800;font-size:clamp(20px,2.4vw,27px);line-height:1.45;margin:2px 0 8px}
-.cblock .brief{font-size:15px;line-height:1.65;margin:2px 0 10px;padding:8px 12px;background:#f4f1e8;border-left:4px solid var(--ink)}
+.cblock .tri{margin:0 0 10px;border-left:4px solid var(--ink);padding:2px 0 2px 12px}.cblock .tri p{margin:3px 0;font-size:15px;line-height:1.6}.cblock .tri b{display:inline-block;min-width:68px;font-size:12px;letter-spacing:.04em;margin-right:6px;color:var(--ink)}
+.cblock .brief{font-size:15px;line-height:1.65;margin:2px 0 10px;padding:8px 12px;background:#fff;border-left:4px solid var(--ink)}
 .cblock h3.ct{font-size:16px;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
 .cblock h3.ct small{font-family:Pretendard,sans-serif;font-size:15px;font-weight:600}
 .cblock .ana{display:grid;gap:10px 18px;grid-template-columns:minmax(0,1fr);margin-top:8px}
@@ -237,7 +238,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .mine .qbox{display:flex;gap:6px;margin-bottom:8px}
 .mine input{flex:1;font:inherit;font-size:15px;padding:8px 12px;border:1.5px solid var(--ink);background:#fff;min-width:0}
 .mine .qsel{margin-bottom:12px}
-.mine .card{border:1.5px solid var(--ink);padding:14px;background:#fbfaf5}
+.mine .card{border:1.5px solid var(--ink);padding:14px;background:#fff}
 .mine .card .hd{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
 .mine .card .hd b{font-family:'Noto Serif KR',serif;font-size:24px}
 .mine .card .px{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
@@ -247,7 +248,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .mine h5{font-size:12px;letter-spacing:.1em;margin:10px 0 2px}
 .mine .none{color:var(--muted);font-size:13px}
 .mine .aiop{font-size:15px;line-height:1.7;margin:4px 0 2px;padding:10px 12px;background:#fff;border-left:4px solid var(--ink)}
-.mine ul.small li{font-size:12.5px;color:#3b3934}
+.mine ul.small li{font-size:12.5px;color:#333}
 @media(min-width:980px){.r5b{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}#s-street .r2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
 
 .camps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
@@ -269,10 +270,10 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .jcard .js{font-size:13px;font-weight:700;margin:3px 0 6px}
 .jcard table{width:100%;border-collapse:collapse;font-size:13px}.jcard th{text-align:left;font-weight:600;color:var(--muted);white-space:nowrap;padding:4px 8px 4px 0;border-bottom:1px dotted var(--line);font-size:12px}.jcard td{padding:4px 0;border-bottom:1px dotted var(--line)}
 
-.tape2{background:#efebe0}.tape2 div{font-size:12.5px}
+.tape2{background:#fff}.tape2 div{font-size:12.5px}
 .news4 .nit{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.news4 .nit:last-child{border-bottom:0}
-.news4 img{width:92px;aspect-ratio:8/5;object-fit:contain;background:#ececec;border:1px solid var(--line)}
-.news4 h4{margin:0 0 2px;font-size:15.5px;line-height:1.35}.news4 h4 .tag{margin-right:6px}.news4 p{margin:0;font-size:13.5px;line-height:1.5;color:#3b3934}
+.news4 img{width:92px;aspect-ratio:8/5;object-fit:contain;background:#fff;border:1px solid var(--line)}
+.news4 h4{margin:0 0 2px;font-size:15.5px;line-height:1.35}.news4 h4 .tag{margin-right:6px}.news4 p{margin:0;font-size:13.5px;line-height:1.5;color:#333}
 .brk td{vertical-align:top}.brk .rup{font-size:12px;font-weight:700}.brk .rdn{font-size:12px;font-weight:700;color:#2563a6}
 .r5b{align-items:start}
 </style></head><body><div class="wrap">
@@ -348,33 +349,18 @@ function candleSVG(c){
  const lastY=y(Cc[n-1]);
  const cid='cp'+Math.random().toString(36).slice(2,8);
  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.name)} 일봉 캔들 차트(최근 3개월)" font-family="Pretendard,sans-serif"><defs><clipPath id="${cid}"><rect x="${L}" y="${PT}" width="${W-R-L}" height="${PH}"/></clipPath></defs>`;
- for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e4dfd2"/>`+(Math.abs(y(v)-lastY)<14*FS?'':`<text x="${W-R+6}" y="${y(v)+4}" font-size="11" fill="#8a857a">${f(v)}</text>`)}
- let pm='';K.dates.forEach((d,i)=>{const m=d.slice(5,7);if(m!==pm&&i>0){g+=`<line x1="${x(i)-cw}" x2="${x(i)-cw}" y1="${PT}" y2="${VT+VH}" stroke="#e7e1d3"/><text x="${x(i)}" y="${H-3}" font-size="11" fill="#8a857a">${+m}월</text>`}pm=m});
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e6e6e6"/>`+(Math.abs(y(v)-lastY)<14*FS?'':`<text x="${W-R+6}" y="${y(v)+4}" font-size="11" fill="#777">${f(v)}</text>`)}
+ let pm='';K.dates.forEach((d,i)=>{const m=d.slice(5,7);if(m!==pm&&i>0){g+=`<line x1="${x(i)-cw}" x2="${x(i)-cw}" y1="${PT}" y2="${VT+VH}" stroke="#e6e6e6"/><text x="${x(i)}" y="${H-3}" font-size="11" fill="#777">${+m}월</text>`}pm=m});
  // 거래량
  const vmaxI=vb.indexOf(Math.max(...vb));
  for(let i=0;i<n;i++){const h=VH*vb[i]/Math.max(1,vb[vmaxI]),col=Cc[i]>=O[i]?UP:DN;g+=`<rect x="${(x(i)-cw/2).toFixed(1)}" y="${(VT+VH-h).toFixed(1)}" width="${cw.toFixed(1)}" height="${h.toFixed(1)}" fill="${col}" opacity="${i===vmaxI?1:.45}"/>`}
- g+=`<text x="${L+3}" y="${VT+10}" font-size="11" fill="#8a857a">거래량(${esc(c.vol_sym)})</text>`;
- g+=x(vmaxI)<W*.3?`<text x="${x(vmaxI)+7}" y="${VT+24}" font-size="11.5" font-weight="700">← 3개월 거래량 최대 ${md(K.dates[vmaxI])}</text>`:`<text x="${x(vmaxI)-7}" y="${VT+12}" text-anchor="end" font-size="11.5" font-weight="700">3개월 거래량 최대 ${md(K.dates[vmaxI])} →</text>`;
+ g+=`<text x="${L+3}" y="${VT+10}" font-size="11" fill="#777">거래량(${esc(c.vol_sym)})</text>`;
  // 이평선
- g+=`<rect x="${x(n-.5)}" y="${PT}" width="${W-R-x(n-.5)}" height="${PH}" fill="#f3efe4"/>${MOB?'':`<text x="${(x(n-.5)+W-R)/2}" y="${PT+PH-6}" text-anchor="middle" font-size="10.5" fill="#a39d90">추세 연장(점선)</text>`}`;
  K.mas.forEach((m,j)=>{const pts=MA[j].map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);g+=`<path clip-path="url(#${cid})" d="${pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join('')}" fill="none" stroke="${MAC[m]}" stroke-width="${m===200?2.4:1.5}" ${m===200?'stroke-dasharray="7 4"':''}/>`;
   const a=MA[j],v1=a[n-1],v0=a[n-6];if(v1!=null&&v0!=null){const sl=(v1-v0)/5;const ve=Math.max(lo,Math.min(hi,v1+sl*PADN));g+=`<path clip-path="url(#${cid})" d="M${x(n-1)} ${y(v1)} L${x(n-1+PADN)} ${y(ve)}" fill="none" stroke="${MAC[m]}" stroke-width="1.5" stroke-dasharray="2 4" opacity=".85"/>`}});
  // 캔들
  for(let i=0;i<n;i++){const up=Cc[i]>=O[i],col=up?UP:DN,top=y(Math.max(O[i],Cc[i])),bot=y(Math.min(O[i],Cc[i]));g+=`<line x1="${x(i)}" x2="${x(i)}" y1="${y(Hh[i])}" y2="${y(Lw[i])}" stroke="${col}" stroke-width="1.1"/><rect x="${(x(i)-cw/2).toFixed(1)}" y="${top.toFixed(1)}" width="${cw.toFixed(1)}" height="${Math.max(1,bot-top).toFixed(1)}" fill="${col}"/>`}
- // 돌파·지지
- const WY=[];const W2=c.watch;if(W2){const near=Math.abs(y(W2.up.v)-y(W2.down.v))<20,upAbove=y(W2.up.v)<=y(W2.down.v);
-  const hl2=(v0,t,col,dash,below)=>{const out=v0<lo?'아래':v0>hi?'위':'';const v=Math.max(lo+(hi-lo)*.03,Math.min(hi-(hi-lo)*.03,v0));if(out){t+=` · 차트 ${out}쪽`;dash='1 5'}WY.push(y(v));const ty=below?y(v)+15*FS:y(v)-5;return `<line x1="${x(0)}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.6" stroke-dasharray="${dash}"/><rect x="${x(0)-2}" y="${ty-12*FS}" width="${(t.length*6.8+12)*FS}" height="${15*FS}" fill="#fbfaf5"/><text x="${x(0)+4}" y="${ty}" font-size="12" font-weight="800" fill="${col}">${t}</text>`};
-  g+=hl2(W2.up.v,`▲ 돌파 볼 자리 ${f(W2.up.v)} (${W2.up.name})`,'#141414','6 3',near&&!upAbove);
-  g+=hl2(W2.down.v,`▼ 지지 ${f(W2.down.v)} (${W2.down.name})`,'#6b675e','2 3',near?upAbove:false)}
- // 고점
- let hiI=0;Hh.forEach((v,i)=>{if(v>Hh[hiI])hiI=i});const dd=(Cc[n-1]/Hh[hiI]-1)*100;
- g+=`<text x="${Math.min(Math.max(x(hiI)-60,L+2),W-R-170*FS)}" y="${y(Hh[hiI])-8}" font-size="12" font-weight="800">3개월 고점 ${f(Hh[hiI])} · 지금 ${dd.toFixed(1)}%</text>`;
- // 200일선 이탈
- const m200=MA[K.mas.indexOf(200)];let xI=-1;for(let i=n-1;i>0;i--){if(m200[i]!=null&&m200[i-1]!=null&&Cc[i]<m200[i]&&Cc[i-1]>=m200[i-1]){xI=i;break}}
- if(xI>0){const cx=x(xI),cy=y(Cc[xI]),lx=Math.min(Math.max(cx,L+64*FS),W-R-70*FS);const hB=18*FS;
-  const clash=ly=>WY.some(w=>w>ly-hB-6&&w<ly+6);let ly=cy-36;if(ly-hB<PT||clash(ly))ly=cy+36+hB;if(clash(ly))ly=cy-36;
-  g+=`<circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="#141414" stroke-width="2.2"/><line x1="${cx}" y1="${ly<cy?cy-11:cy+11}" x2="${cx}" y2="${ly<cy?ly:ly-hB}" stroke="#141414" stroke-width="1.3"/><line x1="${cx}" y1="${ly<cy?ly:ly-hB}" x2="${lx}" y2="${ly<cy?ly:ly-hB}" stroke="#141414" stroke-width="1.3"/><rect x="${lx-64*FS}" y="${ly-hB}" width="${128*FS}" height="${hB}" fill="#141414"/><text x="${lx}" y="${ly-5*FS}" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">200일선 이탈 ${md(K.dates[xI])}</text>`}
- g+=`<line x1="${x(n-1)+cw}" x2="${W-R}" y1="${lastY}" y2="${lastY}" stroke="${Cc[n-1]>=Cc[n-2]?UP:DN}" stroke-width="1" stroke-dasharray="1 3"/>${MOB?'':`<rect x="${x(n-1)+cw+2}" y="${lastY-20*FS}" width="${(f(Cc[n-1]).length+3)*7.2*FS}" height="${16*FS}" fill="#fbfaf5" opacity=".92"/><text x="${x(n-1)+cw+4}" y="${lastY-7}" font-size="11.5" font-weight="800" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}">현재 ${f(Cc[n-1])}</text>`}<rect x="${W-R+2}" y="${lastY-10*FS}" width="${R-4}" height="${20*FS}" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}"/><text x="${W-R+7}" y="${lastY+4.5*FS}" font-size="12.5" font-weight="800" fill="#fff">${f(Cc[n-1])}</text>`;
+ g+=`<line x1="${x(n-1)+cw}" x2="${W-R}" y1="${lastY}" y2="${lastY}" stroke="${Cc[n-1]>=Cc[n-2]?UP:DN}" stroke-width="1" stroke-dasharray="1 3"/>${MOB?'':`<rect x="${x(n-1)+cw+2}" y="${lastY-20*FS}" width="${(f(Cc[n-1]).length+3)*7.2*FS}" height="${16*FS}" fill="#fff" opacity=".92"/><text x="${x(n-1)+cw+4}" y="${lastY-7}" font-size="11.5" font-weight="800" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}">현재 ${f(Cc[n-1])}</text>`}<rect x="${W-R+2}" y="${lastY-10*FS}" width="${R-4}" height="${20*FS}" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}"/><text x="${W-R+7}" y="${lastY+4.5*FS}" font-size="12.5" font-weight="800" fill="#fff">${f(Cc[n-1])}</text>`;
  g+='</svg>';
  return FS===1?g:g.replace(/font-size="([\d.]+)"/g,(m,v)=>`font-size="${(+v*FS).toFixed(1)}"`);
 }
@@ -440,7 +426,7 @@ function miniSVG(m,close){
  let g=`<svg viewBox="0 0 ${W} ${H}" font-family="Pretendard,sans-serif" style="width:100%;height:auto;background:#fff;border:1px solid var(--line)">`;
  const used=[];lv.filter(a=>a[1]>=lo&&a[1]<=hi).sort((p,q)=>y(p[1])-y(q[1])).forEach(a=>{let ty=y(a[1])+4;used.forEach(u=>{if(Math.abs(u-ty)<11)ty=u+11});used.push(ty);g+=`<line x1="${L}" x2="${W-R}" y1="${y(a[1])}" y2="${y(a[1])}" stroke="${a[2]}" stroke-width="1.3" stroke-dasharray="${a[0]==='200일'?'6 3':'3 3'}"/><text x="${W-R+3}" y="${ty}" font-size="10" fill="${a[2]}" font-weight="700">${a[0]} ${f(a[1])}</text>`});
  for(let i=0;i<n;i++){const o=q(b[i*4]),h=q(b[i*4+1]),l=q(b[i*4+2]),c=i===n-1?close:q(b[i*4+3]);const up=c>=o,col=up?UP:DN,t=y(Math.max(o,c)),bt=y(Math.min(o,c));g+=`<line x1="${x(i)}" x2="${x(i)}" y1="${y(h)}" y2="${y(l)}" stroke="${col}"/><rect x="${x(i)-cw/2}" y="${t}" width="${cw}" height="${Math.max(1,bt-t)}" fill="${col}"/>`}
- return g+`<text x="${L+2}" y="${H-4}" font-size="10" fill="#8a857a">최근 ${n}거래일 · 점선은 이동평균 현재 위치</text></svg>`;
+ return g+`<text x="${L+2}" y="${H-4}" font-size="10" fill="#777">최근 ${n}거래일 · 점선은 이동평균 현재 위치</text></svg>`;
 }
 function mineAnalysis(x){
  const m=x.mini||{},c=x.c,a=[];const pos=(v,nm)=>v==null?null:`${nm} ${c>=v?'위':'아래'}(${((c/v-1)*100).toFixed(1)}%)`;
@@ -473,7 +459,7 @@ function mine(Q){
 }
 
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=7;
+const SITE_V=8;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
@@ -496,7 +482,7 @@ function render(D){
  // 차트
  const C=D.charts||[];$('chart-asof').textContent=C[0]?C[0].asof:'';
  const lvf=(c,v)=>c.unit==='달러'?fmt(v,2):Math.round(v).toLocaleString('ko-KR');
- $('charts').innerHTML=C.map(c=>`<div class="cblock"><h3 class="ct serif">${esc(c.title||c.name)} <small>${num(c.close)}${c.unit==='달러'?'달러':''} ${chg(c.chg_pct)}</small></h3>${c.headline?`<p class="hline">${esc(c.headline)}</p>`:''}${c.brief?`<p class="brief">${esc(c.brief)}</p>`:''}
+ $('charts').innerHTML=C.map(c=>`<div class="cblock"><h3 class="ct serif">${esc(c.title||c.name)} <small>${num(c.close)}${c.unit==='달러'?'달러':''} ${chg(c.chg_pct)}</small></h3>${c.headline?`<p class="hline">${esc(c.headline)}</p>`:''}${c.an?`<div class="tri">${c.an.map(r=>`<p><b>${esc(r[0])}</b>${esc(r[1])}</p>`).join('')}</div>`:c.brief?`<p class="brief">${esc(c.brief)}</p>`:''}
   <div class="cscroll">${(()=>{try{return candleSVG(c)}catch(e){console.error(e);return '<p class="tbd">차트를 그리지 못했습니다.</p>'}})()}</div>
   <div class="mal">${c.candle.mas.map(m=>`<span><i style="border-color:${MAC[m]};${m===200?'border-top-style:dashed':''}"></i>${m}일선</span>`).join('')}<span><i style="border-color:${UP}"></i>상승 캔들</span><span><i style="border-color:${DN}"></i>하락 캔들</span></div>
   <div class="ana"><div class="chips">${(c.tags||[]).map(t=>`<span class="chip ${t.hl?'hl':''}">${esc(t.t)}</span>`).join('')}</div>
