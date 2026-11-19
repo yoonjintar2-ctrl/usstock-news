@@ -161,11 +161,12 @@ mark{background:linear-gradient(transparent 45%,#ffe08a 45%);color:inherit;paddi
 .cal .day .dn{font-family:'Noto Serif KR',serif;font-weight:900;font-size:17px;line-height:1}
 .cal .day.past{color:var(--muted);background:rgba(0,0,0,.025)}
 .cal .day.today{outline:2.5px solid var(--ink);outline-offset:-2px;background:#fffdf5}
-.cal .day.today .dn::after{content:' 오늘';font-family:Pretendard,sans-serif;font-size:11px;background:var(--ink);color:var(--paper);padding:0 5px;margin-left:4px;vertical-align:3px}
+.cal .day .dn{white-space:nowrap}
+.cal .day.today .dn::after{content:'오늘';font-family:Pretendard,sans-serif;font-size:11px;background:var(--ink);color:var(--paper);padding:0 5px;margin-left:4px;vertical-align:3px}
 .cal .ev{margin-top:4px;line-height:1.35}.cal .ev i{font-style:normal;font-size:10.5px;border:1px solid currentColor;padding:0 3px;margin-right:3px}
 .cal .ev.hl{font-weight:700}.cal .ev small{color:var(--muted)}
 .cal .day.off{background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(0,0,0,.04) 6px 12px)}
-@media(max-width:600px){.cal .day{min-height:96px;padding:4px;font-size:11px}.cal .ev i{display:none}.cal .day .dn{font-size:14px}}
+@media(max-width:600px){.cal .day{min-height:96px;padding:4px;font-size:11px}.cal .ev i{display:none}.cal .day .dn{font-size:14px}.cal .day.today .dn::after{display:block;width:max-content;margin:3px 0 0;font-size:10px;vertical-align:0}}
 footer{border-top:5px double var(--rule);margin-top:28px;padding-top:10px;font-size:12px;color:var(--muted)}
 .arch select{font:inherit;background:transparent;border:1px solid var(--line);padding:1px 4px}
 
@@ -173,7 +174,7 @@ footer{border-top:5px double var(--rule);margin-top:28px;padding-top:10px;font-s
 .topw3 h3{font-size:clamp(26px,3.4vw,40px);margin:4px 0 16px}
 .topw3 .grid{display:grid;gap:14px 26px;grid-template-columns:minmax(0,1fr)}
 @media(min-width:860px){.topw3 .grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}}
-.topw3 img{width:100%;aspect-ratio:8/5;object-fit:cover;border:1px solid var(--ink);display:block}
+.topw3 img{width:100%;aspect-ratio:8/5;object-fit:contain;background:#ececec;border:1px solid var(--ink);display:block}
 .topw3 .figs{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:560px){.topw3 .figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .topw3 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:8px}.topw3 .foot .src{margin:0}
 /* 접는 목록 */
@@ -190,7 +191,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .sch3 .body{padding-left:68px;color:#3b3934}
 .stars5{letter-spacing:-1px;font-size:12.5px;white-space:nowrap}.stars5 b{color:#141414}.stars5 i{font-style:normal;color:#cfc9bb}
 .news3 summary{grid-template-columns:76px minmax(0,1fr) 12px}
-.news3 summary img{width:76px;height:48px;object-fit:cover;border:1px solid var(--ink);display:block}
+.news3 summary img{width:76px;height:48px;object-fit:contain;background:#ececec;border:1px solid var(--ink);display:block}
 .news3 summary h4{margin:0;font-size:15px}
 .news3 .body{padding-left:86px}
 .news3{display:grid;gap:0 26px;grid-template-columns:minmax(0,1fr)}@media(min-width:860px){.news3{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -227,6 +228,8 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .mine ul{margin:4px 0 0;padding-left:18px;font-size:14px}.mine li{margin:3px 0}
 .mine h5{font-size:12px;letter-spacing:.1em;margin:10px 0 2px}
 .mine .none{color:var(--muted);font-size:13px}
+.mine .aiop{font-size:15px;line-height:1.7;margin:4px 0 2px;padding:10px 12px;background:#fff;border-left:4px solid var(--ink)}
+.mine ul.small li{font-size:12.5px;color:#3b3934}
 @media(min-width:980px){.r5b{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}#s-street .r2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
 </style></head><body><div class="wrap">
 
@@ -289,9 +292,9 @@ function candleSVG(c){
  const O=[],Hh=[],Lw=[],Cc=[],MA=K.mas.map(()=>[]);
  for(let i=0;i<n;i++){const o=i*per;O.push(q(b[o]));Hh.push(q(b[o+1]));Lw.push(q(b[o+2]));Cc.push(q(b[o+3]));K.mas.forEach((m,j)=>MA[j].push(q(b[o+4+j])))}
  Cc[n-1]=c.close.v; // 마지막 종가는 정확한 값
- const W=900,H=400,PT=20,PH=262,VT=300,VH=70,L=8,R=78;
+ const PADN=14,W=900,H=400,PT=20,PH=262,VT=300,VH=70,L=8,R=78;
  let lo=K.mn,hi=K.mx;const pad=(hi-lo)*.05;lo-=pad;hi+=pad*1.4;
- const x=i=>L+(W-L-R)*(i+.5)/n,y=v=>PT+PH*(1-(v-lo)/(hi-lo)),cw=(W-L-R)/n*.62;
+ const x=i=>L+(W-L-R)*(i+.5)/(n+PADN),y=v=>PT+PH*(1-(v-lo)/(hi-lo)),cw=(W-L-R)/(n+PADN)*.62;
  const f=v=>c.unit==='달러'?v.toFixed(2):Math.round(v).toLocaleString('ko-KR');
  const md=d=>`${+d.slice(5,7)}/${+d.slice(8,10)}`;
  const lastY=y(Cc[n-1]);
@@ -304,7 +307,9 @@ function candleSVG(c){
  g+=`<text x="${L+3}" y="${VT+10}" font-size="11" fill="#8a857a">거래량(${esc(c.vol_sym)})</text>`;
  g+=x(vmaxI)<200?`<text x="${x(vmaxI)+7}" y="${VT+24}" font-size="11.5" font-weight="700">← 거래량 최대 ${md(K.dates[vmaxI])}</text>`:`<text x="${x(vmaxI)-7}" y="${VT+12}" text-anchor="end" font-size="11.5" font-weight="700">거래량 최대 ${md(K.dates[vmaxI])} →</text>`;
  // 이평선
- K.mas.forEach((m,j)=>{const pts=MA[j].map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);g+=`<path d="${pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join('')}" fill="none" stroke="${MAC[m]}" stroke-width="${m===200?2.4:1.5}" ${m===200?'stroke-dasharray="7 4"':''}/>`});
+ g+=`<rect x="${x(n-.5)}" y="${PT}" width="${W-R-x(n-.5)}" height="${PH}" fill="#f3efe4"/><text x="${(x(n-.5)+W-R)/2}" y="${PT+PH-6}" text-anchor="middle" font-size="10.5" fill="#a39d90">추세 연장(점선)</text>`;
+ K.mas.forEach((m,j)=>{const pts=MA[j].map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);g+=`<path d="${pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join('')}" fill="none" stroke="${MAC[m]}" stroke-width="${m===200?2.4:1.5}" ${m===200?'stroke-dasharray="7 4"':''}/>`;
+  const a=MA[j],v1=a[n-1],v0=a[n-6];if(v1!=null&&v0!=null){const sl=(v1-v0)/5;const ve=Math.max(lo,Math.min(hi,v1+sl*PADN));g+=`<path d="M${x(n-1)} ${y(v1)} L${x(n-1+PADN)} ${y(ve)}" fill="none" stroke="${MAC[m]}" stroke-width="1.5" stroke-dasharray="2 4" opacity=".85"/>`}});
  // 캔들
  for(let i=0;i<n;i++){const up=Cc[i]>=O[i],col=up?UP:DN,top=y(Math.max(O[i],Cc[i])),bot=y(Math.min(O[i],Cc[i]));g+=`<line x1="${x(i)}" x2="${x(i)}" y1="${y(Hh[i])}" y2="${y(Lw[i])}" stroke="${col}" stroke-width="1.1"/><rect x="${(x(i)-cw/2).toFixed(1)}" y="${top.toFixed(1)}" width="${cw.toFixed(1)}" height="${Math.max(1,bot-top).toFixed(1)}" fill="${col}"/>`}
  // 돌파·지지
@@ -318,7 +323,7 @@ function candleSVG(c){
  // 200일선 이탈
  const m200=MA[K.mas.indexOf(200)];let xI=-1;for(let i=n-1;i>0;i--){if(m200[i]!=null&&m200[i-1]!=null&&Cc[i]<m200[i]&&Cc[i-1]>=m200[i-1]){xI=i;break}}
  if(xI>0){const cx=x(xI),cy=y(Cc[xI]),lx=Math.min(cx,W-R-150);g+=`<circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="#141414" stroke-width="2.2"/><line x1="${cx}" y1="${cy-11}" x2="${cx}" y2="${cy-36}" stroke="#141414" stroke-width="1.3"/><line x1="${cx}" y1="${cy-36}" x2="${lx}" y2="${cy-36}" stroke="#141414" stroke-width="1.3"/><rect x="${lx-64}" y="${cy-54}" width="128" height="18" fill="#141414"/><text x="${lx}" y="${cy-41}" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">200일선 이탈 ${md(K.dates[xI])}</text>`}
- g+=`<rect x="${W-R+2}" y="${lastY-10}" width="${R-4}" height="20" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}"/><text x="${W-R+7}" y="${lastY+4.5}" font-size="12.5" font-weight="800" fill="#fff">${f(Cc[n-1])}</text>`;
+ g+=`<line x1="${x(n-1)+cw}" x2="${W-R}" y1="${lastY}" y2="${lastY}" stroke="${Cc[n-1]>=Cc[n-2]?UP:DN}" stroke-width="1" stroke-dasharray="1 3"/><rect x="${x(n-1)+cw+2}" y="${lastY-20}" width="${(f(Cc[n-1]).length+3)*7.2}" height="16" fill="#fbfaf5" opacity=".92"/><text x="${x(n-1)+cw+4}" y="${lastY-7}" font-size="11.5" font-weight="800" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}">현재 ${f(Cc[n-1])}</text><rect x="${W-R+2}" y="${lastY-10}" width="${R-4}" height="20" fill="${Cc[n-1]>=Cc[n-2]?UP:DN}"/><text x="${W-R+7}" y="${lastY+4.5}" font-size="12.5" font-weight="800" fill="#fff">${f(Cc[n-1])}</text>`;
  return g+'</svg>';
 }
 
@@ -344,7 +349,7 @@ function treemap(T){
  const draw=()=>{const W=box.clientWidth,H=box.clientHeight;const secs={};T.items.forEach(it=>{(secs[it.s]=secs[it.s]||[]).push({...it,v:it.w})});
   const sl=Object.entries(secs).map(([k,a])=>({k,v:a.reduce((s,i)=>s+i.v,0),a:a.sort((p,q)=>q.v-p.v)})).sort((p,q)=>q.v-p.v);
   const rects=[];squarify(sl,0,0,W,H,rects);let html='';
-  rects.forEach(r=>{const inner=[];squarify(r.a,r.x,r.y,r.w,r.h,inner);inner.forEach(c=>{const fs=Math.max(8,Math.min(26,Math.sqrt(c.w*c.h)/4.2));const show=c.w>28&&c.h>18;html+=`<div class="c" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;background:${tcol(c.ch)}" title="${esc(c.t)} ${c.ch>0?'+':''}${c.ch}%">${show?`<b style="font-size:${fs}px">${esc(c.t)}</b>${c.h>fs*2.4?`<span style="font-size:${Math.max(8,fs*.6)}px">${c.ch>0?'+':''}${c.ch.toFixed(2)}%</span>`:''}`:''}</div>`});if(r.w>60&&r.h>30)html+=`<div class="sl" style="left:${r.x+2}px;top:${r.y+2}px">${esc(r.k)}</div>`});
+  rects.forEach(r=>{const inner=[];squarify(r.a,r.x,r.y,r.w,r.h,inner);inner.forEach(c=>{const fs=Math.min(26,Math.sqrt(c.w*c.h)/4.2,(c.w-3)/(c.t.length*.66),(c.h-2)*.8);const show=fs>=4.5;html+=`<div class="c" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;background:${tcol(c.ch)}" title="${esc(c.t)} ${c.ch>0?'+':''}${c.ch}%">${show?`<b style="font-size:${fs}px">${esc(c.t)}</b>${c.h>fs*2.5&&fs>=7?`<span style="font-size:${Math.max(6,fs*.6)}px">${c.ch>0?'+':''}${c.ch.toFixed(2)}%</span>`:''}`:''}</div>`});if(r.w>60&&r.h>30)html+=`<div class="sl" style="left:${r.x+2}px;top:${r.y+2}px">${esc(r.k)}</div>`});
   box.innerHTML=html};
  draw();let to;window.addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(draw,150)});
  $('tm-asof').textContent=T.asof;$('tm-note').innerHTML=`${esc(T.note)} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
@@ -358,7 +363,7 @@ function miniSVG(m,close){
  const W=420,H=170,L=4,R=78,PT=10,PH=150;
  const lv=[['5일',m.ma5,MAC[5]],['20일',m.ma20,MAC[20]],['50일',m.ma50,MAC[60]],['200일',m.ma200,MAC[200]]].filter(a=>a[1]!=null);
  let lo=m.mn,hi=m.mx;lv.forEach(a=>{if(a[1]>=lo-(hi-lo)*.6&&a[1]<=hi+(hi-lo)*.6){lo=Math.min(lo,a[1]);hi=Math.max(hi,a[1])}});const pad=(hi-lo)*.06;lo-=pad;hi+=pad;
- const x=i=>L+(W-L-R)*(i+.5)/n,y=v=>PT+PH*(1-(v-lo)/(hi-lo)),cw=(W-L-R)/n*.6;
+ const PN=5,x=i=>L+(W-L-R)*(i+.5)/(n+PN),y=v=>PT+PH*(1-(v-lo)/(hi-lo)),cw=(W-L-R)/(n+PN)*.6;
  const f=v=>v>=100?v.toFixed(1):v.toFixed(2);
  let g=`<svg viewBox="0 0 ${W} ${H}" font-family="Pretendard,sans-serif" style="width:100%;height:auto;background:#fff;border:1px solid var(--line)">`;
  const used=[];lv.filter(a=>a[1]>=lo&&a[1]<=hi).sort((p,q)=>y(p[1])-y(q[1])).forEach(a=>{let ty=y(a[1])+4;used.forEach(u=>{if(Math.abs(u-ty)<11)ty=u+11});used.push(ty);g+=`<line x1="${L}" x2="${W-R}" y1="${y(a[1])}" y2="${y(a[1])}" stroke="${a[2]}" stroke-width="1.3" stroke-dasharray="${a[0]==='200일'?'6 3':'3 3'}"/><text x="${W-R+3}" y="${ty}" font-size="10" fill="${a[2]}" font-weight="700">${a[0]} ${f(a[1])}</text>`});
@@ -387,7 +392,7 @@ function mine(Q){
  const draw=()=>{const x=by[cur];[...box.querySelectorAll('[data-pick]')].forEach(b=>b.classList.toggle('on',b.dataset.pick===cur));
   const li=a=>a.length?`<ul>${a.map(n=>`<li>${esc(n.t)} <a class="src" href="${esc(n.u)}" target="_blank" rel="noopener">${esc(host(n.u))}</a></li>`).join('')}</ul>`:'<p class="none">수집된 소식이 없습니다.</p>';
   $('mcard').innerHTML=`<div class="card"><div class="hd"><span><b>${esc(x.n)}</b> <span class="muted">${esc(x.t)}</span></span><span class="px">${fmt(x.c,2)}달러 ${chgv(x.ch)} <span class="small muted">${won(x.won)}</span></span></div>
-   <div class="cols"><div>${miniSVG(x.mini,x.c)}</div><div><h5>차트 분석</h5><ul>${mineAnalysis(x).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div></div>
+   <div class="cols"><div>${miniSVG(x.mini,x.c)}</div><div><h5>AI 종합 의견</h5><p class="aiop">${esc(x.ai||'')}</p><p class="src">데이터·뉴스를 바탕으로 AI가 쓴 요약이며 투자 권유가 아닙니다.</p><h5>숫자로 보기</h5><ul class="small">${mineAnalysis(x).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div></div>
    <div class="cols"><div><h5>어제 이슈</h5>${li(x.news.y)}${x.why&&!x.news.y.length?`<p class="small">${esc(x.why)}</p>`:''}</div><div><h5>오늘 일정</h5>${li(x.news.t)}</div></div></div>`};
  const pick=v=>{v=(v||'').trim();if(!v)return;const t=by[v.toUpperCase()]?v.toUpperCase():(Q.list.find(x=>x.n.toLowerCase().includes(v.toLowerCase())||x.t.toLowerCase()===v.toLowerCase())||{}).t;if(t){cur=t;try{localStorage.setItem('usn_mine',t)}catch(e){}draw()}else{$('mcard').innerHTML=`<p class="none">'${esc(v)}'는 아직 목록에 없는 종목입니다. 지원 종목: ${Q.list.length}개</p>`}};
  box.addEventListener('click',e=>{const b=e.target.closest('[data-pick]');if(b)pick(b.dataset.pick)});
@@ -395,7 +400,10 @@ function mine(Q){
  draw();
 }
 
+const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
+const SITE_V=4;
 function render(D){
+ if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
  const dt=new Date(D.date+'T00:00:00');$('date').textContent=`${dt.getFullYear()}년 ${dt.getMonth()+1}월 ${dt.getDate()}일 ${D.weekday||''}요일`;
  $('no').textContent=`제${D.no}호`;$('pub').textContent=D.publisher||'샌디스크 올인';$('session').textContent=`${D.session||''} 마감 기준`;
@@ -417,21 +425,21 @@ function render(D){
  const C=D.charts||[];$('chart-asof').textContent=C[0]?C[0].asof:'';
  const lvf=(c,v)=>c.unit==='달러'?fmt(v,2):Math.round(v).toLocaleString('ko-KR');
  $('charts').innerHTML=C.map(c=>`<div class="cblock"><h3 class="ct serif">${esc(c.title||c.name)} <small>${num(c.close)}${c.unit==='달러'?'달러':''} ${chg(c.chg_pct)}</small></h3>
-  <div class="cscroll">${candleSVG(c)}</div>
+  <div class="cscroll">${(()=>{try{return candleSVG(c)}catch(e){console.error(e);return '<p class="tbd">차트를 그리지 못했습니다.</p>'}})()}</div>
   <div class="mal">${c.candle.mas.map(m=>`<span><i style="border-color:${MAC[m]};${m===200?'border-top-style:dashed':''}"></i>${m}일선</span>`).join('')}<span><i style="border-color:${UP}"></i>상승 캔들</span><span><i style="border-color:${DN}"></i>하락 캔들</span></div>
   <div class="ana"><div class="chips">${(c.tags||[]).map(t=>`<span class="chip ${t.hl?'hl':''}">${esc(t.t)}</span>`).join('')}</div>
   ${c.watch?`<div class="watchlv"><div><span>▲ 돌파 볼 자리</span><b>${lvf(c,c.watch.up.v)}</b><br><small>${esc(c.watch.up.name)} · ${c.watch.up.gap>0?'+':''}${c.watch.up.gap}%</small></div><div><span>▼ 지지 볼 자리</span><b>${lvf(c,c.watch.down.v)}</b><br><small>${esc(c.watch.down.name)} · ${c.watch.down.gap}%</small></div></div>`:''}</div></div>`).join('');
- treemap(D.treemap);
+ safe('tmap',()=>treemap(D.treemap));
  // 뉴스
  $('news').innerHTML=(D.news||[]).map(n=>`<details class="it"><summary>${n.img?`<img src="${esc(n.img)}" alt="">`:'<span></span>'}<h4><span class="tag">${esc(n.tag)}</span>${esc(n.title)}</h4><span class="ar">▶</span></summary><div class="body">${esc(n.body)}${srcs(n.src)}</div></details>`).join('');
- mine(D.quotes);
+ safe('mine',()=>mine(D.quotes));
  // 달력
  const K=D.calendar;if(K){const wd=['월','화','수','목','금'];$('cal').innerHTML=`<div class="cal">${wd.map(w=>`<div class="wd">${w}</div>`).join('')}${K.days.map(d=>{const dd=new Date(d.d+'T00:00:00');const st=d.d<K.today?'past':d.d===K.today?'today':'';const off=d.ev.some(e=>e.k==='휴장');return `<div class="day ${st} ${off?'off':''}"><div class="dn">${dd.getMonth()+1}/${dd.getDate()}</div>${d.ev.map(e=>`<div class="ev ${e.hl?'hl':''}"><i>${esc(e.k)}</i>${esc(e.t)}${e.when?` <small>${esc(e.when)}</small>`:''}</div>`).join('')}</div>`}).join('')}</div>${srcs(K.src)}`}
  // 월가
  const W=D.street||{};
  $('street').innerHTML=`<div class="r2" style="display:grid;gap:22px"><div><h4>${esc(W.title)}</h4><p class="small">${esc(W.summary)}</p>
   <table style="margin-top:8px"><tr><th>증권사</th><th>목표 변경</th></tr>${(W.rows||[]).map(r=>`<tr><td>${esc(r.firm)}${r.rating?`<div class="src">${esc(r.rating)}</div>`:''}</td><td>${r.from&&r.from!=='—'?`<span class="strike">${esc(r.from)}</span> → `:''}<b>${esc(r.to)}</b> <span class="${r.dir>0?'up':r.dir<0?'down':'flat'}"></span></td></tr>`).join('')}</table></div>
-  <div><h4>연준 · 큰손 한마디</h4>${(W.voices||[]).map(v=>`<div class="voice"><b>${esc(v.who)}</b>${esc(v.say)}</div>`).join('')}
+  <div><h4>연준 · 큰손 한마디</h4>${(W.voices||[]).map(v=>`<div class="voice"><b>${esc(v.who)}</b>${esc(v.say)}</div>`).join('')}<h4 style="margin-top:16px">유명 투자자 · 인플루언서</h4>${(W.influencers||[]).map(v=>`<div class="voice"><b>${esc(v.who)}</b>${esc(v.say)}<div class="src"><a href="${esc(v.src)}" target="_blank" rel="noopener">${esc(host(v.src))}</a>${v.src2?` · <a href="${esc(v.src2)}" target="_blank" rel="noopener">${esc(host(v.src2))}</a>`:''}</div></div>`).join('')}
   <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src),...(W.voices||[]).map(v=>v.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div></div>`;
  const T=D.term||{};$('term').innerHTML=`<b>${esc(T.word)}</b>${esc(T.body)}`;
  const CO=D.column||{};$('col').innerHTML=`<h4 style="font-family:'Noto Serif KR',serif;font-size:19px">${esc(CO.title)}</h4><p class="small" style="font-size:14px">${esc(CO.body)}</p>${golink(CO.short)}${srcs(CO.src)}`;
