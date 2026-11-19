@@ -486,7 +486,7 @@ function render(D){
  $('sch').innerHTML=(D.schedule||[]).map(s=>`<details class="it"><summary><span class="t">${esc(s.kst)}</span><span><span class="tag">${esc(s.type)}</span><span class="nm">${esc(s.name)}</span></span>${star5(s.star)}<span class="ar">▶</span></summary><div class="body">${esc(s.why)}${src1(s.src)}</div></details>`).join('');
  $('schnote').textContent=D.schedule_note||'';
  // 지표
- $('ind').innerHTML=`<table class="ind"><tr><th>지표</th><th>수치</th><th>변화</th></tr>${(D.indicators||[]).map(r=>`<tr><td>${esc(r.name)}${r.label?` <span class="small muted">${esc(r.label)}</span>`:''}</td><td>${fmt(r.v,r.d)}${r.suf||''}</td><td>${r.chg!=null?chgv(r.chg,r.chgsuf||'%'):''}</td></tr>`).join('')}</table><div class="src">출처: CNN 공포·탐욕, CME FedWatch(보도), 야후 파이낸스 · 국채·지수는 11/18 종가, 달러·유가·환율은 11/19 오전</div>`;
+ $('ind').innerHTML=`<table class="ind">${(D.indicators||[]).map(r=>`<tr><td>${esc(r.name)}${r.label?` <span class="small muted">${esc(r.label)}</span>`:''}</td><td>${fmt(r.v,r.d)}${r.suf||''}</td><td>${r.chg!=null?chgv(r.chg,r.chgsuf||'%'):''}</td></tr>`).join('')}</table><div class="src">출처: CNN 공포·탐욕, CME FedWatch(보도), 야후 파이낸스 · 국채·지수는 11/18 종가, 달러·유가·환율은 11/19 오전</div>`;
  // 차트
  const C=D.charts||[];$('chart-asof').textContent=C[0]?C[0].asof:'';
  const lvf=(c,v)=>c.unit==='달러'?fmt(v,2):Math.round(v).toLocaleString('ko-KR');
