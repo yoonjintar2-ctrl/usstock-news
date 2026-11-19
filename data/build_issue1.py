@@ -232,5 +232,80 @@ for ln in open('data/movers_raw.txt', encoding='utf-8'):
 issue['quotes'] = {'asof': CLOSE, 'src': 'https://finance.yahoo.com', 'fx': FX,
                    'default': ['NVDA', 'SNDK', 'MU', 'UNH', 'PANW', 'AMD'], 'list': quotes}
 
+# ── v3: 일정(시각·별 5개·상세) ───────────────────────────
+WMT_IR='https://finviz.com/news/421667/walmart-to-host-third-quarter-earnings-conference-call-november-19-2026'
+BABA_IR='https://investingnews.com/alibaba-group-will-announce-september-quarter-2026-results-on-november-19-2026/'
+BABA_EW='https://beta.earningswhispers.com/go/w/BABA'
+issue['schedule']=[
+ {'kst':'19:30','type':'실적','name':'알리바바 9월 분기 실적 발표','star':3,'why':'중국 소비와 클라우드·AI 투자 흐름. 중국 주식(ADR) 분위기를 가릅니다. 컨퍼런스콜은 21:00.','src':BABA_IR},
+ {'kst':'21:00','type':'실적','name':'월마트 3분기 실적 발표','star':5,'why':'미국 소비가 버티는지 보는 대표 실적. 주당 예상 0.64달러(약 850원), 연말 쇼핑 시즌 전망이 핵심입니다. 컨퍼런스콜은 22:00.','src':WMT_IR},
+ {'kst':'22:30','type':'지표','name':'신규 실업수당 청구 (예상 19.6만)','star':4,'why':'예상보다 낮으면 고용이 탄탄하다는 뜻이라 12월 금리 인상 압력이 커집니다. 이전 20만.','src':FV},
+ {'kst':'22:30','type':'지표','name':'11월 필라델피아 연준 제조업지수','star':3,'why':'제조업 경기와 함께 가격 항목으로 물가 압력을 봅니다. 예상 19.2, 이전 20.9.','src':FV},
+ {'kst':'23:30','type':'개장','name':'뉴욕 정규장 개장 · 앤트로픽(ANT) 첫 거래','star':5,'why':'첫 거래가 공모가 83달러(약 11만 원) 위인지, AI주로 돈이 몰리는지 빠지는지. IPO 첫 거래는 보통 개장 뒤 몇 시간 안에 시작됩니다.','src':CNBC_IPO},
+ {'kst':'00:00','type':'지표','name':'10월 경기선행지수','star':2,'why':'경기 둔화 신호를 보는 지표. 시장 영향은 작은 편입니다.','src':SCHWAB},
+ {'kst':'06:00~','type':'실적','name':'인튜이트 · 로스스토어 실적 (장 마감 후)','star':3,'why':'AI 소프트웨어(인튜이트)와 할인 소매(로스) 실적. 시간외 반응을 봅니다.','src':WK},
+ {'kst':'내일','type':'지표','name':'미시간대 소비자심리 확정치 · 쿡 연준 이사 연설','star':3,'why':'소비자 기대 인플레이션과 연준 인사 발언으로 금리 경로 단서를 봅니다.','src':WK},
+]
+# ── v3: 참고 지표(이름·수치만) ───────────────────────────
+issue['indicators']=[
+ {'name':'공포·탐욕 지수','v':24.6,'d':1,'label':'극단적 공포','src':FG},
+ {'name':'12월 금리 인상 확률','v':95.7,'d':1,'suf':'%','src':SED},
+ {'name':'VIX','v':f('^VIX','close'),'d':2,'chg':f('^VIX','chg'),'src':Y('%5EVIX')},
+ {'name':'풋/콜 비율','v':0.88,'d':2,'src':FG},
+ {'name':'미 국채 10년','v':f('^TNX','close'),'d':2,'suf':'%','chg':round(f('^TNX','close')-f('^TNX','close')/(1+f('^TNX','chg')/100),2),'chgsuf':'%p','src':Y('%5ETNX')},
+ {'name':'달러인덱스','v':f('DX-Y.NYB','close'),'d':2,'chg':f('DX-Y.NYB','chg'),'src':Y('DX-Y.NYB')},
+ {'name':'WTI 유가','v':f('CL=F','close'),'d':2,'chg':f('CL=F','chg'),'src':Y('CL%3DF')},
+ {'name':'원/달러','v':FX,'d':2,'chg':f('KRW=X','chg'),'src':Y('KRW%3DX')},
+]
+# ── v3: 캔들 데이터 ─────────────────────────────────────
+C3=json.load(open('data/idx_candles.json',encoding='utf-8'))['idx']
+TITLE={'^IXIC':'나스닥 차트 분석','^GSPC':'S&P 500 차트 분석','SOXX':'반도체(SOXX) 차트 분석'}
+DATES=open('data/raw_series.txt',encoding='utf-8').readline().split('|')[1].split()
+for c in issue['charts']:
+    c['title']=TITLE[c['sym']]; c['candle']=C3[c['sym']]; c['candle']['dates']=['2026-'+d[:2]+'-'+d[2:] for d in DATES]
+    c.pop('series',None); c.pop('points',None)
+# ── v3: S&P 500 트리맵(시총 비중 상위 100) ───────────────
+SEC={'정보기술':'AAPL MSFT NVDA AVGO AMD MU CSCO PLTR ORCL INTC AMAT TXN LRCX ANET CRWD IBM DELL KLAC APH ADI QCOM CRM ACN MRVL APP STX PANW',
+ '커뮤니케이션':'GOOGL GOOG META NFLX DIS VZ TMUS T','경기소비재':'AMZN TSLA HD MCD TJX LOW SBUX','필수소비재':'WMT COST KO PG PM PEP MO',
+ '헬스케어':'LLY JNJ ABBV UNH MRK TMO AMGN GILD ABT DHR PFE ISRG VRTX MDT MCK BMY SYK','금융':'BRK.B JPM V MA BAC MS GS WFC AXP C BLK SCHW CB PGR SPGI',
+ '에너지':'XOM CVX COP','산업재':'GE RTX CAT GEV UNP DE LMT ETN BA ADP PH UBER','소재':'LIN','유틸리티':'NEE','부동산':'WELL PLD'}
+S2={t:k for k,v in SEC.items() for t in v.split()}
+tm=[]
+for it in open('data/sp500_top100.txt',encoding='utf-8').read().strip().split(';'):
+    t,w,ch,nm=it.split(',',3); tm.append({'t':t,'w':float(w),'ch':float(ch),'s':S2.get(t,'기타')})
+issue['treemap']={'items':tm,'asof':CLOSE,'src':'https://www.slickcharts.com/sp500','note':'S&P 500 시가총액 비중 상위 100개 종목 · 크기=지수 비중, 색=전일 등락'}
+# ── v3: 종목별 미니 차트·이슈 ───────────────────────────
+MINI=json.load(open('data/tickers_mini.json',encoding='utf-8'))
+INTC_A='https://www.finanzen.at/nachrichten/aktien/why-intel-stock-just-dropped-16071647'
+INTC_B='https://www.trefis.com/stock/intc/articles/625805/why-did-intel-stock-fall-7/2026-11-17'
+SPX_A='https://marketchameleon.com/Overview/SPCX/'
+SPX_B='https://www.heygotrade.com/en/news/spacex-spcx-stock-news-november-13-2026/'
+SPX_C='https://fourweekmba.com/spacex-stock/'
+TN={
+ 'NVDA':{'y':[('3분기 매출 1,158억 달러(약 154조 원, +103%), 다음 분기 1,300억 달러(약 173조 원) 제시에도 5일 연속 하락',NV_PR),('증권사 7곳 중 5곳이 전망치를 낮춤',PT_MED)],'t':[('앤트로픽 상장 첫날 AI주 수급 흐름',CNBC_IPO)]},
+ 'SNDK':{'y':[('GF증권 2027년 낸드 공급 과잉 전망 뒤 매도 지속, 3개월 -52%',MEM)],'t':[]},
+ 'SNXX':{'y':[('기초자산 샌디스크 약세(낸드 공급 과잉 우려)를 2배로 반영',MEM)],'t':[]},
+ 'MU':{'y':[('낸드 가격 전망 하향에 메모리 업종 동반 약세',MEM)],'t':[]},
+ 'UNH':{'y':[('메디케어 어드밴티지 감사 강화 규정안에 -10.21%, 다우 하락 1위 요인',CAPP)],'t':[]},
+ 'PANW':{'y':[('정부의 자바 치명적 취약점 경고로 보안주 강세, 장 마감 뒤 실적도 예상 상회',CAPP)],'t':[]},
+ 'CRWD':{'y':[('자바 취약점 경고로 보안주 동반 강세',CAPP)],'t':[]},
+ 'WMT':{'y':[],'t':[('21:00 3분기 실적 발표 · 22:00 컨퍼런스콜 (예상 주당 0.64달러, 약 850원)',WMT_IR)]},
+ 'INTC':{'y':[('엔비디아가 보유한 인텔 지분을 매도한다는 소식에 11/17 장중 -2.3%, 11월 들어 약 18% 하락',INTC_A),('11/16 공시 관련 주주 집단소송 제기',INTC_B)],'t':[]},
+ 'SPCX':{'y':[('11/14 스타십 우주선 첫 발사대 포획 성공(부스터는 추락)',SPX_A),('테슬라와 합병 협상 보도(11/12)',SPX_B)],'t':[('12월 8일 보호예수 해제 예정',SPX_C)]},
+ 'SOXX':{'y':[('AMD·브로드컴 강세로 소폭 반등했지만 거래량은 평균 아래',Y('SOXX'))],'t':[]},
+ 'SOXL':{'y':[('반도체 지수 3배 · 고점 대비 -84%, 변동성 매우 큼',Y('SOXL'))],'t':[]},
+ 'GLD':{'y':[('금리 인상 신호에 금 14개월 최저',GOLD)],'t':[]},
+ 'XOM':{'y':[('유가 하락에 에너지주 약세',AP)],'t':[]},
+ 'CVX':{'y':[('유가 하락에 에너지주 약세',AP)],'t':[]},
+}
+KO.update({'SPCX':'스페이스X','SNXX':'샌디스크 2배(SNXX)'})
+for q in issue['quotes']['list']:
+    m=MINI.get(q['t'])
+    if m: q['mini']={'mn':m[0],'mx':m[1],'b':m[2],'res':m[3],'sup':m[4],'ma5':m[5],'ma20':m[6],'ma50':m[7],'ma200':m[8],'vr':m[9]}
+    n=TN.get(q['t'],{'y':[],'t':[]}); q['news']={'y':[{'t':a,'u':b} for a,b in n['y']],'t':[{'t':a,'u':b} for a,b in n['t']]}
+    q['n']=KO.get(q['t'],q['n'])
+issue['quotes']['default']=['NVDA']
+issue['top']['img']='img/2026-11-19-ipo.jpg'
+
 json.dump(issue, open(f'drafts/{D}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('ok')

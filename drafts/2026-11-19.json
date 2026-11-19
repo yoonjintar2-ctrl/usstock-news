@@ -297,36 +297,6 @@
     "src": "https://finance.yahoo.com/quote/%5EIXIC/history",
     "asof": "2026-11-18 16:00 ET 종가"
    },
-   "points": [
-    {
-     "k": "추세",
-     "t": "20·50·200일선 아래 — 단기·중기·장기 모두 약세 구간"
-    },
-    {
-     "k": "200일선",
-     "t": "25,152 (현재가와 -2.9%) — 위로 다시 올라서는지가 첫 관문"
-    },
-    {
-     "k": "골든·데드크로스",
-     "t": "50일선이 200일선보다 4.3% 위 — 아직 데드크로스 아님 (간격 좁아지는 중)"
-    },
-    {
-     "k": "52주 고점 대비",
-     "t": "-11.9% · 조정 구간(-10% 이상) (고점 27,723, 2026-10-06)"
-    },
-    {
-     "k": "지지 · 저항",
-     "t": "아래 23,989(최근 20일 저점) · 위 25,375(20일선) → 26,779(20일 고점)"
-    },
-    {
-     "k": "거래량",
-     "t": "QQQ 거래량 20일 평균의 0.87배 — 반등이어도 거래가 적어 힘이 약함 · 최근 6개월 최대 거래일 11/05"
-    },
-    {
-     "k": "RSI(14)",
-     "t": "37 — 중립~약세"
-    }
-   ],
    "tags": [
     {
      "t": "20·50·200일선 모두 아래",
@@ -375,7 +345,24 @@
    },
    "ma_step": 3,
    "ma_offset": 2,
-   "series": {
+   "asof": "2026-11-18 종가 · 야후 파이낸스 일봉으로 계산",
+   "title": "나스닥 차트 분석",
+   "candle": {
+    "d0": "2026-06-01",
+    "d1": "2026-11-18",
+    "n": 120,
+    "mn": 23221.1799,
+    "mx": 27722.75,
+    "mas": [
+     5,
+     20,
+     60,
+     120,
+     200
+    ],
+    "b": "0+DQ2s2rLxgA19/R29KxNBkC2t3IzdS1OBsDvdG8zNO4OxwEu72JjMW4Ph0GoKeWmbi3Qh8Ho6tji6i1RSAIgY1tbpWzSCEJdpRrkoqxSyILkZ2Gl4yvTiQMtsS2w5SwUyUNwcmyspyxVycPubqbnqaxWygQtLynuq6yXykRuLykprGyYyoTg5aBhaSvZysUhZR4f5qsbCwVjY1reZOocC0WaoBldYWkcy4XgZN1k4Ghdy8Yk6uSqYieezEZn6qan46bfzIan6yIk5SYgzMbnambpJ2WhjQcm52Lk52XiTUdjJeClZmWizYemKmTqJuYjjcfp66draCbkTkgoqWTlp2bkjohnqaYo6GclDsirK+frKWblj0jpqaQlqGZlz4kfIxzgpmYmT8ljZKBgZWVmUAmkJaKlJKUm0EnjJSLi4uUnEEncnlibIOTnEIoanFgY32SnEMpcnNYYXaRnEMpWmNNXWuPnEQqXWdERV2KnEUqXG5aa12HnEYreH5leWKGnEcsfpt8mG2FnEktosOivoCHnUouxMawsZaJnUwvrLmpsKOJnU0wu8W4xLKKnU8xw8a8v7qMnVEyw8OytriNnVMzw8S7vruOnlU0wM6/ysCRnlc1zc3CxsGUn1k2ycrAwcGXn1o3sLWsrb+Zn1w3s7enr7ybn144qayeobSdn185qKygp66hnmE6oKOYnKaknmI6paqfpaWnnWQ7oqiepKOsnGY8sbysu6iwm2g9usSxtKqzm2k+sbOrsq+0m2s/n6ydoq6zm20/oqugqa+ym25AsMGvvrCznHFBvsC2ubGynXJCu7uwtbGynnREr7Gnq7OxnnZFnqecobKwnnhGrbWtsK+vnnpHnq+cp6utnnxIpaeanKarnX5Jo6mSnKOqnYBJsrettKernoNKurywuqmsn4VLxuDF3LSvoIhM3ube48KyootN4eHO0s20o41OxtTF0tO3pJBP1NzO2dm4pZJQ0tXFy9W5ppRR0NHFytC6p5ZSz9vNzc+9qJhT1dbGzs++qJpU4enc4NDAqZxV4vTi8NfDq55W+f739+HGrJ9Y7vTo9OjKrqFZ7fHZ4OzNrqJa6ezk6u7QsKRb6eri4+vTsaVc3eXc4efWs6Zd192/xN3YtKdesseuxdjZtahfwsOepcrYtqlgs7+wtcHWt6phsL+ntbjUuKpiv8m5xLjTuqtjrrGYnbDRvKxjl6OVmq7NvKxknq6cpqvMvaxlrbupuKzLvq1lu760vKrKvq1mqK2gp6zIvq1nhopufabDva1ohpFtbpu8u6xocn9yeY62uqxpiaCGjoWxuatphIQ7PnCpt6pqTltJTWahtapqWHhXc2ebtKlqZ3VaaGSVsqlrfol3f2GSsqlraoZoeW2Osahse3xdbHOLsKdsXF5GSWuGrqZsSksrPmKAraVtR0o5RFZ6q6Rt",
+    "vb": "QjtPUMJcs3+MZFtYZWJVaGZhXFhSUGM7U0VCNEc5QE1qOkIuVlRTZHCCY1h1QUA9Mzk5Pi40YEZBQUkvKDhDP0UuOUA3ND00RTRGSV9bTkE5O1I1OkZDMjQyYSkxOGZhg0k8P347QTw8S6ZrSXr/imtMWElSVW1X",
+    "vmax": 130677400,
     "dates": [
      "2026-06-01",
      "2026-06-02",
@@ -497,379 +484,8 @@
      "2026-11-16",
      "2026-11-17",
      "2026-11-18"
-    ],
-    "close": [
-     27087.0,
-     27094.0,
-     26854.0,
-     26831.0,
-     25709.0,
-     25930.0,
-     25679.0,
-     25170.0,
-     25810.0,
-     25889.0,
-     26684.0,
-     26376.0,
-     26022.0,
-     26518.0,
-     26167.0,
-     25587.0,
-     25477.0,
-     25359.0,
-     25298.0,
-     25820.0,
-     26214.0,
-     26040.0,
-     25833.0,
-     26121.0,
-     25819.0,
-     25871.0,
-     26207.0,
-     26282.0,
-     25873.0,
-     26107.0,
-     26269.0,
-     25882.0,
-     25520.0,
-     25508.0,
-     25837.0,
-     25691.0,
-     25138.0,
-     24976.0,
-     24932.0,
-     24877.0,
-     24443.0,
-     25122.0,
-     25374.0,
-     25914.0,
-     26585.0,
-     26363.0,
-     26348.0,
-     26691.0,
-     26605.0,
-     26445.0,
-     26588.0,
-     26803.0,
-     26729.0,
-     26645.0,
-     26290.0,
-     26331.0,
-     26067.0,
-     26180.0,
-     25980.0,
-     26151.0,
-     26130.0,
-     26541.0,
-     26402.0,
-     26371.0,
-     26100.0,
-     26218.0,
-     26584.0,
-     26507.0,
-     26421.0,
-     26253.0,
-     26082.0,
-     26333.0,
-     26186.0,
-     25982.0,
-     25978.0,
-     26418.0,
-     26523.0,
-     27122.0,
-     27244.0,
-     26936.0,
-     26939.0,
-     27069.0,
-     26820.0,
-     26798.0,
-     26861.0,
-     26872.0,
-     27191.0,
-     27477.0,
-     27600.0,
-     27539.0,
-     27193.0,
-     27366.0,
-     27246.0,
-     27204.0,
-     26693.0,
-     26713.0,
-     26140.0,
-     26431.0,
-     26425.0,
-     26703.0,
-     26009.0,
-     25955.0,
-     26169.0,
-     26478.0,
-     26550.0,
-     26185.0,
-     25437.0,
-     25164.0,
-     25372.0,
-     25737.0,
-     24315.0,
-     24579.0,
-     25253.0,
-     25066.0,
-     25466.0,
-     25366.0,
-     25136.0,
-     24510.0,
-     24328.0,
-     24430.0
-    ],
-    "vol": [
-     33.9,
-     30.1,
-     40.3,
-     40.8,
-     99.6,
-     47.4,
-     91.9,
-     65.3,
-     71.8,
-     51.2,
-     46.7,
-     45.3,
-     51.7,
-     50.2,
-     43.5,
-     53.4,
-     52.5,
-     49.7,
-     47.1,
-     44.9,
-     42.1,
-     40.8,
-     51.0,
-     30.2,
-     42.5,
-     35.6,
-     33.7,
-     26.4,
-     36.6,
-     29.4,
-     32.6,
-     39.4,
-     54.1,
-     29.7,
-     33.7,
-     23.7,
-     44.0,
-     42.9,
-     42.7,
-     51.4,
-     57.2,
-     66.8,
-     50.5,
-     45.0,
-     59.8,
-     33.5,
-     33.0,
-     31.1,
-     26.2,
-     29.3,
-     29.1,
-     31.6,
-     23.8,
-     26.5,
-     49.0,
-     35.8,
-     33.4,
-     33.4,
-     37.4,
-     23.9,
-     20.4,
-     28.7,
-     34.1,
-     32.2,
-     35.2,
-     23.5,
-     29.4,
-     32.9,
-     28.3,
-     26.8,
-     31.4,
-     26.6,
-     35.2,
-     26.6,
-     35.7,
-     37.3,
-     48.5,
-     46.7,
-     40.1,
-     33.2,
-     29.0,
-     30.3,
-     41.8,
-     27.1,
-     29.8,
-     35.7,
-     34.5,
-     25.6,
-     26.5,
-     25.5,
-     49.7,
-     21.2,
-     25.1,
-     28.7,
-     52.4,
-     49.8,
-     66.9,
-     37.2,
-     30.5,
-     32.5,
-     64.6,
-     30.2,
-     33.1,
-     30.9,
-     30.5,
-     38.3,
-     85.2,
-     54.7,
-     37.5,
-     62.4,
-     130.7,
-     70.7,
-     54.9,
-     38.8,
-     44.9,
-     37.2,
-     42.1,
-     43.6,
-     55.7,
-     44.4
-    ],
-    "ma20": [
-     26432.0,
-     26461.0,
-     26356.0,
-     26356.0,
-     26369.0,
-     26207.0,
-     26024.0,
-     25885.0,
-     25914.0,
-     25984.0,
-     25913.0,
-     25851.0,
-     25797.0,
-     25615.0,
-     25620.0,
-     25673.0,
-     25742.0,
-     25905.0,
-     26006.0,
-     26183.0,
-     26390.0,
-     26381.0,
-     26374.0,
-     26316.0,
-     26240.0,
-     26314.0,
-     26457.0,
-     26526.0,
-     26627.0,
-     26798.0,
-     26959.0,
-     27070.0,
-     26976.0,
-     26862.0,
-     26798.0,
-     26560.0,
-     26215.0,
-     25869.0,
-     25690.0,
-     25375.0
-    ],
-    "ma50": [
-     24596.0,
-     24863.0,
-     25130.0,
-     25395.0,
-     25619.0,
-     25753.0,
-     25848.0,
-     25941.0,
-     26016.0,
-     26097.0,
-     26140.0,
-     26123.0,
-     26049.0,
-     25958.0,
-     25947.0,
-     25942.0,
-     25915.0,
-     25903.0,
-     25930.0,
-     25959.0,
-     25959.0,
-     25967.0,
-     26035.0,
-     26047.0,
-     26054.0,
-     26088.0,
-     26146.0,
-     26221.0,
-     26306.0,
-     26463.0,
-     26600.0,
-     26635.0,
-     26622.0,
-     26599.0,
-     26590.0,
-     26554.0,
-     26497.0,
-     26409.0,
-     26350.0,
-     26232.0
-    ],
-    "ma200": [
-     23274.0,
-     23346.0,
-     23409.0,
-     23480.0,
-     23552.0,
-     23608.0,
-     23666.0,
-     23722.0,
-     23774.0,
-     23826.0,
-     23877.0,
-     23921.0,
-     23954.0,
-     23985.0,
-     24035.0,
-     24090.0,
-     24145.0,
-     24193.0,
-     24230.0,
-     24268.0,
-     24316.0,
-     24360.0,
-     24418.0,
-     24477.0,
-     24522.0,
-     24572.0,
-     24625.0,
-     24674.0,
-     24730.0,
-     24799.0,
-     24856.0,
-     24906.0,
-     24951.0,
-     24992.0,
-     25034.0,
-     25064.0,
-     25093.0,
-     25114.0,
-     25137.0,
-     25152.0
     ]
-   },
-   "asof": "2026-11-18 종가 · 야후 파이낸스 일봉으로 계산"
+   }
   },
   {
    "sym": "^GSPC",
@@ -886,36 +502,6 @@
     "src": "https://finance.yahoo.com/quote/%5EGSPC/history",
     "asof": "2026-11-18 16:00 ET 종가"
    },
-   "points": [
-    {
-     "k": "추세",
-     "t": "20·50·200일선 아래 — 단기·중기·장기 모두 약세 구간"
-    },
-    {
-     "k": "200일선",
-     "t": "7,347 (현재가와 -0.3%) — 위로 다시 올라서는지가 첫 관문"
-    },
-    {
-     "k": "골든·데드크로스",
-     "t": "50일선이 200일선보다 4.1% 위 — 아직 데드크로스 아님 (간격 좁아지는 중)"
-    },
-    {
-     "k": "52주 고점 대비",
-     "t": "-6.6% · 고점 대비 소폭 조정(-10% 이내) (고점 7,845, 2026-10-06)"
-    },
-    {
-     "k": "지지 · 저항",
-     "t": "아래 7,288(최근 20일 저점) · 위 7,559(20일선) → 7,770(20일 고점)"
-    },
-    {
-     "k": "거래량",
-     "t": "SPY 거래량 20일 평균의 1.03배 · 최근 6개월 최대 거래일 11/05"
-    },
-    {
-     "k": "RSI(14)",
-     "t": "37 — 중립~약세"
-    }
-   ],
    "tags": [
     {
      "t": "20·50·200일선 모두 아래",
@@ -964,7 +550,24 @@
    },
    "ma_step": 3,
    "ma_offset": 2,
-   "series": {
+   "asof": "2026-11-18 종가 · 야후 파이낸스 일봉으로 계산",
+   "title": "S&P 500 차트 분석",
+   "candle": {
+    "d0": "2026-06-01",
+    "d1": "2026-11-18",
+    "n": 120,
+    "mn": 6836.4965,
+    "mx": 7844.52,
+    "mas": [
+     5,
+     20,
+     60,
+     120,
+     200
+    ],
+    "b": "vMW3wLWWLR4Av8a8w7qbMR8BwsK0tbyfNCEDq8CrvL2hNyIEsbKGirOiOiMFmJ+Nj6miPSQHmKNli56iQCYIgo1sbI+gQycJcpFqjYafRSgKkZyFloifSSkLq7urtZCgTSsNs7ipqpaiUSwOra+Pk56jVS0PpKqfp6OjWC4Rp6+doKWkXDAShpSBhZyiYDETh5V+g5SgZDIUj5N7g5GeaDMVeIxzgomcbDQWjJmBmIiabzUXmKmYp46ZczYZoq2ao5WXdzcaprGVo5uWezgbqbSnsaSWfjkcq7CiqKiXgTsdoaSTo6eYgzwepbOjsqqahj0fs7upuq6eiT4gs7ipq62giz8hsLarsq+hjUEjubyuubShj0MktrmosLOhkUQlmqeWna2ikkUmpKuYmaqhk0YnpaufqqiilUcop66kp6Sjl0gpk5uIkJ6kmEkqkJ2NkZylmUornqKKkZqlmkssjZuKlZalm0wsk5t4eY2jm00tjJqHl46inE4unqqOpZKinVAvqMOowZyjnlEwyOjI46umoFMy7PHf4MCpoVQz3eTZ3M6rolY14une6NuupFg25+zk5+OxpVo36+ve4eKzplw46urj5uS1qF466vfq8+i4qV879PXt7+m9q2E88PDl5enArGM92t3X2OfDrWU+3uXa3OXFrmY/19rKy93Ir2hA0dnQ09jMsGpB0NLKztPPsGtC1NbN1NLSsG1E0dfP09HWsW9F3OTX4dXasXFG4uza3dfdsnNH2dnR1tnesnVIydDDyNbds3dJydXJ0dbctHlK1ujW5tfctntM5ubb3tfcuH1N3t7R09bbuX9O0NDGytfauoFQv8S7vtPYuoNRytTKz87Wu4ZSw8y+xcnUu4hTw8W6vcXSvIpUwceptMHQvIxVyMzDysPPvY9Wz8/DzcPPvpFX2O7X6srQwJRZ6+7o6tPSwpda6enY29vSw5lb0d7Q297SxJxc3OfY5ePTxZ5d3+DR1d/SxqBe2dnO0trSxqJf19/NzdfSx6Rg0dbF0dXSyKZh4Ofa39TSyadi4fHh7NnTyalj9P70+ODVy6tl8fXq8+jXzKxm7fLh6u3Zza5n7/ju9vHbzq9o9vjy9fPdz7Fp8vbv9PLg0bJr7PDY3u7i0rNs1ufS5e3j07Vt5ejIz+Xj1LZu2uHW1+Dj1bdv1ObS3dvi1rhw4+vc6N3j17lx2NrK0Nni2bpyytDDxtfh2rtzytrK1Nbg2rx02ePU39fh27114+je5dbi27112eLX39nj2752yMquu9fh2r53w9CxstDe2r94tb+zucjb2b95yd7J18Xa2b961NWBgrPU1797iJmGiKnP1b97lLuUtKnM1MB8qrKgrKfI08B9vcy5xaPH08B9tM60vq/F0sB+xcant7nE0sF/q6uOkrLA0cCAkZJyf6m80MCAg4Zxe5q2zr+B",
+    "vb": "WEBoZb5ksnqvdHqIrqReh3RtkHZxX3RnWVlUVVlHWV5/ZkZDcFtUYI+HfnmMW05YUEpDSEBGWVJcT0I4OkZKT1M8WEVbQldcWV54ZYRmRm9ZSlZLfmFeW0k/Ui4mNHFYgk5HQW5EQDo9Up1nQ37/d2ZST0xOjJFp",
+    "vmax": 125892800,
     "dates": [
      "2026-06-01",
      "2026-06-02",
@@ -1086,379 +689,8 @@
      "2026-11-16",
      "2026-11-17",
      "2026-11-18"
-    ],
-    "close": [
-     7600.0,
-     7609.8,
-     7553.7,
-     7584.3,
-     7383.7,
-     7405.7,
-     7386.6,
-     7267.0,
-     7394.3,
-     7431.5,
-     7554.3,
-     7511.4,
-     7420.1,
-     7500.6,
-     7472.8,
-     7365.5,
-     7358.2,
-     7357.5,
-     7354.0,
-     7440.4,
-     7499.4,
-     7483.2,
-     7483.2,
-     7537.4,
-     7503.9,
-     7482.7,
-     7543.6,
-     7575.4,
-     7515.3,
-     7543.6,
-     7572.4,
-     7533.8,
-     7457.7,
-     7443.3,
-     7509.2,
-     7499.0,
-     7408.3,
-     7412.0,
-     7413.2,
-     7428.8,
-     7316.1,
-     7437.6,
-     7489.7,
-     7600.5,
-     7736.5,
-     7723.5,
-     7710.0,
-     7757.6,
-     7753.1,
-     7728.2,
-     7748.5,
-     7799.0,
-     7785.8,
-     7745.1,
-     7691.8,
-     7708.0,
-     7641.2,
-     7674.4,
-     7652.9,
-     7677.3,
-     7675.7,
-     7731.0,
-     7711.8,
-     7686.1,
-     7631.5,
-     7666.6,
-     7747.7,
-     7718.6,
-     7673.5,
-     7636.4,
-     7591.7,
-     7657.0,
-     7620.0,
-     7585.7,
-     7551.8,
-     7637.8,
-     7650.5,
-     7764.7,
-     7764.6,
-     7706.0,
-     7704.1,
-     7743.4,
-     7683.7,
-     7670.8,
-     7651.5,
-     7666.5,
-     7722.7,
-     7774.0,
-     7818.9,
-     7801.8,
-     7765.4,
-     7811.5,
-     7807.2,
-     7805.5,
-     7718.9,
-     7744.1,
-     7659.4,
-     7690.7,
-     7712.6,
-     7757.2,
-     7663.4,
-     7623.7,
-     7676.8,
-     7722.6,
-     7744.0,
-     7720.4,
-     7580.1,
-     7541.4,
-     7568.9,
-     7688.6,
-     7353.7,
-     7376.9,
-     7549.9,
-     7520.9,
-     7619.4,
-     7592.4,
-     7561.7,
-     7416.6,
-     7340.5,
-     7323.6
-    ],
-    "vol": [
-     43.6,
-     31.6,
-     51.4,
-     49.9,
-     94.0,
-     49.3,
-     87.7,
-     60.3,
-     86.3,
-     57.1,
-     60.2,
-     67.1,
-     85.9,
-     80.9,
-     46.6,
-     66.8,
-     57.4,
-     53.9,
-     71.0,
-     58.0,
-     55.6,
-     47.1,
-     57.4,
-     50.7,
-     43.7,
-     43.8,
-     41.4,
-     42.2,
-     44.0,
-     35.1,
-     43.8,
-     46.4,
-     62.7,
-     50.4,
-     34.3,
-     32.8,
-     55.4,
-     44.8,
-     41.5,
-     47.3,
-     70.7,
-     66.8,
-     62.4,
-     59.9,
-     69.2,
-     44.7,
-     38.4,
-     43.6,
-     39.2,
-     36.7,
-     33.2,
-     35.6,
-     31.4,
-     34.4,
-     43.9,
-     40.3,
-     45.5,
-     39.2,
-     32.4,
-     27.4,
-     28.8,
-     34.6,
-     36.7,
-     38.8,
-     41.1,
-     29.6,
-     43.5,
-     34.1,
-     44.7,
-     32.8,
-     42.7,
-     45.5,
-     44.0,
-     46.2,
-     59.2,
-     49.7,
-     65.4,
-     50.5,
-     34.8,
-     54.9,
-     44.0,
-     36.7,
-     42.7,
-     36.9,
-     62.1,
-     47.7,
-     46.3,
-     44.8,
-     36.1,
-     31.0,
-     40.4,
-     22.6,
-     18.7,
-     25.8,
-     55.7,
-     43.3,
-     64.4,
-     38.7,
-     35.0,
-     31.9,
-     54.1,
-     33.4,
-     31.7,
-     28.6,
-     30.1,
-     40.3,
-     77.7,
-     50.8,
-     32.9,
-     62.1,
-     125.9,
-     59.0,
-     50.3,
-     40.7,
-     39.2,
-     37.5,
-     38.7,
-     69.2,
-     71.6,
-     51.6
-    ],
-    "ma20": [
-     7466.2,
-     7479.8,
-     7469.3,
-     7478.6,
-     7486.6,
-     7465.0,
-     7442.5,
-     7430.3,
-     7448.0,
-     7475.1,
-     7479.0,
-     7484.7,
-     7492.8,
-     7480.8,
-     7495.9,
-     7525.4,
-     7555.3,
-     7600.1,
-     7631.3,
-     7668.8,
-     7712.6,
-     7708.8,
-     7704.7,
-     7685.2,
-     7661.9,
-     7663.4,
-     7671.9,
-     7670.3,
-     7670.1,
-     7688.4,
-     7714.1,
-     7738.8,
-     7732.9,
-     7727.5,
-     7734.3,
-     7718.3,
-     7679.5,
-     7630.7,
-     7613.3,
-     7559.3
-    ],
-    "ma50": [
-     7119.6,
-     7174.5,
-     7230.7,
-     7285.2,
-     7328.6,
-     7356.8,
-     7378.9,
-     7402.7,
-     7424.4,
-     7447.4,
-     7464.9,
-     7471.9,
-     7471.4,
-     7468.8,
-     7480.7,
-     7494.2,
-     7504.0,
-     7515.6,
-     7532.9,
-     7551.1,
-     7563.8,
-     7576.7,
-     7598.1,
-     7607.3,
-     7612.0,
-     7621.0,
-     7631.9,
-     7645.2,
-     7657.6,
-     7680.5,
-     7703.3,
-     7707.4,
-     7704.3,
-     7699.6,
-     7698.1,
-     7694.4,
-     7686.5,
-     7672.9,
-     7667.5,
-     7648.5
-    ],
-    "ma200": [
-     6847.7,
-     6863.3,
-     6877.2,
-     6892.4,
-     6907.8,
-     6920.8,
-     6934.1,
-     6947.6,
-     6960.7,
-     6974.0,
-     6987.2,
-     6998.9,
-     7009.2,
-     7019.9,
-     7034.2,
-     7050.0,
-     7065.3,
-     7079.2,
-     7091.6,
-     7104.5,
-     7118.7,
-     7131.5,
-     7147.0,
-     7162.6,
-     7174.9,
-     7187.7,
-     7200.7,
-     7213.3,
-     7225.8,
-     7241.3,
-     7255.1,
-     7267.6,
-     7279.9,
-     7291.3,
-     7302.7,
-     7312.7,
-     7322.7,
-     7331.1,
-     7340.3,
-     7346.6
     ]
-   },
-   "asof": "2026-11-18 종가 · 야후 파이낸스 일봉으로 계산"
+   }
   },
   {
    "sym": "SOXX",
@@ -1475,36 +707,6 @@
     "src": "https://finance.yahoo.com/quote/SOXX/history",
     "asof": "2026-11-18 16:00 ET 종가"
    },
-   "points": [
-    {
-     "k": "추세",
-     "t": "20·50·200일선 아래 — 단기·중기·장기 모두 약세 구간"
-    },
-    {
-     "k": "200일선",
-     "t": "160.77 (현재가와 -11.8%) — 위로 다시 올라서는지가 첫 관문"
-    },
-    {
-     "k": "골든·데드크로스",
-     "t": "50일선이 200일선보다 5.6% 위 — 아직 데드크로스 아님 (간격 좁아지는 중)"
-    },
-    {
-     "k": "52주 고점 대비",
-     "t": "-35.1% · 약세장(-20% 이상) (고점 218.65, 2026-06-22)"
-    },
-    {
-     "k": "지지 · 저항",
-     "t": "아래 130.75(최근 20일 저점) · 위 152.85(20일선) → 174.64(20일 고점)"
-    },
-    {
-     "k": "거래량",
-     "t": "SOXX 거래량 20일 평균의 0.82배 — 반등이어도 거래가 적어 힘이 약함 · 최근 6개월 최대 거래일 06/09"
-    },
-    {
-     "k": "RSI(14)",
-     "t": "38 — 중립~약세"
-    }
-   ],
    "tags": [
     {
      "t": "20·50·200일선 모두 아래",
@@ -1553,7 +755,24 @@
    },
    "ma_step": 3,
    "ma_offset": 2,
-   "series": {
+   "asof": "2026-11-18 종가 · 야후 파이낸스 일봉으로 계산",
+   "title": "반도체(SOXX) 차트 분석",
+   "candle": {
+    "d0": "2026-06-01",
+    "d1": "2026-11-18",
+    "n": 120,
+    "mn": 112.6231,
+    "mx": 218.65,
+    "mas": [
+     5,
+     20,
+     60,
+     120,
+     200
+    ],
+    "b": "tMCvu7iVRSEAxdbD1b6bSSMB3uDQ3sagTSUDx9q/08ykUCcEwMKhocemUygFucKyu8eoVioHxsiTs8CpWSwIq7uho7SqXC0Jrsitx7KtXy8LxdPAzruvYzEM4+ng6MS0ZjMN5OnKysi4ajUP2+PQ0dK8bTcQ5vXm8drBcToS/P70/eTGdTwT1+HQ1ODJeT4V1tnH0+HKfUAW7/DQ5eXMgUIY0tbIyd3NhEQZzN673dfPiEYb3vXe8t3SjEgc3+TQ0dzSkEoe0titttPQkksfxNDCw9LPlU0gq7Ceq8jPmE4hpbWks7vPmlAiyc3Bw7jQnFIku8a3wrvRn1MltLeqrLbQoVUmwsKyuLnPo1Ynvb6grrjMpVgooaaWmrDJplkpiJyAk6bGqFoqnaGUlaHCqVsrqa6irJ++ql0toLKgrp+8rF4uprCkqqK6rV8vpaiTl6O2rmAwnJ2BjqKzr2Exf4Bye5iur2IxeH5lZoqnr2Mye4l4hYKjsGQzl5yDhX+hsGU0e4p2iH2esGY1maaXo4WdsWg2n6eZmpCcsWk3lKOPm5SasWo4pqiapJqZsWs5pqeZmZ6YsW06oKGanZ2WsW47rK2np5+Wsm88p7OnqqKXs3A9qaykqqOYs3I+sLausaiZtHM/n6OUm6iYtHRAnqCNkaOXtHVAkJaOk5+Ws3ZBmJmNkZqWs3dCi4uBhpGVsnhDjpKJjY+WsXpEi4+Jjo6YsHtFlpiPlo6Zr3xGkpSHiI2Zrn1GiY2Hio2ZrX5Hg4V+gouXrH9IgIV8g4mWq4FJf4R5g4WVqoJKiZKHkYeUqoNLmp2WmIqUqYRMlZ6Vm4+UqIVNkJONj5GTp4dOlpqSl5WSpohPf4R+f5KQpYlQhIV/gY2No4pRh4p/g4iMoYtRj5KNkYmMoIxSlJyTnIqNn45TpbOjsZOOno9UrLysvJ+RnpFVuruvtqmTnZNWrbestrGVnJRXub63vLeXnJZYuLqrsreZnJdZub22t7ebm5hauLu1uLeenJpbucG1vrmhnJtcys7HyLuknJxex8nDycCnnJ1fzM7IycOqnJ9gv8S9xMasnaBhvMGutMStnaFiurqvsb+vnaJjrKykpbixnaNkmqWXpbCynqNlm52PkaaznaRmgo9+jZ+znaRnhYl8fJSxnKRoioyCg42vnKVofYl5gYasm6VpiYyEioWqnKVqeX1rbn6mnKZrbXZscHyjm6ZrdH9xe3qgm6ZsgYyAinyem6ZtjpWLk36cm6Zti5CHjYSZm6ZucXRia4OVmqZvb3FbXH2PmaVvZmxjZnaKmKVwYGlTWmqFl6RwSUsrLld+laNwQUIzOU14k6NwPlU9Ukt0kaJxS1lJUUdwkKJxYm5cZkpuj6JyW2xaZVVsjqFyYWRNWFtqjaBySUxERVhnjJ9zSUk4RVZki55zS0w/Rk9gip1z",
+    "vb": "SU5Zd+iF/62AZ1V0XWRRhGCEcnNpaKhXgEtoPVZNamuiRGlBRXKMm8O2iGtxZFA3W0tQPi08aFdBQVFDLV5YQVQ8Q2BcQ0U7dT5XR0JTQmgzMUw1Lz9HLC40bDRLWHGtmGFqV5xaYFpXQ8NwirbqzYuBsrWmgYhz",
+    "vmax": 73644300,
     "dates": [
      "2026-06-01",
      "2026-06-02",
@@ -1675,379 +894,8 @@
      "2026-11-16",
      "2026-11-17",
      "2026-11-18"
-    ],
-    "close": [
-     190.64,
-     201.67,
-     205.23,
-     200.91,
-     179.92,
-     190.48,
-     187.38,
-     180.5,
-     195.64,
-     198.75,
-     209.48,
-     197.08,
-     199.91,
-     213.15,
-     218.34,
-     201.13,
-     200.5,
-     208.4,
-     196.65,
-     204.78,
-     213.59,
-     199.9,
-     188.77,
-     193.84,
-     183.9,
-     187.34,
-     193.9,
-     193.78,
-     184.54,
-     189.31,
-     185.09,
-     176.83,
-     173.94,
-     174.71,
-     184.23,
-     185.17,
-     183.75,
-     175.67,
-     172.08,
-     163.82,
-     155.0,
-     168.18,
-     168.3,
-     169.23,
-     180.74,
-     176.9,
-     177.51,
-     181.09,
-     176.46,
-     178.07,
-     182.2,
-     183.58,
-     183.47,
-     186.37,
-     177.13,
-     173.22,
-     174.12,
-     173.35,
-     168.73,
-     171.35,
-     171.8,
-     175.14,
-     169.54,
-     170.35,
-     166.77,
-     167.15,
-     167.4,
-     173.29,
-     176.13,
-     177.33,
-     172.48,
-     175.69,
-     165.8,
-     166.28,
-     167.35,
-     173.03,
-     177.69,
-     186.45,
-     190.93,
-     188.57,
-     188.69,
-     190.89,
-     186.93,
-     189.15,
-     189.55,
-     192.11,
-     196.3,
-     196.5,
-     196.48,
-     194.27,
-     187.76,
-     186.47,
-     181.62,
-     181.3,
-     173.14,
-     171.57,
-     164.46,
-     167.31,
-     166.67,
-     170.12,
-     158.56,
-     159.4,
-     163.94,
-     170.35,
-     173.98,
-     171.29,
-     157.17,
-     151.22,
-     155.0,
-     150.14,
-     131.9,
-     136.53,
-     146.76,
-     146.59,
-     155.4,
-     154.99,
-     149.3,
-     141.22,
-     141.46,
-     141.85
-    ],
-    "vol": [
-     21.0,
-     22.4,
-     25.7,
-     34.3,
-     67.1,
-     38.5,
-     73.6,
-     50.0,
-     36.9,
-     29.8,
-     24.5,
-     33.6,
-     26.8,
-     29.0,
-     23.3,
-     38.1,
-     27.7,
-     38.1,
-     33.1,
-     33.1,
-     30.3,
-     29.9,
-     48.5,
-     25.3,
-     36.9,
-     21.6,
-     30.1,
-     17.6,
-     24.9,
-     22.1,
-     30.6,
-     31.0,
-     46.7,
-     19.6,
-     30.2,
-     18.8,
-     20.1,
-     32.9,
-     40.4,
-     44.7,
-     56.5,
-     52.4,
-     39.3,
-     30.9,
-     32.7,
-     28.9,
-     23.0,
-     15.8,
-     26.3,
-     21.5,
-     23.2,
-     17.8,
-     12.9,
-     17.2,
-     30.0,
-     25.2,
-     18.8,
-     18.8,
-     23.5,
-     19.3,
-     13.0,
-     27.1,
-     25.4,
-     18.7,
-     24.1,
-     17.4,
-     19.3,
-     27.7,
-     26.5,
-     19.3,
-     20.0,
-     17.0,
-     33.8,
-     18.0,
-     25.1,
-     20.4,
-     19.0,
-     23.9,
-     19.0,
-     30.0,
-     14.8,
-     14.2,
-     22.0,
-     15.4,
-     13.4,
-     18.3,
-     20.6,
-     12.7,
-     13.3,
-     14.9,
-     31.1,
-     15.1,
-     21.6,
-     25.4,
-     32.7,
-     50.0,
-     44.0,
-     28.1,
-     30.7,
-     25.1,
-     45.1,
-     25.9,
-     27.8,
-     26.1,
-     25.2,
-     19.4,
-     56.4,
-     32.4,
-     39.9,
-     52.7,
-     67.7,
-     59.3,
-     40.1,
-     37.2,
-     51.4,
-     52.4,
-     47.9,
-     37.2,
-     39.2,
-     33.3
-    ],
-    "ma20": [
-     179.59,
-     182.83,
-     184.72,
-     189.41,
-     195.29,
-     197.93,
-     200.17,
-     198.91,
-     199.28,
-     198.91,
-     195.38,
-     190.96,
-     187.26,
-     180.69,
-     178.28,
-     176.3,
-     175.19,
-     176.59,
-     175.16,
-     175.25,
-     176.5,
-     175.37,
-     174.46,
-     173.54,
-     171.16,
-     171.99,
-     174.8,
-     177.4,
-     181.23,
-     184.26,
-     186.35,
-     187.32,
-     184.49,
-     180.48,
-     177.62,
-     172.35,
-     165.28,
-     159.31,
-     156.83,
-     152.85
-    ],
-    "ma50": [
-     151.1,
-     155.76,
-     160.62,
-     165.91,
-     171.22,
-     175.55,
-     179.69,
-     182.88,
-     185.13,
-     187.48,
-     188.79,
-     189.54,
-     189.66,
-     189.17,
-     189.26,
-     188.82,
-     188.15,
-     187.07,
-     186.4,
-     185.17,
-     183.37,
-     180.8,
-     179.03,
-     177.17,
-     175.83,
-     175.08,
-     175.26,
-     176.09,
-     176.59,
-     178.1,
-     179.39,
-     179.37,
-     178.64,
-     177.52,
-     176.75,
-     175.93,
-     174.43,
-     172.73,
-     171.9,
-     169.85
-    ],
-    "ma200": [
-     113.82,
-     115.45,
-     117.03,
-     118.8,
-     120.74,
-     122.56,
-     124.37,
-     126.0,
-     127.5,
-     128.99,
-     130.33,
-     131.67,
-     132.91,
-     133.92,
-     135.09,
-     136.32,
-     137.56,
-     138.82,
-     139.9,
-     140.95,
-     142.05,
-     143.09,
-     144.26,
-     145.52,
-     146.59,
-     147.78,
-     149.08,
-     150.35,
-     151.72,
-     153.2,
-     154.46,
-     155.56,
-     156.52,
-     157.35,
-     158.26,
-     158.98,
-     159.45,
-     159.88,
-     160.39,
-     160.77
     ]
-   },
-   "asof": "2026-11-18 종가 · 야후 파이낸스 일봉으로 계산"
+   }
   }
  ],
  "chart_summary": "세 지수 모두 **20·50·200일선 아래**. S&P 500은 **200일선(7,347)까지 0.3%** 남았고, 나스닥·SOXX 반등은 **거래량이 평균보다 적었습니다**.",
@@ -2293,75 +1141,67 @@
  },
  "schedule": [
   {
-   "kst": "장 전",
+   "kst": "19:30",
    "type": "실적",
-   "name": "월마트 3분기 실적 (예상 주당 0.64달러, 약 850원)",
-   "why": "미국 소비가 버티는지 보는 대표 실적. 연말 쇼핑 시즌 전망이 핵심입니다.",
+   "name": "알리바바 9월 분기 실적 발표",
    "star": 3,
-   "src": "https://admiralmarkets.com/analytics/traders-blog/walmart-earnings-preview-q3-fiscal-2027"
+   "why": "중국 소비와 클라우드·AI 투자 흐름. 중국 주식(ADR) 분위기를 가릅니다. 컨퍼런스콜은 21:00.",
+   "src": "https://investingnews.com/alibaba-group-will-announce-september-quarter-2026-results-on-november-19-2026/"
   },
   {
-   "kst": "장 전",
+   "kst": "21:00",
    "type": "실적",
-   "name": "알리바바 · 넷이즈 실적",
-   "why": "중국 소비와 AI 투자 분위기. 중국 주식(ADR) 흐름을 가릅니다.",
-   "star": 2,
-   "src": "https://www.schwab.com/learn/story/stock-market-update-open"
-  },
-  {
-   "kst": "22:00",
-   "type": "실적",
-   "name": "월마트 컨퍼런스콜",
-   "why": "관세와 가격 인상, 소비자 지갑 사정에 대한 언급을 봅니다.",
-   "star": 2,
-   "src": "https://admiralmarkets.com/analytics/traders-blog/walmart-earnings-preview-q3-fiscal-2027"
+   "name": "월마트 3분기 실적 발표",
+   "star": 5,
+   "why": "미국 소비가 버티는지 보는 대표 실적. 주당 예상 0.64달러(약 850원), 연말 쇼핑 시즌 전망이 핵심입니다. 컨퍼런스콜은 22:00.",
+   "src": "https://finviz.com/news/421667/walmart-to-host-third-quarter-earnings-conference-call-november-19-2026"
   },
   {
    "kst": "22:30",
    "type": "지표",
-   "name": "신규 실업수당 청구 (예상 19.6만, 이전 20만)",
-   "why": "예상보다 낮으면 고용이 탄탄하다는 뜻이라 12월 금리 인상 압력이 커집니다.",
-   "star": 3,
+   "name": "신규 실업수당 청구 (예상 19.6만)",
+   "star": 4,
+   "why": "예상보다 낮으면 고용이 탄탄하다는 뜻이라 12월 금리 인상 압력이 커집니다. 이전 20만.",
    "src": "https://finviz.com/calendar/economic"
   },
   {
    "kst": "22:30",
    "type": "지표",
-   "name": "11월 필라델피아 연준 제조업지수 (예상 19.2, 이전 20.9)",
-   "why": "제조업 경기와 함께 가격 항목으로 물가 압력을 봅니다.",
-   "star": 2,
+   "name": "11월 필라델피아 연준 제조업지수",
+   "star": 3,
+   "why": "제조업 경기와 함께 가격 항목으로 물가 압력을 봅니다. 예상 19.2, 이전 20.9.",
    "src": "https://finviz.com/calendar/economic"
   },
   {
    "kst": "23:30",
    "type": "개장",
    "name": "뉴욕 정규장 개장 · 앤트로픽(ANT) 첫 거래",
-   "why": "첫 거래가 공모가 83달러(약 11만 원) 위인지, AI주로 돈이 몰리는지 빠지는지.",
-   "star": 3,
+   "star": 5,
+   "why": "첫 거래가 공모가 83달러(약 11만 원) 위인지, AI주로 돈이 몰리는지 빠지는지. IPO 첫 거래는 보통 개장 뒤 몇 시간 안에 시작됩니다.",
    "src": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
   },
   {
    "kst": "00:00",
    "type": "지표",
    "name": "10월 경기선행지수",
+   "star": 2,
    "why": "경기 둔화 신호를 보는 지표. 시장 영향은 작은 편입니다.",
-   "star": 1,
    "src": "https://www.schwab.com/learn/story/stock-market-update-open"
   },
   {
-   "kst": "06:00 뒤",
+   "kst": "06:00~",
    "type": "실적",
    "name": "인튜이트 · 로스스토어 실적 (장 마감 후)",
-   "why": "AI 소프트웨어(인튜이트)와 할인 소매(로스) 실적, 시간외 반응.",
-   "star": 2,
+   "star": 3,
+   "why": "AI 소프트웨어(인튜이트)와 할인 소매(로스) 실적. 시간외 반응을 봅니다.",
    "src": "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-11-16/"
   },
   {
    "kst": "내일",
    "type": "지표",
-   "name": "미시간대 소비자심리 확정치 · 리사 쿡 연준 이사 연설",
+   "name": "미시간대 소비자심리 확정치 · 쿡 연준 이사 연설",
+   "star": 3,
    "why": "소비자 기대 인플레이션과 연준 인사 발언으로 금리 경로 단서를 봅니다.",
-   "star": 2,
    "src": "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-11-16/"
   }
  ],
@@ -2556,12 +1396,7 @@
   "src": "https://finance.yahoo.com",
   "fx": 1330.28,
   "default": [
-   "NVDA",
-   "SNDK",
-   "MU",
-   "UNH",
-   "PANW",
-   "AMD"
+   "NVDA"
   ],
   "list": [
    {
@@ -2576,7 +1411,23 @@
     "a50": true,
     "a200": true,
     "rsi": 57,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 325.33,
+     "mx": 360.83,
+     "b": "aH9gZmWPYYaNpXqkq76ToYaccYWAoXucm52DhaO7nqmaq0GLfYVLXQJCAC910nCuzdh4h2CTXXqNwoy2u82Yp67crNrp9dHU6v/b3uTku8XG2K+/v9+8ww==",
+     "res": 360.83,
+     "sup": 325.33,
+     "ma5": 353.66,
+     "ma20": 347.69,
+     "ma50": 341.15,
+     "ma200": 302.54,
+     "vr": 0.71
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "ADBE",
@@ -2590,7 +1441,23 @@
     "a50": false,
     "a200": false,
     "rsi": 35,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 225.06,
+     "mx": 272.1,
+     "b": "hqx/rKaxlaOz/6z37/zM0s3QnbajrHt+bYpohm2AWX2aroGIh6WAj4GBVnJ+rHJ/ipNjdExjQE1DVDxCRUUlPzlTNURLVC5JU2VGYnKOYHJhZS85MTYABg==",
+     "res": 272.1,
+     "sup": 225.06,
+     "ma5": 237.87,
+     "ma20": 246.11,
+     "ma50": 244.97,
+     "ma200": 246.91,
+     "vr": 1.02
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "AMD",
@@ -2604,7 +1471,23 @@
     "a50": false,
     "a200": true,
     "rsi": 50,
-    "why": "AI 칩주 가운데 강세"
+    "why": "AI 칩주 가운데 강세",
+    "mini": {
+     "mn": 402.1,
+     "mx": 594,
+     "b": "qsKjsL/OtMiiqoaNkKKNmKCvlay317XS4+vT6tXm09qNnXiIkJNVVmh/X21ulmNzQ0gAAzhNKT5flliNhrZ7lrvcoMje/8vz2+Gdr4elhIiSkmiHj618qg==",
+     "res": 594,
+     "sup": 402.1,
+     "ma5": 531.44,
+     "ma20": 514.64,
+     "ma50": 555.22,
+     "ma200": 427.18,
+     "vr": 0.92
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "AMZN",
@@ -2618,7 +1501,23 @@
     "a50": true,
     "a200": true,
     "rsi": 57,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 229.36,
+     "mx": 275.34,
+     "b": "wcisubnCpregoWd1bHNfZ3B3Y211jGuEg5B9jGJuQlASRAA9TIhIWmuAXHbF6r/L6fN/q6nBoqbe/9DQzPHM5vX8yczW9dLT3+LAz7e6mJ2cqYmeqdin1Q==",
+     "res": 275.34,
+     "sup": 229.36,
+     "ma5": 263.5,
+     "ma20": 257.13,
+     "ma50": 255.12,
+     "ma200": 244.91,
+     "vr": 0.82
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "ARM",
@@ -2632,7 +1531,23 @@
     "a50": false,
     "a200": false,
     "rsi": 40,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 163.13,
+     "mx": 237.88,
+     "b": "0tu5xtPhwNi4u5qgorGboaXVo83Q3cnZ6P/e+Nrr0uCVnHqSlpZxc4GVfoaFnltiHisADDAxFicvXChPQFArP2KXVoldjlx9cnw7XTtAJyk1SiJFV2E9Qw==",
+     "res": 237.88,
+     "sup": 163.13,
+     "ma5": 186.3,
+     "ma20": 198.81,
+     "ma50": 243.41,
+     "ma200": 233.94,
+     "vr": 0.74
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "ASML",
@@ -2646,7 +1561,23 @@
     "a50": false,
     "a200": false,
     "rsi": 36,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 1351.8,
+     "mx": 1690.1,
+     "b": "1OTF0vj96vXM0Jqdlq2VprLErrTI3LrW5vLf6ub/4fSywoqhqrx9g5ypk5d5iGBtPkUCBEdIKzdeg1h6c5JqdpGgfYpyh2duZnVTbEBHJykpKwAYIy0MIQ==",
+     "res": 1690.1,
+     "sup": 1351.8,
+     "ma5": 1435.5,
+     "ma20": 1517.6,
+     "ma50": 1640,
+     "ma200": 1601.8,
+     "vr": 0.76
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "ASTS",
@@ -2660,7 +1591,23 @@
     "a50": false,
     "a200": false,
     "rsi": 30,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 25.16,
+     "mx": 44.848,
+     "b": "1d+zz9fjyMyzxqSwqcKWvb3VsLm97brazeK/3tb/1ejO37bNztCNkZmvlJukuH6He4AxQUZoH11sqVyYdZdYbn6YbpR8knh5cXlQYFRZKSwrNRgfJiYABA==",
+     "res": 44.848,
+     "sup": 25.16,
+     "ma5": 29.752,
+     "ma20": 35.695,
+     "ma50": 47.518,
+     "ma200": 72.366,
+     "vr": 1.29
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "AVGO",
@@ -2674,7 +1621,23 @@
     "a50": true,
     "a200": false,
     "rsi": 55,
-    "why": "AI 칩주 가운데 강세"
+    "why": "AI 칩주 가운데 강세",
+    "mini": {
+     "mn": 289.77,
+     "mx": 369.82,
+     "b": "jaSDjpqeh5l1g2RrZXlhZm+Ha36gspanvciuxqa0nLCChl50e4tmZ32SdYd2jWZyRk0BBkRFAAwxai5fVo9WhsDWrrHW/8/u1duZtoiZeYuSrYGlvNeizQ==",
+     "res": 369.82,
+     "sup": 289.77,
+     "ma5": 348.08,
+     "ma20": 332.07,
+     "ma50": 344.15,
+     "ma200": 367.66,
+     "vr": 0.93
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "BA",
@@ -2688,7 +1651,23 @@
     "a50": false,
     "a200": false,
     "rsi": 30,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 161.75,
+     "mx": 193.28,
+     "b": "6frg6PP/3ffx/srRw92n19bixdew0y40MkQaLDVoMFhMYkZPXX5Zbm93XV17jW97en4+V1NnQl5+fjpWTWZHXllqVGdfbE1PT1E/T0VHGBwaNA0RDhcACQ==",
+     "res": 193.19,
+     "sup": 161.75,
+     "ma5": 167.02,
+     "ma20": 173.54,
+     "ma50": 186.07,
+     "ma200": 212.29,
+     "vr": 0.57
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "BAC",
@@ -2702,7 +1681,23 @@
     "a50": false,
     "a200": false,
     "rsi": 35,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 48.74,
+     "mx": 53.03,
+     "b": "VphLcYyTanllk1eLdoJdbHakZmqDjGhzgJNvfbLEjY+Imz5LZmcqMSVMGjeWtHCs6P89PTBmIChOhztsf4plc3+BX3NygmFpgIlkiH2ANVA/VBQqGy0ACg==",
+     "res": 53.03,
+     "sup": 48.74,
+     "ma5": 49.992,
+     "ma20": 50.337,
+     "ma50": 53.285,
+     "ma200": 54.79,
+     "vr": 1.18
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "BRK-B",
@@ -2716,7 +1711,23 @@
     "a50": true,
     "a200": true,
     "rsi": 61,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 533.5,
+     "mx": 596.92,
+     "b": "Ax4AGRgoFhYqQiI2MDweIyM+Ij06PSYmHi4XHC89ISJCRCMkLmEsW1NpSl+EvnW3zNSXnHOnaZaTsnSoqdWjyK/drtzw/9/i7fjk7/f73e/j69PWx8qfpQ==",
+     "res": 596.92,
+     "sup": 539.23,
+     "ma5": 587.4,
+     "ma20": 566.24,
+     "ma50": 534.37,
+     "ma200": 501.9,
+     "vr": 1.04
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "COIN",
@@ -2730,7 +1741,23 @@
     "a50": false,
     "a200": false,
     "rsi": 26,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 109.94,
+     "mx": 180.6,
+     "b": "y+/K3Ov/4PLa5s3V0tjBxbO+pLO2u625qr6pvazCrLeKi2F5bnpcZWaSZYB0nXOWjZZVYWBqTlpNbExeUV9GUFRoU19IW0dLP0s4QCIvGyQeKg8SExUAAg==",
+     "res": 173.64,
+     "sup": 109.94,
+     "ma5": 120.74,
+     "ma20": 141.76,
+     "ma50": 166.53,
+     "ma200": 172.97,
+     "vr": 1.11
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "COST",
@@ -2744,7 +1771,23 @@
     "a50": true,
     "a200": true,
     "rsi": 69,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 980.32,
+     "mx": 1123.7,
+     "b": "IygTGRMjDiAwRSVDP0koKSU+ISwnKBAVBg8ABBcdCBw4SS85P289a1phRUVlglZ2obSQmHSTb4J2m3SZlZ2JmbLHor/O2sHHy+bI4Onz3u3o/+Tn3O3Ozw==",
+     "res": 1123.7,
+     "sup": 980.32,
+     "ma5": 1103.8,
+     "ma20": 1048.7,
+     "ma50": 978.95,
+     "ma200": 977.85,
+     "vr": 0.9
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "CRM",
@@ -2758,7 +1801,23 @@
     "a50": false,
     "a200": false,
     "rsi": 24,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 186.45,
+     "mx": 252.42,
+     "b": "v9++2NTfxNbh/9n38PPY8O353Ozj7tHSxeHD16m4layuup+lp7SWmouPbYqkuZWdpaaCi3V9X2lteGpubW5XaG57aXp8f2p4goJxeXp/aW5XXxsfGhsADw==",
+     "res": 252.42,
+     "sup": 186.45,
+     "ma5": 207.03,
+     "ma20": 224.13,
+     "ma50": 232.22,
+     "ma200": 197.89,
+     "vr": 1.46
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "CRWD",
@@ -2772,7 +1831,28 @@
     "a50": false,
     "a200": true,
     "rsi": 50,
-    "why": "보안주 동반 강세"
+    "why": "보안주 동반 강세",
+    "mini": {
+     "mn": 213.22,
+     "mx": 272.29,
+     "b": "OEUjPUyAQ3F/j19rccFdv8bdsNLL+svt9//a57Hvn8/P34qhrK50e4ake4iAq2h4UVEAEUtLDRAdTg1CMkoWNmBtQUQ7SxVIY2MaOi4xFisvNwIbLnQXZw==",
+     "res": 272.29,
+     "sup": 213.22,
+     "ma5": 227.26,
+     "ma20": 239.24,
+     "ma50": 245.9,
+     "ma200": 174.82,
+     "vr": 1.32
+    },
+    "news": {
+     "y": [
+      {
+       "t": "자바 취약점 경고로 보안주 동반 강세",
+       "u": "https://cappnotes.substack.com/p/closing-look-wednesday-november-18"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "CVX",
@@ -2786,7 +1866,28 @@
     "a50": false,
     "a200": true,
     "rsi": 36,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 205.73,
+     "mx": 236.48,
+     "b": "rLODpqe9ma/AwY6uuui55NfrztrR3La7wNa7w9ziwdXr/+T33uS0t521m6KMj0pddos5PDBOJzkqNxkqEzMCLjdAKz9NZkZYaHZadXd3Wl9ick9WOUEAAQ==",
+     "res": 236.48,
+     "sup": 205.73,
+     "ma5": 215.08,
+     "ma20": 221.13,
+     "ma50": 215.62,
+     "ma200": 196.35,
+     "vr": 1.25
+    },
+    "news": {
+     "y": [
+      {
+       "t": "유가 하락에 에너지주 약세",
+       "u": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-wednesday-11-18-2026"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "DIS",
@@ -2800,7 +1901,23 @@
     "a50": true,
     "a200": true,
     "rsi": 70,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 108.75,
+     "mx": 123.37,
+     "b": "GTYZMzE3GDYwUTBMPUoyQjpAFh0aHQwaDhgABRYoDiY2QSMmNVg1TEpkOF+ExISywtKNlGOeWIyguZS1rbuXtqbBpr68zKKlqbuhsr29na6m9IGPqv+K7Q==",
+     "res": 123.37,
+     "sup": 108.75,
+     "ma5": 119.04,
+     "ma20": 115.53,
+     "ma50": 110.07,
+     "ma200": 103.94,
+     "vr": 2.02
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "GLD",
@@ -2814,7 +1931,28 @@
     "a50": false,
     "a200": false,
     "rsi": 31,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 340.76,
+     "mx": 380.88,
+     "b": "7P/o6vT34fPQ0q+zs7WWpKm1nqywyrDIwtGz0LK5p7GEhVhfhZJ/hYOGdHa3zbXK6vPQ3bbStcru+972w8astra2mZtrbE1aY2lXXVVjR01TZEhKIyMAAw==",
+     "res": 380.18,
+     "sup": 340.76,
+     "ma5": 351.39,
+     "ma20": 364.3,
+     "ma50": 377.64,
+     "ma200": 407.02,
+     "vr": 1.34
+    },
+    "news": {
+     "y": [
+      {
+       "t": "금리 인상 신호에 금 14개월 최저",
+       "u": "https://fxstreet.com/news/gold-falls-to-14-month-low-below-3-750-on-hawkish-fed-rhetoric-202611182327"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "GOOGL",
@@ -2828,7 +1966,23 @@
     "a50": false,
     "a200": false,
     "rsi": 35,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 276.92,
+     "mx": 344.77,
+     "b": "+//n7uLjydnJzamyprOjo6WnlZaXsJaksLqstCUrDRoQFwALFSYHCAwSAQwZShgtQEYBFR4zHR45SSoqLTkhJzJHLz4/YD9SYmk+Rz9BFxoYGwYMFh4KFQ==",
+     "res": 331.43,
+     "sup": 276.92,
+     "ma5": 288.17,
+     "ma20": 294.77,
+     "ma50": 324.96,
+     "ma200": 337.61,
+     "vr": 0.64
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "HOOD",
@@ -2842,7 +1996,23 @@
     "a50": false,
     "a200": false,
     "rsi": 27,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 67.25,
+     "mx": 103.15,
+     "b": "xfDD3PL/4fbZ8srQz9nExr/BrbbG0b7CnLScrKCzmq2AgGl+go9ydn2Dd4N3mXOPg4s7T1dmTGFhgF5yZHJaZG+GaXtgfF5kWFpCSzA7GSIgIQAODRMCDg==",
+     "res": 101.38,
+     "sup": 67.25,
+     "ma5": 73.926,
+     "ma20": 84.107,
+     "ma50": 100.37,
+     "ma200": 91.079,
+     "vr": 0.8
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "IBIT",
@@ -2856,7 +2026,23 @@
     "a50": false,
     "a200": false,
     "rsi": 21,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 35.13,
+     "mx": 48.07,
+     "b": "1+7V5PH/6/rc3tDX2t7T1cbQwMfI0MXQztnL2cndxdCnsZuirbKhoqawprC01bTJwcOUnJabjZmLlYeOgY12gX6NfYxscGVnTlJCSxooFiEfJQ0UFBUABQ==",
+     "res": 46.405,
+     "sup": 35.13,
+     "ma5": 37.518,
+     "ma20": 42.531,
+     "ma50": 44.957,
+     "ma200": 40.922,
+     "vr": 1.22
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "INTC",
@@ -2870,7 +2056,32 @@
     "a50": false,
     "a200": false,
     "rsi": 29,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 51.51,
+     "mx": 95.68,
+     "b": "4vTX6PL44+/S2r/Ex9LAzdLqyuHs++n0/P/w/u/y4+phZENSUFIuMTlAMDQpMh4nHR4ABBQiEhwfMRktJTUfJjtINj8vQS44NTkgLx4hFBcVFgUVFhoLEg==",
+     "res": 95.68,
+     "sup": 51.51,
+     "ma5": 57.234,
+     "ma20": 68.175,
+     "ma50": 92.149,
+     "ma200": 87.503,
+     "vr": 0.55
+    },
+    "news": {
+     "y": [
+      {
+       "t": "엔비디아가 보유한 인텔 지분을 매도한다는 소식에 11/17 장중 -2.3%, 11월 들어 약 18% 하락",
+       "u": "https://www.finanzen.at/nachrichten/aktien/why-intel-stock-just-dropped-16071647"
+      },
+      {
+       "t": "11/16 공시 관련 주주 집단소송 제기",
+       "u": "https://www.trefis.com/stock/intc/articles/625805/why-did-intel-stock-fall-7/2026-11-17"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "IONQ",
@@ -2884,7 +2095,23 @@
     "a50": false,
     "a200": false,
     "rsi": 33,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 23.19,
+     "mx": 36.35,
+     "b": "ia6InKK1nbCWsZKalqOLnZahg5ObxJm9wMSks6a1l6WBi2iFhpNcYG+IbYSGkWR7bXMhP123Vre5/6zr2vPQ5fT30dOuwpGVhIpibllaOj9FSBEgLi8ABg==",
+     "res": 36.35,
+     "sup": 23.19,
+     "ma5": 26.902,
+     "ma20": 30.299,
+     "ma50": 35.482,
+     "ma200": 41.023,
+     "vr": 1.15
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "JNJ",
@@ -2898,7 +2125,23 @@
     "a50": true,
     "a200": true,
     "rsi": 50,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 254.56,
+     "mx": 290.25,
+     "b": "FSwNIhUXABcrbCBdUFI4Qld/SlRMaEllUYJFdpSoiJO2xIWFfYRccmR2TVOAo16brsN6f12cT5unyZvFxM2wu6e+nbnV4b3P2fDC3/b/xsivwqSslq2Bgg==",
+     "res": 290.25,
+     "sup": 259.04,
+     "ma5": 280.64,
+     "ma20": 274.7,
+     "ma50": 267.31,
+     "ma200": 250.5,
+     "vr": 1.06
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "JPM",
@@ -2912,7 +2155,23 @@
     "a50": false,
     "a200": false,
     "rsi": 38,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 323.71,
+     "mx": 359.8,
+     "b": "SHI+Ul9fP1E9WzxbQlEvOElaQ0leYkxVYXlRbpOchIyYmFFeeoRzd3N4VmWdyoPJ9/9WYEOAQkxsjVCCj5V8goiWeYuepoSHoKOHn5qhXGZGXSQsGy0AAw==",
+     "res": 359.8,
+     "sup": 323.71,
+     "ma5": 336.26,
+     "ma20": 338.46,
+     "ma50": 338.93,
+     "ma200": 325.18,
+     "vr": 1.03
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "KO",
@@ -2926,7 +2185,23 @@
     "a50": true,
     "a200": true,
     "rsi": 65,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 90.58,
+     "mx": 100.56,
+     "b": "T1Y1SkFKMjZUek16cXI1NjY7IzYGPQYPBy0AHTlCJTllc1ZZX5Ffhm59XGySmWCFo659hEOSPoKIjGqLm6SHopG5grPEx66vwt+93vH/2ePS58vSvdSowA==",
+     "res": 100.56,
+     "sup": 90.58,
+     "ma5": 98.61,
+     "ma20": 95.598,
+     "ma50": 91.468,
+     "ma200": 83.698,
+     "vr": 0.89
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "LLY",
@@ -2940,7 +2215,23 @@
     "a50": true,
     "a200": true,
     "rsi": 56,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 1257.6,
+     "mx": 1475.3,
+     "b": "Bz8DHwsZBA8cSxQ5NzsAEyIuExkTLxEcDTEDJFixVYjJ4bG7n8GStKbSn7LW3am8z+V+fm2MWXF+vn21sdSnzbzWuNPd7cfHyuG+2ub/x8y6zam5sMKPkw==",
+     "res": 1475.3,
+     "sup": 1257.6,
+     "ma5": 1420.2,
+     "ma20": 1378,
+     "ma50": 1257.7,
+     "ma200": 1115.1,
+     "vr": 0.95
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "MA",
@@ -2954,7 +2245,23 @@
     "a50": true,
     "a200": true,
     "rsi": 54,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 605,
+     "mx": 681.99,
+     "b": "KUAmMzNBKTpAXj9dT1cwPjk7FRwVGwMQAyYAEjh5JmZ8gl5tbrtusJ6khoy546bg+P+iqXu1bZ6ruJCosryaspq6ibnIz5yeqb+mus3StLyosoSHfoxofw==",
+     "res": 681.99,
+     "sup": 605,
+     "ma5": 652.92,
+     "ma20": 644.54,
+     "ma50": 604.72,
+     "ma200": 543.58,
+     "vr": 0.74
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "MCD",
@@ -2968,7 +2275,23 @@
     "a50": true,
     "a200": false,
     "rsi": 62,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 243.33,
+     "mx": 283.53,
+     "b": "BxkBFBEWABMfPRQ7LjUVISA9HTAlKyAnIDkeLUlbQllsfFdeao5ojnuDcH2i8Jvq7/bJ3KnfpNPV/dXy9P/X9uLlxcjW57rAxc20ttbcxcez47DOuNC1ww==",
+     "res": 283.53,
+     "sup": 246.47,
+     "ma5": 274.02,
+     "ma20": 266.97,
+     "ma50": 251.44,
+     "ma200": 280.8,
+     "vr": 0.9
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "META",
@@ -2982,7 +2305,23 @@
     "a50": false,
     "a200": false,
     "rsi": 41,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 583.8,
+     "mx": 713.22,
+     "b": "297A2uD/0eC2wG6Aa39hdGx+V1xVWEZIS1AyOUpkQVA9VDQ9PEstLTVRNElxdVBbYGUAKi5SLTRdfVtxa31mcXx/V1lSXEVOVnZRcm9wSFRQVjtFSEk0QA==",
+     "res": 681.07,
+     "sup": 583.8,
+     "ma5": 625.39,
+     "ma20": 625.29,
+     "ma50": 679.36,
+     "ma200": 629.5,
+     "vr": 0.44
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "MSFT",
@@ -2996,7 +2335,23 @@
     "a50": false,
     "a200": true,
     "rsi": 43,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 496.51,
+     "mx": 559.15,
+     "b": "mJl3kIaWdJSVl2FkVndOcn6WZ5OSm4KOkJ15jLK2Xol1eElncIciKzNuLmTA/7rx7vmToHeqcovD06zGvcJ6lZqcWWRkh2BsX3pGb3SAU1dKTgAoJTkTMA==",
+     "res": 559.15,
+     "sup": 496.51,
+     "ma5": 515.88,
+     "ma20": 526.09,
+     "ma50": 519.94,
+     "ma200": 442.76,
+     "vr": 0.8
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "MSTR",
@@ -3010,7 +2365,23 @@
     "a50": false,
     "a200": false,
     "rsi": 24,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 90.2,
+     "mx": 155.69,
+     "b": "qtypzNr/0fbV58/Y0/HS2cjUt8HCyr3HwNe91sjUvsiirYSdpLeYnqG8n7G12rLMv8aDmJOdipeFmX6KfI1ueHaEdX1dc1ZeVVlGUzU9LTIxNRgZExUAAA==",
+     "res": 152.21,
+     "sup": 90.2,
+     "ma5": 103.18,
+     "ma20": 127.12,
+     "ma50": 140.82,
+     "ma200": 132.12,
+     "vr": 1.42
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "MU",
@@ -3024,7 +2395,28 @@
     "a50": false,
     "a200": false,
     "rsi": 37,
-    "why": "메모리 업종 동반 약세"
+    "why": "메모리 업종 동반 약세",
+    "mini": {
+     "mn": 650,
+     "mx": 990,
+     "b": "sMquuc3RtMaswpWbn7Wcq7THr77L1sTR6v/o+u7x0NWwwJ+wtLaGip2mkpqCmWNtTVQABSw4FB4oRx4+M0glOF+FVXlZcFZvZG5LYD9DMjQ5Og0vMzccKQ==",
+     "res": 990,
+     "sup": 650,
+     "ma5": 742.69,
+     "ma20": 809.1,
+     "ma50": 925.62,
+     "ma200": 769.93,
+     "vr": 0.87
+    },
+    "news": {
+     "y": [
+      {
+       "t": "낸드 가격 전망 하향에 메모리 업종 동반 약세",
+       "u": "https://247wallst.com/investing/2026/11/17/sandisk-and-micron-fall-4-as-gf-securities-cuts-nand-price-forecast-and-warns-of-a-glut-sk-hynix-dips/"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "NFLX",
@@ -3038,7 +2430,23 @@
     "a50": false,
     "a200": false,
     "rsi": 34,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 59.41,
+     "mx": 70.66,
+     "b": "7P/H0muvaoCBt3+trL+QkoKKTmZaZUZGOkkwOkZILTxKUzM9P080QkpcOFt1p2ies7d3i2VwWFtYa1BnXGJIV051THRub0dKT2c9Pk9RGB4aJAAGBxkACQ==",
+     "res": 67.82,
+     "sup": 59.41,
+     "ma5": 61.018,
+     "ma20": 63.17,
+     "ma50": 68.169,
+     "ma200": 80.168,
+     "vr": 0.61
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "NKE",
@@ -3052,7 +2460,23 @@
     "a50": false,
     "a200": false,
     "rsi": 43,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 34.96,
+     "mx": 41.1,
+     "b": "cYRdeXZ9YmtXkVGMdolhYWmTYnt2fWJsW25OW26aaZCkspKaqL+mrZynfJLC/7zm4farv4mvfZeh2JfMuL2RmpCTc4yNl250eoxvfoycdona7hElGFAAOA==",
+     "res": 41.1,
+     "sup": 34.96,
+     "ma5": 37.234,
+     "ma20": 38.23,
+     "ma50": 36.817,
+     "ma200": 44.414,
+     "vr": 1.07
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "NOW",
@@ -3066,7 +2490,23 @@
     "a50": false,
     "a200": false,
     "rsi": 26,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 89.17,
+     "mx": 159.5,
+     "b": "1t3P29vr1+js+On29P/q/fz+7/rz9ufu4u/W3XN1R0pISzQ6OUk3PTtJNUhRVEVHRkcuMDA1KS4tOC0xKS8cJik1KTEsMCYqLzImLywuIyUgJAoODhAABQ==",
+     "res": 159.5,
+     "sup": 89.17,
+     "ma5": 97.154,
+     "ma20": 115.65,
+     "ma50": 129.62,
+     "ma200": 113.43,
+     "vr": 0.96
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "NVDA",
@@ -3080,7 +2520,37 @@
     "a50": false,
     "a200": false,
     "rsi": 21,
-    "why": "실적 발표 뒤 상승분을 반납하고 5일 연속 하락"
+    "why": "실적 발표 뒤 상승분을 반납하고 5일 연속 하락",
+    "mini": {
+     "mn": 148.8,
+     "mx": 222.19,
+     "b": "6fLe6/v/7/7t89nc2OLV2N/w3uny9ejw9/fk5+Tn3OHR0bXCzNW4uc7Sx8m+ybGypKVxcpOgf4NUbEpoV1o7RlNkTFcIQAA8SUohMSQyFhocIQUXJCYGCA==",
+     "res": 219.99,
+     "sup": 148.8,
+     "ma5": 158.32,
+     "ma20": 189.04,
+     "ma50": 210.3,
+     "ma200": 203.72,
+     "vr": 1.46
+    },
+    "news": {
+     "y": [
+      {
+       "t": "3분기 매출 1,158억 달러(약 154조 원, +103%), 다음 분기 1,300억 달러(약 173조 원) 제시에도 5일 연속 하락",
+       "u": "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html"
+      },
+      {
+       "t": "증권사 7곳 중 5곳이 전망치를 낮춤",
+       "u": "https://fourweekmba.com/ai-nvidias-q3-drew-5-target-cuts-2-raises-median-is-222-50/"
+      }
+     ],
+     "t": [
+      {
+       "t": "앤트로픽 상장 첫날 AI주 수급 흐름",
+       "u": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+      }
+     ]
+    }
    },
    {
     "t": "OKLO",
@@ -3094,7 +2564,23 @@
     "a50": false,
     "a200": false,
     "rsi": 36,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 18.535,
+     "mx": 28.55,
+     "b": "y/bH5PP/5erJ3sbYz9XAx8TXr73L5sbg3eHG283qwtOosZirsrx9f4mTcH58k09bTVsAEUSMO4CF6mvTts6hp8XUtruVsIaXmppuiWuPZnJqelNiaYhQUw==",
+     "res": 27.73,
+     "sup": 18.535,
+     "ma5": 23.114,
+     "ma20": 24.553,
+     "ma50": 30.914,
+     "ma200": 49.756,
+     "vr": 0.63
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "ORCL",
@@ -3108,7 +2594,23 @@
     "a50": false,
     "a200": false,
     "rsi": 39,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 109.21,
+     "mx": 148.48,
+     "b": "faN2jpueeIFvelhqZnxjbm16Xm1zlnOKkP985ePmssWfqYGLbHA8QVN7T25ShlJeWmIQJ0NEAC0zSCVFOEgpOWKMYXxcgVp0d3pRaVhaO0BATBkmLjUaHg==",
+     "res": 148.48,
+     "sup": 109.21,
+     "ma5": 120.09,
+     "ma20": 124.5,
+     "ma50": 133.97,
+     "ma200": 153.46,
+     "vr": 0.37
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "PANW",
@@ -3122,7 +2624,28 @@
     "a50": false,
     "a200": true,
     "rsi": 48,
-    "why": "자바 취약점 경고에 보안주 강세, 장 마감 뒤 실적 예상 상회"
+    "why": "자바 취약점 경고에 보안주 강세, 장 마감 뒤 실적 예상 상회",
+    "mini": {
+     "mn": 301.28,
+     "mx": 406.88,
+     "b": "amxRXmaAXG+GnXuCgMJ5v8jivdfZ+tLy8v/f4aPVoL/G1o2coaJ3enmPb3ZvkmFxWFsaIElKHB4sTB9IOEgiPVhiRVA2PSE0R0ohMy0tGCQkJAATHmMZXQ==",
+     "res": 406.88,
+     "sup": 301.28,
+     "ma5": 322.04,
+     "ma20": 347.45,
+     "ma50": 366.7,
+     "ma200": 279.47,
+     "vr": 2.71
+    },
+    "news": {
+     "y": [
+      {
+       "t": "정부의 자바 치명적 취약점 경고로 보안주 강세, 장 마감 뒤 실적도 예상 상회",
+       "u": "https://cappnotes.substack.com/p/closing-look-wednesday-november-18"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "PEP",
@@ -3136,7 +2659,23 @@
     "a50": true,
     "a200": false,
     "rsi": 56,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 131.85,
+     "mx": 148.25,
+     "b": "LTAYIhU4FCxFby9tYWQsPTpaMTgjLQoaBBAADDAwDh5KaT1VZIlehXV8UVSCvGykvtWjqWSgYJSXtYicmbiLt5u9h7zExqCiqtmm0+f/3+OvvJWehaqAnA==",
+     "res": 148.25,
+     "sup": 131.85,
+     "ma5": 143.6,
+     "ma20": 139.95,
+     "ma50": 133.99,
+     "ma200": 145.55,
+     "vr": 0.93
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "PFE",
@@ -3150,7 +2689,23 @@
     "a50": false,
     "a200": true,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 28,
+     "mx": 31.44,
+     "b": "fKd2nJSbfYmYtYuzqayGlpSrf4VyinCFbodaa5Sid5G6xp+7tuGjxsfjjJTM15fP5f+Ji09qKGd2eUlbVWZGZU9vRmuCgz4+REkuQltfPEAkMhojBCgABA==",
+     "res": 31.44,
+     "sup": 28,
+     "ma5": 28.622,
+     "ma20": 29.592,
+     "ma50": 28.829,
+     "ma200": 27.017,
+     "vr": 1.04
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "PLTR",
@@ -3164,7 +2719,23 @@
     "a50": false,
     "a200": true,
     "rsi": 33,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 152.6,
+     "mx": 202.63,
+     "b": "y968zMf/vvr1/9be2OXC4efyzezo++Hr4uvP4enqwN/R05ChrbKCg096QHQ/fz1hSEsADB86GCgsXStVUFk6U2t0XWVaaFBhYmQ+TkNFHygmMwcUHB4FFQ==",
+     "res": 202.63,
+     "sup": 152.6,
+     "ma5": 162.64,
+     "ma20": 176.61,
+     "ma50": 183.98,
+     "ma200": 153.83,
+     "vr": 0.61
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "QCOM",
@@ -3178,7 +2749,23 @@
     "a50": false,
     "a200": false,
     "rsi": 40,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 148.25,
+     "mx": 185.59,
+     "b": "n8WcvMXSscus0KKoo8SfvcPgutbf99T19PXa7dz/1f61v1xxfJFaXm10U259sGOqDFYAOlmDSnVyv2efjLOBrc3oqcG38LfFwMiBpY+oiIqOm2F+gIJGTw==",
+     "res": 185.59,
+     "sup": 148.25,
+     "ma5": 168.92,
+     "ma20": 171.69,
+     "ma50": 178.25,
+     "ma200": 170.42,
+     "vr": 0.65
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "QQQ",
@@ -3192,7 +2779,23 @@
     "a50": false,
     "a200": false,
     "rsi": 38,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 646.64,
+     "mx": 727.95,
+     "b": "1+/I3+3/5fbS2K21rsWrtb3Xuc7X79Lq8/nn+NvgzNefo3OKmaZqbHaEc3mDrIGOcnQBASU4Fx4ycDBnUWxAWH+ZdIlqlmiCg4RPaE1QKy8zNAAgLTMUKA==",
+     "res": 726.14,
+     "sup": 646.64,
+     "ma5": 669.25,
+     "ma20": 686.3,
+     "ma50": 714.36,
+     "ma200": 682.81,
+     "vr": 0.87
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "RIVN",
@@ -3206,7 +2809,23 @@
     "a50": false,
     "a200": false,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 11.375,
+     "mx": 14.31,
+     "b": "UGhJXGd3XV5NWzQ8MDgUKCUmBAUNPgsnICMGGhorAAc/Tg1Ed8punrK7i6bK/8Pp4eJ4prHFlcLG8b/l0vy1ytLUtbydqnp8fHxDRjxXMz8+SyMsKTsVJQ==",
+     "res": 14.31,
+     "sup": 11.375,
+     "ma5": 12.152,
+     "ma20": 12.594,
+     "ma50": 13.706,
+     "ma200": 15.292,
+     "vr": 0.64
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "RKLB",
@@ -3220,7 +2839,23 @@
     "a50": false,
     "a200": false,
     "rsi": 43,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 43.89,
+     "mx": 68.26,
+     "b": "Rlw4SVdpVWZRXz9NSF47W1t0VmhroGWXmaGJmpG0kJ98j2FxdXVHVmB0Xm5weERZRkkAFi5gG2BtpV+ddNB0xdX/yunR78/Tz9emuaW8i42OmmR1foJeYA==",
+     "res": 68.26,
+     "sup": 43.89,
+     "ma5": 58.218,
+     "ma20": 56.256,
+     "ma50": 61.913,
+     "ma200": 77.931,
+     "vr": 0.77
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SBUX",
@@ -3234,7 +2869,23 @@
     "a50": true,
     "a200": true,
     "rsi": 61,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 97.92,
+     "mx": 111.5,
+     "b": "Bi0FGxMYABYXTQ1LQVAvNj1nO1pWYkFgYXtXY4eTYY+SnFFseoZSenaDWIGe35Xd5f+Ym2mjWo2e5p3YzOKx4uHoyeHZ7a6vpLaeoLfltsu25qu0sOCr0g==",
+     "res": 111.5,
+     "sup": 98.63,
+     "ma5": 107.8,
+     "ma20": 105.98,
+     "ma50": 99.725,
+     "ma200": 100.7,
+     "vr": 0.84
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SCHD",
@@ -3248,7 +2899,23 @@
     "a50": true,
     "a200": true,
     "rsi": 44,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 34.4,
+     "mx": 36.38,
+     "b": "AScAJRslEiE5hzKBZn1ScGyDW3RhZ1RdSGRDWYWefJzK26qyss2ywa2vhpTJ6bjp8/9/gzp9NGODr2ihhb19uLTRntHo8cDF2N6z3uXps7yZsmp1WGMhJw==",
+     "res": 36.38,
+     "sup": 34.66,
+     "ma5": 35.584,
+     "ma20": 35.562,
+     "ma50": 34.341,
+     "ma200": 32.76,
+     "vr": 1.07
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SHOP",
@@ -3262,7 +2929,23 @@
     "a50": false,
     "a200": true,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 135.65,
+     "mx": 178.28,
+     "b": "z/PO4t//1Ofo97LGvc+2xsTWv8PF06e0ssmsw7HFobudnm+Dh5dqewVSACkubC5oYWMMMC9eKk9dZUpiWF0nQlNXRVFKWTVDRVo1RDlYI0lEVSAlKCwRFw==",
+     "res": 177,
+     "sup": 135.65,
+     "ma5": 144.6,
+     "ma20": 153.97,
+     "ma50": 153.26,
+     "ma200": 130.4,
+     "vr": 0.58
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SMCI",
@@ -3276,7 +2959,23 @@
     "a50": false,
     "a200": false,
     "rsi": 32,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 23.29,
+     "mx": 37.45,
+     "b": "k7KJpez/1d3J0q68u8OqrrC4p6m117PU3ezM4dbiw8mnspGut7h+gY6iipKSqm5yW2EtRGRvUWNXdEZgVGVFUXKOaYFIZytDREgvQCkuHh8lJQAPGB4IEw==",
+     "res": 36.4,
+     "sup": 23.29,
+     "ma5": 25.48,
+     "ma20": 29.956,
+     "ma50": 35.632,
+     "ma200": 32.467,
+     "vr": 0.55
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SNDK",
@@ -3290,7 +2989,28 @@
     "a50": false,
     "a200": false,
     "rsi": 30,
-    "why": "낸드 공급 과잉 우려 지속, 52주 고점 대비 -67%"
+    "why": "낸드 공급 과잉 우려 지속, 52주 고점 대비 -67%",
+    "mini": {
+     "mn": 0,
+     "mx": 0,
+     "b": "",
+     "res": 1424.48,
+     "sup": 749.39,
+     "ma5": null,
+     "ma20": 1037.74,
+     "ma50": 1384.24,
+     "ma200": 1284.66,
+     "vr": 1.01
+    },
+    "news": {
+     "y": [
+      {
+       "t": "GF증권 2027년 낸드 공급 과잉 전망 뒤 매도 지속, 3개월 -52%",
+       "u": "https://247wallst.com/investing/2026/11/17/sandisk-and-micron-fall-4-as-gf-securities-cuts-nand-price-forecast-and-warns-of-a-glut-sk-hynix-dips/"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "SNOW",
@@ -3304,7 +3024,23 @@
     "a50": false,
     "a200": true,
     "rsi": 39,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 263.84,
+     "mx": 343.55,
+     "b": "mMCSsrTMrrywwIqglcaVxcPtvOPd+Nnr5//k88rvvdWepGWHh4pNVkNpP2RaakRWNzcOEjQ3CCcuYS5XVXFIZouUdXhdeFBweXk/V0RJMDUxOAAdJTURMg==",
+     "res": 343.55,
+     "sup": 263.84,
+     "ma5": 284.56,
+     "ma20": 301.03,
+     "ma50": 321.42,
+     "ma200": 244.56,
+     "vr": 0.87
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SOFI",
@@ -3318,7 +3054,23 @@
     "a50": false,
     "a200": false,
     "rsi": 36,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 14.07,
+     "mx": 17.74,
+     "b": "CUAIKjZIKTojRSMxISwLJiAqFxuFu2+ird2t1cb3w/bQ4qW7yvWusLrBp7zN/8nm3etfiY+tgZWdzpC6p6uAoK6/l5l6k2tscHVGXkhRKTY1OQEPExwAAw==",
+     "res": 17.74,
+     "sup": 14.07,
+     "ma5": 14.858,
+     "ma20": 15.922,
+     "ma50": 15.968,
+     "ma200": 17.207,
+     "vr": 0.74
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "SOXL",
@@ -3332,7 +3084,28 @@
     "a50": false,
     "a200": false,
     "rsi": 35,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 40.59,
+     "mx": 108.6,
+     "b": "yum+1un23Ou7xpWcmrCXoarFpLvM58nj7v/k+uTz1+iao2+JkphlZ3yHdXpuglFiPUEAAR8hCxQcPxk7L0grOlltTF9IakZeVVosQictHR8lJQsgKCoWIQ==",
+     "res": 108.6,
+     "sup": 40.59,
+     "ma5": 54.188,
+     "ma20": 69.404,
+     "ma50": 106.01,
+     "ma200": 123.87,
+     "vr": 1.04
+    },
+    "news": {
+     "y": [
+      {
+       "t": "반도체 지수 3배 · 고점 대비 -84%, 변동성 매우 큼",
+       "u": "https://finance.yahoo.com/quote/SOXL/history"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "SOXX",
@@ -3346,7 +3119,28 @@
     "a50": false,
     "a200": false,
     "rsi": 38,
-    "why": "AMD·브로드컴 강세로 소폭 반등"
+    "why": "AMD·브로드컴 강세로 소폭 반등",
+    "mini": {
+     "mn": 130.75,
+     "mx": 174.64,
+     "b": "x+K90eTq1+W9xZuioLSdpq/LqsHQ6s3m7//n++j13eupsIOZo6p0d4+ch42AlWBxSEsABzM3EiIuZCpdTW5IXISidY9znHCNg4lRbEhQOz1HRx8+TE4wQA==",
+     "res": 174.64,
+     "sup": 130.75,
+     "ma5": 145.76,
+     "ma20": 152.85,
+     "ma50": 169.85,
+     "ma200": 160.77,
+     "vr": 0.82
+    },
+    "news": {
+     "y": [
+      {
+       "t": "AMD·브로드컴 강세로 소폭 반등했지만 거래량은 평균 아래",
+       "u": "https://finance.yahoo.com/quote/SOXX/history"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "SPY",
@@ -3360,7 +3154,23 @@
     "a50": false,
     "a200": false,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 726.8,
+     "mx": 775.64,
+     "b": "zO7E3ej52fLP1rPCrb+mrbnWtsnU6Mng6fPe7tvm0N61tXuXqsGBhIeehpC9/7vRys0fICpQKSxPlUqHboReeZ26k6yOvYyerq5ukHd4O0U9RAEdIisAEg==",
+     "res": 775.64,
+     "sup": 726.8,
+     "ma5": 742.82,
+     "ma20": 753.72,
+     "ma50": 762.51,
+     "ma200": 732.55,
+     "vr": 1.03
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "STX",
@@ -3374,7 +3184,23 @@
     "a50": false,
     "a200": false,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 449.28,
+     "mx": 718.65,
+     "b": "xNu31vX83erR1Kq3rsOjrK3No7m+4bzPu+yj6+H/1u7A2ae5uruCiZuojpVyg2RmREcLEDU4AAsSPBA2KjcfMlxxT2FKZ0BbUV03SzA3KC86PiA0RUgsPw==",
+     "res": 718.65,
+     "sup": 449.28,
+     "ma5": 518.55,
+     "ma20": 573.23,
+     "ma50": 718.2,
+     "ma200": 702.21,
+     "vr": 0.69
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "TLT",
@@ -3388,7 +3214,23 @@
     "a50": true,
     "a200": false,
     "rsi": 48,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 79.11,
+     "mx": 82.42,
+     "b": "SmE4T11pOFeS2IjLzs+mrMTXu8bEyrbCysx9kbDUnrfU4a/S0uy8yrS0j5quz4nMvO+72dX/yNjz9NHcnJ9uiH6PaYt+gy8vDykAFR8yDRUPMwoiPlo3Vg==",
+     "res": 82.42,
+     "sup": 79.11,
+     "ma5": 79.65,
+     "ma20": 81.058,
+     "ma50": 80.07,
+     "ma200": 84.186,
+     "vr": 1.16
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "TQQQ",
@@ -3402,7 +3244,23 @@
     "a50": false,
     "a200": false,
     "rsi": 36,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 49.38,
+     "mx": 73.43,
+     "b": "2O/I3+3/5fbS16y1rcKqs7vUt8rT68/m7/Xj9Nbbx9Oan3CGk59oa3R/cHZ/o32Ib3AJDCMzGR4uXy1XRl03TG2DY3VZgVhvcHBBWEBDIycqKwAaJCkQIA==",
+     "res": 72.53,
+     "sup": 49.38,
+     "ma5": 54.968,
+     "ma20": 60.51,
+     "ma50": 69.782,
+     "ma200": 65.683,
+     "vr": 1.07
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "TSLA",
@@ -3416,7 +3274,23 @@
     "a50": true,
     "a200": true,
     "rsi": 51,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 338.15,
+     "mx": 414.23,
+     "b": "bIRVd5GqjqJ5qnd6dYNbcpnGmbPI7L/o8fTG3eLn0dq53aXP3//H3OTlxMqMtX2eeXkAEyRWIENKlEmGboxsjKLAorGi057H1d6gr6StfouUlnmNnquHmQ==",
+     "res": 414.23,
+     "sup": 338.15,
+     "ma5": 386.25,
+     "ma20": 386.13,
+     "ma50": 375.81,
+     "ma200": 382.08,
+     "vr": 0.69
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "TSM",
@@ -3430,7 +3304,23 @@
     "a50": false,
     "a200": false,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 351.19,
+     "mx": 440.88,
+     "b": "udu50unvzuXCyaiurseqv77dvdDY+NX09//0++Xy3OWzvoucrrWGh5mjk5iNqXN/UVQABVRUMEVZe1Nqaotmgba7n7F7rHmaoKJzh1FhPD88PgcYMDIQIA==",
+     "res": 440.88,
+     "sup": 351.19,
+     "ma5": 380,
+     "ma20": 399.79,
+     "ma50": 425.96,
+     "ma200": 403.49,
+     "vr": 0.78
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "UBER",
@@ -3444,7 +3334,23 @@
     "a50": false,
     "a200": false,
     "rsi": 49,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 64.04,
+     "mx": 72.5,
+     "b": "lqyDlJacZGxnmmOYhpJIUE5ZMT9HSis0LDcUJSU1ADMvNRMkP2cuUFJYO02A/2Swy9Rvj3u4d4ml2pHXzdObtZnUlsjHzJOZn8OWqrTOo7OotluQfLd4jg==",
+     "res": 72.5,
+     "sup": 64.04,
+     "ma5": 69.274,
+     "ma20": 68.138,
+     "ma50": 69.268,
+     "ma200": 72.504,
+     "vr": 0.64
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "UNH",
@@ -3458,7 +3364,28 @@
     "a50": false,
     "a200": false,
     "rsi": 28,
-    "why": "메디케어 어드밴티지 감사 강화 규정안에 급락, 다우 하락 1위 요인"
+    "why": "메디케어 어드밴티지 감사 강화 규정안에 급락, 다우 하락 1위 요인",
+    "mini": {
+     "mn": 342.46,
+     "mx": 426.55,
+     "b": "zfLI6fHx3OLm/+L6+Pvg5ejuyM/V2MfOxOC+xNjbvNDc38DEwcmdsKy/pbyk35jL1N6dooulip2oq5ynq8Omvry9pbe+wa6+xsiwxdPdytOsroePh4kAFw==",
+     "res": 426.55,
+     "sup": 342.46,
+     "ma5": 392.84,
+     "ma20": 403.16,
+     "ma50": 390.64,
+     "ma200": 367.91,
+     "vr": 3.5
+    },
+    "news": {
+     "y": [
+      {
+       "t": "메디케어 어드밴티지 감사 강화 규정안에 -10.21%, 다우 하락 1위 요인",
+       "u": "https://cappnotes.substack.com/p/closing-look-wednesday-november-18"
+      }
+     ],
+     "t": []
+    }
    },
    {
     "t": "V",
@@ -3472,7 +3399,23 @@
     "a50": true,
     "a200": true,
     "rsi": 53,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 394,
+     "mx": 442.23,
+     "b": "NE0yQj9SNUlKbUZsWGJESj5ILjYrMhIqBzkAIzpgM1dwel5ocq1sp5adgIyx4pvh9/+Ul2yfY5efrH2VkaSFmXuod6e7v4qLnbGXqLzEpaybpXZ4dH5ecA==",
+     "res": 442.23,
+     "sup": 394,
+     "ma5": 420.9,
+     "ma20": 417.8,
+     "ma50": 393.31,
+     "ma200": 348.43,
+     "vr": 1.02
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "VOO",
@@ -3486,7 +3429,23 @@
     "a50": false,
     "a200": false,
     "rsi": 37,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 668.06,
+     "mx": 711.83,
+     "b": "0fPJ4u7/3/nU27jHscSrsr7bu87a7c7m7/nj9OHr1eW6un6cr8eFiIuiiZTC48DW0NIgIitTKi5RmUyLcohhfaHAl7CSwpCjsrNxlHt7PUc/RQEeIywAEw==",
+     "res": 710.84,
+     "sup": 668.06,
+     "ma5": 682.83,
+     "ma20": 692.86,
+     "ma50": 701.13,
+     "ma200": 673.58,
+     "vr": 1.35
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "WDC",
@@ -3500,7 +3459,23 @@
     "a50": false,
     "a200": false,
     "rsi": 38,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 258.61,
+     "mx": 402.23,
+     "b": "oL+VvNjbwdW7wZ+qm7WQl5y7ka205rHZ4PbO9er/5vPA1La/wcKJjqO0lZ6FoXB0UVMLEDI0AAkWPhQ3K0EfNlprTWFLZ0FdU18yQigzHigwNhcsOUIkNQ==",
+     "res": 402.23,
+     "sup": 258.61,
+     "ma5": 291.86,
+     "ma20": 324.28,
+     "ma50": 380.23,
+     "ma200": 422.19,
+     "vr": 0.48
+    },
+    "news": {
+     "y": [],
+     "t": []
+    }
    },
    {
     "t": "WMT",
@@ -3514,7 +3489,28 @@
     "a50": true,
     "a200": true,
     "rsi": 65,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 116.63,
+     "mx": 131.82,
+     "b": "P0EOFAUaABQvTBRLU2EqNzNWMT0zOiQtHiwZJEVVM05thGdzfb59uqmshYqu8JvT8P+1unyoa5WInXWYmKKGloGeeZiruZWgqsOhwN7evca20LG3pbuOtA==",
+     "res": 131.82,
+     "sup": 117.83,
+     "ma5": 127.51,
+     "ma20": 124.68,
+     "ma50": 115.82,
+     "ma200": 119,
+     "vr": 1.28
+    },
+    "news": {
+     "y": [],
+     "t": [
+      {
+       "t": "21:00 3분기 실적 발표 · 22:00 컨퍼런스콜 (예상 주당 0.64달러, 약 850원)",
+       "u": "https://finviz.com/news/421667/walmart-to-host-third-quarter-earnings-conference-call-november-19-2026"
+      }
+     ]
+    }
    },
    {
     "t": "XOM",
@@ -3528,8 +3524,774 @@
     "a50": false,
     "a200": true,
     "rsi": 36,
-    "why": ""
+    "why": "",
+    "mini": {
+     "mn": 160.11,
+     "mx": 188.5,
+     "b": "srWFn56skKGytYKjrdSqz8PcwNvT3rGyuNOzxdXau9Do/9301tywsKG1mpx/gkFSYnotLyU8HzQhMRkpECwAJy08JztJYUFXZmhSXlVbOT1CVDdAND4EBA==",
+     "res": 188.5,
+     "sup": 160.11,
+     "ma5": 167.01,
+     "ma20": 173.35,
+     "ma50": 169.58,
+     "ma200": 156.72,
+     "vr": 1.27
+    },
+    "news": {
+     "y": [
+      {
+       "t": "유가 하락에 에너지주 약세",
+       "u": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-wednesday-11-18-2026"
+      }
+     ],
+     "t": []
+    }
+   },
+   {
+    "t": "SPCX",
+    "n": "스페이스X",
+    "c": 143.5,
+    "won": 190895,
+    "ch": 1.27,
+    "w1": 2.7,
+    "m1": -2.9,
+    "hi": -36.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 51,
+    "why": "",
+    "mini": {
+     "mn": 120.39,
+     "mx": 166.18,
+     "b": "kJ1/meD/y9m8vX+ImaSEl5Omh5SWrJKdlpt5inqJc4Nhbk9QXXlVWWB8X3VIcEdWPUAAEjtTLk1af1N5aYhgfoCKZmxhmGFtbnpaaGVtUV9leV93f5B0gQ==",
+     "res": 154.26,
+     "sup": 120.39,
+     "ma5": 140.32,
+     "ma20": 140.48,
+     "ma50": 148.38,
+     "ma200": null,
+     "vr": 0.75
+    },
+    "news": {
+     "y": [
+      {
+       "t": "11/14 스타십 우주선 첫 발사대 포획 성공(부스터는 추락)",
+       "u": "https://marketchameleon.com/Overview/SPCX/"
+      },
+      {
+       "t": "테슬라와 합병 협상 보도(11/12)",
+       "u": "https://www.heygotrade.com/en/news/spacex-spcx-stock-news-november-13-2026/"
+      }
+     ],
+     "t": [
+      {
+       "t": "12월 8일 보호예수 해제 예정",
+       "u": "https://fourweekmba.com/spacex-stock/"
+      }
+     ]
+    }
+   },
+   {
+    "t": "SNXX",
+    "n": "샌디스크 2배(SNXX)",
+    "c": 2.71,
+    "won": 3605,
+    "ch": -5.57,
+    "w1": -38.2,
+    "m1": -73.0,
+    "hi": -94.5,
+    "a50": false,
+    "a200": false,
+    "rsi": 29,
+    "why": "",
+    "mini": {
+     "mn": 2.52,
+     "mx": 10.88,
+     "b": "1+/V5fv/1OvO4K61ucWorLG/qLO4y7TH3fLX8Oboy8+eqHOChYVkZ3KBb3hmdVFZQEIQESYpExgbJxYjHSoUHC1BKzkgMhsvKS8XIBIVCw0OEAALDQ4BBg==",
+     "res": 10.46,
+     "sup": 2.52,
+     "ma5": 3.234,
+     "ma20": 5.6177,
+     "ma50": 11.007,
+     "ma200": 14.126,
+     "vr": 1.11
+    },
+    "news": {
+     "y": [
+      {
+       "t": "기초자산 샌디스크 약세(낸드 공급 과잉 우려)를 2배로 반영",
+       "u": "https://247wallst.com/investing/2026/11/17/sandisk-and-micron-fall-4-as-gf-securities-cuts-nand-price-forecast-and-warns-of-a-glut-sk-hynix-dips/"
+      }
+     ],
+     "t": []
+    }
    }
   ]
+ },
+ "indicators": [
+  {
+   "name": "공포·탐욕 지수",
+   "v": 24.6,
+   "d": 1,
+   "label": "극단적 공포",
+   "src": "https://edition.cnn.com/markets/fear-and-greed"
+  },
+  {
+   "name": "12월 금리 인상 확률",
+   "v": 95.7,
+   "d": 1,
+   "suf": "%",
+   "src": "https://en.sedaily.com/society/2026/11/19/us-dec-rate-hike-odds-at-957-percent-as-fed-resists-bigger"
+  },
+  {
+   "name": "VIX",
+   "v": 24.56,
+   "d": 2,
+   "chg": -3.53,
+   "src": "https://finance.yahoo.com/quote/%5EVIX/history"
+  },
+  {
+   "name": "풋/콜 비율",
+   "v": 0.88,
+   "d": 2,
+   "src": "https://edition.cnn.com/markets/fear-and-greed"
+  },
+  {
+   "name": "미 국채 10년",
+   "v": 5.07,
+   "d": 2,
+   "suf": "%",
+   "chg": -0.04,
+   "chgsuf": "%p",
+   "src": "https://finance.yahoo.com/quote/%5ETNX/history"
+  },
+  {
+   "name": "달러인덱스",
+   "v": 103.86,
+   "d": 2,
+   "chg": 0.0,
+   "src": "https://finance.yahoo.com/quote/DX-Y.NYB/history"
+  },
+  {
+   "name": "WTI 유가",
+   "v": 82.36,
+   "d": 2,
+   "chg": -1.08,
+   "src": "https://finance.yahoo.com/quote/CL%3DF/history"
+  },
+  {
+   "name": "원/달러",
+   "v": 1330.28,
+   "d": 2,
+   "chg": -0.2,
+   "src": "https://finance.yahoo.com/quote/KRW%3DX/history"
+  }
+ ],
+ "treemap": {
+  "items": [
+   {
+    "t": "AAPL",
+    "w": 7.67,
+    "ch": 0.15,
+    "s": "정보기술"
+   },
+   {
+    "t": "MSFT",
+    "w": 5.65,
+    "ch": 0.4,
+    "s": "정보기술"
+   },
+   {
+    "t": "NVDA",
+    "w": 5.46,
+    "ch": -2.89,
+    "s": "정보기술"
+   },
+   {
+    "t": "AMZN",
+    "w": 4.34,
+    "ch": 3.82,
+    "s": "경기소비재"
+   },
+   {
+    "t": "GOOGL",
+    "w": 2.67,
+    "ch": 0.8,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "AVGO",
+    "w": 2.53,
+    "ch": 3.64,
+    "s": "정보기술"
+   },
+   {
+    "t": "GOOG",
+    "w": 2.5,
+    "ch": 0.58,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "META",
+    "w": 2.36,
+    "ch": -0.4,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "TSLA",
+    "w": 2.27,
+    "ch": 0.95,
+    "s": "경기소비재"
+   },
+   {
+    "t": "LLY",
+    "w": 1.85,
+    "ch": -2.32,
+    "s": "헬스케어"
+   },
+   {
+    "t": "BRK.B",
+    "w": 1.83,
+    "ch": -2.07,
+    "s": "금융"
+   },
+   {
+    "t": "WMT",
+    "w": 1.51,
+    "ch": -0.13,
+    "s": "필수소비재"
+   },
+   {
+    "t": "AMD",
+    "w": 1.31,
+    "ch": 5.31,
+    "s": "정보기술"
+   },
+   {
+    "t": "JPM",
+    "w": 1.29,
+    "ch": -1.77,
+    "s": "금융"
+   },
+   {
+    "t": "MU",
+    "w": 1.2,
+    "ch": -1.0,
+    "s": "정보기술"
+   },
+   {
+    "t": "V",
+    "w": 1.16,
+    "ch": -0.37,
+    "s": "금융"
+   },
+   {
+    "t": "JNJ",
+    "w": 0.98,
+    "ch": -2.15,
+    "s": "헬스케어"
+   },
+   {
+    "t": "XOM",
+    "w": 0.98,
+    "ch": -3.97,
+    "s": "에너지"
+   },
+   {
+    "t": "MA",
+    "w": 0.84,
+    "ch": -0.37,
+    "s": "금융"
+   },
+   {
+    "t": "ABBV",
+    "w": 0.76,
+    "ch": -2.33,
+    "s": "헬스케어"
+   },
+   {
+    "t": "COST",
+    "w": 0.73,
+    "ch": -1.21,
+    "s": "필수소비재"
+   },
+   {
+    "t": "KO",
+    "w": 0.63,
+    "ch": -0.71,
+    "s": "필수소비재"
+   },
+   {
+    "t": "CVX",
+    "w": 0.6,
+    "ch": -4.74,
+    "s": "에너지"
+   },
+   {
+    "t": "PG",
+    "w": 0.59,
+    "ch": -0.83,
+    "s": "필수소비재"
+   },
+   {
+    "t": "CSCO",
+    "w": 0.57,
+    "ch": 2.18,
+    "s": "정보기술"
+   },
+   {
+    "t": "PLTR",
+    "w": 0.57,
+    "ch": 0.07,
+    "s": "정보기술"
+   },
+   {
+    "t": "ORCL",
+    "w": 0.53,
+    "ch": -0.97,
+    "s": "정보기술"
+   },
+   {
+    "t": "GE",
+    "w": 0.51,
+    "ch": 0.52,
+    "s": "산업재"
+   },
+   {
+    "t": "MRK",
+    "w": 0.51,
+    "ch": -3.9,
+    "s": "헬스케어"
+   },
+   {
+    "t": "BAC",
+    "w": 0.51,
+    "ch": -1.07,
+    "s": "금융"
+   },
+   {
+    "t": "HD",
+    "w": 0.5,
+    "ch": -0.4,
+    "s": "경기소비재"
+   },
+   {
+    "t": "UNH",
+    "w": 0.47,
+    "ch": -10.21,
+    "s": "헬스케어"
+   },
+   {
+    "t": "PM",
+    "w": 0.45,
+    "ch": -0.85,
+    "s": "필수소비재"
+   },
+   {
+    "t": "INTC",
+    "w": 0.44,
+    "ch": -0.91,
+    "s": "정보기술"
+   },
+   {
+    "t": "MS",
+    "w": 0.42,
+    "ch": -1.29,
+    "s": "금융"
+   },
+   {
+    "t": "AMAT",
+    "w": 0.42,
+    "ch": 0.88,
+    "s": "정보기술"
+   },
+   {
+    "t": "PANW",
+    "w": 0.42,
+    "ch": 9.9,
+    "s": "정보기술"
+   },
+   {
+    "t": "TXN",
+    "w": 0.4,
+    "ch": -1.16,
+    "s": "정보기술"
+   },
+   {
+    "t": "RTX",
+    "w": 0.4,
+    "ch": -0.28,
+    "s": "산업재"
+   },
+   {
+    "t": "LRCX",
+    "w": 0.4,
+    "ch": 0.47,
+    "s": "정보기술"
+   },
+   {
+    "t": "TMO",
+    "w": 0.38,
+    "ch": 0.87,
+    "s": "헬스케어"
+   },
+   {
+    "t": "CAT",
+    "w": 0.38,
+    "ch": -2.11,
+    "s": "산업재"
+   },
+   {
+    "t": "GS",
+    "w": 0.38,
+    "ch": -0.49,
+    "s": "금융"
+   },
+   {
+    "t": "NFLX",
+    "w": 0.37,
+    "ch": 0.23,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "ANET",
+    "w": 0.37,
+    "ch": 4.03,
+    "s": "정보기술"
+   },
+   {
+    "t": "WFC",
+    "w": 0.36,
+    "ch": -2.14,
+    "s": "금융"
+   },
+   {
+    "t": "CRWD",
+    "w": 0.36,
+    "ch": 7.95,
+    "s": "정보기술"
+   },
+   {
+    "t": "AMGN",
+    "w": 0.36,
+    "ch": -3.07,
+    "s": "헬스케어"
+   },
+   {
+    "t": "LIN",
+    "w": 0.35,
+    "ch": -0.57,
+    "s": "소재"
+   },
+   {
+    "t": "IBM",
+    "w": 0.32,
+    "ch": -1.11,
+    "s": "정보기술"
+   },
+   {
+    "t": "AXP",
+    "w": 0.32,
+    "ch": -0.12,
+    "s": "금융"
+   },
+   {
+    "t": "DIS",
+    "w": 0.32,
+    "ch": 4.63,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "GILD",
+    "w": 0.31,
+    "ch": -0.75,
+    "s": "헬스케어"
+   },
+   {
+    "t": "GEV",
+    "w": 0.31,
+    "ch": -0.99,
+    "s": "산업재"
+   },
+   {
+    "t": "DELL",
+    "w": 0.3,
+    "ch": -3.0,
+    "s": "정보기술"
+   },
+   {
+    "t": "C",
+    "w": 0.29,
+    "ch": -2.17,
+    "s": "금융"
+   },
+   {
+    "t": "MCD",
+    "w": 0.29,
+    "ch": -0.65,
+    "s": "경기소비재"
+   },
+   {
+    "t": "PEP",
+    "w": 0.29,
+    "ch": -0.11,
+    "s": "필수소비재"
+   },
+   {
+    "t": "VZ",
+    "w": 0.29,
+    "ch": 0.44,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "KLAC",
+    "w": 0.28,
+    "ch": 0.22,
+    "s": "정보기술"
+   },
+   {
+    "t": "APH",
+    "w": 0.28,
+    "ch": -0.04,
+    "s": "정보기술"
+   },
+   {
+    "t": "ADI",
+    "w": 0.28,
+    "ch": -0.44,
+    "s": "정보기술"
+   },
+   {
+    "t": "WELL",
+    "w": 0.27,
+    "ch": 0.61,
+    "s": "부동산"
+   },
+   {
+    "t": "ABT",
+    "w": 0.27,
+    "ch": -0.22,
+    "s": "헬스케어"
+   },
+   {
+    "t": "BLK",
+    "w": 0.27,
+    "ch": -0.97,
+    "s": "금융"
+   },
+   {
+    "t": "UNP",
+    "w": 0.27,
+    "ch": 1.3,
+    "s": "산업재"
+   },
+   {
+    "t": "NEE",
+    "w": 0.27,
+    "ch": 0.43,
+    "s": "유틸리티"
+   },
+   {
+    "t": "DE",
+    "w": 0.26,
+    "ch": -0.69,
+    "s": "산업재"
+   },
+   {
+    "t": "TMUS",
+    "w": 0.26,
+    "ch": -2.31,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "QCOM",
+    "w": 0.26,
+    "ch": -4.12,
+    "s": "정보기술"
+   },
+   {
+    "t": "DHR",
+    "w": 0.24,
+    "ch": 1.24,
+    "s": "헬스케어"
+   },
+   {
+    "t": "PFE",
+    "w": 0.24,
+    "ch": -1.44,
+    "s": "헬스케어"
+   },
+   {
+    "t": "SCHW",
+    "w": 0.24,
+    "ch": 0.78,
+    "s": "금융"
+   },
+   {
+    "t": "COP",
+    "w": 0.24,
+    "ch": -3.64,
+    "s": "에너지"
+   },
+   {
+    "t": "CRM",
+    "w": 0.23,
+    "ch": -2.12,
+    "s": "정보기술"
+   },
+   {
+    "t": "TJX",
+    "w": 0.23,
+    "ch": 8.05,
+    "s": "경기소비재"
+   },
+   {
+    "t": "T",
+    "w": 0.22,
+    "ch": -1.53,
+    "s": "커뮤니케이션"
+   },
+   {
+    "t": "ISRG",
+    "w": 0.22,
+    "ch": -2.23,
+    "s": "헬스케어"
+   },
+   {
+    "t": "CB",
+    "w": 0.21,
+    "ch": -1.23,
+    "s": "금융"
+   },
+   {
+    "t": "UBER",
+    "w": 0.21,
+    "ch": -0.07,
+    "s": "산업재"
+   },
+   {
+    "t": "VRTX",
+    "w": 0.2,
+    "ch": 0.42,
+    "s": "헬스케어"
+   },
+   {
+    "t": "ACN",
+    "w": 0.2,
+    "ch": -4.93,
+    "s": "정보기술"
+   },
+   {
+    "t": "LMT",
+    "w": 0.2,
+    "ch": -2.06,
+    "s": "산업재"
+   },
+   {
+    "t": "PGR",
+    "w": 0.2,
+    "ch": -2.64,
+    "s": "금융"
+   },
+   {
+    "t": "ETN",
+    "w": 0.2,
+    "ch": 0.36,
+    "s": "산업재"
+   },
+   {
+    "t": "MRVL",
+    "w": 0.2,
+    "ch": -2.15,
+    "s": "정보기술"
+   },
+   {
+    "t": "APP",
+    "w": 0.19,
+    "ch": -2.01,
+    "s": "정보기술"
+   },
+   {
+    "t": "SPGI",
+    "w": 0.19,
+    "ch": -1.32,
+    "s": "금융"
+   },
+   {
+    "t": "BA",
+    "w": 0.19,
+    "ch": -0.61,
+    "s": "산업재"
+   },
+   {
+    "t": "MDT",
+    "w": 0.19,
+    "ch": -1.56,
+    "s": "헬스케어"
+   },
+   {
+    "t": "MO",
+    "w": 0.19,
+    "ch": -1.55,
+    "s": "필수소비재"
+   },
+   {
+    "t": "MCK",
+    "w": 0.19,
+    "ch": -0.66,
+    "s": "헬스케어"
+   },
+   {
+    "t": "LOW",
+    "w": 0.19,
+    "ch": 1.05,
+    "s": "경기소비재"
+   },
+   {
+    "t": "SBUX",
+    "w": 0.19,
+    "ch": 1.51,
+    "s": "경기소비재"
+   },
+   {
+    "t": "BMY",
+    "w": 0.18,
+    "ch": -2.92,
+    "s": "헬스케어"
+   },
+   {
+    "t": "SYK",
+    "w": 0.18,
+    "ch": 0.19,
+    "s": "헬스케어"
+   },
+   {
+    "t": "ADP",
+    "w": 0.18,
+    "ch": -0.88,
+    "s": "산업재"
+   },
+   {
+    "t": "PLD",
+    "w": 0.18,
+    "ch": -0.27,
+    "s": "부동산"
+   },
+   {
+    "t": "STX",
+    "w": 0.18,
+    "ch": 2.28,
+    "s": "정보기술"
+   },
+   {
+    "t": "PH",
+    "w": 0.17,
+    "ch": -0.22,
+    "s": "산업재"
+   }
+  ],
+  "asof": "2026-11-18 16:00 ET 종가",
+  "src": "https://www.slickcharts.com/sp500",
+  "note": "S&P 500 시가총액 비중 상위 100개 종목 · 크기=지수 비중, 색=전일 등락"
  }
 }
