@@ -296,7 +296,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 </div>
 
 <div class="row"><section id="s-chart"><h2>차트 분석 <small id="chart-asof"></small></h2><div id="charts"></div>
- <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small></h3><p class="brief" id="tm-com"></p><div class="tmap" id="tmap"></div><div class="tmtip" id="tmtip" hidden></div><p class="src" style="margin:4px 0 0">칸에 마우스를 올리거나 눌러 보면 어제 시세 요약이 나옵니다.</p><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
+ <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small></h3><p class="hline" id="tm-h"></p><p class="brief" id="tm-com"></p><div class="tmap" id="tmap"></div><div class="tmtip" id="tmtip" hidden></div><p class="src" style="margin:4px 0 0">칸에 마우스를 올리거나 눌러 보면 어제 시세 요약이 나옵니다.</p><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
 </section></div>
 
 <div class="row r5b">
@@ -410,7 +410,7 @@ function treemap(T){
  box.addEventListener('mouseleave',()=>{if(!pin)hide()});
  box.addEventListener('click',e=>{const el=e.target.closest('.c');if(!el)return;e.stopPropagation();if(pin===el){hide();return}pin=el;show(el)});
  document.addEventListener('click',e=>{if(pin&&!tip.contains(e.target))hide()});
- $('tm-asof').textContent=T.asof;if(T.comment)$('tm-com').innerHTML=`${esc(T.comment.t)}${srcs(T.comment.src)}`;else $('tm-com').hidden=true;$('tm-note').innerHTML=`${esc(T.note)} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
+ $('tm-asof').textContent=T.asof;if(T.comment&&T.comment.h)$('tm-h').textContent=T.comment.h;else $('tm-h').hidden=true;if(T.comment)$('tm-com').innerHTML=`${esc(T.comment.t)}${srcs(T.comment.src)}`;else $('tm-com').hidden=true;$('tm-note').innerHTML=`${esc(T.note)} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
  $('tleg').innerHTML=`<span>-3%</span><i style="background:${tcol(-3)}"></i><i style="background:${tcol(-1)}"></i><i style="background:${tcol(0)}"></i><i style="background:${tcol(1)}"></i><i style="background:${tcol(3)}"></i><span>+3%</span>`;
 }
 
