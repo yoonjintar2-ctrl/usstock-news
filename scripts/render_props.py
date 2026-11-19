@@ -207,42 +207,6 @@ def cyber():
     cam.location = (0.3, -9.4, 4.0); aim(cam, (0.2, 0, 1.5)); render('cyber', sc)
 
 
-def d1120_top():  # 2026-11-20 1면: 앤트로픽 상장 축포 vs S&P 500 6일 연속 하락 계단
-    sc, cam = base_scene()
-    sc.render.resolution_x, sc.render.resolution_y = 1200, 750
-    # 오른쪽: 6칸 내려가는 계단(6거래일)
-    for i in range(6):
-        h = 2.9 - i * 0.42
-        box((0.6 + i * 0.62, 0.4, h / 2), (0.58, 1.6, h), mat('navy' if i < 5 else 'coral', 0.1, 0.4), 0.04)
-    arrow((0.9, -0.7, 3.6), (4.2, -0.9, 1.0), 0.12, mat('coral'))
-    # 왼쪽: 받침대 위로 솟는 로켓(상장 첫날 급등)
-    box((-2.6, 0.2, 0.3), (1.6, 1.6, 0.6), mat('white'), 0.06)
-    cyl((-2.6, 0.2, 2.0), 0.42, 2.2, mat('white', rough=0.3))
-    cone((-2.6, 0.2, 3.45), 0.42, 0.0, 0.75, mat('gold', 0.9, 0.2))
-    for a in range(3):
-        ang = a * 2.094
-        box((-2.6 + 0.45 * math.cos(ang), 0.2 + 0.45 * math.sin(ang), 1.1), (0.08, 0.5, 0.7), mat('coral'), 0.02, rot=(0, 0, ang))
-    cyl((-2.6, 0.2, 2.35), 0.2, 0.06, mat('blue'), rot=(math.radians(90), 0, 0))
-    cone((-2.6, 0.2, 0.75), 0.28, 0.05, 0.5, mat('gold', 0.0, 0.5, 2.5), rot=(math.radians(180), 0, 0))
-    import random; random.seed(20)
-    for i in range(40):  # 색종이
-        x, z = random.uniform(-4.6, -0.8), random.uniform(1.2, 5.0)
-        if abs(x + 2.6) < 0.7 and z < 3.9: continue
-        box((x, random.uniform(-0.4, 1.4), z), (0.2, 0.04, 0.13), mat(random.choice(['coral', 'gold', 'teal'])), 0.0,
-            rot=(random.uniform(0, 3), random.uniform(0, 3), random.uniform(0, 3)))
-    cam.location = (0.2, -12.5, 4.6); cam.data.lens = 44; aim(cam, (0.2, 0.2, 2.0)); render('d1120_top', sc)
-
-
-def stairs():  # 연속 하락 계단(지수 며칠째 하락)
-    sc, cam = base_scene()
-    for i in range(6):
-        h = 3.0 - i * 0.45
-        box((-1.6 + i * 0.66, 0.3, h / 2), (0.6, 1.4, h), mat('white' if i < 5 else 'navy', 0.0, 0.5), 0.04)
-    sphere((-1.6, 0.3, 3.25), 0.25, mat('coral'))
-    arrow((-1.2, -0.8, 3.6), (2.4, -1.0, 0.9), 0.12, mat('navy'))
-    cam.location = (0.3, -9.6, 4.2); aim(cam, (0.0, 0.3, 1.6)); render('stairs', sc)
-
-
-SCENES = {'cyber': cyber, 'nvda': nvda, 'fed': fed, 'ipo': ipo, 'health': health, 'memory': memory, 'gold_oil': gold_oil, 'd1120_top': d1120_top, 'stairs': stairs}
+SCENES = {'cyber': cyber, 'nvda': nvda, 'fed': fed, 'ipo': ipo, 'health': health, 'memory': memory, 'gold_oil': gold_oil}
 for k, f in SCENES.items():
     if not ONLY or k in ONLY: f()
