@@ -4,7 +4,7 @@
  "weekday": "목",
  "session": "2026-11-18(수) 뉴욕장",
  "publisher": "샌디스크 올인",
- "lead": "엔비디아 호실적에도 S&P 500은 5일 연속 하락. 연준 의사록이 12월 금리 인상에 무게를 실었고, 오늘 밤 앤트로픽이 사상 최대 공모로 나스닥에 상장합니다.",
+ "lead": "",
  "fx": {
   "usdkrw": {
    "v": 1330.28,
@@ -942,7 +942,8 @@
      "t": "AP",
      "u": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-wednesday-11-18-2026"
     }
-   ]
+   ],
+   "line": "매출 1,158억 달러(약 154조 원, +103%)로 예상을 넘었지만 주가는 2.9% 내려 150.96달러(약 20만 원)에 마감했습니다."
   },
   {
    "tag": "연준",
@@ -958,7 +959,8 @@
      "t": "Investing.com",
      "u": "https://ca.investing.com/news/economy-news/couple-of-policymakers-see-more-than-a-25-bp-rate-hike-in-december--fed-minutes-4967731"
     }
-   ]
+   ],
+   "line": "위원 대부분이 추가 인상을 예상했고, 12월 0.25%p 인상 확률은 약 95%입니다."
   },
   {
    "tag": "보안",
@@ -974,7 +976,8 @@
      "t": "야후 파이낸스",
      "u": "https://finance.yahoo.com/quote/PANW/history"
     }
-   ]
+   ],
+   "line": "정부의 자바 취약점 경고에 보안주가 오르고, 팔로알토는 장 마감 뒤 실적도 예상을 넘었습니다."
   },
   {
    "tag": "업종",
@@ -986,7 +989,8 @@
      "t": "Capp Notes",
      "u": "https://cappnotes.substack.com/p/closing-look-wednesday-november-18"
     }
-   ]
+   ],
+   "line": "메디케어 감사 강화 규정안에 유나이티드헬스가 10% 넘게 빠져 다우를 끌어내렸습니다."
   },
   {
    "tag": "메모리",
@@ -1002,7 +1006,8 @@
      "t": "야후 파이낸스",
      "u": "https://finance.yahoo.com/quote/SNDK/history"
     }
-   ]
+   ],
+   "line": "낸드 공급 과잉 전망 뒤 매도가 이어져 샌디스크는 3개월 새 52% 빠졌습니다."
   },
   {
    "tag": "원자재",
@@ -1018,7 +1023,8 @@
      "t": "AP",
      "u": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-wednesday-11-18-2026"
     }
-   ]
+   ],
+   "line": "금리 인상 신호에 금은 온스당 3,750달러(약 499만 원) 아래로, 유가도 함께 내렸습니다."
   }
  ],
  "movers": [
@@ -1088,65 +1094,81 @@
   }
  ],
  "street": {
-  "title": "엔비디아 실적 뒤 증권사 반응",
-  "summary": "실적 뒤 목표주가 24개의 중간값은 222.50달러(약 30만 원)입니다. 이전 목표를 밝힌 7곳 중 5곳이 낮췄고 2곳은 올렸습니다. 숫자보다 CEO 공백과 중국 리스크를 더 크게 본 결과입니다.",
-  "summary_src": "https://fourweekmba.com/ai-nvidias-q3-drew-5-target-cuts-2-raises-median-is-222-50/",
+  "title": "최근 눈에 띈 증권사 의견",
+  "summary": "최근 2주 사이 등급을 올린 곳은 시스코·팔로알토·AMD처럼 AI 인프라와 보안 쪽이 많았습니다. 반대로 브로드컴과 펩시코는 낮춘 의견이 나왔습니다. 이슈가 크거나 시장에 미친 영향이 큰 순서입니다.",
+  "summary_src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein",
   "rows": [
    {
-    "firm": "레이먼드 제임스",
-    "rating": "",
-    "from": "515달러",
-    "to": "350달러(약 47만 원)",
-    "dir": -1,
-    "src": "https://www.tipranks.com/news/nvidia-stock-price-forecast-analysts-cut-targets-despite-strong-q3"
-   },
-   {
-    "firm": "파이퍼 샌들러",
-    "rating": "비중확대 유지",
-    "from": "300달러",
-    "to": "230달러(약 31만 원)",
-    "dir": -1,
-    "src": "https://www.tipranks.com/news/nvidia-stock-price-forecast-analysts-cut-targets-despite-strong-q3"
-   },
-   {
-    "firm": "모건스탠리",
-    "rating": "",
-    "from": "267달러",
-    "to": "260달러(약 35만 원)",
-    "dir": -1,
-    "src": "https://www.dailypolitical.com/2026/11/18/nvidia-nasdaqnvda-stock-gets-price-target-reduction-from-morgan-stanley.html"
-   },
-   {
-    "firm": "에버코어 ISI",
-    "rating": "중립 유지",
-    "from": "186달러",
-    "to": "184달러(약 24만 원)",
-    "dir": -1,
-    "src": "https://www.benzinga.com/quote/NVDA/price-targets"
-   },
-   {
-    "firm": "JP모건",
-    "rating": "비중확대 유지",
-    "from": "215달러",
-    "to": "230달러(약 31만 원)",
+    "stock": "시스코",
+    "firm": "HSBC · DZ은행",
+    "rating": "보유 → 매수",
+    "to": "133달러(약 17.7만 원)",
+    "date": "11/17",
     "dir": 1,
-    "src": "https://www.aol.com/articles/strong-nvidia-earnings-being-clouded-161240000.html"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
    },
    {
-    "firm": "웨드부시",
-    "rating": "시장수익률 상회",
-    "from": "275달러",
-    "to": "293달러(약 39만 원)",
+    "stock": "팔로알토",
+    "firm": "키뱅크",
+    "rating": "중립 → 비중확대",
+    "to": "380달러(약 50.5만 원)",
+    "date": "11/13",
     "dir": 1,
-    "src": "https://www.benzinga.com/quote/NVDA/price-targets"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn"
    },
    {
+    "stock": "AMD",
+    "firm": "오펜하이머",
+    "rating": "시장수익률 → 시장수익률 상회",
+    "to": "600달러(약 79.8만 원)",
+    "date": "11/9",
+    "dir": 1,
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-amd-upgraded-at-oppenheimer-dkng-downgraded-at-numerous-brokerages"
+   },
+   {
+    "stock": "엔비디아",
     "firm": "BofA",
-    "rating": "매수",
-    "from": "—",
-    "to": "280달러(약 37만 원)",
+    "rating": "매수 유지 (실적 뒤)",
+    "to": "280달러(약 37.2만 원)",
+    "date": "11/18",
     "dir": 0,
     "src": "https://247wallst.com/cards/nvda-xpost-01m7qfdn0mz79tzg8n52bd1d1g"
+   },
+   {
+    "stock": "브로드컴",
+    "firm": "로스차일드 레드번",
+    "rating": "매수 → 중립",
+    "to": "398달러(약 52.9만 원)",
+    "date": "11/13",
+    "dir": -1,
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn"
+   },
+   {
+    "stock": "뉴코어",
+    "firm": "모건스탠리",
+    "rating": "중립 → 비중확대",
+    "to": "310달러(약 41.2만 원)",
+    "date": "11/17",
+    "dir": 1,
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
+   },
+   {
+    "stock": "메드트로닉",
+    "firm": "파이퍼 샌들러",
+    "rating": "중립 → 비중확대",
+    "to": "120달러(약 16만 원)",
+    "date": "11/17",
+    "dir": 1,
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
+   },
+   {
+    "stock": "펩시코",
+    "firm": "번스타인",
+    "rating": "시장수익률 → 시장수익률 하회",
+    "to": "128달러(약 17만 원)",
+    "date": "11/17",
+    "dir": -1,
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
    }
   ],
   "camps": {
@@ -1445,31 +1467,13 @@
    "done": false
   }
  ],
- "column": {
-  "title": "젠슨 황 없는 엔비디아, 숫자보다 무거운 물음표",
-  "short": {
-   "id": "VCv3p1YwE_c",
-   "title": "엔비디아 고점 -35%, 이번 주가 AI 운명 가른다?"
-  },
-  "body": "매출은 1년 새 두 배가 됐는데 주가는 52주 고점보다 38% 낮습니다. 시장은 지금 실적보다 '누가 이끄느냐'를 더 따지고 있습니다. 후임 CEO가 정해지는 날이 반도체 업종의 다음 분기점이 될 수 있습니다.",
-  "src": [
-   {
-    "t": "NVIDIA 8-K",
-    "u": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm"
-   }
-  ]
- },
- "term": {
-  "word": "200일 이동평균선",
-  "body": "최근 200거래일(약 10개월) 종가의 평균입니다. 장기 추세를 가르는 기준으로 쓰여, 지수가 이 선 아래로 내려가면 \"장기 추세가 꺾였다\"는 말이 나옵니다. 오늘 S&P 500은 이 선보다 0.3% 아래에 있습니다."
- },
  "disclaimer": "투자 권유가 아니며, 투자 판단과 책임은 본인에게 있습니다. 시세는 야후 파이낸스 일봉 기준이며, 증권사 전망치는 보도된 내용을 옮긴 것입니다.",
  "quotes": {
   "asof": "2026-11-18 16:00 ET 종가",
   "src": "https://finance.yahoo.com",
   "fx": 1330.28,
   "default": [
-   "NVDA"
+   "SOXL"
   ],
   "list": [
    {
@@ -3228,13 +3232,22 @@
     "news": {
      "y": [
       {
-       "t": "반도체 지수 3배 · 고점 대비 -84%, 변동성 매우 큼",
-       "u": "https://finance.yahoo.com/quote/SOXL/history"
+       "t": "SOXX가 20일 최고 종가보다 18.5% 낮아져 수리수리진타리 ⑨ 반도체 급락 반등 신호(B+)가 켜짐",
+       "u": "https://stock.jintar.co.kr/c/9/"
+      },
+      {
+       "t": "AMD +5.31%·브로드컴 +3.64%가 받쳤지만 엔비디아 -2.89%",
+       "u": "https://finance.yahoo.com/quote/SOXX/history"
       }
      ],
-     "t": []
+     "t": [
+      {
+       "t": "23:30 앤트로픽(ANT) 첫 거래 — AI 반도체로 돈이 몰리는지 빠지는지",
+       "u": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+      }
+     ]
     },
-    "ai": "반도체 지수의 3배 상품으로 고점 대비 -84%입니다. SOXX가 200일선을 11% 아래에서 돌고 있어 반도체 지수가 200일선을 되찾기 전까지는 반등이 나와도 변동성이 클 수 있습니다."
+    "ai": "반도체 지수를 하루 3배로 따라가는 상품이라 고점 대비 -83.7%, 최근 1주 -25.4%·1달 -49.5%로 크게 밀렸습니다. 모든 이동평균선 아래라 추세는 아직 약하지만, RSI 35로 과매도에 가까워졌고 어제는 거래량이 평소 수준인 채 소폭 올랐습니다. 반도체 ETF(SOXX)가 200일선을 약 11% 아래에서 돌고 있어 반등이 나와도 흔들림이 클 수 있고, 3배 상품은 같은 폭으로 오르내려도 원금이 깎이는 구조라 보유 기간을 짧게 정해 두는 편이 안전합니다."
    },
    {
     "t": "SOXX",
@@ -6060,7 +6073,7 @@
    ]
   }
  },
- "site_v": 6,
+ "site_v": 7,
  "jintari": {
   "cards": [
    {

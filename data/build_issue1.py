@@ -305,7 +305,7 @@ for q in issue['quotes']['list']:
     n=TN.get(q['t'],{'y':[],'t':[]}); q['news']={'y':[{'t':a,'u':b} for a,b in n['y']],'t':[{'t':a,'u':b} for a,b in n['t']]}
     q['n']=KO.get(q['t'],q['n'])
 issue['quotes']['default']=['NVDA']
-issue['site_v']=6
+issue['site_v']=7
 issue['top']['img']='img/2026-11-19-ipo.jpg'
 
 # ── v4: AI 종합 의견 ───────────────────────────────────
@@ -446,6 +446,39 @@ for q in issue['quotes']['list']:
     if q['t']=='SNDK':
         q['mini']={'mn':mn,'mx':mx,'b':base64.b64encode(pk).decode(),'res':round(max(r[2] for r in SD[-20:]),2),'sup':round(min(r[3] for r in SD[-20:]),2),
                    'ma5':round(avg(cl[-5:]),2),'ma20':round(avg(cl[-20:]),2),'ma50':round(avg(cl[-50:]),2),'ma200':1284.66,'vr':round(vo[-1]/avg(vo[-21:-1]),2),'note':'1시간봉을 묶은 일봉'}
+# ── v7: 리드 문구 삭제 · 뉴스 한 줄 요약 · 증권사 의견(종목 무관, 이슈 순) · 내 종목 기본 SOXL ──
+issue['lead']=''
+LINES=['매출 1,158억 달러(약 154조 원, +103%)로 예상을 넘었지만 주가는 2.9% 내려 150.96달러(약 20만 원)에 마감했습니다.',
+ '위원 대부분이 추가 인상을 예상했고, 12월 0.25%p 인상 확률은 약 95%입니다.',
+ '정부의 자바 취약점 경고에 보안주가 오르고, 팔로알토는 장 마감 뒤 실적도 예상을 넘었습니다.',
+ '메디케어 감사 강화 규정안에 유나이티드헬스가 10% 넘게 빠져 다우를 끌어내렸습니다.',
+ f"낸드 공급 과잉 전망 뒤 매도가 이어져 샌디스크는 3개월 새 {abs(f('SNDK','m3')):.0f}% 빠졌습니다.",
+ '금리 인상 신호에 금은 온스당 3,750달러(약 499만 원) 아래로, 유가도 함께 내렸습니다.']
+for n,l in zip(issue['news'],LINES): n['line']=l
+NQ17='https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein'
+NQ13='https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn'
+NQ09='https://www.newsquawk.com/headlines/us-broker-moves-amd-upgraded-at-oppenheimer-dkng-downgraded-at-numerous-brokerages'
+issue['street']['title']='최근 눈에 띈 증권사 의견'
+issue['street']['summary']='최근 2주 사이 등급을 올린 곳은 시스코·팔로알토·AMD처럼 AI 인프라와 보안 쪽이 많았습니다. 반대로 브로드컴과 펩시코는 낮춘 의견이 나왔습니다. 이슈가 크거나 시장에 미친 영향이 큰 순서입니다.'
+issue['street']['summary_src']=NQ17
+issue['street']['rows']=[
+ {'stock':'시스코','firm':'HSBC · DZ은행','rating':'보유 → 매수','to':'133달러(약 17.7만 원)','date':'11/17','dir':1,'src':NQ17},
+ {'stock':'팔로알토','firm':'키뱅크','rating':'중립 → 비중확대','to':'380달러(약 50.5만 원)','date':'11/13','dir':1,'src':NQ13},
+ {'stock':'AMD','firm':'오펜하이머','rating':'시장수익률 → 시장수익률 상회','to':'600달러(약 79.8만 원)','date':'11/9','dir':1,'src':NQ09},
+ {'stock':'엔비디아','firm':'BofA','rating':'매수 유지 (실적 뒤)','to':'280달러(약 37.2만 원)','date':'11/18','dir':0,'src':PT_BOFA},
+ {'stock':'브로드컴','firm':'로스차일드 레드번','rating':'매수 → 중립','to':'398달러(약 52.9만 원)','date':'11/13','dir':-1,'src':NQ13},
+ {'stock':'뉴코어','firm':'모건스탠리','rating':'중립 → 비중확대','to':'310달러(약 41.2만 원)','date':'11/17','dir':1,'src':NQ17},
+ {'stock':'메드트로닉','firm':'파이퍼 샌들러','rating':'중립 → 비중확대','to':'120달러(약 16만 원)','date':'11/17','dir':1,'src':NQ17},
+ {'stock':'펩시코','firm':'번스타인','rating':'시장수익률 → 시장수익률 하회','to':'128달러(약 17만 원)','date':'11/17','dir':-1,'src':NQ17},
+]
+issue['quotes']['default']=['SOXL']
+for q in issue['quotes']['list']:
+    if q['t']=='SOXL':
+        q['news']={'y':[{'t':'SOXX가 20일 최고 종가보다 18.5% 낮아져 수리수리진타리 ⑨ 반도체 급락 반등 신호(B+)가 켜짐','u':'https://stock.jintar.co.kr/c/9/'},{'t':'AMD +5.31%·브로드컴 +3.64%가 받쳤지만 엔비디아 -2.89%','u':Y('SOXX')}],
+                   't':[{'t':'23:30 앤트로픽(ANT) 첫 거래 — AI 반도체로 돈이 몰리는지 빠지는지','u':CNBC_IPO}]}
+        q['ai']=f"반도체 지수를 하루 3배로 따라가는 상품이라 고점 대비 {q['hi']}%, 최근 1주 {q['w1']:+}%·1달 {q['m1']:+}%로 크게 밀렸습니다. 모든 이동평균선 아래라 추세는 아직 약하지만, RSI {q['rsi']}로 과매도에 가까워졌고 어제는 거래량이 평소 수준인 채 소폭 올랐습니다. 반도체 ETF(SOXX)가 200일선을 약 11% 아래에서 돌고 있어 반등이 나와도 흔들림이 클 수 있고, 3배 상품은 같은 폭으로 오르내려도 원금이 깎이는 구조라 보유 기간을 짧게 정해 두는 편이 안전합니다."
+
+issue.pop('column',None); issue.pop('term',None)
 # ── v6: 수리수리진타리 오늘의 카드 (stock.jintar.co.kr · 11/18 장 종료 기준 신호) ──
 JL=json.load(open('data/jintari_latest.json',encoding='utf-8'))
 w=lambda usd:(lambda v:f"약 {v/10000:.1f}만 원".replace('.0만','만') if v<100000 else f"약 {round(v/10000)}만 원")(usd*FX)

@@ -2,11 +2,11 @@
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <!--OG-->
 <title>역대 최대 IPO 앤트로픽, 오늘 밤 나스닥 첫 거래 | 미국주식 늬우스 11/19(목)</title>
-<meta name="description" content="엔비디아 호실적에도 S&amp;P 500은 5일 연속 하락. 연준 의사록이 12월 금리 인상에 무게를 실었고, 오늘 밤 앤트로픽이 사상 최대 공모로 나스닥에 상장합니다.">
+<meta name="description" content="">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="미국주식 늬우스">
 <meta property="og:title" content="역대 최대 IPO 앤트로픽, 오늘 밤 나스닥 첫 거래 | 미국주식 늬우스 11/19(목)">
-<meta property="og:description" content="엔비디아 호실적에도 S&amp;P 500은 5일 연속 하락. 연준 의사록이 12월 금리 인상에 무게를 실었고, 오늘 밤 앤트로픽이 사상 최대 공모로 나스닥에 상장합니다.">
+<meta property="og:description" content="">
 <meta property="og:url" content="https://stocknews.jintar.co.kr/">
 <meta property="og:image" content="https://stocknews.jintar.co.kr/og/2026-11-19.png">
 <meta property="og:image:width" content="1200">
@@ -212,9 +212,9 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 /* 캔들 차트 */
 .cblock{padding:14px 16px 16px;border:1.5px solid var(--ink);background:#fff;margin-bottom:20px}
 @media(max-width:600px){.cblock{padding:10px 10px 12px}}
-.cblock .hline{font-family:'Noto Serif KR',serif;font-weight:800;font-size:18px;line-height:1.45;margin:2px 0 8px}
+.cblock .hline{font-family:'Noto Serif KR',serif;font-weight:800;font-size:clamp(20px,2.4vw,27px);line-height:1.45;margin:2px 0 8px}
 .cblock .brief{font-size:15px;line-height:1.65;margin:2px 0 10px;padding:8px 12px;background:#f4f1e8;border-left:4px solid var(--ink)}
-.cblock h3.ct{font-size:22px;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.cblock h3.ct{font-size:16px;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
 .cblock h3.ct small{font-family:Pretendard,sans-serif;font-size:15px;font-weight:600}
 .cblock .ana{display:grid;gap:10px 18px;grid-template-columns:minmax(0,1fr);margin-top:8px}
 @media(min-width:860px){.cblock .ana{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}}
@@ -268,6 +268,13 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .jcard .jg{background:var(--ink);color:#fff;font-weight:800;font-size:13px;padding:1px 7px}
 .jcard .js{font-size:13px;font-weight:700;margin:3px 0 6px}
 .jcard table{width:100%;border-collapse:collapse;font-size:13px}.jcard th{text-align:left;font-weight:600;color:var(--muted);white-space:nowrap;padding:4px 8px 4px 0;border-bottom:1px dotted var(--line);font-size:12px}.jcard td{padding:4px 0;border-bottom:1px dotted var(--line)}
+
+.tape2{background:#efebe0}.tape2 div{font-size:12.5px}
+.news4 .nit{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.news4 .nit:last-child{border-bottom:0}
+.news4 img{width:92px;aspect-ratio:8/5;object-fit:contain;background:#ececec;border:1px solid var(--line)}
+.news4 h4{margin:0 0 2px;font-size:15.5px;line-height:1.35}.news4 h4 .tag{margin-right:6px}.news4 p{margin:0;font-size:13.5px;line-height:1.5;color:#3b3934}
+.brk td{vertical-align:top}.brk .rup{font-size:12px;font-weight:700}.brk .rdn{font-size:12px;font-weight:700;color:#2563a6}
+.r5b{align-items:start}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -277,24 +284,23 @@ details.it .body{padding:0 2px 12px;font-size:14px}
  <div class="pub">발행인 <b id="pub">샌디스크 올인</b> · <span id="session"></span></div>
 </header>
 <nav class="tape" id="tape"></nav>
-<p class="lead" id="lead"></p>
+<nav class="tape tape2" id="tape2"></nav>
+<p class="lead" id="lead" hidden></p>
 
 <div class="row"><section id="s-top"><h2>1면 <small>지금 시장이 가장 주목하는 한 건</small></h2><div id="top"></div></section></div>
 
-<div class="row r2">
+<div class="row r2 nsrow">
+ <section id="s-news"><h2>간밤 핵심 뉴스 <small>어제 무슨 일이</small></h2><div class="news4" id="news"></div></section>
  <section id="s-sch"><h2>오늘 밤 일정 <small>한국 시간 · 누르면 상세</small></h2><div class="sch3" id="sch"></div><p class="src" id="schnote"></p></section>
- <section id="s-g"><h2>참고 지표</h2><div id="ind"></div></section>
 </div>
 
 <div class="row"><section id="s-chart"><h2>차트 분석 <small id="chart-asof"></small></h2><div id="charts"></div>
  <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small></h3><p class="brief" id="tm-com"></p><div class="tmap" id="tmap"></div><div class="tmtip" id="tmtip" hidden></div><p class="src" style="margin:4px 0 0">칸에 마우스를 올리거나 눌러 보면 어제 시세 요약이 나옵니다.</p><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
 </section></div>
 
-<div class="row"><section id="s-news"><h2>간밤 핵심 뉴스 <small>누르면 상세</small></h2><div class="news3" id="news"></div></section></div>
-
 <div class="row r5b">
  <section id="s-mine" class="mine"><h2>내 종목 분석 <small>티커를 넣어 보세요</small></h2><div id="mine"></div></section>
- <section id="s-term-col"><h2>발행인 칼럼</h2><div id="col"></div><h2 style="margin-top:18px">수리수리진타리 오늘의 카드 <small id="jin-asof"></small></h2><div id="jin"></div><h2 style="margin-top:18px">한 줄 용어</h2><div class="term" id="term"></div></section>
+ <section id="s-term-col"><h2>수리수리진타리 오늘의 카드 <small id="jin-asof"></small></h2><div id="jin"></div></section>
 </div>
 
 <div class="row"><section id="s-cal"><h2>이번 주 · 다음 주 달력 <small>미국 현지 날짜</small></h2><div id="cal"></div></section></div>
@@ -449,25 +455,25 @@ function mineAnalysis(x){
 }
 function mine(Q){
  const box=$('mine');if(!Q){box.innerHTML='<p class="tbd">시세 준비 중</p>';return}
- const by=Object.fromEntries(Q.list.map(x=>[x.t,x]));let cur;try{cur=localStorage.getItem('usn_mine')}catch(e){}
+ const by=Object.fromEntries(Q.list.map(x=>[x.t,x]));let cur;try{cur=localStorage.getItem('usn_mine2')}catch(e){}
  if(!by[cur])cur=Q.default[0];
  const won=w=>w>=10000?`약 ${(w/10000).toFixed(w>=100000?0:1)}만 원`:`약 ${w.toLocaleString('ko-KR')}원`;
  box.innerHTML=`<div class="qbox"><input id="min" list="mlist" placeholder="티커 또는 종목명 (예: INTC, 테슬라)" autocomplete="off"><datalist id="mlist">${Q.list.map(x=>`<option value="${esc(x.t)}">${esc(x.n)}</option>`).join('')}</datalist></div>
-  <div class="qsel">${['NVDA','TSLA','INTC','SPCX','SNDK','PLTR','SOXL','QQQ'].filter(t=>by[t]).map(t=>`<button data-pick="${t}">${esc(by[t].n)}</button>`).join(' ')}</div><div id="mcard"></div>
+  <div class="qsel">${['SOXL','NVDA','TSLA','INTC','SPCX','SNDK','PLTR','QQQ'].filter(t=>by[t]).map(t=>`<button data-pick="${t}">${esc(by[t].n)}</button>`).join(' ')}</div><div id="mcard"></div>
   <p class="src">${Q.list.length}개 인기 종목 · ${esc(Q.asof)} · 원화는 ${Q.fx}원/달러 · 출처: 야후 파이낸스, 각 기사</p>`;
  const draw=()=>{const x=by[cur];[...box.querySelectorAll('[data-pick]')].forEach(b=>b.classList.toggle('on',b.dataset.pick===cur));
   const li=a=>a.length?`<ul>${a.map(n=>`<li>${esc(n.t)} <a class="src" href="${esc(n.u)}" target="_blank" rel="noopener">${esc(host(n.u))}</a></li>`).join('')}</ul>`:'<p class="none">수집된 소식이 없습니다.</p>';
   $('mcard').innerHTML=`<div class="card"><div class="hd"><span><b>${esc(x.n)}</b> <span class="muted">${esc(x.t)}</span></span><span class="px">${fmt(x.c,2)}달러 ${chgv(x.ch)} <span class="small muted">${won(x.won)}</span></span></div>
    <div class="cols"><div>${miniSVG(x.mini,x.c)}${x.mini&&x.mini.note?`<p class="src">${esc(x.mini.note)} 기준</p>`:''}<h5>숫자로 보기</h5><ul class="small">${mineAnalysis(x).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
    <div><h5 style="margin-top:0">AI 종합 의견</h5><p class="aiop">${esc(x.ai||'')}</p><p class="src">데이터·뉴스를 바탕으로 AI가 쓴 요약이며 투자 권유가 아닙니다.</p><h5>어제 이슈</h5>${li(x.news.y)}${x.why&&!x.news.y.length?`<p class="small">${esc(x.why)}</p>`:''}<h5>오늘 일정</h5>${li(x.news.t)}</div></div></div>`};
- const pick=v=>{v=(v||'').trim();if(!v)return;const t=by[v.toUpperCase()]?v.toUpperCase():(Q.list.find(x=>x.n.toLowerCase().includes(v.toLowerCase())||x.t.toLowerCase()===v.toLowerCase())||{}).t;if(t){cur=t;try{localStorage.setItem('usn_mine',t)}catch(e){}draw()}else{$('mcard').innerHTML=`<p class="none">'${esc(v)}'는 아직 목록에 없는 종목입니다. 지원 종목: ${Q.list.length}개</p>`}};
+ const pick=v=>{v=(v||'').trim();if(!v)return;const t=by[v.toUpperCase()]?v.toUpperCase():(Q.list.find(x=>x.n.toLowerCase().includes(v.toLowerCase())||x.t.toLowerCase()===v.toLowerCase())||{}).t;if(t){cur=t;try{localStorage.setItem('usn_mine2',t)}catch(e){}draw()}else{$('mcard').innerHTML=`<p class="none">'${esc(v)}'는 아직 목록에 없는 종목입니다. 지원 종목: ${Q.list.length}개</p>`}};
  box.addEventListener('click',e=>{const b=e.target.closest('[data-pick]');if(b)pick(b.dataset.pick)});
  const inp=$('min');inp.addEventListener('change',()=>{pick(inp.value);inp.value=''});inp.addEventListener('keydown',e=>{if(e.key==='Enter'){pick(inp.value);inp.value=''}});
  draw();
 }
 
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=6;
+const SITE_V=7;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
@@ -486,7 +492,7 @@ function render(D){
  $('sch').innerHTML=(D.schedule||[]).map(s=>`<details class="it"><summary><span class="t">${esc(s.kst)}</span><span><span class="tag">${esc(s.type)}</span><span class="nm">${esc(s.name)}</span></span>${star5(s.star)}<span class="ar">▶</span></summary><div class="body">${esc(s.why)}${src1(s.src)}</div></details>`).join('');
  $('schnote').textContent=D.schedule_note||'';
  // 지표
- $('ind').innerHTML=`<table class="ind">${(D.indicators||[]).map(r=>`<tr><td>${esc(r.name)}${r.label?` <span class="small muted">${esc(r.label)}</span>`:''}</td><td>${fmt(r.v,r.d)}${r.suf||''}</td><td>${r.chg!=null?chgv(r.chg,r.chgsuf||'%'):''}</td></tr>`).join('')}</table><div class="src">출처: CNN 공포·탐욕, CME FedWatch(보도), 야후 파이낸스 · 국채·지수는 11/18 종가, 달러·유가·환율은 11/19 오전</div>`;
+ $('tape2').innerHTML=(D.indicators||[]).map(r=>`<div><b>${esc(r.name)}</b>${fmt(r.v,r.d)}${r.suf||''}${r.label?` <span class="small muted">${esc(r.label)}</span>`:''}${r.chg!=null?' '+chgv(r.chg,r.chgsuf||'%'):''}</div>`).join('');
  // 차트
  const C=D.charts||[];$('chart-asof').textContent=C[0]?C[0].asof:'';
  const lvf=(c,v)=>c.unit==='달러'?fmt(v,2):Math.round(v).toLocaleString('ko-KR');
@@ -497,7 +503,7 @@ function render(D){
   ${c.watch?`<div class="watchlv"><div><span>▲ 돌파 볼 자리</span><b>${lvf(c,c.watch.up.v)}</b><br><small>${esc(c.watch.up.name)} · ${c.watch.up.gap>0?'+':''}${c.watch.up.gap}%</small></div><div><span>▼ 지지 볼 자리</span><b>${lvf(c,c.watch.down.v)}</b><br><small>${esc(c.watch.down.name)} · ${c.watch.down.gap}%</small></div></div>`:''}</div></div>`).join('');
  safe('tmap',()=>treemap(D.treemap&&{...D.treemap,fx:(D.quotes||{}).fx}));
  // 뉴스
- $('news').innerHTML=(D.news||[]).map(n=>`<details class="it"><summary>${n.img?`<img src="${esc(n.img)}" alt="">`:'<span></span>'}<h4><span class="tag">${esc(n.tag)}</span>${esc(n.title)}</h4><span class="ar">▶</span></summary><div class="body">${esc(n.body)}${srcs(n.src)}</div></details>`).join('');
+ $('news').innerHTML=(D.news||[]).map(n=>`<div class="nit">${n.img?`<img src="${esc(n.img)}" alt="">`:''}<div><h4><span class="tag">${esc(n.tag)}</span>${esc(n.title)}</h4><p>${esc(n.line||n.body)} ${(n.src||[]).slice(0,1).map(x=>`<a class="src" href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t||host(x.u))}</a>`).join('')}</p></div></div>`).join('');
  safe('mine',()=>mine(D.quotes));
  // 달력
  const K=D.calendar;if(K){const wd=['월','화','수','목','금'];$('cal').innerHTML=`<div class="cal">${wd.map(w=>`<div class="wd">${w}</div>`).join('')}${K.days.map(d=>{const dd=new Date(d.d+'T00:00:00');const st=d.d<K.today?'past':d.d===K.today?'today':'';const off=d.ev.some(e=>e.k==='휴장');return `<div class="day ${st} ${off?'off':''}"><div class="dn">${dd.getMonth()+1}/${dd.getDate()}</div>${d.ev.map(e=>`<div class="ev ${e.hl?'hl':''}"><i>${esc(e.k)}</i>${esc(e.t)}${e.when?` <small>${esc(e.when)}</small>`:''}</div>`).join('')}</div>`}).join('')}</div>${srcs(K.src)}`}
@@ -508,7 +514,7 @@ function render(D){
  $('street').innerHTML=`<div class="camps"><div class="camp"><h4>▲ 롱 진영 <small>오른다 · 괜찮다 쪽</small></h4>${CP.long.map(card).join('')}</div><div class="camp"><h4>▼ 숏 진영 <small>내린다 · 조심하자 쪽</small></h4>${CP.short.map(card).join('')}</div></div>
   <p class="src">말풍선은 실제 발언과 보도를 쉬운 말로 줄인 것입니다. 실루엣은 역할을 나타내는 그림이며 실제 얼굴이 아닙니다.</p>
   <div class="stbl"><h4>${esc(W.title)}</h4><p class="small">${esc(W.summary)}</p>
-  <table style="margin-top:8px"><tr><th>증권사</th><th>목표 변경</th></tr>${(W.rows||[]).map(r=>`<tr><td>${esc(r.firm)}${r.rating?`<div class="src">${esc(r.rating)}</div>`:''}</td><td>${r.from&&r.from!=='—'?`<span class="strike">${esc(r.from)}</span> → `:''}<b>${esc(r.to)}</b> <span class="${r.dir>0?'up':r.dir<0?'down':'flat'}"></span></td></tr>`).join('')}</table>
+  <table class="brk" style="margin-top:8px"><tr><th>종목</th><th>증권사 · 의견</th><th>목표주가</th></tr>${(W.rows||[]).map(r=>`<tr><td><b>${esc(r.stock||'')}</b><div class="src">${esc(r.date||'')}</div></td><td>${esc(r.firm)}<div class="${r.dir>0?'rup':r.dir<0?'rdn':''}">${r.dir>0?'▲ ':r.dir<0?'▼ ':''}${esc(r.rating||'')}</div></td><td><b>${esc(r.to)}</b></td></tr>`).join('')}</table>
   <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div>`;
  safe('jin',()=>{const J=D.jintari;if(!J){$('jin').innerHTML='<p class="none">오늘은 카드가 없습니다.</p>';return}$('jin-asof').textContent=J.asof;
   const spark=a=>{if(!a||a.length<2)return '';const mn=Math.min(...a),mx=Math.max(...a),W=120,H=34;return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline fill="none" stroke="#141414" stroke-width="1.6" points="${a.map((v,i)=>`${(i/(a.length-1)*W).toFixed(1)},${(H-2-(v-mn)/(mx-mn||1)*(H-4)).toFixed(1)}`).join(' ')}"/></svg>`};
@@ -516,8 +522,8 @@ function render(D){
    <div class="jh"><span class="jg">${esc(c.g)}</span><b>${esc(c.t)}</b> <span class="muted">${esc(c.kn)}</span>${spark(c.ln)}</div><div class="js">${esc(c.s)}</div>
    <table>${c.rows.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join('')}</table><p class="small">${esc(c.why)}</p>
    <a class="golink" href="${esc(c.u)}" target="_blank" rel="noopener">카드 자세히 보기 ▶</a></div>`).join('')+(J.cash||[]).map(x=>`<p class="small muted" style="margin:6px 0 0">대기 자금 카드: ${esc(x.s)} · ${esc(x.t)} (${esc(x.kn)})</p>`).join('')+`<p class="src">${esc(J.note)} · <a href="${esc(J.u)}" target="_blank" rel="noopener">stock.jintar.co.kr</a></p>`});
- const T=D.term||{};$('term').innerHTML=`<b>${esc(T.word)}</b>${esc(T.body)}`;
- const CO=D.column||{};$('col').innerHTML=`<h4 style="font-family:'Noto Serif KR',serif;font-size:19px">${esc(CO.title)}</h4><p class="small" style="font-size:14px">${esc(CO.body)}</p>${golink(CO.short)}${srcs(CO.src)}`;
+
+
  $('disc').textContent=D.disclaimer||'';
 }
 const q=new URLSearchParams(location.search).get('d');
