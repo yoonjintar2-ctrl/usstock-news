@@ -45,3 +45,6 @@
 
 ## 검수 체크
 - check_numbers 통과 · 화면 390/1400px 스크린샷 Read 로 확인 · 영상 qa_video 통과 + qa.png 확인 · 제목·썸네일 숫자 = 본문 숫자.
+
+## 공유 썸네일
+발행(`scripts/publish_draft.py D`) 때 `scripts/make_og.py`가 그날 1면 제목·지수·1면 그림으로 `og/D.png`(1200x630)를 만들고, index.html의 `<!--OG-->` 구간(제목·설명·og:image)을 그날 것으로 바꾼다. 이미지 파일명에 날짜가 들어가 카톡 등의 미리보기 캐시도 날마다 새로 잡힌다.
