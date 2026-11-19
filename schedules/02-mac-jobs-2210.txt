@@ -1,0 +1,4 @@
+[예약 작업 · 매일 22:10 KST · 맥 연결 대화에서]
+D=내일. git pull → tts/jobs/us-mnews-D.json·us-shorts-D.json·zz-us-img-D.json 을 .part 로 device_commit_files → mv 로 ~/Downloads/qtts/jobs/ 에 넣는다.
+중복 방지: jobs/·jobs_done/ 에 같은 이름이 있거나 out/<name>/DONE 이 있으면 넣지 않음. 대기기가 꺼져 보이면(worker_log 10분+ 멈춤) 석진님께 알림.
+2줄 보고. 마지막에 send_later 로 내일 22:10 에 이 메시지를 그대로 다시 예약.

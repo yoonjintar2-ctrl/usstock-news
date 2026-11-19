@@ -1,0 +1,2 @@
+[예약 작업 · 매일 06:10 KST · 맥 연결 대화에서]
+D=오늘. ① 마감 시세·3대 지수·원/달러·미 국채 10년·오늘의 종목 가격을 웹 검색으로 확인해 drafts/D.json 숫자 칸을 {v,src,asof} 로 채운다(확인 못 하면 비워 둠). ② python3 scripts/check_numbers.py drafts/D.json 통과. ③ 숫자 문장 음성(12문장 안)을 맥에 넣고, 밤사이 만든 음성·그림을 tar 로 묶어 device_stage_files 로 가져와 후처리·검수(그림은 Read 로 직접 보고 실제와 맞는 것만). ④ commit·push, 2~3줄 보고. 마지막에 send_later 로 내일 06:10 다시 예약.

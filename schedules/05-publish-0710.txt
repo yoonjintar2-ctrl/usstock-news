@@ -1,0 +1,2 @@
+[예약 작업 · 매일 07:10 KST · 클라우드]
+python3 scripts/publish_draft.py D (숫자 검사 통과해야 진행) → 공유 카드 → commit·push → 1~2분 뒤 https://stocknews.jintar.co.kr 을 390px·1400px 로 찍어 Read 로 확인(빈 칸·깨진 그림·겹친 글자) → 존댓말 2~3줄 보고. 지어낸 숫자·인용 금지, 로그인·결제 금지.
