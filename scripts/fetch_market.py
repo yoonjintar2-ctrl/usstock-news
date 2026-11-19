@@ -15,7 +15,7 @@
 숫자는 받아 온 값으로만 계산한다.
 """
 import base64, json, re, time, datetime as dt
-import requests
+import requests, sys
 
 S = requests.Session()
 S.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
@@ -26,21 +26,29 @@ MOVERS = ('AAPL ADBE AMD AMZN ARM ASML ASTS AVGO BA BAC BRK-B COIN COST CRM CRWD
           'TLT TQQQ TSLA TSM UBER UNH V VOO WDC WMT XOM SPCX SNXX').split()
 
 
+FAIL = {}
+
+
 def chart(sym, rng='1y', itv='1d'):
-    for host in ('query1', 'query2'):
+    for k in range(6):
+        host = ('query1', 'query2')[k % 2]
         try:
             r = S.get(f'https://{host}.finance.yahoo.com/v8/finance/chart/{sym}', params={'range': rng, 'interval': itv}, timeout=20)
+            if r.status_code != 200:
+                FAIL[sym] = r.status_code; time.sleep(2 * (k + 1)); continue
             res = r.json()['chart']['result'][0]
             q = res['indicators']['quote'][0]
             rows = []
             for i, t in enumerate(res.get('timestamp') or []):
                 if q['close'][i] is None: continue
-                d = (dt.datetime.utcfromtimestamp(t) + dt.timedelta(hours=-5)).strftime('%Y-%m-%d') if itv != '1d' else \
-                    dt.datetime.utcfromtimestamp(t + res['meta'].get('gmtoffset', 0)).strftime('%Y-%m-%d')
+                d = (dt.datetime.fromtimestamp(t, dt.timezone.utc) + dt.timedelta(hours=-5)).strftime('%Y-%m-%d') if itv != '1d' else \
+                    dt.datetime.fromtimestamp(t + res['meta'].get('gmtoffset', 0), dt.timezone.utc).strftime('%Y-%m-%d')
                 rows.append([d, q['open'][i], q['high'][i], q['low'][i], q['close'][i], q['volume'][i] or 0])
+            FAIL.pop(sym, None)
             return rows
-        except Exception:
-            time.sleep(1)
+        except Exception as e:
+            FAIL[sym] = repr(e)[:80]; time.sleep(2 * (k + 1))
+    print('FAIL', sym, FAIL.get(sym), file=sys.stderr)
     return []
 
 
@@ -92,7 +100,7 @@ def pack(vals, mn, mx, top=254, null=True):
 def main():
     D = {}
     for s in sorted(set(SUMMARY + MOVERS + [v[1] for v in IDX.values()])):
-        D[s] = daily(s); time.sleep(0.25)
+        D[s] = daily(s); time.sleep(0.6)
     last = D['SPY'][-1][0]
     # summary
     head = 'sym|date,close,prev,chg,open,high,low,ma20,ma50,ma200,ma20p,ma50p,ma200p,hi52,hi52d,lo52,lo52d,rsi,vol,vol20,volr,res20,sup20,res60,sup60,w1,m1,m3'
@@ -155,7 +163,7 @@ def main():
         open('data/sp500_top100.txt', 'w').write(';'.join(f'{t},{w:.2f},{c:.2f},{n}' for t, w, c, n in tm) + '\n')
         td = {}
         for t, *_ in tm:
-            ys = t.replace('.', '-'); rows = D.get(ys) or daily(ys); time.sleep(0.2)
+            ys = t.replace('.', '-'); rows = D.get(ys) or daily(ys); time.sleep(0.5)
             if len(rows) < 25: td[ys] = 'ERR'; continue
             rows = rows[-63:]; n = len(rows); cl = [r[4] for r in rows]; vo = [r[5] for r in rows]; L = rows[-1]
             td[ys] = [L[0], *(round(x, 2) for x in L[1:5]), round(pct(L[4], cl[-2]), 2), L[5], round(L[5] / avg(vo[-21:-1]), 2) if avg(vo[-21:-1]) else None,
