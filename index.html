@@ -187,6 +187,7 @@ footer{border-top:5px double var(--rule);margin-top:28px;padding-top:10px;font-s
 @media(min-width:860px){.topw3 .grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}}
 .topw3 img{width:100%;aspect-ratio:8/5;object-fit:contain;background:#ececec;border:1px solid var(--ink);display:block}
 .topw3 .figs{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:560px){.topw3 .figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.topw3 .kpts{margin:4px 0 14px;padding-left:18px;font-size:15.5px;line-height:1.6}.topw3 .kpts li{margin:3px 0}.topw3 .kpts.kr li::marker{content:'– ';color:#8a857a}.topw3 .kpts.kr{color:#3b3934}
 .topw3 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:8px}.topw3 .foot .src{margin:0}
 /* 접는 목록 */
 details.it{border-bottom:1px solid var(--line)}
@@ -209,8 +210,10 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 /* 지표 표 */
 .ind td{padding:7px 4px}.ind td:nth-child(2){font-weight:700;font-size:15px}
 /* 캔들 차트 */
-.cblock{padding:6px 0 26px;border-bottom:1px solid var(--line);margin-bottom:18px}
-.cblock:last-child{border-bottom:0}
+.cblock{padding:14px 16px 16px;border:1.5px solid var(--ink);background:#fff;margin-bottom:20px}
+@media(max-width:600px){.cblock{padding:10px 10px 12px}}
+.cblock .hline{font-family:'Noto Serif KR',serif;font-weight:800;font-size:18px;line-height:1.45;margin:2px 0 8px}
+.cblock .brief{font-size:15px;line-height:1.65;margin:2px 0 10px;padding:8px 12px;background:#f4f1e8;border-left:4px solid var(--ink)}
 .cblock h3.ct{font-size:22px;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
 .cblock h3.ct small{font-family:Pretendard,sans-serif;font-size:15px;font-weight:600}
 .cblock .ana{display:grid;gap:10px 18px;grid-template-columns:minmax(0,1fr);margin-top:8px}
@@ -220,7 +223,11 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .mal i{display:inline-block;width:16px;height:0;border-top:2.5px solid;vertical-align:middle;margin-right:4px}
 /* 트리맵 */
 .tmap{position:relative;width:100%;aspect-ratio:16/9;background:#222;border:1px solid var(--ink);overflow:hidden}
-@media(max-width:700px){.tmap{aspect-ratio:3/4}}
+@media(max-width:700px){.tmap{aspect-ratio:9/16}}
+#tm-wrap{position:relative}.tmap .c{cursor:pointer}.tmap .c.on{outline:3px solid #fff;outline-offset:-3px;z-index:3}
+.tmtip{position:absolute;z-index:20;width:290px;max-width:calc(100% - 12px);background:#fff;border:1.5px solid var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.25);padding:10px 12px;font-size:13px;line-height:1.45}
+.tmtip .th b{font-size:17px;margin-right:4px}.tmtip .th span{display:block;font-size:11.5px;color:var(--muted)}.tmtip .tp{font-size:16px;font-weight:800;margin:4px 0 6px;font-variant-numeric:tabular-nums}.tmtip .tp small{font-weight:600;font-size:12px;color:var(--muted)}.tmtip em{font-style:normal}.tmtip em.u{color:#16a34a}.tmtip em.d{color:#dc2626}
+.tmtip table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}.tmtip th{text-align:left;font-weight:600;color:var(--muted);font-size:11.5px;padding:3px 6px 3px 0;vertical-align:top;white-space:nowrap;border:0}.tmtip td{padding:3px 0;border:0;font-size:12.5px}
 .tmap .c{position:absolute;box-sizing:border-box;border:1px solid #1a1a1a;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;line-height:1.15}
 .tmap .c b{font-weight:800}.tmap .c span{font-weight:600;opacity:.95}
 .tmap .sl{position:absolute;color:#fff;font-size:11px;font-weight:800;background:rgba(0,0,0,.55);padding:1px 5px;z-index:2;pointer-events:none}
@@ -242,6 +249,25 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .mine .aiop{font-size:15px;line-height:1.7;margin:4px 0 2px;padding:10px 12px;background:#fff;border-left:4px solid var(--ink)}
 .mine ul.small li{font-size:12.5px;color:#3b3934}
 @media(min-width:980px){.r5b{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}#s-street .r2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
+
+.camps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+@media(max-width:600px){.camps{gap:8px}}
+.camp h4{margin:0 0 8px;padding-bottom:5px;border-bottom:2px solid var(--ink);font-size:15px}.camp h4 small{font-weight:500;color:var(--muted);font-size:11.5px}
+.spk{display:flex;gap:8px;align-items:flex-start;margin:0 0 12px}
+.spk img{flex:none;width:52px;height:52px;border-radius:50%}
+.bub{position:relative;flex:1;min-width:0;background:#fff;border:1.5px solid var(--ink);border-radius:14px;padding:8px 11px}
+.bub::before{content:'';position:absolute;left:-9px;top:16px;border:8px solid transparent;border-right-color:var(--ink);border-left:0}
+.bub::after{content:'';position:absolute;left:-6px;top:17px;border:7px solid transparent;border-right-color:#fff;border-left:0}
+.bub p{margin:0;font-size:15px;line-height:1.5;font-weight:600}
+.bub .who{margin-top:5px;font-size:11.5px;color:var(--muted)}.bub .who b{color:var(--ink)}.bub .who a{color:var(--muted)}
+@media(max-width:600px){.spk{flex-direction:column;align-items:center;gap:6px}.spk img{width:44px;height:44px}.bub::before{left:50%;top:-9px;margin-left:-8px;border:8px solid transparent;border-bottom-color:var(--ink);border-top:0}.bub::after{left:50%;top:-6px;margin-left:-7px;border:7px solid transparent;border-bottom-color:#fff;border-top:0}.bub{width:100%;box-sizing:border-box}.bub p{font-size:14px}}
+.stbl{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+
+.jcard{border:1.5px solid var(--ink);background:#fff;padding:10px 12px;margin-top:6px}.jcard img{width:100%;display:block;border:1px solid var(--line);margin-bottom:8px}
+.jcard .jh{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.jcard .jh b{font-size:20px}.jcard .jh svg{margin-left:auto}
+.jcard .jg{background:var(--ink);color:#fff;font-weight:800;font-size:13px;padding:1px 7px}
+.jcard .js{font-size:13px;font-weight:700;margin:3px 0 6px}
+.jcard table{width:100%;border-collapse:collapse;font-size:13px}.jcard th{text-align:left;font-weight:600;color:var(--muted);white-space:nowrap;padding:4px 8px 4px 0;border-bottom:1px dotted var(--line);font-size:12px}.jcard td{padding:4px 0;border-bottom:1px dotted var(--line)}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -261,19 +287,19 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 </div>
 
 <div class="row"><section id="s-chart"><h2>차트 분석 <small id="chart-asof"></small></h2><div id="charts"></div>
- <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small></h3><div class="tmap" id="tmap"></div><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
+ <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small></h3><p class="brief" id="tm-com"></p><div class="tmap" id="tmap"></div><div class="tmtip" id="tmtip" hidden></div><p class="src" style="margin:4px 0 0">칸에 마우스를 올리거나 눌러 보면 어제 시세 요약이 나옵니다.</p><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
 </section></div>
 
 <div class="row"><section id="s-news"><h2>간밤 핵심 뉴스 <small>누르면 상세</small></h2><div class="news3" id="news"></div></section></div>
 
 <div class="row r5b">
  <section id="s-mine" class="mine"><h2>내 종목 분석 <small>티커를 넣어 보세요</small></h2><div id="mine"></div></section>
- <section id="s-term-col"><h2>발행인 칼럼</h2><div id="col"></div><h2 style="margin-top:18px">한 줄 용어</h2><div class="term" id="term"></div></section>
+ <section id="s-term-col"><h2>발행인 칼럼</h2><div id="col"></div><h2 style="margin-top:18px">수리수리진타리 오늘의 카드 <small id="jin-asof"></small></h2><div id="jin"></div><h2 style="margin-top:18px">한 줄 용어</h2><div class="term" id="term"></div></section>
 </div>
 
 <div class="row"><section id="s-cal"><h2>이번 주 · 다음 주 달력 <small>미국 현지 날짜</small></h2><div id="cal"></div></section></div>
 
-<div class="row"><section id="s-street"><h2>월가 · 연준 한마디</h2><div id="street"></div></section></div>
+<div class="row"><section id="s-street"><h2>월가 · 연준 · 큰손 한마디 <small>왼쪽 롱 · 오른쪽 숏</small></h2><div id="street"></div></section></div>
 
 <div class="row"><section id="s-about"><h2>이 신문은</h2><p class="small">매일 아침 미국 정규장 마감(한국 시간 06:00) 뒤 발행합니다. 시세 숫자에는 출처와 기준 시각을 달고, 확인하지 못한 숫자는 싣지 않습니다. 캔들·트리맵은 미국식 색(초록=상승, 빨강=하락)이고, 그 밖의 등락은 ▲▼ 기호로 표시합니다. 달러 금액에는 그날 환율로 계산한 대략의 원화를 함께 적습니다. 유튜브 <a href="https://www.youtube.com/@SNDK_lover" target="_blank" rel="noopener">@SNDK_lover 샌디스크 올인</a>에서 쇼츠로도 만나실 수 있습니다.</p></section></div>
 
@@ -366,13 +392,33 @@ function squarify(items,x,y,w,h,out){
 const tcol=ch=>{const a=Math.min(1,Math.abs(ch)/3);if(Math.abs(ch)<0.05)return '#4b5563';return ch>0?`rgb(${Math.round(40-20*a)},${Math.round(90+70*a)},${Math.round(60+10*a)})`:`rgb(${Math.round(120+100*a)},${Math.round(45-10*a)},${Math.round(45-10*a)})`};
 function treemap(T){
  const box=$('tmap');if(!T){box.parentElement.hidden=true;return}
+ let cells=[];
  const draw=()=>{const W=box.clientWidth,H=box.clientHeight;const secs={};T.items.forEach(it=>{(secs[it.s]=secs[it.s]||[]).push({...it,v:it.w})});
   const sl=Object.entries(secs).map(([k,a])=>({k,v:a.reduce((s,i)=>s+i.v,0),a:a.sort((p,q)=>q.v-p.v)})).sort((p,q)=>q.v-p.v);
   const rects=[];squarify(sl,0,0,W,H,rects);let html='';
-  rects.forEach(r=>{const inner=[];squarify(r.a,r.x,r.y,r.w,r.h,inner);inner.forEach(c=>{const fs=Math.min(26,Math.sqrt(c.w*c.h)/4.2,(c.w-3)/(c.t.length*.66),(c.h-2)*.8);const show=fs>=4.5;html+=`<div class="c" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;background:${tcol(c.ch)}" title="${esc(c.t)} ${c.ch>0?'+':''}${c.ch}%">${show?`<b style="font-size:${fs}px">${esc(c.t)}</b>${c.h>fs*2.5&&fs>=7?`<span style="font-size:${Math.max(6,fs*.6)}px">${c.ch>0?'+':''}${c.ch.toFixed(2)}%</span>`:''}`:''}</div>`});if(r.w>60&&r.h>30)html+=`<div class="sl" style="left:${r.x+2}px;top:${r.y+2}px">${esc(r.k)}</div>`});
+  cells=[];rects.forEach(r=>{const inner=[];squarify(r.a,r.x,r.y,r.w,r.h,inner);inner.forEach(c=>{const k=cells.push(c)-1;const fs=Math.min(26,Math.sqrt(c.w*c.h)/4.2,(c.w-3)/(c.t.length*.66),(c.h-2)*.8);const show=fs>=4.5;html+=`<div class="c" data-k="${k}" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;background:${tcol(c.ch)}">${show?`<b style="font-size:${fs}px">${esc(c.t)}</b>${c.h>fs*2.5&&fs>=7?`<span style="font-size:${Math.max(6,fs*.6)}px">${c.ch>0?'+':''}${c.ch.toFixed(2)}%</span>`:''}`:''}</div>`});if(r.w>60&&r.h>30)html+=`<div class="sl" style="left:${r.x+2}px;top:${r.y+2}px">${esc(r.k)}</div>`});
   box.innerHTML=html};
- draw();let to;window.addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(draw,150)});
- $('tm-asof').textContent=T.asof;$('tm-note').innerHTML=`${esc(T.note)} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
+ draw();let to;window.addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(()=>{hide();draw()},150)});
+ const tip=$('tmtip'),wrap=$('tm-wrap');let pin=null;
+ const vol=v=>v>=1e8?`${(v/1e8).toFixed(2)}억 주`:`${Math.round(v/1e4).toLocaleString('ko-KR')}만 주`;
+ const pf=v=>v>=1000?v.toLocaleString('en-US',{maximumFractionDigits:2}):v.toFixed(2);
+ const show=(el)=>{const c=cells[+el.dataset.k];if(!c)return;const d=c.d;const sg=v=>(v>0?'+':'')+v+'%';
+  const won=d&&T.fx?Math.round(d.c*T.fx):0;const wonT=won>=10000?`약 ${(won/10000).toFixed(won>=100000?0:1)}만 원`:`약 ${won.toLocaleString('ko-KR')}원`;
+  const vrT=d?(d.vr>=1.3?'많음':d.vr>=0.9?'보통':'적음'):'';
+  const ma=(v,n)=>`${n} ${pf(v)} ${d.c>=v?'위':'아래'}(${sg(+((d.c/v-1)*100).toFixed(1))})`;
+  tip.innerHTML=`<div class="th"><b>${esc(c.t)}</b> ${esc(c.n||'')}<span>${esc(c.s)} · 지수 비중 ${c.v}%</span></div>`+(d?`<div class="tp">${pf(d.c)}달러 <small>(${wonT})</small> <em class="${d.ch>0?'u':d.ch<0?'d':''}">${d.ch>0?'▲':d.ch<0?'▼':''}${Math.abs(d.ch).toFixed(2)}%</em></div>
+   <table><tr><th>시가 · 고가 · 저가</th><td>${pf(d.o)} · ${pf(d.h)} · ${pf(d.l)}</td></tr><tr><th>거래량</th><td>${vol(d.v)} · 20일 평균의 ${d.vr}배 <b>${vrT}</b></td></tr>
+   <tr><th>1주 · 1달</th><td>${sg(d.w1)} · ${sg(d.m1)}</td></tr><tr><th>이동평균</th><td>${ma(d.ma20,'20일선')}<br>${ma(d.ma50,'50일선')}</td></tr><tr><th>3개월 범위</th><td>${pf(d.lo)} ~ ${pf(d.hi)}</td></tr></table>`:`<div class="tp">${sg(c.ch)}</div>`);
+  tip.hidden=false;const wr=wrap.getBoundingClientRect(),br=box.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight;
+  const cx=br.left-wr.left+c.x+c.w/2;let left=Math.max(6,Math.min(wr.width-tw-6,cx-tw/2));
+  let top=br.top-wr.top+c.y+c.h+6;if(top+th>br.bottom-wr.top+40&&br.top-wr.top+c.y-th-6>0)top=br.top-wr.top+c.y-th-6;
+  tip.style.left=left+'px';tip.style.top=top+'px';[...box.querySelectorAll('.c.on')].forEach(x=>x.classList.remove('on'));el.classList.add('on')};
+ const hide=()=>{tip.hidden=true;pin=null;[...box.querySelectorAll('.c.on')].forEach(x=>x.classList.remove('on'))};
+ box.addEventListener('mouseover',e=>{if(pin)return;const el=e.target.closest('.c');if(el)show(el)});
+ box.addEventListener('mouseleave',()=>{if(!pin)hide()});
+ box.addEventListener('click',e=>{const el=e.target.closest('.c');if(!el)return;e.stopPropagation();if(pin===el){hide();return}pin=el;show(el)});
+ document.addEventListener('click',e=>{if(pin&&!tip.contains(e.target))hide()});
+ $('tm-asof').textContent=T.asof;if(T.comment)$('tm-com').innerHTML=`${esc(T.comment.t)}${srcs(T.comment.src)}`;else $('tm-com').hidden=true;$('tm-note').innerHTML=`${esc(T.note)} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
  $('tleg').innerHTML=`<span>-3%</span><i style="background:${tcol(-3)}"></i><i style="background:${tcol(-1)}"></i><i style="background:${tcol(0)}"></i><i style="background:${tcol(1)}"></i><i style="background:${tcol(3)}"></i><span>+3%</span>`;
 }
 
@@ -412,8 +458,8 @@ function mine(Q){
  const draw=()=>{const x=by[cur];[...box.querySelectorAll('[data-pick]')].forEach(b=>b.classList.toggle('on',b.dataset.pick===cur));
   const li=a=>a.length?`<ul>${a.map(n=>`<li>${esc(n.t)} <a class="src" href="${esc(n.u)}" target="_blank" rel="noopener">${esc(host(n.u))}</a></li>`).join('')}</ul>`:'<p class="none">수집된 소식이 없습니다.</p>';
   $('mcard').innerHTML=`<div class="card"><div class="hd"><span><b>${esc(x.n)}</b> <span class="muted">${esc(x.t)}</span></span><span class="px">${fmt(x.c,2)}달러 ${chgv(x.ch)} <span class="small muted">${won(x.won)}</span></span></div>
-   <div class="cols"><div>${miniSVG(x.mini,x.c)}</div><div><h5>AI 종합 의견</h5><p class="aiop">${esc(x.ai||'')}</p><p class="src">데이터·뉴스를 바탕으로 AI가 쓴 요약이며 투자 권유가 아닙니다.</p><h5>숫자로 보기</h5><ul class="small">${mineAnalysis(x).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div></div>
-   <div class="cols"><div><h5>어제 이슈</h5>${li(x.news.y)}${x.why&&!x.news.y.length?`<p class="small">${esc(x.why)}</p>`:''}</div><div><h5>오늘 일정</h5>${li(x.news.t)}</div></div></div>`};
+   <div class="cols"><div>${miniSVG(x.mini,x.c)}${x.mini&&x.mini.note?`<p class="src">${esc(x.mini.note)} 기준</p>`:''}<h5>숫자로 보기</h5><ul class="small">${mineAnalysis(x).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
+   <div><h5 style="margin-top:0">AI 종합 의견</h5><p class="aiop">${esc(x.ai||'')}</p><p class="src">데이터·뉴스를 바탕으로 AI가 쓴 요약이며 투자 권유가 아닙니다.</p><h5>어제 이슈</h5>${li(x.news.y)}${x.why&&!x.news.y.length?`<p class="small">${esc(x.why)}</p>`:''}<h5>오늘 일정</h5>${li(x.news.t)}</div></div></div>`};
  const pick=v=>{v=(v||'').trim();if(!v)return;const t=by[v.toUpperCase()]?v.toUpperCase():(Q.list.find(x=>x.n.toLowerCase().includes(v.toLowerCase())||x.t.toLowerCase()===v.toLowerCase())||{}).t;if(t){cur=t;try{localStorage.setItem('usn_mine',t)}catch(e){}draw()}else{$('mcard').innerHTML=`<p class="none">'${esc(v)}'는 아직 목록에 없는 종목입니다. 지원 종목: ${Q.list.length}개</p>`}};
  box.addEventListener('click',e=>{const b=e.target.closest('[data-pick]');if(b)pick(b.dataset.pick)});
  const inp=$('min');inp.addEventListener('change',()=>{pick(inp.value);inp.value=''});inp.addEventListener('keydown',e=>{if(e.key==='Enter'){pick(inp.value);inp.value=''}});
@@ -421,7 +467,7 @@ function mine(Q){
 }
 
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=5;
+const SITE_V=6;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
@@ -433,7 +479,7 @@ function render(D){
  const E=D.top||{};
  $('top').innerHTML=`<div class="topw3"><span class="kicker">${esc(E.kicker||'지금 가장 중요한 뉴스')}</span><h3>${esc(E.title)}</h3><div class="grid">
   <div>${E.img?`<img src="${esc(E.img)}" alt="${esc(E.title)}">`:''}<p class="why" style="margin-top:12px">${hl(E.why)}</p></div>
-  <div><div class="figs">${(E.figures||[]).map(f=>`<div class="fig"><div class="n">${esc(f.n)}</div>${f.won?`<div class="w">${esc(f.won)}</div>`:''}<div class="t">${esc(f.t)}</div></div>`).join('')}</div>
+  <div><b class="small">핵심 정리</b><ul class="kpts">${(E.points||[]).map(p=>`<li>${hl(p.t)}</li>`).join('')}</ul>${(E.risks||[]).length?`<b class="small">반대로 볼 점</b><ul class="kpts kr">${E.risks.map(p=>`<li>${hl(p.t)}</li>`).join('')}</ul>`:''}
   <b class="small">오늘 밤 볼 것</b><ol class="watch">${(E.watch||[]).map(w=>`<li>${hl(w)}</li>`).join('')}</ol>
   <div class="foot">${golink(E.short)}${srcs(E.src)}</div></div></div></div>`;
  // 일정
@@ -444,12 +490,12 @@ function render(D){
  // 차트
  const C=D.charts||[];$('chart-asof').textContent=C[0]?C[0].asof:'';
  const lvf=(c,v)=>c.unit==='달러'?fmt(v,2):Math.round(v).toLocaleString('ko-KR');
- $('charts').innerHTML=C.map(c=>`<div class="cblock"><h3 class="ct serif">${esc(c.title||c.name)} <small>${num(c.close)}${c.unit==='달러'?'달러':''} ${chg(c.chg_pct)}</small></h3>
+ $('charts').innerHTML=C.map(c=>`<div class="cblock"><h3 class="ct serif">${esc(c.title||c.name)} <small>${num(c.close)}${c.unit==='달러'?'달러':''} ${chg(c.chg_pct)}</small></h3>${c.headline?`<p class="hline">${esc(c.headline)}</p>`:''}${c.brief?`<p class="brief">${esc(c.brief)}</p>`:''}
   <div class="cscroll">${(()=>{try{return candleSVG(c)}catch(e){console.error(e);return '<p class="tbd">차트를 그리지 못했습니다.</p>'}})()}</div>
   <div class="mal">${c.candle.mas.map(m=>`<span><i style="border-color:${MAC[m]};${m===200?'border-top-style:dashed':''}"></i>${m}일선</span>`).join('')}<span><i style="border-color:${UP}"></i>상승 캔들</span><span><i style="border-color:${DN}"></i>하락 캔들</span></div>
   <div class="ana"><div class="chips">${(c.tags||[]).map(t=>`<span class="chip ${t.hl?'hl':''}">${esc(t.t)}</span>`).join('')}</div>
   ${c.watch?`<div class="watchlv"><div><span>▲ 돌파 볼 자리</span><b>${lvf(c,c.watch.up.v)}</b><br><small>${esc(c.watch.up.name)} · ${c.watch.up.gap>0?'+':''}${c.watch.up.gap}%</small></div><div><span>▼ 지지 볼 자리</span><b>${lvf(c,c.watch.down.v)}</b><br><small>${esc(c.watch.down.name)} · ${c.watch.down.gap}%</small></div></div>`:''}</div></div>`).join('');
- safe('tmap',()=>treemap(D.treemap));
+ safe('tmap',()=>treemap(D.treemap&&{...D.treemap,fx:(D.quotes||{}).fx}));
  // 뉴스
  $('news').innerHTML=(D.news||[]).map(n=>`<details class="it"><summary>${n.img?`<img src="${esc(n.img)}" alt="">`:'<span></span>'}<h4><span class="tag">${esc(n.tag)}</span>${esc(n.title)}</h4><span class="ar">▶</span></summary><div class="body">${esc(n.body)}${srcs(n.src)}</div></details>`).join('');
  safe('mine',()=>mine(D.quotes));
@@ -457,10 +503,19 @@ function render(D){
  const K=D.calendar;if(K){const wd=['월','화','수','목','금'];$('cal').innerHTML=`<div class="cal">${wd.map(w=>`<div class="wd">${w}</div>`).join('')}${K.days.map(d=>{const dd=new Date(d.d+'T00:00:00');const st=d.d<K.today?'past':d.d===K.today?'today':'';const off=d.ev.some(e=>e.k==='휴장');return `<div class="day ${st} ${off?'off':''}"><div class="dn">${dd.getMonth()+1}/${dd.getDate()}</div>${d.ev.map(e=>`<div class="ev ${e.hl?'hl':''}"><i>${esc(e.k)}</i>${esc(e.t)}${e.when?` <small>${esc(e.when)}</small>`:''}</div>`).join('')}</div>`}).join('')}</div>${srcs(K.src)}`}
  // 월가
  const W=D.street||{};
- $('street').innerHTML=`<div class="r2" style="display:grid;gap:22px"><div><h4>${esc(W.title)}</h4><p class="small">${esc(W.summary)}</p>
-  <table style="margin-top:8px"><tr><th>증권사</th><th>목표 변경</th></tr>${(W.rows||[]).map(r=>`<tr><td>${esc(r.firm)}${r.rating?`<div class="src">${esc(r.rating)}</div>`:''}</td><td>${r.from&&r.from!=='—'?`<span class="strike">${esc(r.from)}</span> → `:''}<b>${esc(r.to)}</b> <span class="${r.dir>0?'up':r.dir<0?'down':'flat'}"></span></td></tr>`).join('')}</table></div>
-  <div><h4>연준 · 큰손 한마디</h4>${(W.voices||[]).map(v=>`<div class="voice"><b>${esc(v.who)}</b>${esc(v.say)}</div>`).join('')}<h4 style="margin-top:16px">유명 투자자 · 인플루언서</h4>${(W.influencers||[]).map(v=>`<div class="voice"><b>${esc(v.who)}</b>${esc(v.say)}<div class="src"><a href="${esc(v.src)}" target="_blank" rel="noopener">${esc(host(v.src))}</a>${v.src2?` · <a href="${esc(v.src2)}" target="_blank" rel="noopener">${esc(host(v.src2))}</a>`:''}</div></div>`).join('')}
-  <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src),...(W.voices||[]).map(v=>v.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div></div>`;
+ const card=v=>`<div class="spk"><img src="img/sil/${esc(v.sil||'suit')}.png" alt="" width="52" height="52"><div class="bub"><p>${esc(v.say)}</p><div class="who"><b>${esc(v.who)}</b> ${esc(v.role||'')} · <a href="${esc(v.src)}" target="_blank" rel="noopener">${esc(host(v.src))}</a></div></div></div>`;
+ const CP=W.camps||{long:[],short:[]};
+ $('street').innerHTML=`<div class="camps"><div class="camp"><h4>▲ 롱 진영 <small>오른다 · 괜찮다 쪽</small></h4>${CP.long.map(card).join('')}</div><div class="camp"><h4>▼ 숏 진영 <small>내린다 · 조심하자 쪽</small></h4>${CP.short.map(card).join('')}</div></div>
+  <p class="src">말풍선은 실제 발언과 보도를 쉬운 말로 줄인 것입니다. 실루엣은 역할을 나타내는 그림이며 실제 얼굴이 아닙니다.</p>
+  <div class="stbl"><h4>${esc(W.title)}</h4><p class="small">${esc(W.summary)}</p>
+  <table style="margin-top:8px"><tr><th>증권사</th><th>목표 변경</th></tr>${(W.rows||[]).map(r=>`<tr><td>${esc(r.firm)}${r.rating?`<div class="src">${esc(r.rating)}</div>`:''}</td><td>${r.from&&r.from!=='—'?`<span class="strike">${esc(r.from)}</span> → `:''}<b>${esc(r.to)}</b> <span class="${r.dir>0?'up':r.dir<0?'down':'flat'}"></span></td></tr>`).join('')}</table>
+  <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div>`;
+ safe('jin',()=>{const J=D.jintari;if(!J){$('jin').innerHTML='<p class="none">오늘은 카드가 없습니다.</p>';return}$('jin-asof').textContent=J.asof;
+  const spark=a=>{if(!a||a.length<2)return '';const mn=Math.min(...a),mx=Math.max(...a),W=120,H=34;return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline fill="none" stroke="#141414" stroke-width="1.6" points="${a.map((v,i)=>`${(i/(a.length-1)*W).toFixed(1)},${(H-2-(v-mn)/(mx-mn||1)*(H-4)).toFixed(1)}`).join(' ')}"/></svg>`};
+  $('jin').innerHTML=J.cards.map(c=>`<div class="jcard">${c.img?`<a href="${esc(c.u)}" target="_blank" rel="noopener"><img src="${esc(c.img)}" alt="${esc(c.s)} 카드" loading="lazy"></a>`:''}
+   <div class="jh"><span class="jg">${esc(c.g)}</span><b>${esc(c.t)}</b> <span class="muted">${esc(c.kn)}</span>${spark(c.ln)}</div><div class="js">${esc(c.s)}</div>
+   <table>${c.rows.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join('')}</table><p class="small">${esc(c.why)}</p>
+   <a class="golink" href="${esc(c.u)}" target="_blank" rel="noopener">카드 자세히 보기 ▶</a></div>`).join('')+(J.cash||[]).map(x=>`<p class="small muted" style="margin:6px 0 0">대기 자금 카드: ${esc(x.s)} · ${esc(x.t)} (${esc(x.kn)})</p>`).join('')+`<p class="src">${esc(J.note)} · <a href="${esc(J.u)}" target="_blank" rel="noopener">stock.jintar.co.kr</a></p>`});
  const T=D.term||{};$('term').innerHTML=`<b>${esc(T.word)}</b>${esc(T.body)}`;
  const CO=D.column||{};$('col').innerHTML=`<h4 style="font-family:'Noto Serif KR',serif;font-size:19px">${esc(CO.title)}</h4><p class="small" style="font-size:14px">${esc(CO.body)}</p>${golink(CO.short)}${srcs(CO.src)}`;
  $('disc').textContent=D.disclaimer||'';

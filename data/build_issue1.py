@@ -305,7 +305,7 @@ for q in issue['quotes']['list']:
     n=TN.get(q['t'],{'y':[],'t':[]}); q['news']={'y':[{'t':a,'u':b} for a,b in n['y']],'t':[{'t':a,'u':b} for a,b in n['t']]}
     q['n']=KO.get(q['t'],q['n'])
 issue['quotes']['default']=['NVDA']
-issue['site_v']=5
+issue['site_v']=6
 issue['top']['img']='img/2026-11-19-ipo.jpg'
 
 # ── v4: AI 종합 의견 ───────────────────────────────────
@@ -354,5 +354,113 @@ issue['street']['influencers']=[
  {'who':'전인구 (유튜버)','say':'최근 발언은 확인된 출처를 찾지 못해 싣지 않았습니다. 샌디스크 올인이 그의 전망 적중률을 데이터로 따져 본 쇼츠(적중률 47%)로 대신합니다.','src':'https://www.youtube.com/shorts/p29QHMLDHvo'},
 ]
 
+# ── v6: 1면 핵심 문장 · 차트 한 줄 요약 · 트리맵 해설/종목 팝업 · 롱/숏 카드 · 샌디스크 일봉 ──
+TC='https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/'
+FOOL='https://www.fool.com/investing/2026/11/18/anthropic-priced-its-ipo-at-usd83-here-s-what-i-d-pay-for-the-stock/'
+BPN='https://www.babypips.com/news/headline-anthropic-ipo-what-could-mean-nasdaq-2026-11-16'
+STT='https://www.stocktitan.net/articles/anthropic-ipo-live-ant-first-trading-day-2026'
+BMF='https://www.buildmvpfast.com/blog/anthropic-ipo-price-range-run-rate-claude-builders-2026'
+issue['top'].pop('figures',None)
+issue['top']['points']=[
+ {'t':'공모가를 83달러(약 11만 원)로 정했습니다. 희망 범위 70~78달러(약 9만 3천~10만 4천 원)보다 높습니다.','src':CNBC_IPO},
+ {'t':'공모 주식을 8.25억 주에서 9.8억 주로 늘려 813억 달러(약 108조 원)를 모았습니다. 스페이스X의 750억 달러(약 100조 원)를 넘는 역대 최대입니다.','src':TC},
+ {'t':'주문은 공모 물량의 약 7배가 몰렸고, 희석 기준 기업가치는 약 1.5조 달러(약 2,000조 원)입니다.','src':TV_ANT},
+ {'t':'올해 1~9월 매출은 332억 달러(약 44조 원)로 1년 전보다 1,200% 늘었습니다. 기업가치는 연환산 매출의 약 18배입니다.','src':FOOL},
+ {'t':'나스닥 새 규칙대로면 15거래일 만에 나스닥100에 들어갈 수 있어, 지수를 따라가는 자금이 사들일 수 있습니다.','src':BPN},
+]
+issue['top']['risks']=[
+ {'t':'AMD·브로드컴·구글 등 7개 기업이 공모가로 260억 달러(약 35조 원)어치를 따로 사는데, 이 물량은 매도 제한(보호예수)이 없습니다.','src':BMF},
+ {'t':'6월 스페이스X는 첫날 19% 올랐지만 한 달 뒤 공모가 아래로 내려갔습니다. 첫날 성적이 그 뒤를 보장하지는 않습니다.','src':BPN},
+]
+issue['top']['why']='AI 대장주가 흔들리는 가운데 나온 역대 최대 공모입니다. 첫날 주가가 AI 투자 심리의 온도계가 됩니다.'
+issue['top']['watch']=[
+ '첫 거래 가격이 공모가 83달러(약 11만 원) 위에서 시작하는지 (첫 체결은 개장 몇 시간 뒤일 수 있음)',
+ '엔비디아·반도체로 매수세가 번지는지, 거꾸로 돈이 빠져나가는지',
+ '큰 공모 물량을 소화하느라 다른 기술주가 눌리는지',
+]
+issue['top']['src']=[{'t':'CNBC','u':CNBC_IPO},{'t':'TechCrunch','u':TC},{'t':'TradingView','u':TV_ANT},{'t':'Motley Fool','u':FOOL},{'t':'BabyPips','u':BPN},{'t':'Stock Titan','u':STT}]
+# 차트 위 한 줄 요약(데이터로 문장 생성)
+import re as _re
+def lv(c,v): return f"{v:,.2f}" if c.get('unit')=='달러' else f"{round(v):,}"
+for c in issue['charts']:
+    vr=next((float(m.group(1)) for t in c.get('tags',[]) for m in [_re.search(r'거래량 ([\d.]+)배',t['t'])] if m),None)
+    ch=c['chg_pct']['v']; up,dn=c['watch']['up'],c['watch']['down']; s=[]
+    if vr is not None:
+        if vr<0.95: s.append(f"어제 거래량은 최근 20거래일 평균의 {vr}배로 적은 편이라, {abs(ch):.2f}% {'반등' if ch>0 else '하락'}에 힘이 실리지는 않았습니다.")
+        elif vr<1.15: s.append(f"어제 거래량은 최근 20거래일 평균({vr}배) 수준이었고, 지수는 {ch:+.2f}% 움직였습니다.")
+        else: s.append(f"어제 거래량이 최근 20거래일 평균의 {vr}배로 늘어난 {'상승' if ch>0 else '하락'}이었습니다.")
+    if abs(up['gap'])<=1.5 and abs(dn['gap'])<=1.5:
+        s.append(f"바로 위 {up['name']}({lv(c,up['v'])}, {up['gap']:+}%)과 바로 아래 {dn['name']}({lv(c,dn['v'])}, {dn['gap']}%) 사이에 끼어 있어, 어느 쪽을 먼저 깨느냐가 다음 방향을 정합니다.")
+    elif abs(dn['gap'])<abs(up['gap']):
+        s.append(f"위의 {up['name']}({lv(c,up['v'])})까지는 {up['gap']:+}%로 멀고, 먼저 {dn['name']} {lv(c,dn['v'])}({dn['gap']}%) 지지를 시험하는 자리입니다.")
+    else:
+        s.append(f"{up['name']} {lv(c,up['v'])}({up['gap']:+}%) 돌파를 시험하는 자리이고, 밀리면 {dn['name']} {lv(c,dn['v'])}({dn['gap']}%)가 받침입니다.")
+    c['brief']=' '.join(s)
+    # 어제 캔들 모양으로 한 줄 제목
+    r=summ[c['sym']]; o,h,l,cl=(float(r[k]) for k in ('open','high','low','close'))
+    rg=h-l or 1; lw=(min(o,cl)-l)/rg; uw=(h-max(o,cl))/rg; bd=abs(cl-o)/rg
+    near=abs(l/dn['v']-1)*100<=0.6
+    if lw>=0.45: shape='장중 밀렸다가 긴 아래꼬리를 달고 되돌린 하루'
+    elif uw>=0.45: shape='장중 올랐다가 긴 위꼬리를 남기고 밀린 하루'
+    elif bd>=0.6: shape='큰 '+('양봉으로 밀고 올라간' if cl>o else '음봉으로 밀려 내려간')+' 하루'
+    else: shape='작은 몸통으로 방향을 못 정한 하루'
+    tail=(f", {dn['name']} 바로 위까지 밀려 지지를 시험" if near else (', 저점을 테스트하며 버티는 구간' if lw>=0.45 else ''))
+    c['headline']=shape+tail+(' · 거래량은 적음' if vr is not None and vr<0.95 else '')
+# 트리맵: 종목 팝업 데이터 + 해설
+TD=json.load(open('data/tm_daily.json',encoding='utf-8'))
+NM={x.split(',')[0]:x.split(',',3)[3] for x in open('data/sp500_top100.txt',encoding='utf-8').read().strip().split(';')}
+for it in issue['treemap']['items']:
+    r=TD.get(it['t'].replace('.','-'))
+    it['n']=KO.get(it['t'],NM.get(it['t'],it['t']))
+    if r and r!='ERR': it['d']={'o':r[1],'h':r[2],'l':r[3],'c':r[4],'ch':r[5],'v':r[6],'vr':r[7],'w1':r[8],'m1':r[9],'ma20':r[10],'ma50':r[11],'hi':r[12],'lo':r[13]}
+tmi=issue['treemap']['items']; ups=sum(1 for i in tmi if i['ch']>0)
+secw={}
+for i in tmi: a=secw.setdefault(i['s'],[0,0]); a[0]+=i['w']; a[1]+=i['w']*i['ch']
+sw={k:round(b/a,1) for k,(a,b) in secw.items()}
+g=lambda t:next(i for i in tmi if i['t']==t)
+issue['treemap']['comment']={'t':(f"어제는 상위 100개 중 {ups}개만 올라, S&P 500 하락폭({f('^GSPC','chg'):+.2f}%)보다 체감이 더 나빴습니다. "
+ f"기술주는 한 방향이 아니었습니다. 실적을 낸 엔비디아는 {g('NVDA')['ch']}%였지만, 정부의 자바 취약점 경고에 팔로알토(+{g('PANW')['ch']}%)·크라우드스트라이크(+{g('CRWD')['ch']}%) 같은 보안주가 뛰었고 AMD도 +{g('AMD')['ch']}%였습니다. "
+ f"가장 약한 곳은 헬스케어(비중 가중 {sw['헬스케어']}%)로, 메디케어 감사 강화안에 유나이티드헬스가 {g('UNH')['ch']}% 빠졌습니다. 유가 하락에 에너지({sw['에너지']}%)도 밀렸고, 필수소비재도 {sw['필수소비재']}%라 방어주로 돈이 몰린 날은 아니었습니다. "
+ f"한 달로 넓혀 보면 인텔 {TD['INTC'][9]}%, 마이크론 {TD['MU'][9]}% 등 반도체·메모리가 가장 약합니다."),
+ 'src':[{'t':'slickcharts','u':'https://www.slickcharts.com/sp500'},{'t':'CappNotes 마감 정리','u':CAPP},{'t':'AP','u':AP},{'t':'야후 파이낸스','u':'https://finance.yahoo.com'}]}
+# 롱/숏 한마디 카드 (말풍선 = 실제 발언·보도를 쉬운 말로 줄인 것)
+issue['street']['camps']={'long':[
+ {'who':'캐시 우드','role':'ARK 인베스트','sil':'woman','say':'앤트로픽은 2조 달러(약 2,660조 원)짜리 회사도 될 수 있어요.','src':'https://finance.yahoo.com/markets/article/why-the-anthropic-ipo-could-be-a-trap-for-investors-135504884.html'},
+ {'who':'짐 크레이머','role':'CNBC 진행자','sil':'mic','say':'앤트로픽 상장이 AI주 회복의 열쇠예요.','src':'https://finbold.com/jim-cramer-calls-this-ai-company-the-most-consequential-deal-of-our-time/'},
+ {'who':'JP모건','role':'증권사','sil':'firm','say':'엔비디아 실적은 탄탄해요. 목표주가를 215달러에서 230달러(약 31만 원)로 올렸어요.','src':PT_JPM},
+ {'who':'윌리엄스','role':'뉴욕 연은 총재','sil':'suit_g','say':'지금 금리를 확 올릴 만큼 급한 상황은 아니에요.','src':SED},
+],'short':[
+ {'who':'월러','role':'연준 이사','sil':'suit','say':'물가가 거꾸로 가요. 12월엔 0.5%p 올려야 할 수도 있어요.','src':BABY},
+ {'who':'번스타인','role':'증권사 (지난주)','sil':'firm','say':'엔비디아 목표주가를 400달러에서 200달러(약 27만 원)로 반 토막 냈어요.','src':PT_BERN},
+ {'who':'마이클 버리','role':'빅쇼트 투자자','sil':'hood','say':'진짜 문제는 AI에 쓸 돈을 어디서 구하느냐예요.','src':'https://finance.yahoo.com/technology/ai/articles/michael-burry-says-nvidia-biggest-173049740.html'},
+ {'who':'일론 머스크','role':'테슬라 CEO','sil':'tee','say':'젠슨 황 없는 엔비디아는 큰 계약을 놓칠 거예요.','src':'https://www.ytn.co.kr/_ln/0102_202611160649379740'},
+]}
+issue['street'].pop('voices',None); issue['street'].pop('influencers',None)
+# 샌디스크: 야후 일봉이 2개뿐이라 1시간봉을 일봉으로 묶어 미니 차트 생성
+import base64
+SD=json.load(open('data/sndk_daily.json',encoding='utf-8')); last=SD[-22:]
+mn=min(r[3] for r in last); mx=max(r[2] for r in last)
+pk=bytes(max(0,min(255,round((v-mn)/(mx-mn)*255))) for r in last for v in r[1:5])
+cl=[r[4] for r in SD]; vo=[r[5] for r in SD]; avg=lambda a:sum(a)/len(a)
+for q in issue['quotes']['list']:
+    if q['t']=='SNDK':
+        q['mini']={'mn':mn,'mx':mx,'b':base64.b64encode(pk).decode(),'res':round(max(r[2] for r in SD[-20:]),2),'sup':round(min(r[3] for r in SD[-20:]),2),
+                   'ma5':round(avg(cl[-5:]),2),'ma20':round(avg(cl[-20:]),2),'ma50':round(avg(cl[-50:]),2),'ma200':1284.66,'vr':round(vo[-1]/avg(vo[-21:-1]),2),'note':'1시간봉을 묶은 일봉'}
+# ── v6: 수리수리진타리 오늘의 카드 (stock.jintar.co.kr · 11/18 장 종료 기준 신호) ──
+JL=json.load(open('data/jintari_latest.json',encoding='utf-8'))
+w=lambda usd:(lambda v:f"약 {v/10000:.1f}만 원".replace('.0만','만') if v<100000 else f"약 {round(v/10000)}만 원")(usd*FX)
+usd=lambda s:float(s.replace('$','').replace(',',''))
+JC=[]
+for c in JL['cards']:
+    slug=c['s'][0]; num={'①':'1','②':'2','③':'3','④':'4','⑤':'5','⑥':'6','⑦':'7','⑧':'8','⑨':'9'}.get(slug,'')
+    JC.append({'g':c['g'],'t':c['n'],'kn':c['kn'],'s':c['s'],'ln':c.get('ln',[]),
+     'rows':[('신호 기준가',f"{usd(c['pxSig'])}달러({w(usd(c['pxSig']))}) · 11/18 종가"),
+             ('살 수 있는 가격',f"{usd(c['buy'])}달러({w(usd(c['buy']))}) 안쪽"),
+             ('익절 · 손절',f"+40%({usd(c['tgt'])}달러, {w(usd(c['tgt']))}) · −20%({usd(c['stop'])}달러, {w(usd(c['stop']))})"),
+             ('보유 기간','최대 15거래일, 15일째 종가에 정리')],
+     'why':'11/18 반도체 ETF(SOXX)가 20일 최고 종가보다 18.5% 낮아져 ⑨ 반도체 급락 반등 신호가 켜졌습니다. 2012~26년 이런 날 들어간 경우 아무 날보다 성과가 좋았고 승률은 57~67%였습니다. 다만 나스닥 선물이 평소보다 싸게 거래되고 있어(헤지 매도가 많음) 등급을 한 단계 낮춘 B+입니다.',
+     'img':f'https://stock.jintar.co.kr/c/{num}.jpg' if num else '','u':f'https://stock.jintar.co.kr/c/{num}/' if num else 'https://stock.jintar.co.kr/'})
+issue['jintari']={'cards':JC,'cash':[{'t':x['n'],'kn':x['kn'],'s':x['s']} for x in JL.get('cond',[])],
+ 'note':'발행인이 직접 만든 규칙 카드입니다. 정해진 조건이 켜졌다는 기록일 뿐 투자 권유가 아니며, 결과는 본인 책임입니다.','u':'https://stock.jintar.co.kr/','asof':'2026-11-18 장 종료 기준 신호'}
 json.dump(issue, open(f'drafts/{D}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('ok')
