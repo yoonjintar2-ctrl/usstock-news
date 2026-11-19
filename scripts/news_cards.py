@@ -3,7 +3,7 @@
 import sys, os, math
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter
 
-R = '/home/claude/renders'
+R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'props')
 OUT = sys.argv[1]
 DATE = sys.argv[3] if len(sys.argv) > 3 else '2026-11-19'
 BLACK = '/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc'
