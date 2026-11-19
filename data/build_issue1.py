@@ -305,7 +305,7 @@ for q in issue['quotes']['list']:
     n=TN.get(q['t'],{'y':[],'t':[]}); q['news']={'y':[{'t':a,'u':b} for a,b in n['y']],'t':[{'t':a,'u':b} for a,b in n['t']]}
     q['n']=KO.get(q['t'],q['n'])
 issue['quotes']['default']=['NVDA']
-issue['site_v']=8
+issue['site_v']=9
 issue['top']['img']='img/2026-11-19-ipo.jpg'
 
 # ── v4: AI 종합 의견 ───────────────────────────────────
@@ -549,5 +549,13 @@ for q in issue['quotes']['list']:
     q['h']=HL.get(q['t']) or auto_h(q)
 for c in issue['jintari']['cards']:
     c['h']='빠르게 빠진 반도체는 다시 오르는 일이 많았다 — ⑨ 급락 반등 신호가 켜졌어요'
+
+# ── v10: 증권사 의견 A안 (상승 여력·어제 반응) ──
+TK={'시스코':'CSCO','팔로알토':'PANW','AMD':'AMD','엔비디아':'NVDA','브로드컴':'AVGO','뉴코어':'NUE','메드트로닉':'MDT','펩시코':'PEP'}
+for r in issue['street']['rows']:
+    t=TK.get(r['stock']); d=TD.get(t) if t else None
+    tv=float(r['to'].split('달러')[0].replace(',',''))
+    if d and d!='ERR': r['c']=d[4]; r['rx']=d[5]; r['gap']=round((tv/d[4]-1)*100)
+issue['street']['headline']='AI 인프라·보안은 올리고, 브로드컴·펩시코는 내렸다'
 json.dump(issue, open(f'drafts/{D}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('ok')

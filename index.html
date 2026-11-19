@@ -282,6 +282,20 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 @media(max-width:700px){.tape.mqon{overflow:hidden}.tape .mq{display:flex;width:max-content;animation:mq linear infinite}.tape .mq div{flex:none}.tape.mqon:active .mq{animation-play-state:paused}}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.tape .mq{animation:none}.tape.mqon{overflow-x:auto}}
+
+.bcols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}@media(max-width:700px){.bcols{grid-template-columns:1fr}}
+.bct{font-size:14px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:8px}.bct small{font-weight:500;color:var(--muted);font-size:12px}
+.bcd{background:#fff;border:1.5px solid var(--ink);padding:10px 12px;margin-bottom:8px}
+.bcd .top{display:flex;align-items:baseline;gap:8px}.bcd .nm{font-size:18px;font-weight:800}.bcd .ar{font-size:14.5px;font-weight:800}.bcd .dn{color:#2563a6}
+.bcd .gap{margin-left:auto;font-size:19px;font-weight:900;font-variant-numeric:tabular-nums}.bcd .sub{font-size:12.5px;color:var(--muted);margin-top:4px}.bcd .rx{font-size:12px;margin-top:3px;font-weight:700}
+.camps{column-gap:44px!important}
+.camp.cshort .spk{flex-direction:row-reverse}
+.camp.cshort .bub::before{left:auto;right:-9px;border:8px solid transparent;border-left-color:var(--ink);border-right:0}
+.camp.cshort .bub::after{left:auto;right:-6px;border:7px solid transparent;border-left-color:#fff;border-right:0}
+.camp.cshort h4{text-align:right}
+@media(max-width:600px){.camps{column-gap:18px!important}.camp.cshort .spk{flex-direction:column}.camp.cshort .bub::before{right:auto;left:50%;border:8px solid transparent;border-bottom-color:var(--ink);border-top:0}.camp.cshort .bub::after{right:auto;left:50%;border:7px solid transparent;border-bottom-color:#fff;border-top:0}}
+.cblock{background:transparent!important}.cblock .tri,.cblock .brief{background:transparent}
+.cblock .cscroll{background:#fff;border:1px solid var(--ink);padding:6px 4px 0}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -467,7 +481,7 @@ function mine(Q){
 
 const marquee=()=>{if(!(window.matchMedia&&matchMedia('(max-width:700px)').matches))return;['tape','tape2'].forEach((id,k)=>{const el=$(id);if(!el||!el.children.length||el.querySelector('.mq'))return;const inner=el.innerHTML;el.innerHTML=`<div class="mq" style="animation-duration:${Math.max(18,el.children.length*(k?5:6))}s">${inner}${inner}</div>`;el.classList.add('mqon')})};
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=8;
+const SITE_V=9;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
@@ -505,10 +519,12 @@ function render(D){
  const W=D.street||{};
  const card=v=>`<div class="spk"><img src="img/sil/${esc(v.sil||'suit')}.png" alt="" width="52" height="52"><div class="bub"><p>${esc(v.say)}</p><div class="who"><b>${esc(v.who)}</b> ${esc(v.role||'')} · <a href="${esc(v.src)}" target="_blank" rel="noopener">${esc(host(v.src))}</a></div></div></div>`;
  const CP=W.camps||{long:[],short:[]};
- $('street').innerHTML=`<div class="camps"><div class="camp"><h4>▲ 롱 진영 <small>오른다 · 괜찮다 쪽</small></h4>${CP.long.map(card).join('')}</div><div class="camp"><h4>▼ 숏 진영 <small>내린다 · 조심하자 쪽</small></h4>${CP.short.map(card).join('')}</div></div>
+ $('street').innerHTML=`<div class="camps"><div class="camp"><h4>▲ 롱 진영 <small>오른다 · 괜찮다 쪽</small></h4>${CP.long.map(card).join('')}</div><div class="camp cshort"><h4>▼ 숏 진영 <small>내린다 · 조심하자 쪽</small></h4>${CP.short.map(card).join('')}</div></div>
   <p class="src">말풍선은 실제 발언과 보도를 쉬운 말로 줄인 것입니다. 실루엣은 역할을 나타내는 그림이며 실제 얼굴이 아닙니다.</p>
-  <div class="stbl"><h4>${esc(W.title)}</h4><p class="small">${esc(W.summary)}</p>
-  <table class="brk" style="margin-top:8px"><tr><th>종목</th><th>증권사 · 의견</th><th>목표주가</th></tr>${(W.rows||[]).map(r=>`<tr><td><b>${esc(r.stock||'')}</b><div class="src">${esc(r.date||'')}</div></td><td>${esc(r.firm)}<div class="${r.dir>0?'rup':r.dir<0?'rdn':''}">${r.dir>0?'▲ ':r.dir<0?'▼ ':''}${esc(r.rating||'')}</div></td><td><b>${esc(r.to)}</b></td></tr>`).join('')}</table>
+  <div class="stbl"><h4>${esc(W.title)}</h4>${W.headline?`<p class="mh">${esc(W.headline)}</p>`:''}<p class="small">${esc(W.summary)}</p>
+  ${(()=>{const R=W.rows||[];const cd=r=>`<div class="bcd"><div class="top"><span class="nm">${esc(r.stock)}</span><span class="ar ${r.dir<0?'dn':''}">${r.dir>0?'▲ ':r.dir<0?'▼ ':'● '}${esc((r.rating||'').split('→').pop().trim())}</span>${r.gap!=null?`<span class="gap ${r.gap<0?'dn':''}">${r.gap>0?'+':''}${r.gap}%</span>`:''}</div><div class="sub">${esc(r.firm)} · ${esc(r.date||'')} · ${esc(r.rating||'')} · 목표 ${esc(r.to)}</div>${r.rx!=null?`<div class="rx">어제 주가 ${r.rx>0?'+':''}${r.rx.toFixed(2)}%</div>`:''}</div>`;
+   const up=R.filter(r=>r.dir>0),dn=R.filter(r=>r.dir<0),kp=R.filter(r=>!r.dir);
+   return `<div class="bcols"><div><div class="bct">▲ 올린 곳 <small>${up.length}건</small></div>${up.map(cd).join('')}</div><div><div class="bct">▼ 내린 곳 <small>${dn.length}건</small></div>${dn.map(cd).join('')}${kp.length?`<div class="bct" style="margin-top:14px">● 유지 <small>${kp.length}건</small></div>${kp.map(cd).join('')}`:''}</div></div><p class="src">큰 숫자 = 목표주가가 어제 종가보다 몇 % 위(아래)인지</p>`})()}
   <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div>`;
  safe('jin',()=>{const J=D.jintari;if(!J){$('jin').innerHTML='<p class="none">오늘은 카드가 없습니다.</p>';return}$('jin-asof').textContent=J.asof;
   const spark=a=>{if(!a||a.length<2)return '';const mn=Math.min(...a),mx=Math.max(...a),W=120,H=34;return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline fill="none" stroke="#141414" stroke-width="1.6" points="${a.map((v,i)=>`${(i/(a.length-1)*W).toFixed(1)},${(H-2-(v-mn)/(mx-mn||1)*(H-4)).toFixed(1)}`).join(' ')}"/></svg>`};

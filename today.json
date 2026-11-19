@@ -1147,7 +1147,10 @@
     "to": "133달러(약 17.7만 원)",
     "date": "11/17",
     "dir": 1,
-    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein",
+    "c": 97.18,
+    "rx": 2.18,
+    "gap": 37
    },
    {
     "stock": "팔로알토",
@@ -1156,7 +1159,10 @@
     "to": "380달러(약 50.5만 원)",
     "date": "11/13",
     "dir": 1,
-    "src": "https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn",
+    "c": 339.92,
+    "rx": 9.9,
+    "gap": 12
    },
    {
     "stock": "AMD",
@@ -1165,7 +1171,10 @@
     "to": "600달러(약 79.8만 원)",
     "date": "11/9",
     "dir": 1,
-    "src": "https://www.newsquawk.com/headlines/us-broker-moves-amd-upgraded-at-oppenheimer-dkng-downgraded-at-numerous-brokerages"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-amd-upgraded-at-oppenheimer-dkng-downgraded-at-numerous-brokerages",
+    "c": 530.14,
+    "rx": 5.31,
+    "gap": 13
    },
    {
     "stock": "엔비디아",
@@ -1174,7 +1183,10 @@
     "to": "280달러(약 37.2만 원)",
     "date": "11/18",
     "dir": 0,
-    "src": "https://247wallst.com/cards/nvda-xpost-01m7qfdn0mz79tzg8n52bd1d1g"
+    "src": "https://247wallst.com/cards/nvda-xpost-01m7qfdn0mz79tzg8n52bd1d1g",
+    "c": 150.96,
+    "rx": -2.89,
+    "gap": 85
    },
    {
     "stock": "브로드컴",
@@ -1183,7 +1195,10 @@
     "to": "398달러(약 52.9만 원)",
     "date": "11/13",
     "dir": -1,
-    "src": "https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-panw-upgraded-at-keybanc-avgo-downgraded-at-rothschild-redburn",
+    "c": 354.05,
+    "rx": 3.64,
+    "gap": 12
    },
    {
     "stock": "뉴코어",
@@ -1201,7 +1216,10 @@
     "to": "120달러(약 16만 원)",
     "date": "11/17",
     "dir": 1,
-    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein",
+    "c": 100.72,
+    "rx": -1.56,
+    "gap": 19
    },
    {
     "stock": "펩시코",
@@ -1210,7 +1228,10 @@
     "to": "128달러(약 17만 원)",
     "date": "11/17",
     "dir": -1,
-    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein"
+    "src": "https://www.newsquawk.com/headlines/us-broker-moves-csco-upgraded-at-hsbc-pep-downgraded-at-bernstein",
+    "c": 141.87,
+    "rx": -0.11,
+    "gap": -10
    }
   ],
   "camps": {
@@ -1274,7 +1295,8 @@
      "src": "https://www.ytn.co.kr/_ln/0102_202611160649379740"
     }
    ]
-  }
+  },
+  "headline": "AI 인프라·보안은 올리고, 브로드컴·펩시코는 내렸다"
  },
  "schedule": [
   {
@@ -6187,7 +6209,7 @@
    ]
   }
  },
- "site_v": 8,
+ "site_v": 9,
  "jintari": {
   "cards": [
    {
