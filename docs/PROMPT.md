@@ -20,6 +20,15 @@
 - 시세: GitHub Actions `market-data`가 06:10 KST에 `data/`를 갱신한다(`data/market_meta.json`의 `last_session`이 전날 미국 날짜인지 확인, 실패 로그는 `data/fetch_log.txt`). 갱신이 안 됐으면 맥 크롬에서 `scripts/fetch_market_browser.js`를 야후 차트 주소 탭에 붙여 실행하는 길이 있지만 승인 창이 뜰 수 있어, 무인 작업에서는 시도하지 않고 보고만 한다.
 - 호 조립은 `data/build_issue2.py`처럼 앞 호 틀을 돌린 뒤 글·일정·의견만 그날 것으로 바꾸는 방식(새 파일 `data/build_issue{no}.py`).
 
+## 1면 그림 · 뉴스 점검망 (2026-11-20 발행인 지시)
+- **1면 메인 그림은 매일 새로 만든다.** 전날 호와 같은 그림·같은 소품(assets/props)·같은 구도 금지. 그날 이야기에 맞는 새 장면을 `scripts/render_props.py`에 함수로 추가해 블렌더로 렌더(`pip install bpy==5.2.3`)하고 `img/D-top.jpg`로 쓴다. 발행 전 `archive/어제.json`의 `top.img`와 나란히 놓고 한눈에 달라 보이는지 확인.
+- 간밤 뉴스 카드끼리도 같은 소품을 두 번 쓰지 않는다. 모자라면 새 소품을 렌더한다.
+- **뉴스 점검망 — 큰 움직임은 이유를 반드시 찾는다.** 마감 정리 기사(AP 등) 하나만 보고 끝내지 않는다.
+  1. `data/tm_daily.json`(S&P 상위 100)과 `data/movers_raw.txt`에서 ±5% 이상, 또는 상위 20 종목 중 ±3% 이상 움직인 종목을 전부 뽑는다.
+  2. 종목마다 "why <회사> stock <날짜>"로 따로 검색해 이유를 확인한다(공매도 보고서·소송·규제·인수·등급 변경 등). 이유가 크면 간밤 뉴스에 넣는다.
+  3. 공매도 보고서(Hunterbrook·Hindenburg·Citron 등), 대형 인수, 규제·소송은 따로 "short seller report"·"acquisition" 등으로 한 번 더 훑는다.
+  4. 빠뜨린 사례: 11/19 AMD -7.7%(헌터브룩 공매도 보고서)를 마감 정리 기사만 보고 놓쳤다.
+
 ## 하루 일정 (KST, 미장 정규장 마감 = 서머타임 05:00 / 그 외 06:00)
 | 시각 | 단계 | 하는 일 |
 |---|---|---|

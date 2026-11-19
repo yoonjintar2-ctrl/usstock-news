@@ -14,7 +14,7 @@
  "top": {
   "kicker": "지금 가장 중요한 뉴스",
   "title": "앤트로픽은 첫날 17% 올랐는데, S&P 500은 6일째 하락",
-  "img": "img/2026-11-20-ipo.jpg",
+  "img": "img/2026-11-20-top.jpg",
   "points": [
    {
     "t": "앤트로픽(ANT)은 미국 시간 정오 무렵 첫 거래를 시작해 115달러(약 15만 원) 위까지 올랐다가 97.17달러(약 13만 원), 공모가보다 17.1% 높게 마감했습니다.",
@@ -31,6 +31,10 @@
    {
     "t": "장 초반 1.3% 올랐던 지수가 뒤집혔고, S&P 500 종목의 90% 넘게 떨어졌습니다. 엔비디아는 +4.7%에서 -3.3%로, 마이크론은 +7.8%에서 -2.1%로 돌아섰습니다.",
     "src": "https://wsvn.com/news/us-world/wall-street-tumbles-to-its-longest-losing-streak-since-2024-as-the-dow-drops-1100-points/"
+   },
+   {
+    "t": "AMD는 공매도 투자사 헌터브룩이 '블랙리스트에 오른 중국 서버 업체가 AMD 펌웨어를 계속 받았다'는 보고서와 함께 하락 베팅을 공개하자 -7.72%로 무너졌습니다. AMD는 미국 법을 지킨다고 반박했습니다.",
+    "src": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html"
    },
    {
     "t": "AP는 AI 거품 우려, 데이터센터 투자 대비 수익 의문, 높은 금리, 중간선거 뒤 AI 규제 강화 가능성, 젠슨 황 사임을 하락 이유로 꼽았습니다.",
@@ -894,21 +898,38 @@
    "body": "장 초반 1.3% 오르다 뒤집혀 -2.02%로 마감했고, S&P 500 종목의 90% 넘게 떨어졌습니다."
   },
   {
-   "tag": "반도체",
+   "tag": "공매도",
    "img": "img/2026-11-20-chip.jpg",
+   "title": "AMD -7.7%, 공매도 세력 헌터브룩 '중국 수출 위험' 보고서",
+   "line": "헌터브룩은 미국 블랙리스트에 오른 중국 서버 업체 IEIT가 AMD 펌웨어 업데이트를 계속 받았다고 주장하며 공매도를 공개했고, AMD는 장 초반 상승에서 -7.72%로 뒤집혔습니다. AMD는 잘못이 없다고 반박했습니다.",
+   "src": [
+    {
+     "t": "CNBC",
+     "u": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html"
+    },
+    {
+     "t": "Bloomberg",
+     "u": "https://www.bloomberg.com/news/articles/2026-11-19/amd-slides-after-hunterbrook-shorts-stock-cites-circular-deals"
+    },
+    {
+     "t": "24/7 Wall St.",
+     "u": "https://247wallst.com/investing/2026/11/19/amd-is-still-up-125-this-year-did-today-just-mark-the-top-for-amd-stock/"
+    }
+   ],
+   "body": "헌터브룩은 미국 블랙리스트에 오른 중국 서버 업체 IEIT가 AMD 펌웨어 업데이트를 계속 받았다고 주장하며 공매도를 공개했고, AMD는 장 초반 상승에서 -7.72%로 뒤집혔습니다. AMD는 잘못이 없다고 반박했습니다."
+  },
+  {
+   "tag": "반도체",
+   "img": "img/2026-11-20-mu.jpg",
    "title": "AI 반도체, 장 초반 강세가 하락으로",
-   "line": "마이크론은 +7.8%에서 -2.10%로, 엔비디아는 +4.7%에서 -3.30%로 뒤집혔고 AMD는 -7.72%였습니다.",
+   "line": "마이크론은 +7.8%에서 -2.10%로, 엔비디아는 +4.7%에서 -3.30%로 뒤집혔습니다.",
    "src": [
     {
      "t": "AP",
      "u": "https://wsvn.com/news/us-world/wall-street-tumbles-to-its-longest-losing-streak-since-2024-as-the-dow-drops-1100-points/"
-    },
-    {
-     "t": "야후 파이낸스",
-     "u": "https://finance.yahoo.com/quote/AMD/history"
     }
    ],
-   "body": "마이크론은 +7.8%에서 -2.10%로, 엔비디아는 +4.7%에서 -3.30%로 뒤집혔고 AMD는 -7.72%였습니다."
+   "body": "마이크론은 +7.8%에서 -2.10%로, 엔비디아는 +4.7%에서 -3.30%로 뒤집혔습니다."
   },
   {
    "tag": "보안",
@@ -1006,7 +1027,7 @@
     "asof": "2026-11-19 16:00 ET 종가"
    },
    "won": "약 65만 원",
-   "why": "AI 반도체 매도에 하루 -7.7%"
+   "why": "공매도 헌터브룩의 중국 수출 위험 보고서에 -7.7%"
   },
   {
    "ticker": "PANW",
@@ -1194,11 +1215,11 @@
      "src": "https://babypips.com/news/daily-financial-forex-market-recap-2026-11-18"
     },
     {
-     "who": "번스타인",
-     "role": "증권사 (지난주)",
-     "sil": "firm",
-     "say": "엔비디아 목표주가를 400달러에서 200달러(약 27만 원)로 반 토막 냈어요.",
-     "src": "https://www.kiplinger.com/news/live/nvidia-earnings-live-updates-and-commentary-november-2026"
+     "who": "헌터브룩",
+     "role": "공매도 투자사",
+     "sil": "glasses",
+     "say": "AMD 펌웨어가 미국 블랙리스트 중국 업체로 계속 흘러갔어요. 그래서 AMD 하락에 걸었어요.",
+     "src": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html"
     }
    ]
   },
@@ -1492,7 +1513,7 @@
     "a50": false,
     "a200": true,
     "rsi": 45,
-    "why": "AI 반도체 매도에 -7.72%",
+    "why": "공매도 헌터브룩 보고서(중국 블랙리스트 업체 펌웨어)에 -7.72%",
     "mini": {
      "mn": 402.1,
      "mx": 594,
@@ -1508,14 +1529,18 @@
     "news": {
      "y": [
       {
-       "t": "AI 반도체 매도에 -7.72%, 1주 -16.4%",
-       "u": "https://finance.yahoo.com/quote/AMD/history"
+       "t": "헌터브룩이 공매도 공개 + 中 블랙리스트 업체 IEIT 펌웨어 보고서 → -7.72%",
+       "u": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html"
+      },
+      {
+       "t": "AMD는 미국 법 준수, 잘못 없다고 반박",
+       "u": "https://www.bloomberg.com/news/articles/2026-11-19/amd-slides-after-hunterbrook-shorts-stock-cites-circular-deals"
       }
      ],
      "t": []
     },
-    "ai": "어제 -7.72%로 AI 반도체 중 가장 크게 밀렸고 20·50일선을 모두 내줬습니다. 200일선(428.63달러, 약 57만 원)은 아직 아래에 있어 중기 추세는 남아 있지만, 1주 -16%로 변동성이 매우 큰 구간입니다.",
-    "h": "AI 반도체 중 가장 큰 -7.7%, 1주 -16%"
+    "ai": "공매도 투자사 헌터브룩이 중국 블랙리스트 업체로 AMD 펌웨어가 흘러갔다는 보고서와 함께 하락 베팅을 공개해 -7.72%로 AI 반도체 중 가장 크게 밀렸고 20·50일선을 모두 내줬습니다. 200일선(428.63달러, 약 57만 원)은 아직 아래에 있어 중기 추세는 남아 있지만, 1주 -16%로 변동성이 매우 큰 구간입니다.",
+    "h": "공매도 보고서 한 방에 -7.7%, 중국 수출 위험이 새 변수"
    },
    {
     "t": "AMZN",
@@ -5996,7 +6021,7 @@
   "note": "S&P 500 시가총액 비중 상위 100개 종목 · 크기=지수 비중, 색=전일 등락",
   "comment": {
    "h": "100개 중 8개만 상승 — 보안주 몇 개 빼고 전부 밀린 날",
-   "t": "어제는 상위 100개 중 8개만 올랐습니다. 오른 곳은 팔로알토(+6.42%)·크라우드스트라이크(+2.71%)·인텔(+1.92%)·퀄컴(+1.38%) 정도였습니다. 가장 약한 곳은 AMD(-7.72%)·유나이티드헬스(-5.55%)·마벨(-4.86%)·우버(-4.6%)였고, 아마존(-3.87%)·알파벳(-3.46%)·메타(-3.27%) 같은 큰 종목도 3% 넘게 빠졌습니다. 업종별로는 커뮤니케이션 -2.9%, 정보기술 -2.0%가 가장 크게 밀렸고, 에너지(-0.4%)·필수소비재(-1.4%)는 상대적으로 덜 빠졌습니다.",
+   "t": "어제는 상위 100개 중 8개만 올랐습니다. 오른 곳은 팔로알토(+6.42%)·크라우드스트라이크(+2.71%)·인텔(+1.92%)·퀄컴(+1.38%) 정도였습니다. 가장 약한 곳은 공매도 보고서가 나온 AMD(-7.72%)·유나이티드헬스(-5.55%)·마벨(-4.86%)·우버(-4.6%)였고, 아마존(-3.87%)·알파벳(-3.46%)·메타(-3.27%) 같은 큰 종목도 3% 넘게 빠졌습니다. 업종별로는 커뮤니케이션 -2.9%, 정보기술 -2.0%가 가장 크게 밀렸고, 에너지(-0.4%)·필수소비재(-1.4%)는 상대적으로 덜 빠졌습니다.",
    "src": [
     {
      "t": "slickcharts",
