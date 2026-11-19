@@ -283,7 +283,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.tape .mq{animation:none}.tape.mqon{overflow-x:auto}}
 
-.bcols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}@media(max-width:700px){.bcols{grid-template-columns:1fr}}
+.bcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}@media(max-width:1000px) and (min-width:701px){.bcols{grid-template-columns:1fr 1fr}}@media(max-width:700px){.bcols{grid-template-columns:1fr}}
 .bct{font-size:14px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:8px}.bct small{font-weight:500;color:var(--muted);font-size:12px}
 .bcd{background:#fff;border:1.5px solid var(--ink);padding:10px 12px;margin-bottom:8px}
 .bcd .top{display:flex;align-items:baseline;gap:8px}.bcd .nm{font-size:18px;font-weight:800}.bcd .ar{font-size:14.5px;font-weight:800}.bcd .dn{color:#2563a6}
@@ -524,7 +524,7 @@ function render(D){
   <div class="stbl"><h4>${esc(W.title)}</h4>${W.headline?`<p class="mh">${esc(W.headline)}</p>`:''}<p class="small">${esc(W.summary)}</p>
   ${(()=>{const R=W.rows||[];const cd=r=>`<div class="bcd"><div class="top"><span class="nm">${esc(r.stock)}</span><span class="ar ${r.dir<0?'dn':''}">${r.dir>0?'▲ ':r.dir<0?'▼ ':'● '}${esc((r.rating||'').split('→').pop().trim())}</span>${r.gap!=null?`<span class="gap ${r.gap<0?'dn':''}">${r.gap>0?'+':''}${r.gap}%</span>`:''}</div><div class="sub">${esc(r.firm)} · ${esc(r.date||'')} · ${esc(r.rating||'')} · 목표 ${esc(r.to)}</div>${r.rx!=null?`<div class="rx">어제 주가 ${r.rx>0?'+':''}${r.rx.toFixed(2)}%</div>`:''}</div>`;
    const up=R.filter(r=>r.dir>0),dn=R.filter(r=>r.dir<0),kp=R.filter(r=>!r.dir);
-   return `<div class="bcols"><div><div class="bct">▲ 올린 곳 <small>${up.length}건</small></div>${up.map(cd).join('')}</div><div><div class="bct">▼ 내린 곳 <small>${dn.length}건</small></div>${dn.map(cd).join('')}${kp.length?`<div class="bct" style="margin-top:14px">● 유지 <small>${kp.length}건</small></div>${kp.map(cd).join('')}`:''}</div></div><p class="src">큰 숫자 = 목표주가가 어제 종가보다 몇 % 위(아래)인지</p>`})()}
+   return `<div class="bcols"><div><div class="bct">▲ 올린 곳 <small>${up.length}건</small></div>${up.map(cd).join('')}</div><div><div class="bct">▼ 내린 곳 <small>${dn.length}건</small></div>${dn.map(cd).join('')}</div>${kp.length?`<div><div class="bct">● 유지 <small>${kp.length}건</small></div>${kp.map(cd).join('')}</div>`:''}</div><p class="src">큰 숫자 = 목표주가가 어제 종가보다 몇 % 위(아래)인지</p>`})()}
   <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div>`;
  safe('jin',()=>{const J=D.jintari;if(!J){$('jin').innerHTML='<p class="none">오늘은 카드가 없습니다.</p>';return}$('jin-asof').textContent=J.asof;
   const spark=a=>{if(!a||a.length<2)return '';const mn=Math.min(...a),mx=Math.max(...a),W=120,H=34;return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline fill="none" stroke="#141414" stroke-width="1.6" points="${a.map((v,i)=>`${(i/(a.length-1)*W).toFixed(1)},${(H-2-(v-mn)/(mx-mn||1)*(H-4)).toFixed(1)}`).join(' ')}"/></svg>`};
