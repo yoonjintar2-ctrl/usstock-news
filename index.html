@@ -270,7 +270,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .jcard .js{font-size:13px;font-weight:700;margin:3px 0 6px}
 .jcard table{width:100%;border-collapse:collapse;font-size:13px}.jcard th{text-align:left;font-weight:600;color:var(--muted);white-space:nowrap;padding:4px 8px 4px 0;border-bottom:1px dotted var(--line);font-size:12px}.jcard td{padding:4px 0;border-bottom:1px dotted var(--line)}
 
-.tape2{background:#fff}.tape2 div{font-size:12.5px}
+.tape2{background:transparent}.tape2 div{font-size:12.5px}
 .news4 .nit{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.news4 .nit:last-child{border-bottom:0}
 .news4 img{width:92px;aspect-ratio:8/5;object-fit:contain;background:#fff;border:1px solid var(--line)}
 .news4 h4{margin:0 0 2px;font-size:15.5px;line-height:1.35}.news4 h4 .tag{margin-right:6px}.news4 p{margin:0;font-size:13.5px;line-height:1.5;color:#333}
@@ -278,6 +278,10 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .r5b{align-items:start}
 .mh{font-family:'Noto Serif KR',serif;font-weight:800;font-size:clamp(19px,2.2vw,25px);line-height:1.4;margin:6px 0 4px}
 .jcard .jh b{font-size:16px!important}
+
+@media(max-width:700px){.tape.mqon{overflow:hidden}.tape .mq{display:flex;width:max-content;animation:mq linear infinite}.tape .mq div{flex:none}.tape.mqon:active .mq{animation-play-state:paused}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tape .mq{animation:none}.tape.mqon{overflow-x:auto}}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -460,6 +464,8 @@ function mine(Q){
  draw();
 }
 
+
+const marquee=()=>{if(!(window.matchMedia&&matchMedia('(max-width:700px)').matches))return;['tape','tape2'].forEach((id,k)=>{const el=$(id);if(!el||!el.children.length||el.querySelector('.mq'))return;const inner=el.innerHTML;el.innerHTML=`<div class="mq" style="animation-duration:${Math.max(18,el.children.length*(k?5:6))}s">${inner}${inner}</div>`;el.classList.add('mqon')})};
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
 const SITE_V=8;
 function render(D){
@@ -467,7 +473,7 @@ function render(D){
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
  const dt=new Date(D.date+'T00:00:00');$('date').textContent=`${dt.getFullYear()}년 ${dt.getMonth()+1}월 ${dt.getDate()}일 ${D.weekday||''}요일`;
  $('no').textContent=`제${D.no}호`;$('pub').textContent=D.publisher||'샌디스크 올인';$('session').textContent=`${D.session||''} 마감 기준`;
- $('lead').textContent=D.lead||'';
+ $('lead').textContent=D.lead||'';setTimeout(marquee,0);
  $('tape').innerHTML=((D.market||{}).rows||[]).map(r=>`<div><b>${esc(r.name)}</b>${num(r.close)} ${chg(r.chg_pct)}</div>`).join('');
  // 1면 — 제목 맨 위
  const E=D.top||{};
