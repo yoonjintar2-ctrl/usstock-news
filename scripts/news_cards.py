@@ -5,6 +5,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter
 
 R = '/home/claude/renders'
 OUT = sys.argv[1]
+DATE = sys.argv[3] if len(sys.argv) > 3 else '2026-11-19'
 BLACK = '/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc'
 BOLD = '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc'
 W, H = 640, 400
@@ -79,10 +80,13 @@ def card(name, src, tick, comp, kw, chg):
     d.rectangle((6, 6, W - 7, H - 7), outline=10, width=3)
     d.line((14, H - 34, W - 14, H - 34), fill=10, width=1)
     fs = ImageFont.truetype(BOLD, 14, index=1)
-    d.text((18, H - 30), '미국주식 늬우스 · 2026.11.19', font=fs, fill=60)
-    canvas.save(os.path.join(OUT, f'2026-11-19-{name}.jpg'), quality=86)
+    d.text((18, H - 30), '미국주식 늬우스 · ' + DATE.replace('-', '.'), font=fs, fill=60)
+    canvas.save(os.path.join(OUT, f'{DATE}-{name}.jpg'), quality=86)
 
 
+if len(sys.argv) > 2:
+    import json
+    CARDS = json.load(open(sys.argv[2], encoding='utf-8'))
 for k, v in CARDS.items():
     card(k, *v)
 print('ok')
