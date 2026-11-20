@@ -80,6 +80,43 @@ def chart(sym, rng='1y', itv='1d'):
     return rows
 
 
+def cnbc_today(syms):
+    """CNBC 지수 일봉은 당일 봉이 늦게 붙는다 → 시세 화면(quote)의 당일 시가·고가·저가·현재가로 마지막 날을 채운다."""
+    from urllib.parse import quote
+    out = {}
+    syms = list(syms)
+    for i in range(0, len(syms), 30):
+        part = syms[i:i + 30]; cs = [CN.get(x, x.replace('-', '.')) for x in part]
+        url = ('https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=' + quote('|'.join(cs), safe='') +
+               '&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=0&output=json')
+        try:
+            qs = S.get(url, timeout=25).json()['FormattedQuoteResult']['FormattedQuote']
+        except Exception as e:
+            print('quote 실패', e, file=sys.stderr); continue
+        by = {q.get('symbol'): q for q in qs}
+        num = lambda v: float(str(v).replace(',', '').replace('%', '')) if v not in (None, '', '--', 'UNCH') else None
+        for x, c in zip(part, cs):
+            q = by.get(c)
+            if not q: continue
+            try:
+                d = (q.get('last_time') or '')[:10]
+                o, h, l, c_ = num(q.get('open')), num(q.get('high')), num(q.get('low')), num(q.get('last'))
+                v = int(num(q.get('volume')) or 0) if q.get('volume') else 0
+                if d and c_ is not None: out[x] = [d, o or c_, h or c_, l or c_, c_, v]
+            except Exception:
+                pass
+    return out
+
+
+def patch_today(D):
+    """마지막 일봉 날짜가 시세 화면 날짜보다 이르면 당일 봉을 붙인다."""
+    q = cnbc_today(D.keys())
+    for s, row in q.items():
+        rows = D.get(s) or []
+        if rows and row[0] > rows[-1][0]:
+            rows.append(row); print('당일 봉 보충', s, row[0], file=sys.stderr)
+
+
 def daily(sym):
     rows = chart(sym)
     if len(rows) < 30:  # 일봉이 깨진 종목(예: SNDK) → 1시간봉을 일봉으로
@@ -129,6 +166,7 @@ def main():
     D = {}
     for s in sorted(set(SUMMARY + MOVERS + [v[1] for v in IDX.values()])):
         D[s] = daily(s); time.sleep(0.3)
+    patch_today(D)
     last = D['SPY'][-1][0]
     # summary
     head = 'sym|date,close,prev,chg,open,high,low,ma20,ma50,ma200,ma20p,ma50p,ma200p,hi52,hi52d,lo52,lo52d,rsi,vol,vol20,volr,res20,sup20,res60,sup60,w1,m1,m3'
