@@ -1,0 +1,21 @@
+name: probe-sources
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/probe.yml']
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
+          {
+          for h in query1 query2; do echo "== yahoo $h SPY"; curl -s -m 15 -A "$UA" -o /tmp/y.json -w "%{http_code}\n" "https://$h.finance.yahoo.com/v8/finance/chart/SPY?range=5d&interval=1d"; head -c 200 /tmp/y.json; echo; done
+          for s in spy.us sndk.us brk-b.us ^spx ^ndq ^dji ^vix ^sox ^rut 10usy.b dx.f usdkrw cl.f gc.f soxx.us; do echo "== stooq $s"; curl -s -m 15 -A "$UA" "https://stooq.com/q/d/l/?s=$s&i=d" | tail -n 2; echo; done
+          } > data/probe.txt 2>&1
+          git config user.name "market-bot"; git config user.email "market-bot@users.noreply.github.com"
+          git add data/probe.txt; git commit -m "소스 점검" && git pull --rebase && git push
