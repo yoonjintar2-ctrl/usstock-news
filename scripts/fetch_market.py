@@ -222,7 +222,7 @@ def main():
         html = S.get('https://www.slickcharts.com/sp500', timeout=20).text
         for m in re.finditer(r'<tr>\s*<td>(\d+)</td>\s*<td[^>]*><a[^>]*>([^<]+)</a></td>\s*<td[^>]*><a[^>]*>([^<]+)</a></td>\s*<td>([\d.]+)%</td>.*?<td[^>]*>\s*(?:<[^>]+>)*\s*([-\d.]+)\s*(?:</[^>]+>)*\s*</td>\s*<td[^>]*>\s*(?:<[^>]+>)*\s*\(?([-\d.]+)%', html, re.S):
             if len(tm) >= 100: break
-            tm.append((m.group(3).strip(), float(m.group(4)), float(m.group(6)), m.group(2).strip()))
+            tm.append((m.group(3).strip(), float(m.group(4)), float(m.group(6)), __import__('html').unescape(m.group(2).strip()).replace(';', ' ')))
     except Exception as e:
         print('slickcharts 실패', e)
     if len(tm) >= 50:
