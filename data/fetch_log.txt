@@ -1,3 +1,7 @@
-/home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py:209: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+당일 봉 보충 ^DJI 2026-11-19
+당일 봉 보충 ^IXIC 2026-11-19
+당일 봉 보충 ^RUT 2026-11-19
+당일 봉 보충 ^SOX 2026-11-19
+/home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py:247: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump({'fetched_utc': dt.datetime.utcnow().isoformat(timespec='seconds'), 'last_session': last,
 마지막 거래일 2026-11-19 빠진 종목 []
