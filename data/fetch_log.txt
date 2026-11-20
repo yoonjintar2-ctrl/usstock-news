@@ -1,9 +1,3 @@
-/home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py:39: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
-  dt.datetime.utcfromtimestamp(t + res['meta'].get('gmtoffset', 0)).strftime('%Y-%m-%d')
-Traceback (most recent call last):
-  File "/home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py", line 179, in <module>
-    main()
-  File "/home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py", line 96, in main
-    last = D['SPY'][-1][0]
-           ~~~~~~~~^^^^
-IndexError: list index out of range
+/home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py:209: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  json.dump({'fetched_utc': dt.datetime.utcnow().isoformat(timespec='seconds'), 'last_session': last,
+마지막 거래일 2026-11-19 빠진 종목 []
