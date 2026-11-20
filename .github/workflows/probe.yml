@@ -16,15 +16,11 @@ jobs:
           UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
           p(){ echo "== $1"; curl -s -m 20 -A "$UA" -H 'Accept: application/json, text/plain, */*' -o /tmp/o -w "%{http_code} %{size_download}\n" "$2" || echo TIMEOUT; head -c 300 /tmp/o 2>/dev/null; rm -f /tmp/o; echo; }
           {
-          p stooq_body "https://stooq.com/q/d/l/?s=spy.us&i=d"
-          p nasdaq_spy "https://api.nasdaq.com/api/quote/SPY/historical?assetclass=etf&fromdate=2026-11-01&limit=5"
-          p nasdaq_aapl "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-11-01&limit=5"
-          p nasdaq_comp "https://api.nasdaq.com/api/quote/COMP/historical?assetclass=index&fromdate=2026-11-01&limit=5"
-          p cboe_vix "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
-          p fred_dgs10 "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
-          p yahoo_csv "https://query1.finance.yahoo.com/v7/finance/download/SPY?interval=1d&range=5d"
-          p cnbc "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX|SPY&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json"
-          p cnn_fg "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+          for s in SPY .SPX .IXIC .DJI .VIX .SOX .RUT US10Y .DXY KRW= @CL.1 @GC.1 SNDK BRK.B; do
+            e=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$s")
+            p "bars_$s" "https://ts-api.cnbc.com/harmony/app/bars/$e/1D/20260801000000/20261120000000/adjusted/EST5EDT.json"
+          done
+          p nasdaq_spx_19 "https://api.nasdaq.com/api/quote/SPX/historical?assetclass=index&fromdate=2026-11-15&todate=2026-11-20&limit=5"
           } > data/probe.txt 2>&1
           git config user.name "market-bot"; git config user.email "market-bot@users.noreply.github.com"
-          git add data/probe.txt; git commit -m "소스 점검 4"; for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done; exit 0
+          git add data/probe.txt; git commit -m "소스 점검 5"; for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done; exit 0
