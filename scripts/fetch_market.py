@@ -27,15 +27,36 @@ MOVERS = ('AAPL ADBE AMD AMZN ARM ASML ASTS AVGO BA BAC BRK-B COIN COST CRM CRWD
 
 
 FAIL = {}
+CN = {'^IXIC': '.IXIC', '^GSPC': '.SPX', '^DJI': '.DJI', '^VIX': '.VIX', '^TNX': 'US10Y', 'DX-Y.NYB': '.DXY', 'KRW=X': 'KRW=',
+      'CL=F': '@CL.1', 'GC=F': '@GC.1', '^SOX': '.SOX', '^RUT': '.RUT'}
 
 
-def chart(sym, rng='1y', itv='1d'):
-    for k in range(6):
-        host = ('query1', 'query2')[k % 2]
+def cnbc(sym, days=380):
+    """CNBC 일봉(깃허브 러너에서 야후가 429로 막혀 기본 소스로 씀)."""
+    from urllib.parse import quote
+    c = CN.get(sym, sym.replace('-', '.'))
+    end = dt.datetime.now(dt.timezone.utc) + dt.timedelta(days=1); st = end - dt.timedelta(days=days)
+    url = f"https://ts-api.cnbc.com/harmony/app/bars/{quote(c)}/1D/{st:%Y%m%d}000000/{end:%Y%m%d}000000/adjusted/EST5EDT.json"
+    for k in range(3):
+        try:
+            r = S.get(url, timeout=25)
+            if r.status_code != 200: FAIL[sym] = f'cnbc {r.status_code}'; time.sleep(2 * (k + 1)); continue
+            rows = []
+            for b in (r.json().get('barData') or {}).get('priceBars') or []:
+                t = b['tradeTime']; cl = float(b['close'])
+                rows.append([f'{t[:4]}-{t[4:6]}-{t[6:8]}', float(b['open']), float(b['high']), float(b['low']), cl, int(b.get('volume') or 0)])
+            if rows: FAIL.pop(sym, None); return rows
+            FAIL[sym] = 'cnbc empty'
+        except Exception as e:
+            FAIL[sym] = 'cnbc ' + repr(e)[:80]; time.sleep(2 * (k + 1))
+    return []
+
+
+def yahoo(sym, rng='1y', itv='1d'):
+    for host in ('query1', 'query2'):
         try:
             r = S.get(f'https://{host}.finance.yahoo.com/v8/finance/chart/{sym}', params={'range': rng, 'interval': itv}, timeout=20)
-            if r.status_code != 200:
-                FAIL[sym] = r.status_code; time.sleep(2 * (k + 1)); continue
+            if r.status_code != 200: FAIL[sym] = f'yahoo {r.status_code}'; continue
             res = r.json()['chart']['result'][0]
             q = res['indicators']['quote'][0]
             rows = []
@@ -44,12 +65,19 @@ def chart(sym, rng='1y', itv='1d'):
                 d = (dt.datetime.fromtimestamp(t, dt.timezone.utc) + dt.timedelta(hours=-5)).strftime('%Y-%m-%d') if itv != '1d' else \
                     dt.datetime.fromtimestamp(t + res['meta'].get('gmtoffset', 0), dt.timezone.utc).strftime('%Y-%m-%d')
                 rows.append([d, q['open'][i], q['high'][i], q['low'][i], q['close'][i], q['volume'][i] or 0])
-            FAIL.pop(sym, None)
             return rows
         except Exception as e:
-            FAIL[sym] = repr(e)[:80]; time.sleep(2 * (k + 1))
-    print('FAIL', sym, FAIL.get(sym), file=sys.stderr)
+            FAIL[sym] = 'yahoo ' + repr(e)[:80]
     return []
+
+
+def chart(sym, rng='1y', itv='1d'):
+    if itv == '1d':
+        rows = cnbc(sym)
+        if len(rows) >= 30: return rows
+    rows = yahoo(sym, rng, itv)
+    if not rows: print('FAIL', sym, FAIL.get(sym), file=sys.stderr)
+    return rows
 
 
 def daily(sym):
@@ -100,7 +128,7 @@ def pack(vals, mn, mx, top=254, null=True):
 def main():
     D = {}
     for s in sorted(set(SUMMARY + MOVERS + [v[1] for v in IDX.values()])):
-        D[s] = daily(s); time.sleep(0.6)
+        D[s] = daily(s); time.sleep(0.3)
     last = D['SPY'][-1][0]
     # summary
     head = 'sym|date,close,prev,chg,open,high,low,ma20,ma50,ma200,ma20p,ma50p,ma200p,hi52,hi52d,lo52,lo52d,rsi,vol,vol20,volr,res20,sup20,res60,sup60,w1,m1,m3'
@@ -163,7 +191,7 @@ def main():
         open('data/sp500_top100.txt', 'w').write(';'.join(f'{t},{w:.2f},{c:.2f},{n}' for t, w, c, n in tm) + '\n')
         td = {}
         for t, *_ in tm:
-            ys = t.replace('.', '-'); rows = D.get(ys) or daily(ys); time.sleep(0.5)
+            ys = t.replace('.', '-'); rows = D.get(ys) or daily(ys); time.sleep(0.3)
             if len(rows) < 25: td[ys] = 'ERR'; continue
             rows = rows[-63:]; n = len(rows); cl = [r[4] for r in rows]; vo = [r[5] for r in rows]; L = rows[-1]
             td[ys] = [L[0], *(round(x, 2) for x in L[1:5]), round(pct(L[4], cl[-2]), 2), L[5], round(L[5] / avg(vo[-21:-1]), 2) if avg(vo[-21:-1]) else None,
@@ -179,7 +207,7 @@ def main():
     except Exception as e:
         print('공포탐욕 실패', e)
     json.dump({'fetched_utc': dt.datetime.utcnow().isoformat(timespec='seconds'), 'last_session': last,
-               'missing': [s for s, r in D.items() if len(r) < 25]}, open('data/market_meta.json', 'w'), ensure_ascii=False)
+               'missing': [s for s, r in D.items() if len(r) < 25], 'via': 'cnbc', 'fail': FAIL}, open('data/market_meta.json', 'w'), ensure_ascii=False)
     print('마지막 거래일', last, '빠진 종목', [s for s, r in D.items() if len(r) < 25])
 
 
