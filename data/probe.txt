@@ -1,0 +1,45 @@
+== bars_SPY
+200 12225
+{"barData":{"priceBars":[{"open":"749.4400","high":"758.5800","low":"748.8000","close":"757.6700","volume":59927538,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"760.6300","high":"773.4100","low":"760.5200","close":"771.3300","volume":69154788,"tradeTime":"20260804000000","
+== bars_.SPX
+200 11833
+{"barData":{"priceBars":[{"open":"7504.7800","high":"7610.0400","low":"7504.7800","close":"7600.5000","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"7630.6200","high":"7758.2100","low":"7629.1000","close":"7736.5200","volume":0,"tradeTime":"20260804000000","tradeT
+== bars_.IXIC
+200 12838
+{"barData":{"priceBars":[{"open":"25452.6630","high":"25967.4410","low":"25420.3520","close":"25913.8960","volume":1678694713,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"26088.0420","high":"26679.9090","low":"26088.0420","close":"26584.9930","volume":1906317330,"tradeTime
+== bars_.DJI
+200 12773
+{"barData":{"priceBars":[{"open":"52759.0600","high":"53230.0800","low":"52759.0600","close":"53178.4100","volume":604860673,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"53641.2100","high":"54272.6000","low":"53641.2100","close":"54085.8800","volume":580351963,"tradeTime":
+== bars_.VIX
+200 11511
+{"barData":{"priceBars":[{"open":"16.0300","high":"16.3000","low":"15.5400","close":"15.8600","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"15.7600","high":"16.6500","low":"15.5100","close":"16.5000","volume":0,"tradeTime":"20260804000000","tradeTimeinMills":1785
+== bars_.SOX
+200 12137
+{"barData":{"priceBars":[{"open":"11046.0870","high":"11495.2790","low":"10922.3090","close":"11430.3510","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"11834.7720","high":"12258.0790","low":"11834.7720","close":"12179.2630","volume":0,"tradeTime":"20260804000000"
+== bars_.RUT
+200 11838
+{"barData":{"priceBars":[{"open":"2935.2623","high":"2985.6802","low":"2935.2623","close":"2981.9084","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"2990.1485","high":"3043.1061","low":"2990.1485","close":"3036.9754","volume":0,"tradeTime":"20260804000000","tradeT
+== bars_US10Y
+200 10919
+{"barData":{"priceBars":[{"open":"4.7180","high":"4.7180","low":"4.6670","close":"4.6840","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"4.6860","high":"4.7080","low":"4.6190","close":"4.6270","volume":0,"tradeTime":"20260804000000","tradeTimeinMills":178581600000
+== bars_.DXY
+200 11850
+{"barData":{"priceBars":[{"open":"99.6900","high":"100.0170","low":"99.4180","close":"99.8970","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"99.9730","high":"100.0580","low":"99.8280","close":"99.8580","volume":0,"tradeTime":"20260804000000","tradeTimeinMills":17
+== bars_KRW=
+200 12764
+{"barData":{"priceBars":[{"open":"1442.7900","high":"1442.9100","low":"1424.8000","close":"1428.9900","volume":0,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"1429.2600","high":"1436.6000","low":"1420.6000","close":"1428.8400","volume":0,"tradeTime":"20260804000000","tradeT
+== bars_@CL.1
+200 11796
+{"barData":{"priceBars":[{"open":"80.1000","high":"81.3000","low":"78.4300","close":"80.3400","volume":294823,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"80.1000","high":"82.3300","low":"75.1100","close":"75.7700","volume":362270,"tradeTime":"20260804000000","tradeTimeinM
+== bars_@GC.1
+200 12377
+{"barData":{"priceBars":[{"open":"4135.2000","high":"4145.5000","low":"4074.0000","close":"4090.5000","volume":93289,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"4109.6000","high":"4163.8000","low":"4098.2000","close":"4152.6000","volume":118831,"tradeTime":"20260804000000
+== bars_SNDK
+200 12453
+{"barData":{"priceBars":[{"open":"1159.8400","high":"1316.4500","low":"1121.2650","close":"1288.0300","volume":14759329,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"1358.2100","high":"1446.6225","low":"1340.0000","close":"1427.6200","volume":14685257,"tradeTime":"202608040
+== bars_BRK.B
+200 12148
+{"barData":{"priceBars":[{"open":"514.9300","high":"520.6650","low":"510.8250","close":"513.1400","volume":4202394,"tradeTime":"20260803000000","tradeTimeinMills":1785729600000},{"open":"512.0700","high":"517.7700","low":"508.8100","close":"517.2200","volume":4771273,"tradeTime":"20260804000000","tr
+== nasdaq_spx_19
+200 142
+{"data":null,"message":null,"status":{"rCode":400,"bCodeMessage":[{"code":1001,"errorMessage":"Symbol not exists."}],"developerMessage":null}}
