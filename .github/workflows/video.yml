@@ -1,0 +1,60 @@
+name: daily-video
+# video/<날짜>.json 이 올라오면: 목소리(Supertonic, 맥 없이) → 세로 영상 렌더 → 유튜브 업로드(시크릿 있으면)
+# 결과 영상·썸네일·점검 시트는 video-out 브랜치(매번 덮어씀)에, 업로드 기록은 video/uploaded.json 에 남긴다.
+on:
+  push:
+    paths: ['video/*.json', '!video/uploaded.json']
+  workflow_dispatch:
+    inputs:
+      spec: {description: 'video/<날짜>.json 경로', required: true}
+permissions:
+  contents: write
+concurrency: {group: daily-video, cancel-in-progress: false}
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - name: 대상 찾기
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.spec }}" ]; then echo "specs=${{ github.event.inputs.spec }}" >> $GITHUB_OUTPUT; exit 0; fi
+          S=$(git diff --name-only HEAD~1 HEAD -- 'video/*.json' | grep -v uploaded.json | tr '\n' ' ')
+          echo "specs=$S" >> $GITHUB_OUTPUT
+      - name: 준비
+        if: steps.pick.outputs.specs != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q supertonic pillow numpy requests
+      - name: 렌더·업로드
+        if: steps.pick.outputs.specs != ''
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          set -e
+          mkdir -p out
+          for S in ${{ steps.pick.outputs.specs }}; do
+            D=$(basename "$S" .json)
+            python3 scripts/video/render.py "$S" out/ 2>&1 | tee -a out/log.txt
+            PA=$(python3 -c "import json;print(json.load(open('$S')).get('publish_at',''))")
+            AUTO=$(python3 -c "import json;print(json.load(open('$S')).get('upload',True))")
+            if [ -n "$YT_REFRESH_TOKEN" ] && [ "$AUTO" = "True" ]; then
+              python3 scripts/video/upload.py out/$D-summary.mp4 out/$D-thumb.jpg "$S" ${PA:+--publish-at $PA} 2>&1 | tee -a out/log.txt
+            else
+              echo "업로드 건너뜀(시크릿 없음 또는 upload=false)" | tee -a out/log.txt
+            fi
+          done
+      - name: 결과 올리기
+        if: always() && steps.pick.outputs.specs != ''
+        run: |
+          git config user.name "video-bot"; git config user.email "video-bot@users.noreply.github.com"
+          if ! git diff --quiet -- video/uploaded.json 2>/dev/null || [ -n "$(git status --porcelain video/uploaded.json)" ]; then
+            git add video/uploaded.json && git commit -m "영상 업로드 기록" && for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
+          fi
+          mkdir -p /tmp/o && cp out/*.mp4 out/*.jpg out/*.json out/log.txt /tmp/o/ 2>/dev/null || true
+          git checkout --orphan video-out-tmp && git rm -rq --cached . && git clean -fdq -e out
+          cp /tmp/o/* . && git add -A && git commit -qm "영상 결과 $(date -u +%FT%TZ)" && git push -f origin HEAD:video-out
