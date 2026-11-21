@@ -1,0 +1,4 @@
+Fetching 26 files:   0%|          | 0/26 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 26 files:  19%|█▉        | 5/26 [00:00<00:00, 39.54it/s]Fetching 26 files:  81%|████████  | 21/26 [00:00<00:00, 95.91it/s]Fetching 26 files: 100%|██████████| 26/26 [00:00<00:00, 29.44it/s]
+ok out/2026-11-21-summary.mp4 159.7 s
+업로드 건너뜀(시크릿 없음 또는 upload=false)
