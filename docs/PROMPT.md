@@ -39,6 +39,15 @@
 - 간밤 핵심 뉴스(`news`)에는 1면 두 건을 빼고 나머지만 싣는다.
 - 트리맵은 우측 상단 ◀ ▶ 로 지난 호(archive/*.json)의 트리맵을 본다 — 매 호 `treemap` 을 빠짐없이 넣는다.
 
+## 매일 영상 3편 (2026-11-21 발행인 지시)
+- ① **간밤 미장 요약**(세로, 길이 제한 없음 — 60초에 맞추느라 알아듣기 어렵게 줄이지 않는다) ② 1면 첫 기사 8비트 쇼츠 ③ 1면 두 번째 기사 8비트 쇼츠. 채널 '샌디스크 올인'에 매일.
+- 제목과 썸네일에는 **날짜를 크게**. 제목엔 해시태그.
+- ① 은 호 발행 직후 `video/D.json`(형식: scripts/video/render.py 맨 위 설명, 본보기 video/2026-11-21.json)을 써서 push → Actions `daily-video`가 6번 여성 목소리(Supertonic F1, +2음)로 렌더 → 결과는 `video-out` 브랜치(D-summary.mp4·D-thumb.jpg·D-sheet.jpg·log.txt).
+  나레이션 = 자막(토씨까지 동일). 숫자는 그대로 써도 scripts/video/ko_read.py 가 읽기로 바꾼다. 장면: intro(지수표) → 1면 두 건(그림 img/D-top.jpg, D-top2.jpg) → 그 밖의 뉴스 4~6개(items 한 줄씩) → 오늘 밤/다음 주 일정 → outro.
+- 업로드: 유튜브 API 시크릿(YT_CLIENT_ID·YT_CLIENT_SECRET·YT_REFRESH_TOKEN)이 생기기 전까지는 `upload: false` 로 두고 **맥 크롬**으로 올린다(발행인 11/21 "당분간은 맥을 쓰자"). 시크릿이 생기면 upload 를 지우면 Actions 가 바로 올린다.
+- ②③ 8비트 쇼츠는 shorts-video-studio 키트(pixel_kit)로 맥에서 만든다(당분간).
+- 올리는 시각: ① 07:30, ② 12:00, ③ 18:00 (KST, 예약 공개). 유튜브·틱톡 같은 시각, 중복 업로드 금지(video/uploaded.json·채널 목록 확인).
+
 ## 하루 일정 (KST, 미장 정규장 마감 = 서머타임 05:00 / 그 외 06:00)
 | 시각 | 단계 | 하는 일 |
 |---|---|---|
