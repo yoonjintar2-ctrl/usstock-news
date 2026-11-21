@@ -82,6 +82,53 @@
     "t": "Investing.com",
     "u": "https://www.investing.com/news/economy-news/feds-cook-says-rate-hikes-needed-to-lower-high-inflation-5042321"
    }
+  ],
+  "react": [
+   {
+    "p": "스톡트윗",
+    "t": "그날 하루도 개인 투자자 분위기는 여전히 \"매우 낙관\" — 글 수는 \"매우 많음\"으로 폭발",
+    "u": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-clocks-worst-week-in-18-years-as-sec-reportedly-probes-its-accounting-practices/cNbSDIWR91Q"
+   },
+   {
+    "p": "스톡트윗",
+    "t": "\"이 가격이면 코로나 이후 가장 쉬운 돈벌이\"라며 줍줍을 외치는 글",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-down-40-october-041800878.html"
+   },
+   {
+    "p": "스톡트윗",
+    "t": "지난주 투표에선 10명 중 6명꼴이 \"떨어질 때 산다\", 4명은 \"일단 피한다\"",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-heads-worst-week-032900844.html"
+   },
+   {
+    "p": "스톡트윗",
+    "t": "엔비디아 앞날을 두고 개인들끼리도 의견이 크게 갈리는 중",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-heads-worst-week-032900844.html"
+   },
+   {
+    "p": "레딧",
+    "t": "창업자 스캔들 뒤 오히려 주가가 더 올랐던 베이조스·게이츠 사례를 붙인 \"그냥 사\" 밈",
+    "u": "https://www.ibtimes.co.uk/nvidia-reddit-meme-executive-scandals-stock-gains-1831263"
+   },
+   {
+    "p": "TV",
+    "t": "크레이머: 엔비디아가 시장 전체에 그늘을 드리우고 다른 종목까지 물들인다",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-down-40-october-041800878.html"
+   },
+   {
+    "p": "TV",
+    "t": "크레이머: 황의 복귀설이 오히려 회사를 더 가라앉히고 있다",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-down-40-october-041800878.html"
+   },
+   {
+    "p": "전문가",
+    "t": "전 SEC 위원장 겐슬러: 핵심은 투자자를 오도했느냐, 시장은 이미 \"중대한 일\"로 본다",
+    "u": "https://stocktwits.com/news-articles/markets/equity/gary-gensler-says-key-question-in-nvidia-probe-is-whether-huang-misled-shareholders-sees-ai-repricing-ahead/cNGrO6sR9ev"
+   },
+   {
+    "p": "회사",
+    "t": "엔비디아는 예전부터 \"엔론·월드컴 같은 회계 사기와 다르다\"고 반박해 왔다",
+    "u": "https://www.datacenterdynamics.com/en/news/nvidia-says-its-not-like-enron-in-leaked-memo-to-financial-analysts/"
+   }
   ]
  },
  "market": {
@@ -726,7 +773,7 @@
      200
     ],
     "b": "293L28GXOw//wte5z8ebPxH/ubyYmMGdQhP/sr2qtMGgRRX/wMOJrLqhSRf/orWYmq2iTBj/psKlwaqlTxv/v8+6yrSoUx3/4efd5r6tVx//4ufFxcOxWyH/1+DMzc22XyT/5PTk8Ne7Yyb//P7z/eHAaCn/1N7L0NzDbCv/0tXBzt7FcC3/7u/M4+PHdS//ztLDxNrIeDH/x9q02dPKfDP/2/Tb8dnNgTb/3OHLzdnNhTj/ztSlr8/LiDr/vsu8vc3Kizv/o6iVosLLjT3/nK6crLXKkD//xMi7vbHLk0H/tMCwvbTNlUL/rbChpK/LmET/vLyqsbLKmkb/t7iXprHHnEf/l52LkKjEnkj/fZJ0iJ3Bn0r/k5iJipi8oEv/oKaYo5W3okz/l6uXppa1o07/naicopmzpU//nJ+JjZqvplH/kpN1g5mrp1L/cnRkbo6mqFP/a3JWVn6eqFT/bn5reXaaqFX/jZJ2eXKXqFb/bn9pfHCUqFf/j52MmnmUqVn/lZ+OkIWSqVr/iZqEkoqQqVv/nZ+Rm5GOql3/nZ+Pj5SNql7/lpeQk5OMql//pKWenpaMqmH/nqyeopmMq2L/oaSboZqOrGT/qK+mqZ+PrWX/lpqJkZ+OrWb/lZaChpqNrGf/hYuCiZWLrGn/jo+Ch5CLq2r/gIB0e4eLqmv/g4d+gYSMqWwxgIN9g4OOqG4yjI2Ei4OPp28ziIl7fYGPpnA0foJ7f4KPpHI1dnlxdYCNpHM2dHlvdn2Mo3Q3cnhsd3mLonU4fYd7h3uKonc5kJOLjn6KoXg6i5SLkYSKoHk7hYmChIeInns8i5CIjYuHnXw9c3hxc4eFnH0+d3lydIKCmn8/e35yd32Bl4BAhIeChn2BloFBiZKJkn6BlYNCnayaqYmDlIRDpLaktZaGlIZFs7Snr6GIk4hGpbCkr6mLkopHsriwtbCNkotIsbOjqrCPko1JsrausLCRko5KsbWtsbCUkpBLsrutuLKYkpFMxcrCw7WbkpJOwcS9xLqfkpRPx8rDxL6hk5VQuL+2vsCjk5ZStbumrb6lk5hTs7SnqbmnlJlUo6SbnLGplJlVkJyNnKmrlJpWkZOEhp6slJtXdYRxgpWrk5tYeX5vb4qqkpxZf4F2d4KnkpxacX1sdXqkkpxafoF4fnmikp1bbHBdYHKekp1cX2hdYm+Zkp1dZnJjbm2WkZ1ddYF0f2+Ukp1eg4p/iHGSkZ1fgIZ7gXiPkZ1gY2dSXHeKkJ1gYWNLTHCEj5xhV11UVmh/jpxhUFpCSlx5jZtiNzkXGkdxippiLi8fJjxriJpiK0QqQTpmh5ljOkk3QDVihZljUmBMVzhfhJhkSl1JVkRdg5hkUlU7R0tbgpdlNzsxMkhYgZZlNjclM0VUgJVlOTosND5RfpRmP0UpKTVOfZNmIiMAAydJepFm",
-    "vb": "UW3UeumedV5OalVcSnlYeWlpYF+ZUHVEXzhPRmFilD5gOz9ogI2ypnxiZ1xJMlNESTgpNl9QOztKPSlWUDtMNz1YVD0/Nms5T0A6TDxfLy1GMSs6QSgqL2IwRFBnnotZYU+PUlhSUD2yZn6n1rt/daOml3Z8a4P/",
+    "vb": "UW3UeumedV5OalVcSnlYeWlpYF+ZUHVEXzdPRmFilD5gOz9ogI2ypnxhZ1xJMlNESTgpM19QOztKPSlWUDtMNz1YVD0/Nms5T0A8TDxfLy1GMSs6QSgqL2IwRFBnnotZYU+PUlhSUD2yZn6n1rt/daOml3Z8a4P/",
     "vmax": 80651944,
     "dates": [
      "2026-06-03",
@@ -872,23 +919,6 @@
  "chart_summary": "세 지수 모두 **20·50·200일선 아래**, **하루 저점 근처**에서 마감했습니다. S&P 500은 **고점 대비 -11.9%로 조정**, 반도체 ETF는 **-44%로 약세장**입니다.",
  "news": [
   {
-   "tag": "규제",
-   "img": "img/2026-11-21-nvda.jpg",
-   "title": "엔비디아 -14%, 'SEC가 회계 들여다본다' 보도",
-   "line": "로이터는 SEC 조사 담당자들이 엔비디아의 회계 문제 가능성을 살핀다고 전했고, 엔비디아는 -14.01%로 이번 주에만 -22.9% 빠졌습니다.",
-   "src": [
-    {
-     "t": "로이터(WMBD 전재)",
-     "u": "https://wmbdradio.com/2026/11/20/exclusive-us-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say/"
-    },
-    {
-     "t": "Motley Fool",
-     "u": "https://www.fool.com/investing/2026/11/20/nvidia-stock-plunge-wipes-out-nearly-usd500-billion-in-one-day-as-sec-reportedly-probes-its-accounting/"
-    }
-   ],
-   "body": "로이터는 SEC 조사 담당자들이 엔비디아의 회계 문제 가능성을 살핀다고 전했고, 엔비디아는 -14.01%로 이번 주에만 -22.9% 빠졌습니다."
-  },
-  {
    "tag": "시장",
    "img": "img/2026-11-21-spx.jpg",
    "title": "S&P 500·다우 조정 진입, 나스닥은 올해 상승분 반납",
@@ -904,27 +934,6 @@
     }
    ],
    "body": "S&P 500은 -3.70%로 7일 연속 내렸고 2020년 이후 가장 긴 하락입니다. 7,000선 아래로 내려간 것은 4월 이후 처음입니다."
-  },
-  {
-   "tag": "반도체",
-   "img": "img/2026-11-21-chip.jpg",
-   "title": "반도체 지수 -10.7%, 브로드컴은 '구글 주문 축소' 보도",
-   "line": "밍치궈 애널리스트가 구글이 2027년 TPU 주문을 약 20% 줄였다고 전하자 브로드컴은 -12.19%였습니다. 구글·브로드컴은 확인하지 않았습니다.",
-   "src": [
-    {
-     "t": "StockAnalysis",
-     "u": "https://stockanalysis.com/news/broadcom-falls-google-tpu-cut-mediatek/"
-    },
-    {
-     "t": "24/7 Wall St.",
-     "u": "https://247wallst.com/investing/2026/11/20/broadcom-stock-plunges-12-and-loses-191-billion-after-a-report-that-google-cut-its-plans-for-broadcom-ai-chips/"
-    },
-    {
-     "t": "TradingKey",
-     "u": "https://www.tradingkey.com/analysis/stocks/us-stocks/262316111-nasdaq-falls-ai-stock-selloff-nvidia-sec-probe-tradingkey"
-    }
-   ],
-   "body": "밍치궈 애널리스트가 구글이 2027년 TPU 주문을 약 20% 줄였다고 전하자 브로드컴은 -12.19%였습니다. 구글·브로드컴은 확인하지 않았습니다."
   },
   {
    "tag": "메모리",
@@ -3910,7 +3919,7 @@
   "items": [
    {
     "t": "AAPL",
-    "w": 7.88,
+    "w": 7.89,
     "ch": -1.9,
     "s": "정보기술",
     "n": "애플",
@@ -3954,7 +3963,7 @@
    },
    {
     "t": "NVDA",
-    "w": 4.92,
+    "w": 4.95,
     "ch": -14.01,
     "s": "정보기술",
     "n": "엔비디아",
@@ -3964,7 +3973,7 @@
      "l": 124.5,
      "c": 125.53,
      "ch": -14.01,
-     "v": 572154191,
+     "v": 572154221,
      "vr": 2.2,
      "w1": -22.9,
      "m1": -40.8,
@@ -3986,7 +3995,7 @@
      "l": 245.31,
      "c": 246.82,
      "ch": -4.1,
-     "v": 67193590,
+     "v": 67193592,
      "vr": 1.33,
      "w1": -7.4,
      "m1": -1.4,
@@ -3998,7 +4007,7 @@
    },
    {
     "t": "GOOGL",
-    "w": 2.68,
+    "w": 2.69,
     "ch": -2.7,
     "s": "커뮤니케이션",
     "n": "알파벳(구글)",
@@ -4042,7 +4051,7 @@
    },
    {
     "t": "AVGO",
-    "w": 2.33,
+    "w": 2.34,
     "ch": -12.19,
     "s": "정보기술",
     "n": "브로드컴",
@@ -4064,7 +4073,7 @@
    },
    {
     "t": "META",
-    "w": 2.29,
+    "w": 2.28,
     "ch": -5.93,
     "s": "커뮤니케이션",
     "n": "메타",
@@ -4108,7 +4117,7 @@
    },
    {
     "t": "BRK.B",
-    "w": 1.91,
+    "w": 1.9,
     "ch": -0.36,
     "s": "금융",
     "n": "BERKSHIRE HATHAWAY Class B",
@@ -4130,7 +4139,7 @@
    },
    {
     "t": "LLY",
-    "w": 1.89,
+    "w": 1.88,
     "ch": -0.3,
     "s": "헬스케어",
     "n": "일라이 릴리",
@@ -4152,7 +4161,7 @@
    },
    {
     "t": "WMT",
-    "w": 1.6,
+    "w": 1.59,
     "ch": 1.52,
     "s": "필수소비재",
     "n": "월마트",
@@ -4174,7 +4183,7 @@
    },
    {
     "t": "JPM",
-    "w": 1.31,
+    "w": 1.3,
     "ch": -3.03,
     "s": "금융",
     "n": "JP모건",
@@ -4228,7 +4237,7 @@
      "l": 418.76,
      "c": 424.39,
      "ch": -13.25,
-     "v": 65727707,
+     "v": 65727709,
      "vr": 1.66,
      "w1": -20.5,
      "m1": -16.4,
@@ -4250,7 +4259,7 @@
      "l": 585.25,
      "c": 594.51,
      "ch": -13.89,
-     "v": 55274765,
+     "v": 55274767,
      "vr": 1.73,
      "w1": -23.6,
      "m1": -30.6,
@@ -4284,7 +4293,7 @@
    },
    {
     "t": "JNJ",
-    "w": 1.03,
+    "w": 1.02,
     "ch": 1.25,
     "s": "헬스케어",
     "n": "존슨앤드존슨",
@@ -4328,7 +4337,7 @@
    },
    {
     "t": "ABBV",
-    "w": 0.8,
+    "w": 0.79,
     "ch": -0.86,
     "s": "헬스케어",
     "n": "ABBVIE INC.",
@@ -4372,7 +4381,7 @@
    },
    {
     "t": "KO",
-    "w": 0.66,
+    "w": 0.65,
     "ch": 0.94,
     "s": "필수소비재",
     "n": "코카콜라",
@@ -4460,7 +4469,7 @@
    },
    {
     "t": "PLTR",
-    "w": 0.55,
+    "w": 0.56,
     "ch": -6.63,
     "s": "정보기술",
     "n": "팔란티어",
@@ -4547,28 +4556,6 @@
     }
    },
    {
-    "t": "ORCL",
-    "w": 0.51,
-    "ch": -8.48,
-    "s": "정보기술",
-    "n": "오라클",
-    "d": {
-     "o": 108.48,
-     "h": 108.99,
-     "l": 100.25,
-     "c": 101.19,
-     "ch": -8.48,
-     "v": 41015304,
-     "vr": 1.01,
-     "w1": -19.3,
-     "m1": -19.4,
-     "ma20": 122.51,
-     "ma50": 132.14,
-     "hi": 170.7,
-     "lo": 100.25
-    }
-   },
-   {
     "t": "GE",
     "w": 0.51,
     "ch": -2.81,
@@ -4588,6 +4575,28 @@
      "ma50": 314.32,
      "hi": 356.39,
      "lo": 278.37
+    }
+   },
+   {
+    "t": "ORCL",
+    "w": 0.5,
+    "ch": -8.48,
+    "s": "정보기술",
+    "n": "오라클",
+    "d": {
+     "o": 108.48,
+     "h": 108.99,
+     "l": 100.25,
+     "c": 101.19,
+     "ch": -8.48,
+     "v": 41015306,
+     "vr": 1.01,
+     "w1": -19.3,
+     "m1": -19.4,
+     "ma20": 122.51,
+     "ma50": 132.14,
+     "hi": 170.7,
+     "lo": 100.25
     }
    },
    {
@@ -4724,7 +4733,7 @@
    },
    {
     "t": "TMO",
-    "w": 0.4,
+    "w": 0.39,
     "ch": -0.58,
     "s": "헬스케어",
     "n": "Thermo Fisher Scientific, Inc.",
@@ -4789,25 +4798,25 @@
     }
    },
    {
-    "t": "AMGN",
-    "w": 0.38,
-    "ch": -1.14,
-    "s": "헬스케어",
-    "n": "Amgen Inc",
+    "t": "LRCX",
+    "w": 0.37,
+    "ch": -3.77,
+    "s": "정보기술",
+    "n": "Lam Research Corp",
     "d": {
-     "o": 443.5,
-     "h": 444.27,
-     "l": 435.25,
-     "c": 438.82,
-     "ch": -1.14,
-     "v": 2509979,
+     "o": 220.96,
+     "h": 221.96,
+     "l": 203.45,
+     "c": 203.68,
+     "ch": -3.77,
+     "v": 12973071,
      "vr": 0.95,
-     "w1": -6.0,
-     "m1": 0.1,
-     "ma20": 458.53,
-     "ma50": 429.28,
-     "hi": 483.99,
-     "lo": 374.46
+     "w1": -12.9,
+     "m1": -21.9,
+     "ma20": 224.86,
+     "ma50": 269.56,
+     "hi": 352.56,
+     "lo": 184.24
     }
    },
    {
@@ -4833,28 +4842,6 @@
     }
    },
    {
-    "t": "LRCX",
-    "w": 0.37,
-    "ch": -3.77,
-    "s": "정보기술",
-    "n": "Lam Research Corp",
-    "d": {
-     "o": 220.96,
-     "h": 221.96,
-     "l": 203.45,
-     "c": 203.68,
-     "ch": -3.77,
-     "v": 12973071,
-     "vr": 0.95,
-     "w1": -12.9,
-     "m1": -21.9,
-     "ma20": 224.86,
-     "ma50": 269.56,
-     "hi": 352.56,
-     "lo": 184.24
-    }
-   },
-   {
     "t": "CAT",
     "w": 0.37,
     "ch": -3.83,
@@ -4877,25 +4864,25 @@
     }
    },
    {
-    "t": "NFLX",
+    "t": "AMGN",
     "w": 0.37,
-    "ch": -2.96,
-    "s": "커뮤니케이션",
-    "n": "넷플릭스",
+    "ch": -1.14,
+    "s": "헬스케어",
+    "n": "Amgen Inc",
     "d": {
-     "o": 58.34,
-     "h": 59.35,
-     "l": 56.56,
-     "c": 56.73,
-     "ch": -2.96,
-     "v": 62009565,
-     "vr": 1.57,
-     "w1": -8.7,
-     "m1": -15.4,
-     "ma20": 62.28,
-     "ma50": 67.4,
-     "hi": 83.6,
-     "lo": 56.56
+     "o": 443.5,
+     "h": 444.27,
+     "l": 435.25,
+     "c": 438.82,
+     "ch": -1.14,
+     "v": 2509979,
+     "vr": 0.95,
+     "w1": -6.0,
+     "m1": 0.1,
+     "ma20": 458.53,
+     "ma50": 429.28,
+     "hi": 483.99,
+     "lo": 374.46
     }
    },
    {
@@ -4918,6 +4905,28 @@
      "ma50": 493.94,
      "hi": 533.38,
      "lo": 454.19
+    }
+   },
+   {
+    "t": "NFLX",
+    "w": 0.37,
+    "ch": -2.96,
+    "s": "커뮤니케이션",
+    "n": "넷플릭스",
+    "d": {
+     "o": 58.34,
+     "h": 59.35,
+     "l": 56.56,
+     "c": 56.73,
+     "ch": -2.96,
+     "v": 62009565,
+     "vr": 1.57,
+     "w1": -8.7,
+     "m1": -15.4,
+     "ma20": 62.28,
+     "ma50": 67.4,
+     "hi": 83.6,
+     "lo": 56.56
     }
    },
    {
@@ -4944,7 +4953,7 @@
    },
    {
     "t": "CRWD",
-    "w": 0.35,
+    "w": 0.36,
     "ch": -5.76,
     "s": "정보기술",
     "n": "크라우드스트라이크",
@@ -5251,25 +5260,25 @@
     }
    },
    {
-    "t": "NEE",
-    "w": 0.27,
-    "ch": -1.17,
-    "s": "유틸리티",
-    "n": "NextEra Energy, Inc.",
+    "t": "TMUS",
+    "w": 0.28,
+    "ch": -0.91,
+    "s": "커뮤니케이션",
+    "n": "T-Mobile US, Inc.",
     "d": {
-     "o": 84.12,
-     "h": 84.25,
-     "l": 83.15,
-     "c": 83.79,
-     "ch": -1.17,
-     "v": 9598144,
-     "vr": 0.73,
-     "w1": -1.8,
-     "m1": 7.0,
-     "ma20": 84.72,
-     "ma50": 80.93,
-     "hi": 90.04,
-     "lo": 74.41
+     "o": 163.61,
+     "h": 164.02,
+     "l": 160.13,
+     "c": 162.53,
+     "ch": -0.91,
+     "v": 4410615,
+     "vr": 0.7,
+     "w1": -5.0,
+     "m1": 5.7,
+     "ma20": 160.19,
+     "ma50": 162.53,
+     "hi": 189.87,
+     "lo": 143.75
     }
    },
    {
@@ -5295,25 +5304,47 @@
     }
    },
    {
-    "t": "TMUS",
+    "t": "NEE",
     "w": 0.27,
-    "ch": -0.91,
-    "s": "커뮤니케이션",
-    "n": "T-Mobile US, Inc.",
+    "ch": -1.17,
+    "s": "유틸리티",
+    "n": "NextEra Energy, Inc.",
     "d": {
-     "o": 163.61,
-     "h": 164.02,
-     "l": 160.13,
-     "c": 162.53,
-     "ch": -0.91,
-     "v": 4410615,
-     "vr": 0.7,
-     "w1": -5.0,
-     "m1": 5.7,
-     "ma20": 160.19,
-     "ma50": 162.53,
-     "hi": 189.87,
-     "lo": 143.75
+     "o": 84.12,
+     "h": 84.25,
+     "l": 83.15,
+     "c": 83.79,
+     "ch": -1.17,
+     "v": 9598144,
+     "vr": 0.73,
+     "w1": -1.8,
+     "m1": 7.0,
+     "ma20": 84.72,
+     "ma50": 80.93,
+     "hi": 90.04,
+     "lo": 74.41
+    }
+   },
+   {
+    "t": "KLAC",
+    "w": 0.27,
+    "ch": -2.35,
+    "s": "정보기술",
+    "n": "KLA Corporation Common Stock",
+    "d": {
+     "o": 151.04,
+     "h": 151.33,
+     "l": 140.22,
+     "c": 141.48,
+     "ch": -2.35,
+     "v": 10811230,
+     "vr": 0.73,
+     "w1": -10.1,
+     "m1": -13.4,
+     "ma20": 150.49,
+     "ma50": 169.8,
+     "hi": 208.68,
+     "lo": 128.16
     }
    },
    {
@@ -5383,28 +5414,6 @@
     }
    },
    {
-    "t": "KLAC",
-    "w": 0.27,
-    "ch": -2.35,
-    "s": "정보기술",
-    "n": "KLA Corporation Common Stock",
-    "d": {
-     "o": 151.04,
-     "h": 151.33,
-     "l": 140.22,
-     "c": 141.48,
-     "ch": -2.35,
-     "v": 10811230,
-     "vr": 0.73,
-     "w1": -10.1,
-     "m1": -13.4,
-     "ma20": 150.49,
-     "ma50": 169.8,
-     "hi": 208.68,
-     "lo": 128.16
-    }
-   },
-   {
     "t": "DE",
     "w": 0.26,
     "ch": -3.08,
@@ -5471,6 +5480,28 @@
     }
    },
    {
+    "t": "DHR",
+    "w": 0.25,
+    "ch": -0.45,
+    "s": "헬스케어",
+    "n": "Danaher Corporation",
+    "d": {
+     "o": 230.01,
+     "h": 230.78,
+     "l": 226.27,
+     "c": 227.56,
+     "ch": -0.45,
+     "v": 4099560,
+     "vr": 1.17,
+     "w1": -2.0,
+     "m1": -2.7,
+     "ma20": 231.59,
+     "ma50": 224.38,
+     "hi": 238.46,
+     "lo": 199.09
+    }
+   },
+   {
     "t": "SCHW",
     "w": 0.25,
     "ch": -0.48,
@@ -5515,28 +5546,6 @@
     }
    },
    {
-    "t": "DHR",
-    "w": 0.24,
-    "ch": -0.45,
-    "s": "헬스케어",
-    "n": "Danaher Corporation",
-    "d": {
-     "o": 230.01,
-     "h": 230.78,
-     "l": 226.27,
-     "c": 227.56,
-     "ch": -0.45,
-     "v": 4099560,
-     "vr": 1.17,
-     "w1": -2.0,
-     "m1": -2.7,
-     "ma20": 231.59,
-     "ma50": 224.38,
-     "hi": 238.46,
-     "lo": 199.09
-    }
-   },
-   {
     "t": "TJX",
     "w": 0.24,
     "ch": -0.63,
@@ -5559,28 +5568,6 @@
     }
    },
    {
-    "t": "T",
-    "w": 0.24,
-    "ch": -0.46,
-    "s": "커뮤니케이션",
-    "n": "AT&T Inc.",
-    "d": {
-     "o": 21.89,
-     "h": 21.97,
-     "l": 21.52,
-     "c": 21.85,
-     "ch": -0.46,
-     "v": 46737762,
-     "vr": 0.96,
-     "w1": -1.5,
-     "m1": -0.3,
-     "ma20": 21.63,
-     "ma50": 23.29,
-     "hi": 26.93,
-     "lo": 20.52
-    }
-   },
-   {
     "t": "CRM",
     "w": 0.24,
     "ch": -1.47,
@@ -5600,6 +5587,28 @@
      "ma50": 229.69,
      "hi": 268.27,
      "lo": 179.92
+    }
+   },
+   {
+    "t": "T",
+    "w": 0.24,
+    "ch": -0.46,
+    "s": "커뮤니케이션",
+    "n": "AT&T Inc.",
+    "d": {
+     "o": 21.89,
+     "h": 21.97,
+     "l": 21.52,
+     "c": 21.85,
+     "ch": -0.46,
+     "v": 46737762,
+     "vr": 0.96,
+     "w1": -1.5,
+     "m1": -0.3,
+     "ma20": 21.63,
+     "ma50": 23.29,
+     "hi": 26.93,
+     "lo": 20.52
     }
    },
    {
@@ -5713,28 +5722,6 @@
     }
    },
    {
-    "t": "VRTX",
-    "w": 0.21,
-    "ch": -2.94,
-    "s": "헬스케어",
-    "n": "Vertex Pharmaceuticals Inc",
-    "d": {
-     "o": 537.79,
-     "h": 537.79,
-     "l": 517.82,
-     "c": 520.66,
-     "ch": -2.94,
-     "v": 1177432,
-     "vr": 0.76,
-     "w1": -4.0,
-     "m1": -0.7,
-     "ma20": 538.48,
-     "ma50": 522.74,
-     "hi": 568.67,
-     "lo": 484.08
-    }
-   },
-   {
     "t": "LMT",
     "w": 0.21,
     "ch": -1.1,
@@ -5757,25 +5744,25 @@
     }
    },
    {
-    "t": "SPGI",
-    "w": 0.2,
-    "ch": -0.83,
-    "s": "금융",
-    "n": "S&P Global Inc.",
+    "t": "VRTX",
+    "w": 0.21,
+    "ch": -2.94,
+    "s": "헬스케어",
+    "n": "Vertex Pharmaceuticals Inc",
     "d": {
-     "o": 444.78,
-     "h": 446.19,
-     "l": 439.35,
-     "c": 442.66,
-     "ch": -0.83,
-     "v": 1128895,
-     "vr": 0.66,
-     "w1": -5.5,
-     "m1": -0.1,
-     "ma20": 463.21,
-     "ma50": 430.79,
-     "hi": 485.99,
-     "lo": 382.21
+     "o": 537.79,
+     "h": 537.79,
+     "l": 517.82,
+     "c": 520.66,
+     "ch": -2.94,
+     "v": 1177432,
+     "vr": 0.76,
+     "w1": -4.0,
+     "m1": -0.7,
+     "ma20": 538.48,
+     "ma50": 522.74,
+     "hi": 568.67,
+     "lo": 484.08
     }
    },
    {
@@ -5798,6 +5785,28 @@
      "ma50": 94.45,
      "hi": 106.2,
      "lo": 85.22
+    }
+   },
+   {
+    "t": "SPGI",
+    "w": 0.2,
+    "ch": -0.83,
+    "s": "금융",
+    "n": "S&P Global Inc.",
+    "d": {
+     "o": 444.78,
+     "h": 446.19,
+     "l": 439.35,
+     "c": 442.66,
+     "ch": -0.83,
+     "v": 1128895,
+     "vr": 0.66,
+     "w1": -5.5,
+     "m1": -0.1,
+     "ma20": 463.21,
+     "ma50": 430.79,
+     "hi": 485.99,
+     "lo": 382.21
     }
    },
    {
@@ -5842,28 +5851,6 @@
      "ma50": 72.87,
      "hi": 79.97,
      "lo": 65.78
-    }
-   },
-   {
-    "t": "LOW",
-    "w": 0.2,
-    "ch": -1.63,
-    "s": "경기소비재",
-    "n": "Lowe's Companies Inc.",
-    "d": {
-     "o": 220.41,
-     "h": 221.46,
-     "l": 217.63,
-     "c": 219.14,
-     "ch": -1.63,
-     "v": 3287667,
-     "vr": 0.9,
-     "w1": -3.7,
-     "m1": 11.5,
-     "ma20": 218.03,
-     "ma50": 201.6,
-     "hi": 235.0,
-     "lo": 178.45
     }
    },
    {
@@ -5933,6 +5920,28 @@
     }
    },
    {
+    "t": "LOW",
+    "w": 0.19,
+    "ch": -1.63,
+    "s": "경기소비재",
+    "n": "Lowe's Companies Inc.",
+    "d": {
+     "o": 220.41,
+     "h": 221.46,
+     "l": 217.63,
+     "c": 219.14,
+     "ch": -1.63,
+     "v": 3287667,
+     "vr": 0.9,
+     "w1": -3.7,
+     "m1": 11.5,
+     "ma20": 218.03,
+     "ma50": 201.6,
+     "hi": 235.0,
+     "lo": 178.45
+    }
+   },
+   {
     "t": "ADP",
     "w": 0.19,
     "ch": -1.43,
@@ -5999,28 +6008,6 @@
     }
    },
    {
-    "t": "SYK",
-    "w": 0.19,
-    "ch": -1.59,
-    "s": "헬스케어",
-    "n": "Stryker Corporation",
-    "d": {
-     "o": 315.56,
-     "h": 316.56,
-     "l": 311.0,
-     "c": 313.08,
-     "ch": -1.59,
-     "v": 2195500,
-     "vr": 0.66,
-     "w1": 0.2,
-     "m1": 5.2,
-     "ma20": 314.53,
-     "ma50": 294.94,
-     "hi": 349.48,
-     "lo": 267.0
-    }
-   },
-   {
     "t": "APP",
     "w": 0.18,
     "ch": -3.04,
@@ -6040,6 +6027,28 @@
      "ma50": 308.77,
      "hi": 418.77,
      "lo": 225.19
+    }
+   },
+   {
+    "t": "SYK",
+    "w": 0.18,
+    "ch": -1.59,
+    "s": "헬스케어",
+    "n": "Stryker Corporation",
+    "d": {
+     "o": 315.56,
+     "h": 316.56,
+     "l": 311.0,
+     "c": 313.08,
+     "ch": -1.59,
+     "v": 2195500,
+     "vr": 0.66,
+     "w1": 0.2,
+     "m1": 5.2,
+     "ma20": 314.53,
+     "ma50": 294.94,
+     "hi": 349.48,
+     "lo": 267.0
     }
    },
    {
@@ -6066,7 +6075,7 @@
    },
    {
     "t": "PH",
-    "w": 0.18,
+    "w": 0.17,
     "ch": -1.38,
     "s": "산업재",
     "n": "Parker-Hannifin Corporation",
@@ -6131,7 +6140,7 @@
    ]
   }
  },
- "site_v": 9,
+ "site_v": 10,
  "jintari": {
   "cards": [
    {
@@ -6279,6 +6288,114 @@
   "note": "발행인이 직접 만든 규칙 카드입니다. 정해진 조건이 켜졌다는 기록일 뿐 투자 권유가 아니며, 결과는 본인 책임입니다.",
   "u": "https://stock.jintar.co.kr/",
   "asof": "2026-11-20 장 종료 기준 · 카드 갱신 11/21 05:40 KST"
+ },
+ "top2": {
+  "kicker": "두 번째 큰 뉴스",
+  "title": "브로드컴 -12%, '구글이 AI칩 주문 20% 줄였다' 설문 한 장에 휘청",
+  "img": "img/2026-11-21-top2.jpg",
+  "points": [
+   {
+    "t": "TF인터내셔널 궈밍치 애널리스트가 X에 '구글이 2027년 브로드컴 설계 TPU 8i 출하를 약 100만 개, 20%가량 줄였다'는 업계 설문 결과를 올렸습니다. 대신 미디어텍이 설계한 TPU 8t를 늘릴 계획이라고 했습니다.",
+    "src": "https://stockanalysis.com/news/broadcom-falls-google-tpu-cut-mediatek/"
+   },
+   {
+    "t": "브로드컴은 -12.19%, 304.41달러(약 41만 원)로 마감했습니다. 거래량은 평소의 약 2배였습니다.",
+    "src": "https://www.marketbeat.com/instant-alerts/price-broadcom-nasdaq-avgo-stock-falls-124-heres-what-happened-2026-11-20/"
+   },
+   {
+    "t": "목요일 종가 이후 시가총액 약 1,910억 달러(약 257조 원)가 증발했고, 최고가보다 36% 낮아졌습니다.",
+    "src": "https://247wallst.com/investing/2026/11/20/broadcom-stock-plunges-12-and-loses-191-billion-after-a-report-that-google-cut-its-plans-for-broadcom-ai-chips/"
+   },
+   {
+    "t": "구글과 브로드컴은 이 내용을 확인하지 않았습니다. 같은 날 골드만삭스는 12개월 주가 전망을 540달러(약 73만 원)에서 460달러(약 62만 원)로 낮췄습니다.",
+    "src": "https://invezz.com/news/2026/11/20/why-broadcom-shares-are-down-over-11-on-friday/"
+   },
+   {
+    "t": "맞춤형 AI칩을 설계하는 마벨도 -10%로 같이 밀렸습니다.",
+    "src": "https://247wallst.com/investing/2026/11/20/broadcom-plunges-11-as-google-reportedly-shifts-tpu-orders-to-mediatek-overshadowing-goldmans-460-target-marvell-sinks-10/"
+   }
+  ],
+  "risks": [
+   {
+    "t": "팁랭크스는 구글이 AI 투자를 줄이는 게 아니라 연산 자원을 다시 나누는 것이라고 봤습니다.",
+    "src": "https://tipranks.com/news/google-cuts-broadcom-ai-chip-orders-by-20-avgo-stock-sinks"
+   },
+   {
+    "t": "반도체 전체가 무너진 날이라 이 보도만의 영향으로 보기는 어렵다는 분석도 있습니다.",
+    "src": "https://finance.biggo.com/news/dd24faec-557c-44e9-bf10-6089d4d44839"
+   }
+  ],
+  "why": "엔비디아 다음 AI 반도체 대장으로 꼽히던 브로드컴이 최대 고객 구글의 주문 축소설에 흔들렸습니다. 맞춤형 AI칩 이야기가 꺾이는지가 관건입니다.",
+  "watch": [
+   "구글·브로드컴이 공식 입장을 내는지",
+   "12월 9일 브로드컴 실적 발표에서 2027년 AI 매출 전망",
+   "미디어텍·마벨 등 맞춤칩 경쟁사 주가 흐름"
+  ],
+  "src": [
+   {
+    "t": "StockAnalysis",
+    "u": "https://stockanalysis.com/news/broadcom-falls-google-tpu-cut-mediatek/"
+   },
+   {
+    "t": "24/7 Wall St.",
+    "u": "https://247wallst.com/investing/2026/11/20/broadcom-stock-plunges-12-and-loses-191-billion-after-a-report-that-google-cut-its-plans-for-broadcom-ai-chips/"
+   },
+   {
+    "t": "Invezz",
+    "u": "https://invezz.com/news/2026/11/20/why-broadcom-shares-are-down-over-11-on-friday/"
+   },
+   {
+    "t": "궈밍치 X",
+    "u": "https://x.com/mingchikuo/status/2123792271195918462"
+   }
+  ],
+  "react": [
+   {
+    "p": "X",
+    "t": "궈밍치 본인: 구글이 최첨단 모델 개발에 연산을 먼저 몰아주려는 조정일 뿐",
+    "u": "https://x.com/mingchikuo/status/2123792271195918462"
+   },
+   {
+    "p": "X",
+    "t": "\"추론칩을 줄이는 건 말이 된다\"며 구글 결정에 수긍하는 답글",
+    "u": "https://x.com/mingchikuo/status/2123792271195918462"
+   },
+   {
+    "p": "분석",
+    "t": "\"브로드컴은 양쪽에서 맞고 있다\" — 주문 축소설에 AI 반도체 몸값 낮추기까지 겹쳤다는 매도 의견",
+    "u": "https://invezz.com/news/2026/11/20/why-broadcom-shares-are-down-over-11-on-friday/"
+   },
+   {
+    "p": "분석",
+    "t": "\"구글 발표는 없고 설문뿐\" — 확인된 사실이 아니라 분위기라는 지적",
+    "u": "https://explainx.ai/blog/google-broadcom-tpu-8i-million-unit-cut-2027-claimed-vs-verified-2026"
+   },
+   {
+    "p": "분석",
+    "t": "AI 투자를 줄이는 게 아니라 배분을 바꾸는 것이라는 해석",
+    "u": "https://tipranks.com/news/google-cuts-broadcom-ai-chip-orders-by-20-avgo-stock-sinks"
+   },
+   {
+    "p": "분석",
+    "t": "반도체 전체 투매 날이라 이 보도 탓만 하긴 어렵다는 시각",
+    "u": "https://finance.biggo.com/news/dd24faec-557c-44e9-bf10-6089d4d44839"
+   },
+   {
+    "p": "시장",
+    "t": "골드만의 460달러(약 62만 원) 주가 전망이 그나마 반론으로 거론됨",
+    "u": "https://www.marketbeat.com/instant-alerts/price-broadcom-nasdaq-avgo-stock-falls-124-heres-what-happened-2026-11-20/"
+   },
+   {
+    "p": "시장",
+    "t": "이득은 미디어텍, 매도는 마벨 등 다른 맞춤칩 설계사로 번졌다는 반응",
+    "u": "https://247wallst.com/investing/2026/11/20/broadcom-plunges-11-as-google-reportedly-shifts-tpu-orders-to-mediatek-overshadowing-goldmans-460-target-marvell-sinks-10/"
+   },
+   {
+    "p": "시장",
+    "t": "결국 12월 9일 실적에서 확인하자며 관망하는 분위기",
+    "u": "https://247wallst.com/investing/2026/11/20/broadcom-stock-plunges-12-and-loses-191-billion-after-a-report-that-google-cut-its-plans-for-broadcom-ai-chips/"
+   }
+  ]
  },
  "lead": ""
 }

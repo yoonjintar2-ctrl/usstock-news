@@ -189,6 +189,11 @@ footer{border-top:5px double var(--rule);margin-top:28px;padding-top:10px;font-s
 .topw3 .figs{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:560px){.topw3 .figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .topw3 .kpts{margin:4px 0 14px;padding-left:18px;font-size:15.5px;line-height:1.6}.topw3 .kpts li{margin:3px 0}.topw3 .kpts.kr li::marker{content:'– ';color:#777}.topw3 .kpts.kr{color:#333}
 .topw3 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:8px}.topw3 .foot .src{margin:0}
+.topw3.t2{margin-top:26px;padding-top:20px;border-top:2px solid var(--ink)}.topw3.t2 h3{font-size:clamp(22px,2.8vw,32px)}
+.react{margin-top:14px;border-top:1px solid var(--line);padding-top:8px}.react ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:3px 22px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:860px){.react ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.react li{font-size:12.5px;line-height:1.45;color:#333}.react .rp{display:inline-block;min-width:44px;font-size:10.5px;font-weight:700;border:1px solid #999;color:#555;padding:0 4px;margin-right:6px;text-align:center;vertical-align:1px}.react a{color:#888;text-decoration:none;font-size:11px}.react small{font-weight:400;color:var(--muted);font-size:11px}
+.tmnav{float:right;display:flex;align-items:center;gap:4px;font-size:12px;font-family:Pretendard,sans-serif;font-weight:600}.tmnav button{border:1px solid var(--ink);background:#fff;font-size:12px;padding:1px 7px;cursor:pointer;line-height:1.4}.tmnav button:disabled{opacity:.3;cursor:default}
 /* 접는 목록 */
 details.it{border-bottom:1px solid var(--line)}
 details.it>summary{list-style:none;cursor:pointer;display:grid;align-items:center;gap:10px;padding:9px 2px}
@@ -296,6 +301,8 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 @media(max-width:600px){.camps{column-gap:18px!important}.camp.cshort .spk{flex-direction:column}.camp.cshort .bub::before{right:auto;left:50%;border:8px solid transparent;border-bottom-color:var(--ink);border-top:0}.camp.cshort .bub::after{right:auto;left:50%;border:7px solid transparent;border-bottom-color:#fff;border-top:0}}
 .cblock{background:transparent!important}.cblock .tri,.cblock .brief{background:transparent}
 .cblock .cscroll{background:#fff;border:1px solid var(--ink);padding:6px 4px 0}
+.sch3 summary{grid-template-columns:78px minmax(0,1fr) auto 12px}.sch3 .t{white-space:normal;word-break:keep-all;line-height:1.25;font-size:12.5px}.sch3 .body{padding-left:88px}
+@media(max-width:560px){.sch3 summary{grid-template-columns:64px minmax(0,1fr) auto 10px;gap:8px}.sch3 .t{font-size:11.5px}.sch3 .body{padding-left:2px}}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -316,7 +323,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 </div>
 
 <div class="row"><section id="s-chart"><h2>차트 분석 <small id="chart-asof"></small></h2><div id="charts"></div>
- <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small></h3><p class="hline" id="tm-h"></p><p class="brief" id="tm-com"></p><div class="tmap" id="tmap"></div><div class="tmtip" id="tmtip" hidden></div><p class="src" style="margin:4px 0 0">칸에 마우스를 올리거나 눌러 보면 어제 시세 요약이 나옵니다.</p><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
+ <div class="cblock" id="tm-wrap"><h3 class="ct serif">S&amp;P 500 트리맵 <small id="tm-asof"></small><span class="tmnav"><button id="tmprev" aria-label="이전 날">◀</button><span id="tmday"></span><button id="tmnext" aria-label="다음 날">▶</button></span></h3><p class="hline" id="tm-h"></p><p class="brief" id="tm-com"></p><div class="tmap" id="tmap"></div><div class="tmtip" id="tmtip" hidden></div><p class="src" style="margin:4px 0 0">칸에 마우스를 올리거나 눌러 보면 어제 시세 요약이 나옵니다.</p><div class="tlegend" id="tleg"></div><p class="src" id="tm-note"></p></div>
 </section></div>
 
 <div class="row r5b">
@@ -402,15 +409,17 @@ function squarify(items,x,y,w,h,out){
  }
 }
 const tcol=ch=>{const a=Math.min(1,Math.abs(ch)/3);if(Math.abs(ch)<0.05)return '#4b5563';return ch>0?`rgb(${Math.round(40-20*a)},${Math.round(90+70*a)},${Math.round(60+10*a)})`:`rgb(${Math.round(120+100*a)},${Math.round(45-10*a)},${Math.round(45-10*a)})`};
-function treemap(T){
- const box=$('tmap');if(!T){box.parentElement.hidden=true;return}
- let cells=[];
+let TM_T=null,TM_init=false,TM_draw=null,TM_hide=null;
+function treemap(T0){
+ const box=$('tmap');if(!T0){box.parentElement.hidden=true;return}
+ TM_T=T0;if(TM_init){TM_hide();TM_draw();tmMeta(T0);return}TM_init=true;
+ let cells=[];const T=new Proxy({},{get:(_,k)=>TM_T[k]});
  const draw=()=>{const W=box.clientWidth,H=box.clientHeight;const secs={};T.items.forEach(it=>{(secs[it.s]=secs[it.s]||[]).push({...it,v:it.w})});
   const sl=Object.entries(secs).map(([k,a])=>({k,v:a.reduce((s,i)=>s+i.v,0),a:a.sort((p,q)=>q.v-p.v)})).sort((p,q)=>q.v-p.v);
   const rects=[];squarify(sl,0,0,W,H,rects);let html='';
   cells=[];rects.forEach(r=>{const inner=[];squarify(r.a,r.x,r.y,r.w,r.h,inner);inner.forEach(c=>{const k=cells.push(c)-1;const fs=Math.min(26,Math.sqrt(c.w*c.h)/4.2,(c.w-3)/(c.t.length*.66),(c.h-2)*.8);const show=fs>=4.5;html+=`<div class="c" data-k="${k}" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;background:${tcol(c.ch)}">${show?`<b style="font-size:${fs}px">${esc(c.t)}</b>${c.h>fs*2.5&&fs>=7?`<span style="font-size:${Math.max(6,fs*.6)}px">${c.ch>0?'+':''}${c.ch.toFixed(2)}%</span>`:''}`:''}</div>`});if(r.w>60&&r.h>30)html+=`<div class="sl" style="left:${r.x+2}px;top:${r.y+2}px">${esc(r.k)}</div>`});
   box.innerHTML=html};
- draw();let to;window.addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(()=>{hide();draw()},150)});
+ TM_draw=draw;draw();let to;window.addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(()=>{hide();draw()},150)});
  const tip=$('tmtip'),wrap=$('tm-wrap');let pin=null;
  const vol=v=>v>=1e8?`${(v/1e8).toFixed(2)}억 주`:`${Math.round(v/1e4).toLocaleString('ko-KR')}만 주`;
  const pf=v=>v>=1000?v.toLocaleString('en-US',{maximumFractionDigits:2}):v.toFixed(2);
@@ -425,15 +434,28 @@ function treemap(T){
   const cx=br.left-wr.left+c.x+c.w/2;let left=Math.max(6,Math.min(wr.width-tw-6,cx-tw/2));
   let top=br.top-wr.top+c.y+c.h+6;if(top+th>br.bottom-wr.top+40&&br.top-wr.top+c.y-th-6>0)top=br.top-wr.top+c.y-th-6;
   tip.style.left=left+'px';tip.style.top=top+'px';[...box.querySelectorAll('.c.on')].forEach(x=>x.classList.remove('on'));el.classList.add('on')};
- const hide=()=>{tip.hidden=true;pin=null;[...box.querySelectorAll('.c.on')].forEach(x=>x.classList.remove('on'))};
+ const hide=TM_hide=()=>{tip.hidden=true;pin=null;[...box.querySelectorAll('.c.on')].forEach(x=>x.classList.remove('on'))};
  box.addEventListener('mouseover',e=>{if(pin)return;const el=e.target.closest('.c');if(el)show(el)});
  box.addEventListener('mouseleave',()=>{if(!pin)hide()});
  box.addEventListener('click',e=>{const el=e.target.closest('.c');if(!el)return;e.stopPropagation();if(pin===el){hide();return}pin=el;show(el)});
  document.addEventListener('click',e=>{if(pin&&!tip.contains(e.target))hide()});
- $('tm-asof').textContent=T.asof;if(T.comment&&T.comment.h)$('tm-h').textContent=T.comment.h;else $('tm-h').hidden=true;if(T.comment)$('tm-com').innerHTML=`${esc(T.comment.t)}${srcs(T.comment.src)}`;else $('tm-com').hidden=true;$('tm-note').innerHTML=`${esc(T.note)} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
- $('tleg').innerHTML=`<span>-3%</span><i style="background:${tcol(-3)}"></i><i style="background:${tcol(-1)}"></i><i style="background:${tcol(0)}"></i><i style="background:${tcol(1)}"></i><i style="background:${tcol(3)}"></i><span>+3%</span>`;
+ tmMeta(T0);
 }
 
+function tmMeta(T){
+ $('tm-asof').textContent=T.asof||'';const h=$('tm-h'),c=$('tm-com');h.hidden=!(T.comment&&T.comment.h);if(!h.hidden)h.textContent=T.comment.h;c.hidden=!T.comment;if(T.comment)c.innerHTML=`${esc(T.comment.t)}${srcs(T.comment.src)}`;$('tm-note').innerHTML=`${esc(T.note||'')} · 출처: <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(host(T.src))}</a>`;
+ $('tleg').innerHTML=`<span>-3%</span><i style="background:${tcol(-3)}"></i><i style="background:${tcol(-1)}"></i><i style="background:${tcol(0)}"></i><i style="background:${tcol(1)}"></i><i style="background:${tcol(3)}"></i><span>+3%</span>`;
+}
+/* 트리맵 날짜 이동 — 지난 호의 트리맵을 불러온다 */
+async function tmNav(cur,asof0){
+ let days=[];try{days=(await (await fetch('archive/index.json?v='+Date.now())).json()).map(x=>x.date).sort()}catch(e){}
+ if(!days.length){$('tmprev').disabled=$('tmnext').disabled=true;return}
+ let i=days.indexOf(cur);if(i<0)i=days.length-1;const cache={};
+ let asof=asof0||'';const lab=()=>{const m=/(\d{4})-(\d{2})-(\d{2})/.exec(asof);return m?`${+m[2]}/${+m[3]} 장`:''};
+ const go=async k=>{if(k<0||k>=days.length)return;const d=days[k];try{const J=cache[d]||(cache[d]=await (await fetch(`archive/${d}.json`)).json());if(!J.treemap)return;i=k;asof=J.treemap.asof||'';treemap({...J.treemap,fx:(J.quotes||{}).fx});upd()}catch(e){}};
+ const upd=()=>{$('tmday').textContent=lab();$('tmprev').disabled=i<=0;$('tmnext').disabled=i>=days.length-1};
+ $('tmprev').onclick=()=>go(i-1);$('tmnext').onclick=()=>go(i+1);upd();
+}
 /* 내 종목 분석 */
 function miniSVG(m,close){
  if(!m||!m.b)return '<p class="none">차트 데이터를 불러오지 못한 종목입니다.</p>';
@@ -481,7 +503,7 @@ function mine(Q){
 
 const marquee=()=>{if(!(window.matchMedia&&matchMedia('(max-width:700px)').matches))return;['tape','tape2'].forEach((id,k)=>{const el=$(id);if(!el||!el.children.length||el.querySelector('.mq'))return;const inner=el.innerHTML;el.innerHTML=`<div class="mq" style="animation-duration:${Math.max(18,el.children.length*(k?5:6))}s">${inner}${inner}</div>`;el.classList.add('mqon')})};
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=9;
+const SITE_V=10;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
@@ -491,11 +513,13 @@ function render(D){
  $('tape').innerHTML=((D.market||{}).rows||[]).map(r=>`<div><b>${esc(r.name)}</b>${num(r.close)} ${chg(r.chg_pct)}</div>`).join('');
  // 1면 — 제목 맨 위
  const E=D.top||{};
- $('top').innerHTML=`<div class="topw3"><span class="kicker">${esc(E.kicker||'지금 가장 중요한 뉴스')}</span><h3>${esc(E.title)}</h3><div class="grid">
+ const topHTML=(E,i)=>`<div class="topw3${i?' t2':''}"><span class="kicker">${esc(E.kicker||'지금 가장 중요한 뉴스')}</span><h3>${esc(E.title)}</h3><div class="grid">
   <div>${E.img?`<img src="${esc(E.img)}" alt="${esc(E.title)}">`:''}<p class="why" style="margin-top:12px">${hl(E.why)}</p></div>
   <div><b class="small">핵심 정리</b><ul class="kpts">${(E.points||[]).map(p=>`<li>${hl(p.t)}</li>`).join('')}</ul>${(E.risks||[]).length?`<b class="small">반대로 볼 점</b><ul class="kpts kr">${E.risks.map(p=>`<li>${hl(p.t)}</li>`).join('')}</ul>`:''}
-  <b class="small">오늘 밤 볼 것</b><ol class="watch">${(E.watch||[]).map(w=>`<li>${hl(w)}</li>`).join('')}</ol>
-  <div class="foot">${golink(E.short)}${srcs(E.src)}</div></div></div></div>`;
+  ${(E.watch||[]).length?`<b class="small">${i?'앞으로 볼 것':'오늘 밤 볼 것'}</b><ol class="watch">${E.watch.map(w=>`<li>${hl(w)}</li>`).join('')}</ol>`:''}
+  <div class="foot">${golink(E.short)}${srcs(E.src)}</div></div></div>
+  ${(E.react||[]).length?`<div class="react"><b class="small">사람들 반응 <small>SNS·커뮤니티·방송에서 나온 말의 뉘앙스를 요약</small></b><ul>${E.react.map(r=>`<li><span class="rp">${esc(r.p)}</span>${esc(r.t)}${r.u?` <a href="${esc(r.u)}" target="_blank" rel="noopener">↗</a>`:''}</li>`).join('')}</ul></div>`:''}</div>`;
+ $('top').innerHTML=[D.top,D.top2].filter(Boolean).map(topHTML).join('');
  // 일정
  $('sch').innerHTML=(D.schedule||[]).map(s=>`<details class="it"><summary><span class="t">${esc(s.kst)}</span><span><span class="tag">${esc(s.type)}</span><span class="nm">${esc(s.name)}</span></span>${star5(s.star)}<span class="ar">▶</span></summary><div class="body">${esc(s.why)}${src1(s.src)}</div></details>`).join('');
  $('schnote').textContent=D.schedule_note||'';
@@ -509,7 +533,7 @@ function render(D){
   <div class="mal">${c.candle.mas.map(m=>`<span><i style="border-color:${MAC[m]};${m===200?'border-top-style:dashed':''}"></i>${m}일선</span>`).join('')}<span><i style="border-color:${UP}"></i>상승 캔들</span><span><i style="border-color:${DN}"></i>하락 캔들</span></div>
   <div class="ana"><div class="chips">${(c.tags||[]).map(t=>`<span class="chip ${t.hl?'hl':''}">${esc(t.t)}</span>`).join('')}</div>
   ${c.watch?`<div class="watchlv"><div><span>▲ 돌파 볼 자리</span><b>${lvf(c,c.watch.up.v)}</b><br><small>${esc(c.watch.up.name)} · ${c.watch.up.gap>0?'+':''}${c.watch.up.gap}%</small></div><div><span>▼ 지지 볼 자리</span><b>${lvf(c,c.watch.down.v)}</b><br><small>${esc(c.watch.down.name)} · ${c.watch.down.gap}%</small></div></div>`:''}</div></div>`).join('');
- safe('tmap',()=>treemap(D.treemap&&{...D.treemap,fx:(D.quotes||{}).fx}));
+ safe('tmap',()=>{treemap(D.treemap&&{...D.treemap,fx:(D.quotes||{}).fx});tmNav(D.date,(D.treemap||{}).asof)});
  // 뉴스
  $('news').innerHTML=(D.news||[]).map(n=>`<div class="nit">${n.img?`<img src="${esc(n.img)}" alt="">`:''}<div><h4><span class="tag">${esc(n.tag)}</span>${esc(n.title)}</h4><p>${esc(n.line||n.body)} ${(n.src||[]).slice(0,1).map(x=>`<a class="src" href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t||host(x.u))}</a>`).join('')}</p></div></div>`).join('');
  safe('mine',()=>mine(D.quotes));

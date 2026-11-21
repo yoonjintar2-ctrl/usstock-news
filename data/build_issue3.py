@@ -351,6 +351,67 @@ issue['jintari'] = {'cards': cards, 'cash': [],
  'note': '발행인이 직접 만든 규칙 카드입니다. 정해진 조건이 켜졌다는 기록일 뿐 투자 권유가 아니며, 결과는 본인 책임입니다.',
  'u': JL_U, 'asof': '2026-11-20 장 종료 기준 · 카드 갱신 11/21 05:40 KST'}
 
+# ── v11: 1면 두 건 + 사람들 반응, 간밤 뉴스에서 1면 두 건 빼기 (발행인 11/21) ──
+SA='https://stockanalysis.com/news/broadcom-falls-google-tpu-cut-mediatek/'
+W247='https://247wallst.com/investing/2026/11/20/broadcom-stock-plunges-12-and-loses-191-billion-after-a-report-that-google-cut-its-plans-for-broadcom-ai-chips/'
+W247b='https://247wallst.com/investing/2026/11/20/broadcom-plunges-11-as-google-reportedly-shifts-tpu-orders-to-mediatek-overshadowing-goldmans-460-target-marvell-sinks-10/'
+INV='https://invezz.com/news/2026/11/20/why-broadcom-shares-are-down-over-11-on-friday/'
+TIP='https://tipranks.com/news/google-cuts-broadcom-ai-chip-orders-by-20-avgo-stock-sinks'
+MB='https://www.marketbeat.com/instant-alerts/price-broadcom-nasdaq-avgo-stock-falls-124-heres-what-happened-2026-11-20/'
+BG='https://finance.biggo.com/news/dd24faec-557c-44e9-bf10-6089d4d44839'
+EXP='https://explainx.ai/blog/google-broadcom-tpu-8i-million-unit-cut-2027-claimed-vs-verified-2026'
+KUO='https://x.com/mingchikuo/status/2123792271195918462'
+ST_NV='https://stocktwits.com/news-articles/markets/equity/nvda-stock-clocks-worst-week-in-18-years-as-sec-reportedly-probes-its-accounting-practices/cNbSDIWR91Q'
+YH_NV='https://finance.yahoo.com/markets/stocks/articles/nvda-stock-down-40-october-041800878.html'
+YH_POLL='https://finance.yahoo.com/markets/stocks/articles/nvda-stock-heads-worst-week-032900844.html'
+IBT='https://www.ibtimes.co.uk/nvidia-reddit-meme-executive-scandals-stock-gains-1831263'
+GEN='https://stocktwits.com/news-articles/markets/equity/gary-gensler-says-key-question-in-nvidia-probe-is-whether-huang-misled-shareholders-sees-ai-repricing-ahead/cNGrO6sR9ev'
+DCD='https://www.datacenterdynamics.com/en/news/nvidia-says-its-not-like-enron-in-leaked-memo-to-financial-analysts/'
+issue['top']['react'] = [
+ {'p': '스톡트윗', 't': '그날 하루도 개인 투자자 분위기는 여전히 "매우 낙관" — 글 수는 "매우 많음"으로 폭발', 'u': ST_NV},
+ {'p': '스톡트윗', 't': '"이 가격이면 코로나 이후 가장 쉬운 돈벌이"라며 줍줍을 외치는 글', 'u': YH_NV},
+ {'p': '스톡트윗', 't': '지난주 투표에선 10명 중 6명꼴이 "떨어질 때 산다", 4명은 "일단 피한다"', 'u': YH_POLL},
+ {'p': '스톡트윗', 't': '엔비디아 앞날을 두고 개인들끼리도 의견이 크게 갈리는 중', 'u': YH_POLL},
+ {'p': '레딧', 't': '창업자 스캔들 뒤 오히려 주가가 더 올랐던 베이조스·게이츠 사례를 붙인 "그냥 사" 밈', 'u': IBT},
+ {'p': 'TV', 't': '크레이머: 엔비디아가 시장 전체에 그늘을 드리우고 다른 종목까지 물들인다', 'u': YH_NV},
+ {'p': 'TV', 't': '크레이머: 황의 복귀설이 오히려 회사를 더 가라앉히고 있다', 'u': YH_NV},
+ {'p': '전문가', 't': '전 SEC 위원장 겐슬러: 핵심은 투자자를 오도했느냐, 시장은 이미 "중대한 일"로 본다', 'u': GEN},
+ {'p': '회사', 't': '엔비디아는 예전부터 "엔론·월드컴 같은 회계 사기와 다르다"고 반박해 왔다', 'u': DCD},
+]
+F_ = TD['AVGO'] if 'AVGO' in TD else None
+issue['top2'] = {
+ 'kicker': '두 번째 큰 뉴스',
+ 'title': "브로드컴 -12%, '구글이 AI칩 주문 20% 줄였다' 설문 한 장에 휘청",
+ 'img': 'img/2026-11-21-top2.jpg',
+ 'points': [
+  {'t': "TF인터내셔널 궈밍치 애널리스트가 X에 '구글이 2027년 브로드컴 설계 TPU 8i 출하를 약 100만 개, 20%가량 줄였다'는 업계 설문 결과를 올렸습니다. 대신 미디어텍이 설계한 TPU 8t를 늘릴 계획이라고 했습니다.", 'src': SA},
+  {'t': f"브로드컴은 {F_[5]:+.2f}%, {F_[4]}달러({won(F_[4])})로 마감했습니다. 거래량은 평소의 약 2배였습니다.", 'src': MB},
+  {'t': '목요일 종가 이후 시가총액 약 1,910억 달러(약 257조 원)가 증발했고, 최고가보다 36% 낮아졌습니다.', 'src': W247},
+  {'t': '구글과 브로드컴은 이 내용을 확인하지 않았습니다. 같은 날 골드만삭스는 12개월 주가 전망을 540달러(약 73만 원)에서 460달러(약 62만 원)로 낮췄습니다.', 'src': INV},
+  {'t': '맞춤형 AI칩을 설계하는 마벨도 -10%로 같이 밀렸습니다.', 'src': W247b},
+ ],
+ 'risks': [
+  {'t': '팁랭크스는 구글이 AI 투자를 줄이는 게 아니라 연산 자원을 다시 나누는 것이라고 봤습니다.', 'src': TIP},
+  {'t': '반도체 전체가 무너진 날이라 이 보도만의 영향으로 보기는 어렵다는 분석도 있습니다.', 'src': BG},
+ ],
+ 'why': '엔비디아 다음 AI 반도체 대장으로 꼽히던 브로드컴이 최대 고객 구글의 주문 축소설에 흔들렸습니다. 맞춤형 AI칩 이야기가 꺾이는지가 관건입니다.',
+ 'watch': ['구글·브로드컴이 공식 입장을 내는지', '12월 9일 브로드컴 실적 발표에서 2027년 AI 매출 전망', '미디어텍·마벨 등 맞춤칩 경쟁사 주가 흐름'],
+ 'src': [{'t': 'StockAnalysis', 'u': SA}, {'t': '24/7 Wall St.', 'u': W247}, {'t': 'Invezz', 'u': INV}, {'t': '궈밍치 X', 'u': KUO}],
+ 'react': [
+  {'p': 'X', 't': '궈밍치 본인: 구글이 최첨단 모델 개발에 연산을 먼저 몰아주려는 조정일 뿐', 'u': KUO},
+  {'p': 'X', 't': '"추론칩을 줄이는 건 말이 된다"며 구글 결정에 수긍하는 답글', 'u': KUO},
+  {'p': '분석', 't': '"브로드컴은 양쪽에서 맞고 있다" — 주문 축소설에 AI 반도체 몸값 낮추기까지 겹쳤다는 매도 의견', 'u': INV},
+  {'p': '분석', 't': '"구글 발표는 없고 설문뿐" — 확인된 사실이 아니라 분위기라는 지적', 'u': EXP},
+  {'p': '분석', 't': 'AI 투자를 줄이는 게 아니라 배분을 바꾸는 것이라는 해석', 'u': TIP},
+  {'p': '분석', 't': '반도체 전체 투매 날이라 이 보도 탓만 하긴 어렵다는 시각', 'u': BG},
+  {'p': '시장', 't': '골드만의 460달러(약 62만 원) 주가 전망이 그나마 반론으로 거론됨', 'u': MB},
+  {'p': '시장', 't': '이득은 미디어텍, 매도는 마벨 등 다른 맞춤칩 설계사로 번졌다는 반응', 'u': W247b},
+  {'p': '시장', 't': '결국 12월 9일 실적에서 확인하자며 관망하는 분위기', 'u': W247},
+ ],
+}
+issue['news'] = [n for n in issue['news'] if n['img'] not in ('img/2026-11-21-nvda.jpg', 'img/2026-11-21-chip.jpg')]
+
+issue['site_v'] = 10
 issue['disclaimer'] = '투자 권유가 아니며, 투자 판단과 책임은 본인에게 있습니다. 시세는 CNBC·야후 파이낸스 일봉(11/20 종가) 기준이며, 증권사·전문가 의견은 보도된 내용을 옮긴 것입니다. 샌디스크는 8:1 액면분할을 반영한 가격입니다.'
 issue.pop('lead', None); issue['lead'] = ''
 json.dump(issue, open(f"drafts/{issue['date']}.json", 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
