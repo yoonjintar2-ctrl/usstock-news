@@ -319,7 +319,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 
 <div class="row r2 nsrow">
  <section id="s-news"><h2>간밤 핵심 뉴스 <small>어제 무슨 일이</small></h2><div class="news4" id="news"></div></section>
- <section id="s-sch"><h2>오늘 밤 일정 <small>한국 시간 · 누르면 상세</small></h2><div class="sch3" id="sch"></div><p class="src" id="schnote"></p></section>
+ <section id="s-sch"><h2><span id="schh">오늘 밤 일정</span> <small>한국 시간 · 누르면 상세</small></h2><div class="sch3" id="sch"></div><p class="src" id="schnote"></p></section>
 </div>
 
 <div class="row"><section id="s-chart"><h2>차트 분석 <small id="chart-asof"></small></h2><div id="charts"></div>
@@ -503,7 +503,7 @@ function mine(Q){
 
 const marquee=()=>{if(!(window.matchMedia&&matchMedia('(max-width:700px)').matches))return;['tape','tape2'].forEach((id,k)=>{const el=$(id);if(!el||!el.children.length||el.querySelector('.mq'))return;const inner=el.innerHTML;el.innerHTML=`<div class="mq" style="animation-duration:${Math.max(18,el.children.length*(k?5:6))}s">${inner}${inner}</div>`;el.classList.add('mqon')})};
 const safe=(id,fn)=>{try{fn()}catch(e){console.error(id,e);const el=$(id);if(el)el.innerHTML='<p class="tbd">이 칸을 불러오지 못했습니다. 새로고침해 주세요.</p>'}};
-const SITE_V=10;
+const SITE_V=11;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
@@ -513,10 +513,11 @@ function render(D){
  $('tape').innerHTML=((D.market||{}).rows||[]).map(r=>`<div><b>${esc(r.name)}</b>${num(r.close)} ${chg(r.chg_pct)}</div>`).join('');
  // 1면 — 제목 맨 위
  const E=D.top||{};
+ const NOMKT=D.weekday==='토'||D.weekday==='일';if(NOMKT)$('schh').textContent='다음 주 일정';
  const topHTML=(E,i)=>`<div class="topw3${i?' t2':''}"><span class="kicker">${esc(E.kicker||'지금 가장 중요한 뉴스')}</span><h3>${esc(E.title)}</h3><div class="grid">
   <div>${E.img?`<img src="${esc(E.img)}" alt="${esc(E.title)}">`:''}<p class="why" style="margin-top:12px">${hl(E.why)}</p></div>
   <div><b class="small">핵심 정리</b><ul class="kpts">${(E.points||[]).map(p=>`<li>${hl(p.t)}</li>`).join('')}</ul>${(E.risks||[]).length?`<b class="small">반대로 볼 점</b><ul class="kpts kr">${E.risks.map(p=>`<li>${hl(p.t)}</li>`).join('')}</ul>`:''}
-  ${(E.watch||[]).length?`<b class="small">${i?'앞으로 볼 것':'오늘 밤 볼 것'}</b><ol class="watch">${E.watch.map(w=>`<li>${hl(w)}</li>`).join('')}</ol>`:''}
+  ${(E.watch||[]).length?`<b class="small">${E.watch_label||(i||NOMKT?'앞으로 볼 것':'오늘 밤 볼 것')}</b><ol class="watch">${E.watch.map(w=>`<li>${hl(w)}</li>`).join('')}</ol>`:''}
   <div class="foot">${golink(E.short)}${srcs(E.src)}</div></div></div>
   ${(E.react||[]).length?`<div class="react"><b class="small">사람들 반응 <small>SNS·커뮤니티·방송에서 나온 말의 뉘앙스를 요약</small></b><ul>${E.react.map(r=>`<li><span class="rp">${esc(r.p)}</span>${esc(r.t)}${r.u?` <a href="${esc(r.u)}" target="_blank" rel="noopener">↗</a>`:''}</li>`).join('')}</ul></div>`:''}</div>`;
  $('top').innerHTML=[D.top,D.top2].filter(Boolean).map(topHTML).join('');

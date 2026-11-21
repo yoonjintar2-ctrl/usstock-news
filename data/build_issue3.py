@@ -411,7 +411,7 @@ issue['top2'] = {
 }
 issue['news'] = [n for n in issue['news'] if n['img'] not in ('img/2026-11-21-nvda.jpg', 'img/2026-11-21-chip.jpg')]
 
-issue['site_v'] = 10
+issue['site_v'] = 11
 issue['disclaimer'] = '투자 권유가 아니며, 투자 판단과 책임은 본인에게 있습니다. 시세는 CNBC·야후 파이낸스 일봉(11/20 종가) 기준이며, 증권사·전문가 의견은 보도된 내용을 옮긴 것입니다. 샌디스크는 8:1 액면분할을 반영한 가격입니다.'
 issue.pop('lead', None); issue['lead'] = ''
 json.dump(issue, open(f"drafts/{issue['date']}.json", 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
