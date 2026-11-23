@@ -32,13 +32,16 @@ VOICE = os.getenv('VOICE', 'F1'); PITCH = float(os.getenv('PITCH_ST', '2')); SPE
 class Voice:
     def __init__(self, dry):
         self.dry = dry
-        if not dry:
+        self.vdir = os.getenv('VOICE_DIR')        # 맥 Qwen 마스코트 목소리(미리 다듬은 44.1kHz wav, 파일명 = 장면_줄.wav)
+        if not dry and not self.vdir:
             from supertonic import TTS
             self.tts = TTS()
             self.style = self.tts.get_voice_style(VOICE)
 
     def say(self, text, path):
         spoken = read(text)
+        if self.vdir and not self.dry:
+            return load_wav(os.path.join(self.vdir, os.path.basename(path))), spoken
         if self.dry:
             dur = max(1.2, len(spoken) * 0.115)
             a = np.zeros(int(dur * SR), np.float32)
@@ -144,10 +147,9 @@ def scene_base(sc, V):
         pw = X1 - X0; ph = int(p.height * pw / p.width); ph = min(ph, SUB_Y - 80 - y)
         pic = (p, (X0, y, pw, ph)); y += ph + 20
     if sc.get('rows'):
-        f1, f2 = F('Bold', 58), F('ExtraBold', 62)
-        for name, v, c in sc['rows']:
+        f1, f2 = F('Bold', 62), F('ExtraBold', 68)
+        for name, v, c in sc['rows']:          # 11/22 발행인: 지수 값(포인트)은 빼고 등락률(%)만
             d.text((X0, y), name, font=f1, fill=INK)
-            d.text((X1 - 290, y), v, font=f1, fill=INK, anchor='ra')
             d.text((X1, y), c, font=f2, fill=chg_col(c), anchor='ra')
             y += 96; d.line((X0, y - 12, X1, y - 12), fill=(200, 200, 200), width=2)
     if sc.get('items'):
