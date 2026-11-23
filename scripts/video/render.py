@@ -219,7 +219,8 @@ def main(spec, outdir, dry=False):
         scenes.append((s0, t))
     total = t + 0.8
     voice_track = np.concatenate(audio + [np.zeros(int(0.8 * SR), np.float32)])
-    mix = voice_track * 0.95 + bgm(len(voice_track) / SR) * (0.6 if not dry else 1)
+    _b = bgm(len(voice_track) / SR); _b = np.pad(_b, (0, max(0, len(voice_track) - len(_b))))[:len(voice_track)]
+    mix = voice_track * 0.95 + _b * (0.6 if not dry else 1)
     mix = np.clip(mix, -1, 1)
     wav_p = os.path.join(tmp, 'mix.wav')
     with wave.open(wav_p, 'w') as w:
