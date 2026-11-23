@@ -64,26 +64,43 @@ def load_wav(p):
     return x
 
 
+def _piano(f, dur, vel=1.0):
+    """간단한 합성 피아노 한 음(해머 어택 + 배음별 감쇠 + 약간의 디튠)."""
+    n = int(dur * SR); tt = np.arange(n) / SR
+    out = np.zeros(n)
+    for k, (a, dec) in enumerate([(1.0, 1.6), (0.45, 2.4), (0.22, 3.4), (0.12, 4.6), (0.06, 6.0), (0.03, 8.0)], 1):
+        fk = f * k * (1 + 0.0004 * k * k)
+        out += a * np.exp(-tt * dec * (0.6 + f / 900)) * (np.sin(2 * np.pi * fk * tt) + 0.3 * np.sin(2 * np.pi * fk * 1.0015 * tt))
+    att = np.minimum(1, tt / 0.004)
+    rel = np.clip((dur - tt) / 0.25, 0, 1)
+    return out * att * rel * vel
+
+
 def bgm(sec):
-    """밝고 잔잔한 패드 + 가벼운 아르페지오(한 곡 쭉)."""
-    t = np.arange(int(sec * SR)) / SR
-    prog = [(60, 64, 67, 71), (57, 60, 64, 67), (53, 57, 60, 64), (55, 59, 62, 65)]   # Cmaj7 Am7 Fmaj7 G7
-    bar = 4.0
-    out = np.zeros_like(t)
-    for i in range(int(sec // bar) + 1):
-        ch = prog[i % 4]; s = int(i * bar * SR); e = min(len(t), int((i + 1) * bar * SR) + SR)
-        if s >= len(t): break
-        tt = t[s:e] - i * bar
-        env = np.minimum(1, tt / 0.8) * np.exp(-np.maximum(0, tt - bar) * 3)
-        for n in ch:
-            f = 440 * 2 ** ((n - 69) / 12)
-            out[s:e] += 0.05 * env * (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(4 * np.pi * f * tt))
-        for k in range(8):  # 아르페지오
-            n = ch[k % 4] + 12; st = s + int(k * bar / 8 * SR); en = min(len(t), st + int(0.45 * SR))
-            if st >= len(t): break
-            tt2 = (np.arange(en - st)) / SR
-            out[st:en] += 0.035 * np.exp(-tt2 * 6) * np.sin(2 * np.pi * 440 * 2 ** ((n - 69) / 12) * tt2)
-    fade = np.minimum(1, np.minimum(t / 1.5, (sec - t) / 2.0))
+    """11/24 발행인: 신디 패드 대신 잔잔한 피아노 연주 한 곡을 쭉 (왼손 화음 + 오른손 아르페지오, 76BPM)."""
+    N = int(sec * SR); out = np.zeros(N + SR * 3)
+    prog = [(48, (60, 64, 67, 72)), (45, (57, 60, 64, 69)), (41, (57, 60, 65, 69)), (43, (55, 59, 62, 67)),
+            (48, (55, 60, 64, 67)), (40, (55, 59, 64, 67)), (41, (57, 60, 65, 69)), (43, (55, 59, 62, 65))]   # C Am F G | C Em F G7
+    beat = 60 / 76; bar = beat * 4
+    rng = np.random.default_rng(7)
+    def note(m, t0, dur, vel):
+        s = int(t0 * SR); x = _piano(440 * 2 ** ((m - 69) / 12), dur, vel)
+        if s >= len(out): return
+        e = min(len(out), s + len(x)); out[s:e] += x[:e - s]
+    i = 0
+    while i * bar < sec:
+        root, ch = prog[i % len(prog)]; t0 = i * bar
+        note(root, t0, bar * 1.2, 0.55); note(root + 12, t0 + beat * 2, bar * 0.7, 0.35)
+        pat = [0, 1, 2, 3, 2, 1, 0, 2]
+        for k, j in enumerate(pat):
+            note(ch[j] + (12 if k == 3 else 0), t0 + k * beat / 2 + rng.uniform(0, 0.012), beat * 1.6, 0.30 + 0.06 * (k % 2 == 0))
+        i += 1
+    # 은은한 울림(짧은 피드백 딜레이 2개)
+    for d_, g in ((0.11, 0.28), (0.23, 0.18)):
+        k = int(d_ * SR); out[k:] += g * out[:-k].copy()
+    out = out[:N]; out /= (np.abs(out).max() + 1e-9); out *= 0.16
+    t = np.arange(N) / SR
+    fade = np.minimum(1, np.minimum(t / 1.5, (sec - t) / 2.5))
     return out * np.clip(fade, 0, 1)
 
 
