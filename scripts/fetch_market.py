@@ -228,8 +228,12 @@ def main():
     if len(tm) >= 50:
         open('data/sp500_top100.txt', 'w').write(';'.join(f'{t},{w:.2f},{c:.2f},{n}' for t, w, c, n in tm) + '\n')
         td = {}
+        TM = {}
         for t, *_ in tm:
-            ys = t.replace('.', '-'); rows = D.get(ys) or daily(ys); time.sleep(0.3)
+            ys = t.replace('.', '-'); TM[ys] = D.get(ys) or daily(ys); time.sleep(0.3)
+        patch_today({k: v for k, v in TM.items() if k not in D})  # NYSE 종목 당일 봉이 늦게 붙는 문제(11/23 61종목 11/20에 멈춤)
+        for t, *_ in tm:
+            ys = t.replace('.', '-'); rows = TM[ys]
             if len(rows) < 25: td[ys] = 'ERR'; continue
             rows = rows[-63:]; n = len(rows); cl = [r[4] for r in rows]; vo = [r[5] for r in rows]; L = rows[-1]
             td[ys] = [L[0], *(round(x, 2) for x in L[1:5]), round(pct(L[4], cl[-2]), 2), L[5], round(L[5] / avg(vo[-21:-1]), 2) if avg(vo[-21:-1]) else None,
