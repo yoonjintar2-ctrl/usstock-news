@@ -169,7 +169,7 @@ def scene_base(sc, V):
             d.text((X0, y), name, font=f1, fill=INK)
             d.text((X1, y), c, font=f2, fill=chg_col(c), anchor='ra')
             y += 96; d.line((X0, y - 12, X1, y - 12), fill=(200, 200, 200), width=2)
-    if sc.get('items'):
+    if sc.get('items') and sc['kind'] != 'quotes':
         f1, f2 = F('ExtraBold', 52), F('SemiBold', 38)
         boxes = []
         for a, b in sc['items']:
@@ -179,9 +179,20 @@ def scene_base(sc, V):
                 d.text((X0 + 24, y), ln, font=f1, fill=INK); y += 62
             boxes.append((y0 - 8, y + 4)); y += 20
         sc['_boxes'] = boxes
+    if sc.get('quotes') or sc['kind'] == 'quotes':
+        f1, f2 = F('SemiBold', 34), F('ExtraBold', 46)
+        boxes = []
+        for a, b in sc['items_q'] if sc.get('items_q') else sc['items']:
+            y0 = y
+            d.text((X0 + 24, y), a, font=f1, fill=MUTE); y += 44
+            for ln in wrap(d, '“' + b + '”', f2, X1 - X0 - 24)[:2]:
+                d.text((X0 + 24, y), ln, font=f2, fill=INK); y += 58
+            boxes.append((y0 - 8, y + 4)); y += 18
+        sc['_boxes'] = boxes
     if sc['kind'] == 'outro':
-        d.text((W // 2, 760), 'stocknews.jintar.co.kr', font=F('Black', 70), fill=INK, anchor='mm')
-        d.text((W // 2, 850), '매일 아침 미국 증시를 신문 한 장으로', font=F('Bold', 44), fill=MUTE, anchor='mm')
+        d.text((W // 2, 760), '구독하고', font=F('Black', 96), fill=INK, anchor='mm')
+        d.text((W // 2, 870), '매일 아침 미국주식 소식', font=F('Black', 70), fill=INK, anchor='mm')
+        d.text((W // 2, 960), '미국주식 늬우스 · 샌디스크 올인', font=F('Bold', 44), fill=MUTE, anchor='mm')
     d.text((X0, 1840), '※ 투자 판단과 책임은 본인에게 있습니다', font=F('SemiBold', 28), fill=MUTE)
     return im, pic
 
@@ -268,7 +279,8 @@ def main(spec, outdir, dry=False):
         cur = timeline[ti] if ti < len(timeline) and timeline[ti][0] <= tt else None
         bx = V['scenes'][si].get('_boxes')
         if bx and cur and cur[2] == si:
-            k = cur[4] - (len(V['scenes'][si]['lines']) - len(bx))
+            hl = V['scenes'][si].get('hl')
+            k = (hl[cur[4]] if cur[4] < len(hl) else -1) if hl else cur[4] - (len(V['scenes'][si]['lines']) - len(bx))
             if 0 <= k < len(bx):
                 y0, y1 = bx[k]; dr = ImageDraw.Draw(fr)
                 dr.rectangle((X0, y0, X0 + 10, y1), fill=DN)
