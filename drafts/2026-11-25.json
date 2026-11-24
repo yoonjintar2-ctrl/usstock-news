@@ -1,0 +1,6523 @@
+{
+ "date": "2026-11-25",
+ "no": 5,
+ "weekday": "수",
+ "session": "2026-11-24(화) 뉴욕장",
+ "publisher": "샌디스크 올인",
+ "fx": {
+  "usdkrw": {
+   "v": 1340.95,
+   "src": "https://finance.yahoo.com/quote/KRW%3DX/history",
+   "asof": "2026-11-25 08:50 KST 시세"
+  }
+ },
+ "top": {
+  "kicker": "지금 가장 중요한 뉴스",
+  "title": "반도체 하루 만에 되밀려…필라델피아 반도체 -7.9%, 엔비디아 -5.9%, ADI -17%",
+  "img": "img/2026-11-25-top.jpg",
+  "points": [
+   {
+    "t": "전날 +14%였던 필라델피아 반도체 지수가 -7.88%로 되밀렸습니다. 나스닥은 -1.48%, S&P 500은 -0.50%였고, 다우는 +0.85%로 5만 선 위에서 끝났습니다.",
+    "src": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-tech-sell-off-drags-nasdaq-as-dow-gains-on-value-rotation/"
+   },
+   {
+    "t": "엔비디아는 -5.86%, 155.38달러(약 21만 원)로 마감해 하루 새 시가총액 약 2,400억 달러(약 322조 원)를 내줬습니다. 전날 +31%의 일부를 돌려준 셈입니다.",
+    "src": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/"
+   },
+   {
+    "t": "아날로그디바이스(ADI)는 4분기 실적이 예상을 넘었지만 1분기 전망이 시장 기대에 그치고 이익률이 낮아진다는 말에 -17.37% 급락했습니다. 매출의 약 79%가 아날로그인 텍사스인스트루먼트도 -11.25%였습니다.",
+    "src": "https://www.fool.com/investing/2026/11/24/why-analog-devices-stock-fell-nearly-20-today/"
+   },
+   {
+    "t": "마이크론은 BNP파리바가 투자의견을 '중립'으로 내리고 적정 주가를 1,700달러(약 228만 원)에서 775달러(약 104만 원)로 깎자 -11.01%였습니다. 2027년 중반부터 메모리 공급과 수요가 비슷해져 값이 내릴 수 있다는 이유입니다.",
+    "src": "https://www.fool.com/investing/2026/11/24/why-micron-stock-dove-today/"
+   },
+   {
+    "t": "황 CEO는 화요일 아침 직원 전체 회의에서 사과하고 치료를 받고 있다고 말한 것으로 보도됐습니다. 엔비디아 회계에 대한 SEC 초기 조사 보도와 12/1 의회 면담 일정도 다시 거론됐습니다.",
+    "src": "https://finance.yahoo.com/markets/stocks/articles/nvidia-jensen-huang-apologizes-employees-200356995.html"
+   }
+  ],
+  "risks": [
+   {
+    "t": "번스타인은 엔비디아를 '시장수익률 상회'로 다시 올리고 적정 주가로 200달러(약 27만 원)를 제시했습니다. 종가보다 약 29% 높은 값입니다.",
+    "src": "https://www.investing.com/news/stock-market-news/bernstein-reverses-nvidia-downgrade-on-huangs-return-valuation-5047972"
+   },
+   {
+    "t": "UBS 마크 헤펠레는 기술주의 출렁임이 'AI 투자 이야기가 깨졌다'는 신호는 아니라고 봤습니다. 돈은 헬스케어·소비주로 옮겨 다우는 올랐습니다.",
+    "src": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+   }
+  ],
+  "why": "월요일 반등이 하루 만에 절반가량 꺾이면서 반도체 바닥이 아직 확인되지 않았다는 점이 드러났습니다. 실적이 좋아도 전망·이익률·메모리 값 같은 다음 숫자에 더 민감한 장입니다.",
+  "watch": [
+   "반도체 ETF(SOXX)가 20일 지지선 122.20달러(약 16만 원)를 지키는지",
+   "수요일 밤 10월 PCE 물가(근원 전년 대비 3.2% 예상)와 GDP 수정치",
+   "12/1 황 CEO 의회 면담 · SEC 조사 보도 후속"
+  ],
+  "src": [
+   {
+    "t": "Motley Fool 마감",
+    "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/"
+   },
+   {
+    "t": "Motley Fool 마감②",
+    "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-tech-sell-off-drags-nasdaq-as-dow-gains-on-value-rotation/"
+   },
+   {
+    "t": "StockTitan 실시간",
+    "u": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+   },
+   {
+    "t": "Motley Fool(ADI)",
+    "u": "https://www.fool.com/investing/2026/11/24/why-analog-devices-stock-fell-nearly-20-today/"
+   },
+   {
+    "t": "Motley Fool(MU)",
+    "u": "https://www.fool.com/investing/2026/11/24/why-micron-stock-dove-today/"
+   },
+   {
+    "t": "야후 파이낸스",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/nvidia-jensen-huang-apologizes-employees-200356995.html"
+   }
+  ],
+  "react": [
+   {
+    "p": "스톡트윗",
+    "t": "엔비디아 게시판은 주가가 빠지는 중에도 \"매우 낙관\"·글 수 \"매우 많음\"을 유지",
+    "u": "https://stocktwits.com/news-articles/markets/equity/steve-eisman-says-ai-industry-dodged-a-big-bullet-with-jensen-huang-s-return-but-only-for-now/cNbsQGGR9ks"
+   },
+   {
+    "p": "스톡트윗",
+    "t": "3만 명 넘게 참여한 투표에서 63%가 \"더 낙관적이 됐다\"고 답함(급락 전 아침)",
+    "u": "https://stocktwits.com/news-articles/markets/equity/dan-ives-calls-jensen-huang-return-to-nvidia-the-start-of-ai-godfather-part-2-but-warns-of-more-noise-ahead/cNbsIBLR9kL"
+   },
+   {
+    "p": "TV",
+    "t": "CNBC 스티브 아이스먼: AI 업계가 '큰 총알을 피했다', 다만 위험은 여전",
+    "u": "https://stocktwits.com/news-articles/markets/equity/steve-eisman-says-ai-industry-dodged-a-big-bullet-with-jensen-huang-s-return-but-only-for-now/cNbsQGGR9ks"
+   },
+   {
+    "p": "TV",
+    "t": "블룸버그 서베일런스: \"아직 순항은 아니다\"·\"AI 거래 숲을 못 빠져나왔다\" vs \"AI 수요는 꺾인 적 없다\"",
+    "u": "https://mblip.com/bloomberg-surveillance-11-24-2026/"
+   },
+   {
+    "p": "TV",
+    "t": "폭스비즈니스: D.A. 데이비슨 길 루리아가 황 복귀 뒤 주가가 밀린 이유를 짚음",
+    "u": "https://www.foxbusiness.com/video/6408816030112"
+   },
+   {
+    "p": "X",
+    "t": "블랭크페인 전 골드만 CEO: 황은 돌아왔지만 이사회는 그럴 기회가 없을 것이라고 꼬집음",
+    "u": "https://finance.yahoo.com/markets/stocks/live/nvidia-live-updates-nvidia-stock-falls-as-exuberance-fades-after-jensen-huangs-return-as-ceo-142100906.html"
+   },
+   {
+    "p": "X",
+    "t": "'GPU 예수의 부활' 밈과 복귀의 도덕성을 비꼬는 글이 엇갈림",
+    "u": "https://finance.yahoo.com/technology/articles/jensen-huang-back-nvidia-reactions-103056272.html"
+   },
+   {
+    "p": "분석",
+    "t": "골드만 TMT 데스크: 분위기가 나아진 것과 반도체 걱정이 정리된 것은 다르다",
+    "u": "https://www.investing.com/news/stock-market-news/nvidia-shares-surge-30-as-board-announces-jensen-huangs-reinstatement-5045795"
+   },
+   {
+    "p": "전문가",
+    "t": "노무라 맥엘리곳: 월요일은 기계적 매수였고 아무것도 보장하지 않는다",
+    "u": "https://finance.yahoo.com/markets/stocks/live/nvidia-live-updates-nvidia-stock-falls-as-exuberance-fades-after-jensen-huangs-return-as-ceo-142100906.html"
+   },
+   {
+    "p": "전문가",
+    "t": "텔로스 웰스 댄 시핸: 월요일이 대단했어도 숲을 빠져나왔다는 신호는 아니다",
+    "u": "https://www.investing.com/news/stock-market-news/nvidia-slips-as-investors-assess-risks-surrounding-huangs-return-as-ceo-5047757"
+   },
+   {
+    "p": "분석",
+    "t": "BofA: '반도체 전망치 하향이 시작됐다'며 마이크론에 경고",
+    "u": "https://finance.yahoo.com/markets/stocks/articles/warning-micron-investors-bank-america-201039465.html"
+   },
+   {
+    "p": "전문가",
+    "t": "마이클 버리: '불안한 정상'으로 돌아왔다며 엔비디아 공매도 논리는 그대로라고 주장",
+    "u": "https://www.tradingview.com/news/stocktwits:d0ffd2d32094b:0-michael-burry-says-nvidia-s-precarious-normal-returns-with-jensen-huang-back-at-the-helm-loads-up-on-jd-tencent-byd-stocks/"
+   }
+  ]
+ },
+ "market": {
+  "rows": [
+   {
+    "name": "S&P 500",
+    "unit": "",
+    "close": {
+     "v": 7201.09,
+     "src": "https://finance.yahoo.com/quote/%5EGSPC/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    },
+    "chg_pct": {
+     "v": -0.5,
+     "src": "https://finance.yahoo.com/quote/%5EGSPC/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    }
+   },
+   {
+    "name": "나스닥 종합",
+    "unit": "",
+    "close": {
+     "v": 23733.53,
+     "src": "https://finance.yahoo.com/quote/%5EIXIC/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    },
+    "chg_pct": {
+     "v": -1.48,
+     "src": "https://finance.yahoo.com/quote/%5EIXIC/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    }
+   },
+   {
+    "name": "다우",
+    "unit": "",
+    "close": {
+     "v": 50018.7,
+     "src": "https://finance.yahoo.com/quote/%5EDJI/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    },
+    "chg_pct": {
+     "v": 0.85,
+     "src": "https://finance.yahoo.com/quote/%5EDJI/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    }
+   },
+   {
+    "name": "필라델피아 반도체",
+    "unit": "",
+    "close": {
+     "v": 8832.5,
+     "src": "https://finance.yahoo.com/quote/%5ESOX/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    },
+    "chg_pct": {
+     "v": -7.88,
+     "src": "https://finance.yahoo.com/quote/%5ESOX/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    }
+   },
+   {
+    "name": "러셀 2000",
+    "unit": "",
+    "close": {
+     "v": 2684.94,
+     "src": "https://finance.yahoo.com/quote/%5ERUT/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    },
+    "chg_pct": {
+     "v": 0.57,
+     "src": "https://finance.yahoo.com/quote/%5ERUT/history",
+     "asof": "2026-11-24 16:00 ET 종가"
+    }
+   }
+  ],
+  "note": "다우는 423포인트 올라 50,019로 마감했고, 나스닥은 356포인트 내렸습니다. 반도체 지수는 -7.88%, VIX는 26.36로 거의 그대로였습니다.",
+  "src": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/"
+ },
+ "gauges": [
+  {
+   "name": "VIX 변동성",
+   "v": {
+    "v": 26.36,
+    "src": "https://finance.yahoo.com/quote/%5EVIX/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg": {
+    "v": -0.98,
+    "src": "https://finance.yahoo.com/quote/%5EVIX/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "scale": [
+    10,
+    40
+   ],
+   "label": "20 위 = 불안",
+   "ends": [
+    "10 안정",
+    "40 공포"
+   ],
+   "note": "하루 -1.0% · 장중 32.38까지 올랐다 내려옴 · CNN 공포·탐욕 지수 18(극단적 공포, Investrade 11/24 집계)"
+  }
+ ],
+ "macro": [],
+ "charts": [
+  {
+   "sym": "^IXIC",
+   "name": "나스닥 종합",
+   "unit": "pt",
+   "vol_sym": "QQQ",
+   "close": {
+    "v": 23733.53,
+    "src": "https://finance.yahoo.com/quote/%5EIXIC/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -1.48,
+    "src": "https://finance.yahoo.com/quote/%5EIXIC/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "tags": [
+    {
+     "t": "20·50·200일선 모두 아래",
+     "hl": true
+    },
+    {
+     "t": "200일선 -5.7%",
+     "hl": true
+    },
+    {
+     "t": "고점 대비 -14.4% · 조정",
+     "hl": true
+    },
+    {
+     "t": "데드크로스 아직",
+     "hl": false
+    },
+    {
+     "t": "거래량 0.83배",
+     "hl": false
+    },
+    {
+     "t": "RSI 40",
+     "hl": false
+    }
+   ],
+   "watch": {
+    "up": {
+     "v": 25165.23,
+     "name": "200일선",
+     "gap": 6.0
+    },
+    "down": {
+     "v": 22513.01,
+     "name": "20일 저점",
+     "gap": -5.1
+    }
+   },
+   "levels": {
+    "reclaim": 25165.23,
+    "support": 22513.01,
+    "ma20": 24860.72,
+    "ma50": 26026.55,
+    "ma200": 25165.23,
+    "hi52": 27722.75
+   },
+   "ma_step": 3,
+   "ma_offset": 2,
+   "asof": "2026-11-24 종가 · 야후 파이낸스 일봉으로 계산",
+   "title": "나스닥 차트 분석",
+   "candle": {
+    "d0": "2026-06-05",
+    "d1": "2026-11-24",
+    "n": 120,
+    "mn": 22513.013,
+    "mx": 27722.747,
+    "mas": [
+     5,
+     20,
+     60,
+     120,
+     200
+    ],
+    "b": "xMaZnM3BWDz/rbOkp8LAWz3/r7d4mrS/Xj7/kp2AgqO9YD//iKN/oZm7Y0D/n6uXpZu6ZkH/wMy/y6O7akP/ytC8vKm7bkT/wsOoq7K8cUX/vsWzw7m8dUb/wsWwsru8eEf/lKSSlrG6fEj/laKLkKi3f0n/nZ1/i6G0g0r/fpF6iJWwhkr/kqKHoZKtiUv/obahtJirjU3/rLaorJ6pkE7/rLeYoqKmk0//qrSosKqklk//qKqboaqlmVD/nKWTpKelm1H/prWitKmmnVL/s7mquK2poFP/rrGhpKupoVT/q7Kmr62po1b/t7mst7GopFf/srKfpK6npVj/jZyFk6empln/nKGSkqOjp1r/n6SaoqCjqFr/m6Kam5ujqVv/hYt3gJSiqVz/foR1eI6hqVz/hYZudomgql3/cXhlc3+eql3/c3xdXnOZqV7/coJwf3OXqV//ipB5i3eWqWD/j6iOpoCWqWH/rsuux5GXqmP/zM67vKSZqmT/t8K0u7CZqmX/xM3BzL2aqmf/y83FyMOcq2n/y8u8wMKdqmr/y8zEx8Sdq2z/ydXI0cmgq23/1NTKzsmjrG//0NHJycmlrHH/u7+3uMimrHL/vcCzusWorHP/tLerrb6qrHX/tLess7mtq3b/ra+mqbKwq3j/sbWssbGzqnn/r7OrsK+3qXr/u8W3xLS6qXxXw8y8vra9qH1Yu722vLq+qH9ZrLeqr7m9qIBZr7attbq9qYJausm6xrq9qYRbx8nAw7u9qoVcxMS7v7y8q4dduryztr28q4leq7Oprry7q4pfuL+4urq5q4xgq7qqs7a4q45hsbKnqbK2qpBhr7Wgqa+2qpFivMC4vrO2q5Njw8W6w7W3rJZjzeTM4b65rZhk4+nj58q8r5pl5eXV2NO+sJ1mztnM2NjAsJ9n2eHV3t7CsaFo2NrN0tvDsqNp1tfN0dbEsqRp1uDU1NbFs6Zq2tvO1dXHtKhr5ezg5NbJtals5vXm8t3Ltqtt+v74+OXOt6xu8PXr9evRuK5v7/Pe5O7Uua9w6+7n7fDWurBx7O3l5+7ZvLFy4ujg5ercvbJz3OHHzOLdvrN0vc+5zd3ev7R1ysursdHdwLR1vci7v8ncwbV2usezv8HawrZ3x9DDzMLZw7Z4ubymqrvXxbd4pa+jqLnUxbd5q7mpsrbSxrh6uMS1wbfSxrh6xMe+xbXRxrh7tLits7fPxrh7lpqCj7LLxrh8l6CAgajFxLd8hZCFi53Aw7d9mayXnZW7w7d+lJVVWIO0wbZ+ZnFhZXuuv7V+botuhnypvrV+fIdwfHmkvbR/j5mJkHahvLR/fpZ9i4Cdu7SAjY5zgIaburOAcnRfYX+WubKAYmNIWXeRuLGAYGNTXW2MtrCBcHZCQ1+GtK+BNUEABUZ+sa2BVlo/TUJ5r6yBPEMuPDxyrauB",
+    "vb": "wlyzf4xkW1hlYlVoZmJcV1JPYztTRUIzRzlATWk6Qi5WU1Nkb4JiV3RBQDwzOTk+LjJfRkFBSS4oOEI/RS45QDc0PTRFNEVJXltOQTg7UTU6RkMyNDJhKTE4ZmGCSDs/fjtAPDtKpmtJef6Ka0xXSFJVbFiL/6Zg",
+    "vmax": 131019648,
+    "dates": [
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05",
+     "2026-08-06",
+     "2026-08-07",
+     "2026-08-10",
+     "2026-08-11",
+     "2026-08-12",
+     "2026-08-13",
+     "2026-08-14",
+     "2026-08-17",
+     "2026-08-18",
+     "2026-08-19",
+     "2026-08-20",
+     "2026-08-21",
+     "2026-08-24",
+     "2026-08-25",
+     "2026-08-26",
+     "2026-08-27",
+     "2026-08-28",
+     "2026-08-31",
+     "2026-09-01",
+     "2026-09-02",
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-08",
+     "2026-09-09",
+     "2026-09-10",
+     "2026-09-11",
+     "2026-09-14",
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17",
+     "2026-09-18",
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-23",
+     "2026-09-24",
+     "2026-09-25",
+     "2026-09-28",
+     "2026-09-29",
+     "2026-09-30",
+     "2026-10-01",
+     "2026-10-02",
+     "2026-10-05",
+     "2026-10-06",
+     "2026-10-07",
+     "2026-10-08",
+     "2026-10-09",
+     "2026-10-12",
+     "2026-10-13",
+     "2026-10-14",
+     "2026-10-15",
+     "2026-10-16",
+     "2026-10-19",
+     "2026-10-20",
+     "2026-10-21",
+     "2026-10-22",
+     "2026-10-23",
+     "2026-10-26",
+     "2026-10-27",
+     "2026-10-28",
+     "2026-10-29",
+     "2026-10-30",
+     "2026-11-02",
+     "2026-11-03",
+     "2026-11-04",
+     "2026-11-05",
+     "2026-11-06",
+     "2026-11-09",
+     "2026-11-10",
+     "2026-11-11",
+     "2026-11-12",
+     "2026-11-13",
+     "2026-11-16",
+     "2026-11-17",
+     "2026-11-18",
+     "2026-11-19",
+     "2026-11-20",
+     "2026-11-23",
+     "2026-11-24"
+    ]
+   },
+   "brief": "어제 거래량은 최근 20거래일 평균의 0.83배로 적은 편이라, 1.48% 하락에 힘이 실리지는 않았습니다. 위의 200일선(25,165)까지는 +6.0%로 멀고, 먼저 20일 저점 22,513(-5.1%) 지지를 시험하는 자리입니다.",
+   "headline": "-1.48%, 시가 근처에서 출발해 아래로 밀린 음봉",
+   "an": [
+    [
+     "어제",
+     "나스닥은 -1.48%로 23,734에 끝났습니다. 23,746에서 출발해 23,456까지 밀렸고, 엔비디아(-5.86%)·마이크론(-11.01%)·AMD(-8.86%)가 끌어내렸습니다."
+    ],
+    [
+     "최근 대비",
+     "1주 -2.5%, 1달 -9.3%, 고점 대비 -14.4%입니다. QQQ 거래량은 20일 평균의 0.83배로 많지 않았습니다."
+    ],
+    [
+     "앞으로",
+     "20일선 24,861이 +4.7% 위, 200일선 25,165이 +6.0% 위에 있습니다. RSI는 40, 아래로는 최근 20일 저점 22,513이 기준입니다."
+    ]
+   ]
+  },
+  {
+   "sym": "^GSPC",
+   "name": "S&P 500",
+   "unit": "pt",
+   "vol_sym": "SPY",
+   "close": {
+    "v": 7201.09,
+    "src": "https://finance.yahoo.com/quote/%5EGSPC/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -0.5,
+    "src": "https://finance.yahoo.com/quote/%5EGSPC/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "tags": [
+    {
+     "t": "20·50·200일선 모두 아래",
+     "hl": true
+    },
+    {
+     "t": "200일선 -2.0%",
+     "hl": true
+    },
+    {
+     "t": "고점 대비 -8.2%",
+     "hl": false
+    },
+    {
+     "t": "데드크로스 아직",
+     "hl": false
+    },
+    {
+     "t": "거래량 0.89배",
+     "hl": false
+    },
+    {
+     "t": "RSI 40",
+     "hl": false
+    }
+   ],
+   "watch": {
+    "up": {
+     "v": 7351.29,
+     "name": "200일선",
+     "gap": 2.1
+    },
+    "down": {
+     "v": 6882.66,
+     "name": "20일 저점",
+     "gap": -4.4
+    }
+   },
+   "levels": {
+    "reclaim": 7351.29,
+    "support": 6882.66,
+    "ma20": 7451.18,
+    "ma50": 7609.91,
+    "ma200": 7351.29,
+    "hi52": 7844.52
+   },
+   "ma_step": 3,
+   "ma_offset": 2,
+   "asof": "2026-11-24 종가 · 야후 파이낸스 일봉으로 계산",
+   "title": "S&P 500 차트 분석",
+   "candle": {
+    "d0": "2026-06-05",
+    "d1": "2026-11-24",
+    "n": 120,
+    "mn": 6882.66,
+    "mx": 7844.52,
+    "mas": [
+     5,
+     20,
+     60,
+     120,
+     200
+    ],
+    "b": "ra6AhK+eMRn/k5qHiqWeNBr/k59ehZmdNxv/fIhlZYqcOhz/a4xjh4CbPR7/i5h/kYOaQB//p7insYqcRCH/sLSlppGdSSL/qayJjpmeTCP/oKabo5+fUST/o6uYnKGfVCb/gI97f5eeWCf/gZB4fo+cXSj/io50fYuaYSn/codtfISXZSr/hpR7k4KVaSv/lKWTo4mUbSz/namWn5CScC7/oq6Qn5aRdC//pbGjraCReDD/p62dpKOSezH/naCOnqOTfjL/oa+er6aVgDT/sLilt6uZgzX/sLSlp6mbhTb/rbKnr6ychzj/trmqtrCdiTr/s7akrLCdizv/laORmKqdjTz/oKeTlKadjj3/oKebpaSdkD7/oqqfo6Cfkj//jZaCi5mgk0D/ipmIjJeglEH/mp6EjJWhlUL/h5aEkJGhlkT/jZZycoeflkX/hpWBk4mel0b/maaJoI2emEf/pMCkvpefmUn/xufF4aeim0r/6/Hd3r2lnUz/2+PX2sunnk7/4ejd59mqoFD/5evj5uGtoVL/6urc3+GvolT/6eni5eKyo1b/6ffp8ue1pVj/9PXs7ui5p1r/8PDk5Oi9qFz/2NzV1ubAql3/3OPY2uTDq1//1djIyNzGq2H/z9fN0dbJrGP/ztDIy9HMrGT/0tTL0tDQrWb/z9XN0c7UrWj/2+PV4NPYrWo94evY29Xbrmw+19fP1Nfcr24/x87AxtTbsHBAx9PGz9TasXJC1OfU5NXbsnVD5eXZ3dXatHdE3d3P0dXZtnlGzc3Ex9XYt3tHvMG4u9HWt31Jx9LHzMzUt4BKwMq7w8fSuIJLwcK2usLQuYVMvsWlsb7OuYdNxsrBx8DNuolOzc3Ay8DNu4xP1u3W6cfOvY9R6+7n6dHQv5JS6OjW2dnQwJRTz93O2d3QwZdU2ubW4+HRwplV3t7P1N3Qw5xW2NjM0NjQxJ5X1d7Ly9XQxJ9Yz9TCz9PQxaFZ3+bY3tLQxqNb4PHf69fRx6Vc9P7099/TyKdd8PTp8+fVyahf7fLg6ezXyqpg7/jt9fHZy6th9vjx9PLcza1i8fbv9PLez65k6+/W3e3hz7Bl1ObQ4+zi0bFm5OfGzeTi0rJn2eDU1d7h07No0uXP29nh1LVp4era59vh1rZq1tnHztfh17drx83BxNXf2LhsyNjI0tTf2blt2OHS3tXg2blu4efd49Th2bpv2ODV3dfi2btwxsequNXg2btxwM6trs7d2LxysbyvtcbZ17xyx9zH1cPY17x00tN8fK/S1bx0g5SBg6XN07x1jreOsKXJ0r12pq+bqaLG0b12usq2w5/E0b13sMuwu6vC0L14wsOjs7XB0L55p6eJja69z715jI1reaW4zr16fYBqdJWzzLx7ho1NTX+syrt7R1MAB12jxrp7W21HXlOdxLl7TFpEVEyWwrh8",
+    "vb": "nlOUZpFgZXGRiE9xYVt4Yl5PYVVKSkZHSjtKTmpVOjddS0ZQd3FpZXRLQUlCPjg8NTpKRE1CNy4wOj5BRTJJOUs3SE1KTmRUblU7XUo+SD5pUE5MPTREJh8sXklsQTs2Wzg1MDNEg1Y3adRjVUVCP0F1eVeB/5Vb",
+    "vmax": 151413318,
+    "dates": [
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05",
+     "2026-08-06",
+     "2026-08-07",
+     "2026-08-10",
+     "2026-08-11",
+     "2026-08-12",
+     "2026-08-13",
+     "2026-08-14",
+     "2026-08-17",
+     "2026-08-18",
+     "2026-08-19",
+     "2026-08-20",
+     "2026-08-21",
+     "2026-08-24",
+     "2026-08-25",
+     "2026-08-26",
+     "2026-08-27",
+     "2026-08-28",
+     "2026-08-31",
+     "2026-09-01",
+     "2026-09-02",
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-08",
+     "2026-09-09",
+     "2026-09-10",
+     "2026-09-11",
+     "2026-09-14",
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17",
+     "2026-09-18",
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-23",
+     "2026-09-24",
+     "2026-09-25",
+     "2026-09-28",
+     "2026-09-29",
+     "2026-09-30",
+     "2026-10-01",
+     "2026-10-02",
+     "2026-10-05",
+     "2026-10-06",
+     "2026-10-07",
+     "2026-10-08",
+     "2026-10-09",
+     "2026-10-12",
+     "2026-10-13",
+     "2026-10-14",
+     "2026-10-15",
+     "2026-10-16",
+     "2026-10-19",
+     "2026-10-20",
+     "2026-10-21",
+     "2026-10-22",
+     "2026-10-23",
+     "2026-10-26",
+     "2026-10-27",
+     "2026-10-28",
+     "2026-10-29",
+     "2026-10-30",
+     "2026-11-02",
+     "2026-11-03",
+     "2026-11-04",
+     "2026-11-05",
+     "2026-11-06",
+     "2026-11-09",
+     "2026-11-10",
+     "2026-11-11",
+     "2026-11-12",
+     "2026-11-13",
+     "2026-11-16",
+     "2026-11-17",
+     "2026-11-18",
+     "2026-11-19",
+     "2026-11-20",
+     "2026-11-23",
+     "2026-11-24"
+    ]
+   },
+   "brief": "어제 거래량은 최근 20거래일 평균의 0.89배로 적은 편이라, 0.50% 하락에 힘이 실리지는 않았습니다. 200일선 7,351(+2.1%) 돌파를 시험하는 자리이고, 밀리면 20일 저점 6,883(-4.4%)가 받침입니다.",
+   "headline": "-0.50%, 작은 몸통으로 7,200선 지켜",
+   "an": [
+    [
+     "어제",
+     "S&P 500은 -0.50%로 7,201에 마감했습니다. 7,139~7,224 사이의 좁은 범위였고, 헬스케어가 반도체 하락을 상당 부분 메웠습니다."
+    ],
+    [
+     "최근 대비",
+     "1주 -1.9%, 1달 -6.2%, 고점 대비 -8.2%입니다. SPY 거래량은 평균의 0.89배였습니다."
+    ],
+    [
+     "앞으로",
+     "200일선 7,351은 +2.1% 위, 20일선 7,451은 +3.5% 위입니다. 지난주 저점 6,883이 아래 기준선입니다."
+    ]
+   ]
+  },
+  {
+   "sym": "SOXX",
+   "name": "반도체 ETF SOXX",
+   "unit": "달러",
+   "vol_sym": "SOXX",
+   "close": {
+    "v": 128.62,
+    "src": "https://finance.yahoo.com/quote/SOXX/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -8.27,
+    "src": "https://finance.yahoo.com/quote/SOXX/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "tags": [
+    {
+     "t": "20·50·200일선 모두 아래",
+     "hl": true
+    },
+    {
+     "t": "200일선 -20.2%",
+     "hl": true
+    },
+    {
+     "t": "고점 대비 -41.2% · 약세장",
+     "hl": true
+    },
+    {
+     "t": "데드크로스 아직",
+     "hl": false
+    },
+    {
+     "t": "거래량 1.09배",
+     "hl": false
+    },
+    {
+     "t": "RSI 37",
+     "hl": false
+    }
+   ],
+   "watch": {
+    "up": {
+     "v": 161.15,
+     "name": "200일선",
+     "gap": 25.3
+    },
+    "down": {
+     "v": 122.2,
+     "name": "20일 저점",
+     "gap": -5.0
+    }
+   },
+   "levels": {
+    "reclaim": 161.15,
+    "support": 122.2,
+    "ma20": 146.75,
+    "ma50": 166.85,
+    "ma200": 161.15,
+    "hi52": 218.65
+   },
+   "ma_step": 3,
+   "ma_offset": 2,
+   "asof": "2026-11-24 종가 · 야후 파이낸스 일봉으로 계산",
+   "title": "반도체(SOXX) 차트 분석",
+   "candle": {
+    "d0": "2026-06-05",
+    "d1": "2026-11-24",
+    "n": 120,
+    "mn": 122.2,
+    "mx": 218.6498,
+    "mas": [
+     5,
+     20,
+     60,
+     120,
+     200
+    ],
+    "b": "ubyYmMGdQhP/sr2qtMGgRRX/wMOJrLqhSRf/orWYmq2iTBj/psKlwaqlTxv/v8+6yrSoUx3/4efd5r6tVx//4ufFxcOxWyH/1+DMzc22XyT/5PTk8Ne7Yyb//P7z/eHAaCn/1N7L0NzDbCv/0tXBzt7FcC3/7u/M4+PHdS//ztLDxNrIeDH/x9q02dPKfDP/2/Tb8dnNgTb/3OHLzdnNhTj/ztSlr8/LiDr/vsu8vc3Kizv/o6iVosLLjT3/nK6crLXKkD//xMi7vbHLk0H/tMCwvbTNlUL/rbChpK/LmET/vLyqsbLKmkb/t7iXprHHnEf/l52LkKjEnkj/fZJ0iJ3Bn0r/k5iJipi8oEv/oKaYo5W3okz/l6uXppa1o07/naicopmzpU//nJ+JjZqvplH/kpN1g5mrp1L/cnRkbo6mqFP/a3JWVn6eqFT/bn5reXaaqFX/jZJ2eXKXqFb/bn9pfHCUqFf/j52MmnmUqVn/lZ+OkIWSqVr/iZqEkoqQqVv/nZ+Rm5GOql3/nZ+Pj5SNql7/lpeQk5OMql//pKWenpaMqmH/nqyeopmMq2L/oaSboZqOrGT/qK+mqZ+PrWX/lpqJkZ+OrWb/lZaChpqNrGf/hYuCiZWLrGn/jo+Ch5CLq2r/gIB0e4eLqmv/g4d+gYSMqWz/gIN9g4OOqG7/jI2Ei4OPp28ziIl7fYGPpnA0foJ7f4KPpHI1dnlxdYCNpHM2dHlvdn2Mo3Q3cnhsd3mLonU4fYd7h3uKonc5kJOLjn6KoXg6i5SLkYSKoHk7hYmChIeInns8i5CIjYuHnXw9c3hxc4eFnH0+d3lydIKCmn8/e35yd32Bl4BAhIeChn2BloFBiZKJkn6BlYNCnayaqYmDlIRDpLaktZaGlIZFs7Snr6GIk4hGpbCkr6mLkopHsriwtbCNkotIsbOjqrCPko1JsrausLCRko5KsbWtsbCUkpBLsrutuLKYkpFMxcrCw7WbkpJOwcS9xLqfkpRPx8rDxL6hk5VQuL+2vsCjk5ZStbumrb6lk5hTs7SnqbmnlJlUo6SbnLGplJlVkJyNnKmrlJpWkZOEhp6slJtXdYRxgpWrk5tYeX5vb4qqkpxZf4F2d4KnkpxacX1sdXqkkpxafoF4fnmikp1bbHBdYHKekp1cX2hdYm+Zkp1dZnJjbm2WkZ1ddYF0f2+Ukp1eg4p/iHGSkZ1fgIZ7gXiPkZ1gY2dSXHeKkJ1gYWNLTHCEj5xhV11UVmh/jpxhUFpCSlx5jZtiNzkXGkdxippiLi8fJjxriJpiK0QqQTpmh5ljOkk3QDVihZljUmBMVzhfhJhkSl1JVkRdg5hkUlU7R0tbgpdlNzsxMkhYgZZlNjclM0VUgJVlOTosND5RfpRmP0UpKTVOfZNmIiMAAydJepFmNDUmLydGeY9mHiAKESBBd45n",
+    "vb": "wW/UkGpWR2FNVENuUG9fX1dWjElqPlczSEBYWYc4VzY6X3SBo5dxWV5TQi5MPkMzJTJWSTY2RDglTkk2RjI4UEw4OjFhNEg7NUU3VispQCwnNTslJitaLD5JXpB/UVhIgktQS0k4o11zmMOrdGuUl4prcWJ3/8+R",
+    "vmax": 88477695,
+    "dates": [
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05",
+     "2026-08-06",
+     "2026-08-07",
+     "2026-08-10",
+     "2026-08-11",
+     "2026-08-12",
+     "2026-08-13",
+     "2026-08-14",
+     "2026-08-17",
+     "2026-08-18",
+     "2026-08-19",
+     "2026-08-20",
+     "2026-08-21",
+     "2026-08-24",
+     "2026-08-25",
+     "2026-08-26",
+     "2026-08-27",
+     "2026-08-28",
+     "2026-08-31",
+     "2026-09-01",
+     "2026-09-02",
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-08",
+     "2026-09-09",
+     "2026-09-10",
+     "2026-09-11",
+     "2026-09-14",
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17",
+     "2026-09-18",
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-23",
+     "2026-09-24",
+     "2026-09-25",
+     "2026-09-28",
+     "2026-09-29",
+     "2026-09-30",
+     "2026-10-01",
+     "2026-10-02",
+     "2026-10-05",
+     "2026-10-06",
+     "2026-10-07",
+     "2026-10-08",
+     "2026-10-09",
+     "2026-10-12",
+     "2026-10-13",
+     "2026-10-14",
+     "2026-10-15",
+     "2026-10-16",
+     "2026-10-19",
+     "2026-10-20",
+     "2026-10-21",
+     "2026-10-22",
+     "2026-10-23",
+     "2026-10-26",
+     "2026-10-27",
+     "2026-10-28",
+     "2026-10-29",
+     "2026-10-30",
+     "2026-11-02",
+     "2026-11-03",
+     "2026-11-04",
+     "2026-11-05",
+     "2026-11-06",
+     "2026-11-09",
+     "2026-11-10",
+     "2026-11-11",
+     "2026-11-12",
+     "2026-11-13",
+     "2026-11-16",
+     "2026-11-17",
+     "2026-11-18",
+     "2026-11-19",
+     "2026-11-20",
+     "2026-11-23",
+     "2026-11-24"
+    ]
+   },
+   "brief": "어제 거래량은 최근 20거래일 평균(1.09배) 수준이었고, 지수는 -8.27% 움직였습니다. 위의 200일선(161.15)까지는 +25.3%로 멀고, 먼저 20일 저점 122.20(-5.0%) 지지를 시험하는 자리입니다.",
+   "headline": "-8.27%, 전날 상승분 절반 넘게 반납",
+   "an": [
+    [
+     "어제",
+     "반도체 ETF는 -8.27%로 128.62달러(약 17만 원)에 끝났습니다. 133.75달러에서 시작해 126.0달러(약 17만 원)까지 밀렸습니다."
+    ],
+    [
+     "최근 대비",
+     "1주 -9.1%, 1달 -21.6%, 고점 대비 -41.2%입니다. 거래량은 평균의 1.09배였습니다."
+    ],
+    [
+     "앞으로",
+     "20일선 146.75달러(약 20만 원)가 +14.1% 위, 200일선 161.15달러는 +25.3% 위입니다. 최근 20일 저점 122.2달러(약 16만 원)를 지키는지가 먼저입니다."
+    ]
+   ]
+  }
+ ],
+ "chart_summary": "세 지수 모두 **20·50·200일선 아래**에 머물렀습니다. 나스닥은 **고점 대비 -14.4%**, 반도체 ETF는 **하루 -8.3%**로 월요일 반등의 절반 넘게를 되돌렸고, S&P 500은 **-0.50%**로 버텼습니다.",
+ "news": [
+  {
+   "tag": "시장",
+   "img": "img/2026-11-25-spx.jpg",
+   "title": "다우 +0.85% 5만 선 회복, 나스닥 -1.48%",
+   "line": "기술주에서 빠진 돈이 헬스케어·소비주로 옮겨 갔습니다. 암젠(+5.55%)·애브비(+4.1%)·일라이 릴리(+3.15%)가 올랐고, 11월 소비자신뢰지수는 103.3으로 예상(약 92)을 크게 넘었습니다.",
+   "src": [
+    {
+     "t": "Motley Fool 마감",
+     "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-tech-sell-off-drags-nasdaq-as-dow-gains-on-value-rotation/"
+    },
+    {
+     "t": "TradingKey(애브비)",
+     "u": "https://www.tradingkey.com/news/market-movers/262320386-market-movers-abbv-20261124"
+    },
+    {
+     "t": "Investing.com(릴리)",
+     "u": "https://www.investing.com/news/stock-market-news/why-is-eli-lilly-stock-rallying-today-93CH-5048619"
+    }
+   ],
+   "body": "기술주에서 빠진 돈이 헬스케어·소비주로 옮겨 갔습니다. 암젠(+5.55%)·애브비(+4.1%)·일라이 릴리(+3.15%)가 올랐고, 11월 소비자신뢰지수는 103.3으로 예상(약 92)을 크게 넘었습니다."
+  },
+  {
+   "tag": "메모리",
+   "img": "img/2026-11-25-memory.jpg",
+   "title": "마이크론 -11.0%, 샌디스크 -11.1%…BNP '2027년 중반 공급 균형'",
+   "line": "BNP파리바의 마이크론 하향과 트렌드포스의 내년 1분기 낸드 계약가 하락 전망이 겹쳤습니다. 샌디스크는 77.95달러(약 10만 원)로, 내부자 주식 매도 예정 신고(Form 144)도 거론됐습니다.",
+   "src": [
+    {
+     "t": "Motley Fool",
+     "u": "https://www.fool.com/investing/2026/11/24/why-micron-stock-dove-today/"
+    },
+    {
+     "t": "Investing.com(샌디스크)",
+     "u": "https://ca.investing.com/news/stock-market-news/why-is-sandisk-stock-sliding-today-93CH-4978673"
+    },
+    {
+     "t": "24/7 Wall St.",
+     "u": "https://247wallst.com/investing/2026/11/24/micron-falls-7-as-nvidia-pullback-partially-reverses-mondays-ai-chip-rally-sandisk-and-sk-hynix-drop-6/"
+    }
+   ],
+   "body": "BNP파리바의 마이크론 하향과 트렌드포스의 내년 1분기 낸드 계약가 하락 전망이 겹쳤습니다. 샌디스크는 77.95달러(약 10만 원)로, 내부자 주식 매도 예정 신고(Form 144)도 거론됐습니다."
+  },
+  {
+   "tag": "실적",
+   "img": "img/2026-11-25-earn.jpg",
+   "title": "워크데이 시간외 -7%, 오토데스크 -4%, 앰바렐라 -40%",
+   "line": "워크데이는 실적이 예상을 넘었지만 4분기 전망이 신중해 시간외 7% 넘게 내렸습니다. 앰바렐라는 메모리 값과 공급 부족으로 고객이 전망을 낮춘다며 시간외 40% 넘게 빠졌고, HP는 보합권이었습니다.",
+   "src": [
+    {
+     "t": "Investing.com(워크데이)",
+     "u": "https://ng.investing.com/news/stock-market-news/workday-q3-fy27-slides-ai-arr-surges-130-but-stock-falls-on-outlook-93CH-2827803"
+    },
+    {
+     "t": "Investing.com(오토데스크)",
+     "u": "https://www.investing.com/news/transcripts/autodesk-shares-fall-despite-q3-earnings-beat-strong-guidance-5049017"
+    },
+    {
+     "t": "TradersAgency(앰바렐라)",
+     "u": "https://tradersagency.com/blog/ambarella-shares-plunge-after-hours-on-q3-miss-and-weak-q4-guidance-amid-memory-supply-crunch"
+    },
+    {
+     "t": "Investing.com(HP)",
+     "u": "https://www.investing.com/news/stock-market-news/why-is-hp-stock-gaining-today-93CH-5049304"
+    }
+   ],
+   "body": "워크데이는 실적이 예상을 넘었지만 4분기 전망이 신중해 시간외 7% 넘게 내렸습니다. 앰바렐라는 메모리 값과 공급 부족으로 고객이 전망을 낮춘다며 시간외 40% 넘게 빠졌고, HP는 보합권이었습니다."
+  },
+  {
+   "tag": "인수",
+   "img": "img/2026-11-25-deal.jpg",
+   "title": "사노피, 인스메드 약 410억 달러(약 55조 원) 현금 인수",
+   "line": "1주당 175달러(약 23만 원), 인수설 보도 전날 종가보다 약 46% 높은 값입니다. 인스메드는 +14.13%로 170.15달러(약 23만 원)에 끝났고 2027년 상반기 마무리 예정입니다.",
+   "src": [
+    {
+     "t": "StockTitan(사노피 발표)",
+     "u": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    }
+   ],
+   "body": "1주당 175달러(약 23만 원), 인수설 보도 전날 종가보다 약 46% 높은 값입니다. 인스메드는 +14.13%로 170.15달러(약 23만 원)에 끝났고 2027년 상반기 마무리 예정입니다."
+  },
+  {
+   "tag": "소매",
+   "img": "img/2026-11-25-retail.jpg",
+   "title": "딕스 +14.6%·달러트리 +11.2%, 소매 실적에 다우 힘",
+   "line": "딕스와 달러트리가 연간 이익 전망을 올렸고 콜스·애버크롬비는 19% 넘게 뛰었습니다. 딕스 실적에서 풋락커 매장 판매가 좋았다는 말에 나이키도 +5.89%였습니다.",
+   "src": [
+    {
+     "t": "StockTitan",
+     "u": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "t": "야후 파이낸스(나이키)",
+     "u": "https://finance.yahoo.com/markets/stocks/articles/nike-soars-6-competitor-calls-185716230.html"
+    }
+   ],
+   "body": "딕스와 달러트리가 연간 이익 전망을 올렸고 콜스·애버크롬비는 19% 넘게 뛰었습니다. 딕스 실적에서 풋락커 매장 판매가 좋았다는 말에 나이키도 +5.89%였습니다."
+  },
+  {
+   "tag": "상장",
+   "img": "img/2026-11-25-ipo.jpg",
+   "title": "앤트로픽, 상장 나흘 만에 공모가 83달러(약 11만 원) 아래로",
+   "line": "장중 약 76달러까지 13% 빠졌고 81.91달러(약 11만 원) 무렵에서 끝났습니다. 공동창업자 7명이 상장 때 모두 19.6억 달러(약 26,283억 원)어치를 팔았다는 공시가 매물 부담으로 거론됐습니다.",
+   "src": [
+    {
+     "t": "야후 파이낸스",
+     "u": "https://finance.yahoo.com/technology/ai/articles/anthropic-stock-falls-below-ipo-203714977.html"
+    },
+    {
+     "t": "Motley Fool(종가 시세)",
+     "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/"
+    }
+   ],
+   "body": "장중 약 76달러까지 13% 빠졌고 81.91달러(약 11만 원) 무렵에서 끝났습니다. 공동창업자 7명이 상장 때 모두 19.6억 달러(약 26,283억 원)어치를 팔았다는 공시가 매물 부담으로 거론됐습니다."
+  },
+  {
+   "tag": "연준",
+   "img": "img/2026-11-25-fed.jpg",
+   "title": "12월 0.25%p 인상 확률 약 95%, 오늘 밤 PCE 물가",
+   "line": "선물시장은 12월 9일 회의에서 0.25%p 인상 확률을 약 95%, 0.5%p를 약 5%로 봤습니다. 소비자신뢰지수가 2년 만에 가장 높게 나와 물가 걱정은 더 커졌습니다.",
+   "src": [
+    {
+     "t": "Coinotag(금리 선물)",
+     "u": "https://en.coinotag.com/traders-price-december-fed-rate-hike-odds-pce"
+    },
+    {
+     "t": "Motley Fool 마감",
+     "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-tech-sell-off-drags-nasdaq-as-dow-gains-on-value-rotation/"
+    },
+    {
+     "t": "Eurasia Business News",
+     "u": "https://eurasiabusinessnews.com/2026/11/24/stock-market-today-november-24-2026-nasdaq-falls-as-nvidia-and-anthropic-slide-oil-price-at-89-gold-drops-to-3620/"
+    }
+   ],
+   "body": "선물시장은 12월 9일 회의에서 0.25%p 인상 확률을 약 95%, 0.5%p를 약 5%로 봤습니다. 소비자신뢰지수가 2년 만에 가장 높게 나와 물가 걱정은 더 커졌습니다."
+  },
+  {
+   "tag": "자산",
+   "img": "img/2026-11-25-gold.jpg",
+   "title": "금 -2.6%, 비트코인 6만 달러(약 8046만 원) 아래",
+   "line": "금 선물은 3,556.6달러(약 477만 원)로 밀렸습니다. 미국이 중국·일본·한국 등에 관세를 올릴 준비를 한다는 WSJ 보도 뒤 비트코인은 6만 달러(약 8046만 원) 아래로 내려왔고, 스트래티지는 -8.12%였습니다.",
+   "src": [
+    {
+     "t": "야후 파이낸스(금)",
+     "u": "https://finance.yahoo.com/quote/GC%3DF/history"
+    },
+    {
+     "t": "CoinDesk",
+     "u": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto"
+    },
+    {
+     "t": "To Vima(WSJ 관세)",
+     "u": "https://www.tovima.com/wsj/u-s-prepares-to-raise-tariffs-on-china-and-other-countries"
+    }
+   ],
+   "body": "금 선물은 3,556.6달러(약 477만 원)로 밀렸습니다. 미국이 중국·일본·한국 등에 관세를 올릴 준비를 한다는 WSJ 보도 뒤 비트코인은 6만 달러(약 8046만 원) 아래로 내려왔고, 스트래티지는 -8.12%였습니다."
+  }
+ ],
+ "movers": [
+  {
+   "ticker": "ADI",
+   "name": "아날로그디바이스",
+   "close": {
+    "v": 312.95,
+    "src": "https://finance.yahoo.com/quote/ADI/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -17.37,
+    "src": "https://finance.yahoo.com/quote/ADI/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "won": "약 42만 원",
+   "why": "실적은 넘었지만 1분기 전망·이익률 하락 예고"
+  },
+  {
+   "ticker": "DELL",
+   "name": "델",
+   "close": {
+    "v": 295.28,
+    "src": "https://finance.yahoo.com/quote/DELL/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -11.83,
+    "src": "https://finance.yahoo.com/quote/DELL/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "won": "약 40만 원",
+   "why": "HPE 이익률 경고 여파, 장 마감 후 실적은 예상 상회"
+  },
+  {
+   "ticker": "TXN",
+   "name": "텍사스인스트루먼트",
+   "close": {
+    "v": 258.44,
+    "src": "https://finance.yahoo.com/quote/TXN/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -11.25,
+    "src": "https://finance.yahoo.com/quote/TXN/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "won": "약 35만 원",
+   "why": "ADI 전망 실망에 아날로그 동반 하락"
+  },
+  {
+   "ticker": "MU",
+   "name": "마이크론",
+   "close": {
+    "v": 629.79,
+    "src": "https://finance.yahoo.com/quote/MU/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -11.01,
+    "src": "https://finance.yahoo.com/quote/MU/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "won": "약 84만 원",
+   "why": "BNP파리바 투자의견 하향"
+  },
+  {
+   "ticker": "MRVL",
+   "name": "마벨",
+   "close": {
+    "v": 131.57,
+    "src": "https://finance.yahoo.com/quote/MRVL/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": -9.1,
+    "src": "https://finance.yahoo.com/quote/MRVL/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "won": "약 18만 원",
+   "why": "반도체 차익 실현·엔비디아 의회 조사 부담"
+  },
+  {
+   "ticker": "AMGN",
+   "name": "암젠",
+   "close": {
+    "v": 473.94,
+    "src": "https://finance.yahoo.com/quote/AMGN/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "chg_pct": {
+    "v": 5.55,
+    "src": "https://finance.yahoo.com/quote/AMGN/history",
+    "asof": "2026-11-24 16:00 ET 종가"
+   },
+   "won": "약 64만 원",
+   "why": "기술주에서 헬스케어로 돈 이동"
+  }
+ ],
+ "street": {
+  "title": "최근 눈에 띈 증권사 의견",
+  "summary": "번스타인이 엔비디아를 다시 올렸고, BNP파리바는 메모리 값 하락을 내다보며 마이크론 목표가를 절반 넘게 깎았습니다. 실적을 낸 소매·HPE·줌은 목표가 조정이 엇갈렸습니다.",
+  "summary_src": "https://www.investing.com/news/stock-market-news/bernstein-reverses-nvidia-downgrade-on-huangs-return-valuation-5047972",
+  "rows": [
+   {
+    "stock": "엔비디아",
+    "firm": "번스타인",
+    "rating": "시장수익률 → 시장수익률 상회",
+    "to": "200달러(약 27만 원)",
+    "date": "11/24",
+    "dir": 1,
+    "src": "https://www.investing.com/news/stock-market-news/bernstein-reverses-nvidia-downgrade-on-huangs-return-valuation-5047972",
+    "c": 155.38,
+    "rx": -5.86,
+    "gap": 29
+   },
+   {
+    "stock": "엔비디아",
+    "firm": "로젠블랫",
+    "rating": "매수 유지",
+    "to": "300달러(약 40만 원)",
+    "date": "11/24",
+    "dir": 0,
+    "src": "https://www.investing.com/news/analyst-ratings/rosenblatt-reiterates-nvidia-stock-rating-after-ceo-reinstatement-93CH-5047866",
+    "c": 155.38,
+    "rx": -5.86,
+    "gap": 93
+   },
+   {
+    "stock": "마이크론",
+    "firm": "BNP파리바",
+    "rating": "시장수익률 상회 → 중립",
+    "to": "1,700→775달러(약 104만 원)",
+    "date": "11/24",
+    "dir": -1,
+    "src": "https://stocktwits.com/news-articles/markets/equity/mu-stock-downgraded-price-target-cut-by-almost-1-000-bnp-paribas-flags-2028-hyperscaler-capacity-risks/cNbsaFoR9ko"
+   },
+   {
+    "stock": "HPE",
+    "firm": "웰스파고",
+    "rating": "목표 하향",
+    "to": "63→50달러(약 6.7만 원)",
+    "date": "11/24",
+    "dir": -1,
+    "src": "https://www.marketscreener.com/news/wells-fargo-adjusts-price-target-on-hewlett-packard-enterprise-to-50-from-63-ce7851dbdb8eff20"
+   },
+   {
+    "stock": "베스트바이",
+    "firm": "제프리스",
+    "rating": "보유 유지",
+    "to": "84→101달러(약 14만 원)",
+    "date": "11/24",
+    "dir": 1,
+    "src": "https://www.investing.com/news/analyst-ratings/best-buy-stock-price-target-raised-to-101-from-84-by-jefferies-93CH-5048837"
+   },
+   {
+    "stock": "딕스",
+    "firm": "트루이스트",
+    "rating": "보유 유지",
+    "to": "128→150달러(약 20만 원)",
+    "date": "11/24",
+    "dir": 1,
+    "src": "https://www.tipranks.com/news/the-fly/dicks-sporting-price-target-raised-to-150-from-128-at-truist-thefly-news"
+   },
+   {
+    "stock": "줌",
+    "firm": "BofA",
+    "rating": "매수 유지",
+    "to": "130→115달러(약 15만 원)",
+    "date": "11/24",
+    "dir": -1,
+    "src": "https://stocktwits.com/news-articles/markets/equity/zm-stock-faces-wall-street-price-target-cuts-after-q3-beat/cNbsJ5vR9kj"
+   },
+   {
+    "stock": "델",
+    "firm": "모건스탠리 · 씨티(실적 전)",
+    "rating": "목표 하향",
+    "to": "403달러(약 54만 원) · 550달러(약 74만 원)",
+    "date": "11/24",
+    "dir": -1,
+    "src": "https://moneycheck.com/dell-stock-morgan-stanley-and-citi-cut-targets-ahead-of-earnings-today"
+   }
+  ],
+  "camps": {
+   "long": [
+    {
+     "who": "앙투안 치카이반",
+     "role": "뉴스트리트 리서치 (11/24)",
+     "sil": "glasses",
+     "say": "저는 오늘도 엔비디아를 사는 쪽이에요.",
+     "src": "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-falls-after-epic-rally-on-jensen-huangs-return-as-ceo-094535877.html"
+    },
+    {
+     "who": "댄 아이브스",
+     "role": "기술주 애널리스트 (X)",
+     "sil": "suit_g",
+     "say": "잡음은 남았지만 황이 돌아와 질서가 잡혔어요.",
+     "src": "https://stocktwits.com/news-articles/markets/equity/dan-ives-calls-jensen-huang-return-to-nvidia-the-start-of-ai-godfather-part-2-but-warns-of-more-noise-ahead/cNbsIBLR9kL"
+    },
+    {
+     "who": "마크 헤펠레",
+     "role": "UBS 글로벌 웰스 CIO",
+     "sil": "suit",
+     "say": "기술주 출렁임이 AI 투자 이야기가 깨졌다는 신호는 아니에요.",
+     "src": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "who": "마이클 모너핸",
+     "role": "파운더스 100 ETF 운용역",
+     "sil": "firm",
+     "say": "창업자는 드물고, 비슷한 두 번째 사람은 거의 없어요.",
+     "src": "https://www.aljazeera.com/economy/2026/11/24/nvidia-stock-cools-after-huangs-return-driven-surge"
+    }
+   ],
+   "short": [
+    {
+     "who": "스티븐 도버",
+     "role": "프랭클린 템플턴 전략가",
+     "sil": "suit",
+     "say": "돈이 더는 아주 싸지 않아요. 가치 평가를 따져야 해요.",
+     "src": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+    },
+    {
+     "who": "크리슈나 구하",
+     "role": "에버코어 ISI",
+     "sil": "glasses",
+     "say": "워시 의장에게 이번이 진짜 시험대예요.",
+     "src": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+    },
+    {
+     "who": "댄 시핸",
+     "role": "텔로스 웰스 어드바이저스",
+     "sil": "woman",
+     "say": "복귀 자체가 답한 만큼 질문도 던져요.",
+     "src": "https://www.investing.com/news/stock-market-news/nvidia-slips-as-investors-assess-risks-surrounding-huangs-return-as-ceo-5047757"
+    },
+    {
+     "who": "스티브 아이스먼",
+     "role": "투자자 (CNBC)",
+     "sil": "hood",
+     "say": "그렇다고 환자에게 큰 위험이 없다는 뜻은 아니에요.",
+     "src": "https://stocktwits.com/news-articles/markets/equity/steve-eisman-says-ai-industry-dodged-a-big-bullet-with-jensen-huang-s-return-but-only-for-now/cNbsQGGR9ks"
+    }
+   ]
+  },
+  "headline": "엔비디아는 다시 올리고, 마이크론은 반토막 목표가"
+ },
+ "schedule": [
+  {
+   "kst": "20:30 무렵",
+   "type": "실적",
+   "name": "디어 실적 (장 전)",
+   "star": 2,
+   "why": "주당 예상 4.03달러(약 0.5만 원), 매출 104억 달러(약 14조 원). 농기계 경기를 봅니다.",
+   "src": "https://www.investing.com/news/stock-market-news/deere-polestar-and-more-set-to-report-earnings-wednesday-93CH-5048882"
+  },
+  {
+   "kst": "22:30",
+   "type": "지표",
+   "name": "10월 PCE 물가 · 3분기 GDP 수정치 · 내구재 · 실업수당",
+   "star": 5,
+   "why": "근원 PCE 전년 대비 3.2% 예상(이전 3.1%), GDP 3.4% 안팎. 12월 인상 폭을 가를 연준의 마지막 물가 숫자입니다.",
+   "src": "https://investing.com/news/stock-market-news/key-fed-events-and-economic-data-to-watch-this-week-93CH-5046211"
+  },
+  {
+   "kst": "23:30",
+   "type": "개장",
+   "name": "뉴욕 정규장 · 델 실적 반응",
+   "star": 4,
+   "why": "시간외에서 오른 델이 정규장에서 버티는지, 반도체가 이틀째 밀리는지 봅니다.",
+   "src": "https://financefeeds.com/dell-stock-rises-after-q3-revenue-of-54-94b-beats-50-6b-estimate/"
+  },
+  {
+   "kst": "11/26(목) 00:00",
+   "type": "지표",
+   "name": "10월 신규주택판매",
+   "star": 2,
+   "why": "예상 64.9만 채, 이전 67.6만 채.",
+   "src": "https://investing.com/news/stock-market-news/key-fed-events-and-economic-data-to-watch-this-week-93CH-5046211"
+  },
+  {
+   "kst": "11/26(목) 04:00",
+   "type": "연준",
+   "name": "연준 베이지북",
+   "star": 3,
+   "why": "12월 9일 회의 전 지역 경기 보고서. 물가·고용 표현을 봅니다.",
+   "src": "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-11-23/"
+  },
+  {
+   "kst": "11/26(목) 밤",
+   "type": "휴장",
+   "name": "추수감사절 휴장",
+   "star": 2,
+   "why": "목요일은 미국 증시가 쉬어 11/27(금) 호는 쉽니다.",
+   "src": "https://www.nyse.com/markets/hours-calendars"
+  },
+  {
+   "kst": "11/28(토) 03:00",
+   "type": "단축",
+   "name": "금요일 조기 폐장(미 동부 13:00)",
+   "star": 2,
+   "why": "거래가 얇아 움직임이 커질 수 있습니다.",
+   "src": "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-11-23/"
+  }
+ ],
+ "schedule_note": "시각은 한국 시간이며 발표 기관·회사 일정에 따라 바뀔 수 있습니다. 예상치는 집계 기관마다 조금씩 다릅니다.",
+ "calendar": {
+  "today": "2026-11-25",
+  "days": [
+   {
+    "d": "2026-11-16",
+    "ev": [
+     {
+      "k": "연준",
+      "t": "워시 의장 연설"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-17",
+    "ev": [
+     {
+      "k": "실적",
+      "t": "엔비디아",
+      "when": "장 후"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-18",
+    "ev": [
+     {
+      "k": "연준",
+      "t": "FOMC 의사록"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-19",
+    "ev": [
+     {
+      "k": "상장",
+      "t": "앤트로픽 +17%"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-20",
+    "ev": [
+     {
+      "k": "급락",
+      "t": "엔비디아 -14% · S&P 조정"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-23",
+    "ev": [
+     {
+      "k": "급등",
+      "t": "황 복귀 · 엔비디아 +31%"
+     },
+     {
+      "k": "인수",
+      "t": "CRWD→ZS 인수"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-24",
+    "ev": [
+     {
+      "k": "급락",
+      "t": "반도체 -7.9%",
+      "hl": true
+     },
+     {
+      "k": "실적",
+      "t": "델·워크데이·HP",
+      "when": "장 후",
+      "hl": true
+     },
+     {
+      "k": "인수",
+      "t": "사노피→인스메드"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-25",
+    "ev": [
+     {
+      "k": "지표",
+      "t": "PCE 물가·GDP",
+      "hl": true
+     },
+     {
+      "k": "연준",
+      "t": "베이지북"
+     },
+     {
+      "k": "실적",
+      "t": "디어",
+      "when": "장 전"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-26",
+    "ev": [
+     {
+      "k": "휴장",
+      "t": "추수감사절 휴장"
+     }
+    ]
+   },
+   {
+    "d": "2026-11-27",
+    "ev": [
+     {
+      "k": "단축",
+      "t": "조기 폐장(13:00 ET)"
+     },
+     {
+      "k": "예고",
+      "t": "12/1 황 의회 면담 · 12/9 FOMC"
+     }
+    ]
+   }
+  ],
+  "src": [
+   {
+    "t": "Investing.com 주간 일정",
+    "u": "https://investing.com/news/stock-market-news/key-fed-events-and-economic-data-to-watch-this-week-93CH-5046211"
+   },
+   {
+    "t": "HeyGoTrade 주간",
+    "u": "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-11-23/"
+   },
+   {
+    "t": "Investing.com 실적 예정",
+    "u": "https://www.investing.com/news/stock-market-news/deere-polestar-and-more-set-to-report-earnings-wednesday-93CH-5048882"
+   },
+   {
+    "t": "Wisevoter(의회 일정)",
+    "u": "https://wisevoter.com/world/us/2026/11/24/marvell-nvidia-shares-fall-congressional-scrutiny"
+   },
+   {
+    "t": "StockTitan(FOMC 날짜)",
+    "u": "https://www.stocktitan.net/articles/october-2026-pce-inflation-preview"
+   }
+  ]
+ },
+ "earnings": [
+  {
+   "date": "11/24(화)",
+   "time": "장 시작 전",
+   "company": "아날로그디바이스",
+   "ticker": "ADI",
+   "done": true
+  },
+  {
+   "date": "11/24(화)",
+   "time": "장 시작 전",
+   "company": "베스트바이",
+   "ticker": "BBY",
+   "done": true
+  },
+  {
+   "date": "11/24(화)",
+   "time": "장 마감 후",
+   "company": "델 테크놀로지스",
+   "ticker": "DELL",
+   "done": true
+  },
+  {
+   "date": "11/24(화)",
+   "time": "장 마감 후",
+   "company": "워크데이",
+   "ticker": "WDAY",
+   "done": true
+  },
+  {
+   "date": "11/24(화)",
+   "time": "장 마감 후",
+   "company": "HP",
+   "ticker": "HPQ",
+   "done": true
+  },
+  {
+   "date": "11/24(화)",
+   "time": "장 마감 후",
+   "company": "오토데스크",
+   "ticker": "ADSK",
+   "done": true
+  },
+  {
+   "date": "11/25(수)",
+   "time": "장 시작 전",
+   "company": "디어",
+   "ticker": "DE",
+   "done": false
+  }
+ ],
+ "disclaimer": "투자 권유가 아니며, 투자 판단과 책임은 본인에게 있습니다. 시세는 CNBC 일봉(11/24 종가) 기준이며, 시간외 가격·증권사·전문가 의견은 보도된 내용을 옮긴 것입니다. 샌디스크는 8:1 액면분할을 반영한 가격입니다.",
+ "quotes": {
+  "asof": "2026-11-24 16:00 ET 종가",
+  "src": "https://finance.yahoo.com",
+  "fx": 1340.95,
+  "default": [
+   "NVDA"
+  ],
+  "list": [
+   {
+    "t": "AAPL",
+    "n": "애플",
+    "c": 354.07,
+    "won": 474790,
+    "ch": 1.43,
+    "w1": 0.6,
+    "m1": 3.0,
+    "hi": -1.9,
+    "a50": true,
+    "a200": true,
+    "rsi": 57,
+    "why": "",
+    "mini": {
+     "mn": 325.33,
+     "mx": 360.83,
+     "b": "hpxxhYChe5ybnYOFo7ueqZqrQYt9hUtdAkIAL3XScK7N2HiHYJNdeo3CjLa7zZinrtys2un10dTq/9ve5OS7xcbYr7+/37zDxteYrMbQbXyixJCro9GUzg==",
+     "res": 360.83,
+     "sup": 325.33,
+     "ma5": 349.47,
+     "ma20": 348.08,
+     "ma50": 342.58,
+     "ma200": 303.99,
+     "vr": 0.7
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "애플은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -1.9%, 최근 1달 +3.0%이고 RSI는 57입니다. 최근 20일 범위는 325.33~360.83 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.43%, 1달 +3.0% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "ADBE",
+    "n": "어도비",
+    "c": 232.08,
+    "won": 311208,
+    "ch": 3.62,
+    "w1": -1.5,
+    "m1": -10.3,
+    "hi": -36.0,
+    "a50": false,
+    "a200": false,
+    "rsi": 45,
+    "why": "",
+    "mini": {
+     "mn": 216.95,
+     "mx": 263.35,
+     "b": "/P/M5dLbqa2buZa0m6+Hq8jdr7e1066+r6+EoKzboK25wZGieZFte3CBaXBzc1JtZoFicXiCW3eBk3OQoL2OoI+TXWZeYy0zMUYQGhhGAAQRKgYnIVweUw==",
+     "res": 257.14,
+     "sup": 216.95,
+     "ma5": 224.33,
+     "ma20": 238.82,
+     "ma50": 242.39,
+     "ma200": 245.97,
+     "vr": 0.82
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "어도비은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -36.0%, 최근 1달 -10.3%이고 RSI는 45입니다. 최근 20일 범위는 216.95~257.14 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +3.62%, 1달 -10.3% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "AMD",
+    "n": "AMD",
+    "c": 413.27,
+    "won": 554174,
+    "ch": -8.86,
+    "w1": -17.9,
+    "m1": -22.2,
+    "hi": -37.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 39,
+    "why": "반도체 동반 하락",
+    "mini": {
+     "mn": 396.01,
+     "mx": 594.0,
+     "b": "o7GYrrnYuNTk7NTr1ufU25GgfIyUllpbbINkcXOZaHdJTggLPlIwRGSZXZGKuH+avd2jyt//zfTc4qCyiqiIi5aWbYqTr4CtvM1geGJlHSVoaS5KJioAFg==",
+     "res": 594.0,
+     "sup": 396.01,
+     "ma5": 462.09,
+     "ma20": 497.84,
+     "ma50": 550.48,
+     "ma200": 432.0,
+     "vr": 0.99
+    },
+    "news": {
+     "y": [
+      {
+       "t": "반도체 차익 실현 속 -8.9% · 헌터브룩 공매도 건 재거론",
+       "u": "https://finance.yahoo.com/markets/stocks/articles/why-amd-amd-stock-down-173112516.html"
+      }
+     ],
+     "t": []
+    },
+    "ai": "AMD은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -37.2%, 최근 1달 -22.2%이고 RSI는 39입니다. 최근 20일 범위는 396.01~594.0 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "-8.9%, 반도체 동반 약세"
+   },
+   {
+    "t": "AMZN",
+    "n": "아마존",
+    "c": 252.29,
+    "won": 338308,
+    "ch": -1.21,
+    "w1": -2.2,
+    "m1": 1.3,
+    "hi": -12.2,
+    "a50": false,
+    "a200": true,
+    "rsi": 47,
+    "why": "",
+    "mini": {
+     "mn": 229.3632,
+     "mx": 275.34,
+     "b": "cHdjbXWMa4SDkH2MYm5CUBJEAD1MiEhaa4BcdsXqv8vp83+rqcGipt7/0NDM8czm9fzJzNb10tPf4sDPt7qYnZypiZ6p2KfV8PiYm4aqWGGruHmQf5F1fw==",
+     "res": 275.34,
+     "sup": 229.36,
+     "ma5": 255.92,
+     "ma20": 257.7,
+     "ma50": 255.15,
+     "ma200": 245.59,
+     "vr": 0.56
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "아마존은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -12.2%, 최근 1달 +1.3%이고 RSI는 47입니다. 최근 20일 범위는 229.36~275.34 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -1.21%, 1달 +1.3% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "ARM",
+    "n": "ARM",
+    "c": 176.67,
+    "won": 236906,
+    "ch": 16.08,
+    "w1": 0.9,
+    "m1": -16.0,
+    "hi": -61.0,
+    "a50": false,
+    "a200": false,
+    "rsi": 42,
+    "why": "",
+    "mini": {
+     "mn": 150.37,
+     "mx": 237.88,
+     "b": "sLypr7LbsNXW4tHe6//j+eDu2OSkq42ipqaFh5OlkZiWrHN5P0olME5POEdOdEdpXGlKW3mmb5p1n3OQho9YdVhcR0hSZUNgcHhZXnR1TE42OwAFX2E9TQ==",
+     "res": 237.88,
+     "sup": 150.37,
+     "ma5": 174.44,
+     "ma20": 191.92,
+     "ma50": 238.37,
+     "ma200": 234.77,
+     "vr": 1.29
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "ARM은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -61.0%, 최근 1달 -16.0%이고 RSI는 42입니다. 최근 20일 범위는 150.37~237.88 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +16.08%, 1달 -16.0% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "ASML",
+    "n": "ASML",
+    "c": 1336.06,
+    "won": 1791590,
+    "ch": -3.45,
+    "w1": -3.4,
+    "m1": -16.0,
+    "hi": -33.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 38,
+    "why": "",
+    "mini": {
+     "mn": 1258.53,
+     "mx": 1690.1,
+     "b": "w9HAxNTkyd/r9ebv7P/o9sPPpLa8ypmesbuqrZaigoxobTk6b3BZYoGefJeRqoqTqbSZo5Ghh42Hk3iMaW9WWFdYN0pSWkFRaG05OiwuAAVXXENKOzwfLg==",
+     "res": 1690.1,
+     "sup": 1258.53,
+     "ma5": 1347.51,
+     "ma20": 1466.78,
+     "ma50": 1615.81,
+     "ma200": 1600.89,
+     "vr": 0.81
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "ASML은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -33.2%, 최근 1달 -16.0%이고 RSI는 38입니다. 최근 20일 범위는 1258.53~1690.1 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -3.45%, 1달 -16.0% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "ASTS",
+    "n": "AST 스페이스모바일",
+    "c": 23.6,
+    "won": 31646,
+    "ch": -8.06,
+    "w1": -14.5,
+    "m1": -40.2,
+    "hi": -82.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 31,
+    "why": "우주주 차익 실현",
+    "mini": {
+     "mn": 22.52,
+     "mx": 44.848,
+     "b": "xdq6wcXvwt7T5cfi2//a69Tjv9PT1Zuepbmhp6/AjZaLj0pYXHo6cH2zb6SFpGyAjaSAoYufiImCiWVzaG1CRURNMzpAQB4iOkQhIxsnAgk3OB0kHx8ADA==",
+     "res": 44.85,
+     "sup": 22.52,
+     "ma5": 24.72,
+     "ma20": 32.6,
+     "ma50": 44.71,
+     "ma200": 70.85,
+     "vr": 0.77
+    },
+    "news": {
+     "y": [
+      {
+       "t": "우주주 차익 실현",
+       "u": "https://247wallst.com/investing/2026/11/24/ast-spacemobile-plunges-11-rocket-lab-tumbles-9-as-space-stocks-retrace-mondays-rally-spacex-falls-6-amid-reported-tesla-merger-talks/"
+      }
+     ],
+     "t": []
+    },
+    "ai": "AST 스페이스모바일은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -82.4%, 최근 1달 -40.2%이고 RSI는 31입니다. 최근 20일 범위는 22.52~44.85 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -8.06%, 1달 -40.2% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "AVGO",
+    "n": "브로드컴",
+    "c": 301.08,
+    "won": 403733,
+    "ch": -3.98,
+    "w1": -11.9,
+    "m1": -8.5,
+    "hi": -39.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 41,
+    "why": "반도체 하락 속 -4%",
+    "mini": {
+     "mn": 289.767,
+     "mx": 369.82,
+     "b": "b4drfqCylqe9yK7GprScsIKGXnR7i2ZnfZJ1h3aNZnJGTQEGREUADDFqLl9Wj1aGwNausdb/z+7V25m2iJl5i5KtgaW816LN6f2wtaqqJC9jby9MJT4aJA==",
+     "res": 369.82,
+     "sup": 289.77,
+     "ma5": 323.95,
+     "ma20": 329.54,
+     "ma50": 341.32,
+     "ma200": 367.51,
+     "vr": 0.9
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "브로드컴은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -39.2%, 최근 1달 -8.5%이고 RSI는 41입니다. 최근 20일 범위는 289.77~369.82 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -3.98%, 1달 -8.5% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "BA",
+    "n": "보잉",
+    "c": 163.59,
+    "won": 219366,
+    "ch": 0.74,
+    "w1": -0.2,
+    "m1": -13.1,
+    "hi": -35.7,
+    "a50": false,
+    "a200": false,
+    "rsi": 38,
+    "why": "",
+    "mini": {
+     "mn": 155.56,
+     "mx": 189.66,
+     "b": "9f/k9dHyWV5dbUdXX45bgHSJb3iEo4GUlZyEhaCxlaCfo2h/e41rhaOjZH51jHCFgZB8joaTdnh3eWl3bnBESEdfOj47Qy43PkEZJSlFAAIhOhozL00pPA==",
+     "res": 179.19,
+     "sup": 155.56,
+     "ma5": 161.06,
+     "ma20": 169.04,
+     "ma50": 182.21,
+     "ma200": 210.7,
+     "vr": 0.5
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "보잉은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -35.7%, 최근 1달 -13.1%이고 RSI는 38입니다. 최근 20일 범위는 155.56~179.19 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.74%, 1달 -13.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "BAC",
+    "n": "뱅크오브아메리카",
+    "c": 48.56,
+    "won": 65117,
+    "ch": 0.87,
+    "w1": -1.8,
+    "m1": -3.9,
+    "hi": -25.6,
+    "a50": false,
+    "a200": false,
+    "rsi": 39,
+    "why": "",
+    "mini": {
+     "mn": 46.88,
+     "mx": 53.025,
+     "b": "oMCUl6ivlp6ntJulytawsay5eIKUlWtwZ4Jfc7bLm8Xv/3h4bpRjaYSrdpimrpSepqePnZyokZemrZOspadyhXmIW2pgbE1UZWcwRkFOAAc6RyE0KVMnRg==",
+     "res": 53.02,
+     "sup": 46.88,
+     "ma5": 48.24,
+     "ma20": 49.81,
+     "ma50": 52.25,
+     "ma200": 54.64,
+     "vr": 0.99
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "뱅크오브아메리카은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -25.6%, 최근 1달 -3.9%이고 RSI는 39입니다. 최근 20일 범위는 46.88~53.02 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.87%, 1달 -3.9% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "BRK-B",
+    "n": "버크셔 해서웨이",
+    "c": 577.21,
+    "won": 774010,
+    "ch": 0.85,
+    "w1": -1.6,
+    "m1": 5.2,
+    "hi": -3.3,
+    "a50": true,
+    "a200": true,
+    "rsi": 61,
+    "why": "",
+    "mini": {
+     "mn": 539.2283,
+     "mx": 596.92,
+     "b": "DSsMKScpEBEIGQAFGyoLDC8yDg4aURdLQlo4T3i3Z7DH0I2SZZ9ajIiqZ5+h0ZrDp9qm2e7/3ODr9+Ht9vra7eDpz9LCxZackpZ1kZameYiToYGSmrOOqA==",
+     "res": 596.92,
+     "sup": 539.23,
+     "ma5": 573.25,
+     "ma20": 571.79,
+     "ma50": 539.22,
+     "ma200": 503.29,
+     "vr": 0.71
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "버크셔 해서웨이은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -3.3%, 최근 1달 +5.2%이고 RSI는 61입니다. 최근 20일 범위는 539.23~596.92 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.85%, 1달 +5.2% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "COIN",
+    "n": "코인베이스",
+    "c": 102.35,
+    "won": 137246,
+    "ch": -5.91,
+    "w1": -11.0,
+    "m1": -35.9,
+    "hi": -64.1,
+    "a50": false,
+    "a200": false,
+    "rsi": 27,
+    "why": "비트코인 약세",
+    "mini": {
+     "mn": 101.71,
+     "mx": 163.6,
+     "b": "7/rd7/L45/Xk+uL65v/m88DBkayfrYuVl8mVtKbVpc3DzYORkJt7iHqdeY5/jnJ9gZmAjnSKc3dpd2JrSVhAS0RSMzc4OiIkNDkdHhUnAAEgKBYdFxgBAw==",
+     "res": 163.6,
+     "sup": 101.71,
+     "ma5": 106.5,
+     "ma20": 130.15,
+     "ma50": 160.74,
+     "ma200": 171.84,
+     "vr": 0.72
+    },
+    "news": {
+     "y": [
+      {
+       "t": "비트코인 약세, 11월 현물 ETF 유출 사상 최대",
+       "u": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto"
+      }
+     ],
+     "t": []
+    },
+    "ai": "코인베이스은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -64.1%, 최근 1달 -35.9%이고 RSI는 27입니다. 과매도 구간이라 기술적 반등이 나올 수 있지만 추세 전환 신호는 아닙니다. 최근 20일 범위는 101.71~163.6 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -5.91%, 1달 -35.9% · 이평선 모두 아래 약세 · 과매도 구간"
+   },
+   {
+    "t": "COST",
+    "n": "코스트코",
+    "c": 1091.71,
+    "won": 1463929,
+    "ch": -0.56,
+    "w1": -1.7,
+    "m1": 8.6,
+    "hi": -2.8,
+    "a50": true,
+    "a200": true,
+    "rsi": 65,
+    "why": "",
+    "mini": {
+     "mn": 980.315,
+     "mx": 1123.6699,
+     "b": "JT4hLCcoEBUGDwAEFx0IHDhJLzk/bz1rWmFFRWWCVnahtJCYdJNwgnabdJmVnYmZsseiv87awcfL5sjg6fPe7ej/5Ofc7c7Pwsy3ytn90tnD2LrRosycxg==",
+     "res": 1123.67,
+     "sup": 980.32,
+     "ma5": 1096.44,
+     "ma20": 1067.05,
+     "ma50": 994.12,
+     "ma200": 979.95,
+     "vr": 0.9
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "코스트코은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -2.8%, 최근 1달 +8.6%이고 RSI는 65입니다. 최근 20일 범위는 980.32~1123.67 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.56%, 1달 +8.6% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "CRM",
+    "n": "세일즈포스",
+    "c": 193.26,
+    "won": 259152,
+    "ch": 4.21,
+    "w1": -0.6,
+    "m1": -21.9,
+    "hi": -28.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 35,
+    "why": "",
+    "mini": {
+     "mn": 179.915,
+     "mx": 250.99,
+     "b": "8//k8+r12tvP6M3ftMKit7nEq7GzvqKmmJx9mLDDoqmwsZCYhItweX2Hen58fWh4fol4iYuNeYeQkICIiI15fWhwMDQvMRcmKjgJDAwjAAMMFQYUDjYOMA==",
+     "res": 244.64,
+     "sup": 179.91,
+     "ma5": 186.61,
+     "ma20": 211.9,
+     "ma50": 226.96,
+     "ma200": 197.73,
+     "vr": 1.03
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "세일즈포스은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -28.2%, 최근 1달 -21.9%이고 RSI는 35입니다. 최근 20일 범위는 179.91~244.64 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +4.21%, 1달 -21.9% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "CRWD",
+    "n": "크라우드스트라이크",
+    "c": 210.86,
+    "won": 282753,
+    "ch": 0.9,
+    "w1": -4.0,
+    "m1": -19.5,
+    "hi": -26.5,
+    "a50": false,
+    "a200": true,
+    "rsi": 39,
+    "why": "전날 급락 뒤 소폭 반등",
+    "mini": {
+     "mn": 200.53,
+     "mx": 272.29,
+     "b": "0OO+2tX71PD4/+Hrv/Kw19fln7G6vY2Tm7SSnZa6gpBvby07a2s3OkVtOGRWakBafIdjZV5rPmh/f0NdU1VAUVRbL0RTjUCCpciLmYOQX2c9WQAeJDUbJQ==",
+     "res": 272.29,
+     "sup": 200.53,
+     "ma5": 225.95,
+     "ma20": 232.61,
+     "ma50": 245.88,
+     "ma200": 177.29,
+     "vr": 1.49
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "크라우드스트라이크은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -26.5%, 최근 1달 -19.5%이고 RSI는 39입니다. 최근 20일 범위는 200.53~272.29 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.90%, 1달 -19.5% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "CVX",
+    "n": "셰브론",
+    "c": 206.17,
+    "won": 276464,
+    "ch": -1.06,
+    "w1": -5.1,
+    "m1": -11.6,
+    "hi": -12.8,
+    "a50": false,
+    "a200": true,
+    "rsi": 38,
+    "why": "",
+    "mini": {
+     "mn": 205.34,
+     "mx": 236.48,
+     "b": "u+m55NjrztrS3Le7wde8w9ziwtbr/+T33uW1uJ+2naONkUxfeIw8PjNQKjwtORwtFjUFMDlCLUFPaEhaandcd3h4XGFkdFFYO0MDBBIXAgkJJwUZBR8ABw==",
+     "res": 236.48,
+     "sup": 205.34,
+     "ma5": 208.61,
+     "ma20": 217.58,
+     "ma50": 215.26,
+     "ma200": 196.75,
+     "vr": 1.04
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "셰브론은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -12.8%, 최근 1달 -11.6%이고 RSI는 38입니다. 최근 20일 범위는 205.34~236.48 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -1.06%, 1달 -11.6% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "DIS",
+    "n": "디즈니",
+    "c": 122.51,
+    "won": 164280,
+    "ch": 1.86,
+    "w1": 4.8,
+    "m1": 11.0,
+    "hi": -0.7,
+    "a50": true,
+    "a200": true,
+    "rsi": 64,
+    "why": "",
+    "mini": {
+     "mn": 108.75,
+     "mx": 123.37,
+     "b": "OkAWHRodDBoOGAAFFigOJjZBIyY1WDVMSmQ4X4TEhLLC0o2UY55YjKC5lLWtu5e2psGmvrzMoqWpu6Gyvb2drqb0gY+q/4rt5uzEydbnmqGjzZjJwPa28A==",
+     "res": 123.37,
+     "sup": 108.75,
+     "ma5": 120.67,
+     "ma20": 117.26,
+     "ma50": 111.14,
+     "ma200": 104.2,
+     "vr": 1.02
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "디즈니은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -0.7%, 최근 1달 +11.0%이고 RSI는 64입니다. 최근 20일 범위는 108.75~123.37 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.86%, 1달 +11.0% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "GLD",
+    "n": "금 ETF(GLD)",
+    "c": 325.45,
+    "won": 436412,
+    "ch": -2.27,
+    "w1": -7.7,
+    "m1": -11.5,
+    "hi": -36.1,
+    "a50": false,
+    "a200": false,
+    "rsi": 30,
+    "why": "",
+    "mini": {
+     "mn": 320.95,
+     "mx": 380.18,
+     "b": "yNDAyszezN3Z487iztPGza6vkZawuKyvrrCkpdHg0N70+uLr0ePQ3vb/7PzZ28rQ0NG9vp6eipKYnZCVj5iGio6ZhohtbVVXUVQ9PRohAAhJSTI0LTMREw==",
+     "res": 380.18,
+     "sup": 320.95,
+     "ma5": 331.54,
+     "ma20": 356.34,
+     "ma50": 372.33,
+     "ma200": 404.51,
+     "vr": 0.82
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "금 ETF(GLD)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -36.1%, 최근 1달 -11.5%이고 RSI는 30입니다. 최근 20일 범위는 320.95~380.18 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -2.27%, 1달 -11.5% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "GOOGL",
+    "n": "알파벳(구글)",
+    "c": 279.05,
+    "won": 374192,
+    "ch": -1.08,
+    "w1": -0.4,
+    "m1": -11.9,
+    "hi": -31.7,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "",
+    "mini": {
+     "mn": 264.22,
+     "mx": 326.405,
+     "b": "6OvX2Nj12Of0//D5XWNCUEVONEBLXTw9Qkc1QU+ET2V6gTVLVWxUVHKEYmJmclhfaoFoeHmdeY2fp3iBeXtNUE9ROkJMVT9Le4AhIypOAARSVi5JR0gwPQ==",
+     "res": 326.4,
+     "sup": 264.22,
+     "ma5": 276.31,
+     "ma20": 285.64,
+     "ma50": 319.64,
+     "ma200": 336.54,
+     "vr": 0.62
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "알파벳(구글)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -31.7%, 최근 1달 -11.9%이고 RSI는 40입니다. 최근 20일 범위는 264.22~326.4 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -1.08%, 1달 -11.9% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "HOOD",
+    "n": "로빈후드",
+    "c": 67.37,
+    "won": 90340,
+    "ch": 8.36,
+    "w1": -6.5,
+    "m1": -29.1,
+    "hi": -51.8,
+    "a50": false,
+    "a200": false,
+    "rsi": 32,
+    "why": "",
+    "mini": {
+     "mn": 61.75,
+     "mx": 97.75,
+     "b": "9v/q7Obn1Nzt+OXow9vC0sfZwdOmp4+lqbWZnKSqnaqewJq2qrFhdn6Nc4iIp4WZipmBi5atkKKHooWLf4FpclZiQElHSCc1NDopNU5XMDEsMQADPDwlKA==",
+     "res": 96.71,
+     "sup": 61.75,
+     "ma5": 67.31,
+     "ma20": 79.79,
+     "ma50": 97.53,
+     "ma200": 90.89,
+     "vr": 0.96
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "로빈후드은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -51.8%, 최근 1달 -29.1%이고 RSI는 32입니다. 최근 20일 범위는 61.75~96.71 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +8.36%, 1달 -29.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "IBIT",
+    "n": "비트코인 ETF(IBIT)",
+    "c": 34.62,
+    "won": 46424,
+    "ch": 4.85,
+    "w1": -5.9,
+    "m1": -24.7,
+    "hi": -37.7,
+    "a50": false,
+    "a200": false,
+    "rsi": 27,
+    "why": "",
+    "mini": {
+     "mn": 32.62,
+     "mx": 46.405,
+     "b": "+//09+jy4unq8ufy8Prt+uv+6PLL1MDH0dXFxsvUytPX9tfr5OW6wbvAs76wu62zqLOdqKWzo7KUmI2Pd3ttdUdUQ01LUTpBQUIuM0FCKi4uLgAHRUUgJQ==",
+     "res": 46.37,
+     "sup": 32.62,
+     "ma5": 34.84,
+     "ma20": 40.8,
+     "ma50": 44.37,
+     "ma200": 40.85,
+     "vr": 1.48
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "비트코인 ETF(IBIT)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -37.7%, 최근 1달 -24.7%이고 RSI는 27입니다. 과매도 구간이라 기술적 반등이 나올 수 있지만 추세 전환 신호는 아닙니다. 최근 20일 범위는 32.62~46.37 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +4.85%, 1달 -24.7% · 이평선 모두 아래 약세 · 과매도 구간"
+   },
+   {
+    "t": "INTC",
+    "n": "인텔",
+    "c": 54.8,
+    "won": 73484,
+    "ch": -8.15,
+    "w1": -0.7,
+    "m1": -39.4,
+    "hi": -61.5,
+    "a50": false,
+    "a200": false,
+    "rsi": 36,
+    "why": "반도체 차익 실현·파운드리 적자 부담",
+    "mini": {
+     "mn": 51.1,
+     "mx": 95.68,
+     "b": "0+rK4e376fT8//D+7/Pj6mNlRVRSVC8zOkIyNis0ICkfIAIHFiQUHiEzGy8nNyEoPEo4QTFDMDo3OyIxICMWGRcYCBcZHA0UJTAVGhIfAAEuMiAxIyUOFQ==",
+     "res": 95.68,
+     "sup": 51.1,
+     "ma5": 55.23,
+     "ma20": 61.42,
+     "ma50": 88.63,
+     "ma200": 87.62,
+     "vr": 0.75
+    },
+    "news": {
+     "y": [
+      {
+       "t": "파운드리 영업손실 18.5억 달러(약 24,808억 원) · 내년 잉여현금흐름 플러스 어렵다는 CFO 발언 재부각",
+       "u": "https://www.fool.com/investing/2026/11/24/why-intel-stock-fell-today/"
+      }
+     ],
+     "t": []
+    },
+    "ai": "인텔은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -61.5%, 최근 1달 -39.4%이고 RSI는 36입니다. 최근 20일 범위는 51.1~95.68 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "-8.2%, 파운드리 적자 부담"
+   },
+   {
+    "t": "IONQ",
+    "n": "아이온큐",
+    "c": 22.4,
+    "won": 30037,
+    "ch": -4.03,
+    "w1": -9.8,
+    "m1": -27.2,
+    "hi": -69.6,
+    "a50": false,
+    "a200": false,
+    "rsi": 35,
+    "why": "",
+    "mini": {
+     "mn": 20.51,
+     "mx": 36.35,
+     "b": "qLGYpazOqsjKzrPAtcKotJafgZmbpnd7h5yGmZqjf5GFi0dfecNyw8X/uu/g9djp9vnZ2rzMpKeZnn2HdXZcYGVnOUZRUiswPVgiIx0kAAM7RiouIy4XHg==",
+     "res": 36.35,
+     "sup": 20.51,
+     "ma5": 22.53,
+     "ma20": 28.45,
+     "ma50": 34.3,
+     "ma200": 40.79,
+     "vr": 0.67
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "아이온큐은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -69.6%, 최근 1달 -27.2%이고 RSI는 35입니다. 최근 20일 범위는 20.51~36.35 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -4.03%, 1달 -27.2% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "JNJ",
+    "n": "존슨앤드존슨",
+    "c": 276.46,
+    "won": 370719,
+    "ch": 2.37,
+    "w1": -0.8,
+    "m1": 3.8,
+    "hi": -4.8,
+    "a50": true,
+    "a200": true,
+    "rsi": 54,
+    "why": "",
+    "mini": {
+     "mn": 264.2,
+     "mx": 290.2495,
+     "b": "GVAIFQowBiwQVABDbYhcbJuuV1hNViA+KkMLE1CBIneQrUlPIXgNdoe1da+uupOih6Z5n8bWpL3M6qvT8/+xtJGsg45vjlJTNT8FHTxRND03UB85OXwmeA==",
+     "res": 290.25,
+     "sup": 264.2,
+     "ma5": 271.36,
+     "ma20": 275.58,
+     "ma50": 267.69,
+     "ma200": 251.17,
+     "vr": 0.72
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "존슨앤드존슨은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -4.8%, 최근 1달 +3.8%이고 RSI는 54입니다. 최근 20일 범위는 264.2~290.25 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +2.37%, 1달 +3.8% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "JPM",
+    "n": "JP모건",
+    "c": 317.1,
+    "won": 425215,
+    "ch": 0.14,
+    "w1": -3.9,
+    "m1": -5.1,
+    "hi": -13.5,
+    "a50": false,
+    "a200": false,
+    "rsi": 37,
+    "why": "",
+    "mini": {
+     "mn": 309.18,
+     "mx": 359.8,
+     "b": "fYp5fYyPgIaOoIOYsrinrba2g4ygp5uem5+GkbnZptj5/4eOeaR4gJaugqavtKKmqrSfrLrAp6m8vqm6t7yKknuMY2lcaUlLV2AqODY7AAcyPx0mHDIWKA==",
+     "res": 359.8,
+     "sup": 309.18,
+     "ma5": 317.72,
+     "ma20": 334.79,
+     "ma50": 335.97,
+     "ma200": 325.14,
+     "vr": 0.88
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "JP모건은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -13.5%, 최근 1달 -5.1%이고 RSI는 37입니다. 최근 20일 범위는 309.18~359.8 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.14%, 1달 -5.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "KO",
+    "n": "코카콜라",
+    "c": 97.62,
+    "won": 130904,
+    "ch": 1.81,
+    "w1": -1.2,
+    "m1": 5.3,
+    "hi": -2.9,
+    "a50": true,
+    "a200": true,
+    "rsi": 59,
+    "why": "",
+    "mini": {
+     "mn": 90.58,
+     "mx": 100.56,
+     "b": "NjsjNgY8Bg8HLQAdOUIlOWVzVllfkV+Gbn1cbJKZYIWjrn2EQ5I+goiMaoubpIeikbmCs8THrq/C373e8f/Z49Lny9K91KjAkJxqjaS4nqRnmGeHkcWCtA==",
+     "res": 100.56,
+     "sup": 90.58,
+     "ma5": 96.93,
+     "ma20": 96.33,
+     "ma50": 92.12,
+     "ma200": 84.07,
+     "vr": 0.86
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "코카콜라은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -2.9%, 최근 1달 +5.3%이고 RSI는 59입니다. 최근 20일 범위는 90.58~100.56 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.81%, 1달 +5.3% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "LLY",
+    "n": "일라이 릴리",
+    "c": 1407.59,
+    "won": 1887508,
+    "ch": 3.15,
+    "w1": -0.6,
+    "m1": 10.0,
+    "hi": -4.6,
+    "a50": true,
+    "a200": true,
+    "rsi": 59,
+    "why": "헬스케어로 돈 이동·인수 소식",
+    "mini": {
+     "mn": 1260.34,
+     "mx": 1475.25,
+     "b": "HysQFhAtDhoKLgAhVrBTh8jhsLuewJCzpdKesdXcqLvO5Xx8a4tWb329fLSw1KbMu9a30t3txsbJ4b3Z5f/Hy7nMqLivwY6RgZBgbHmFYWdlkGN8griCrw==",
+     "res": 1475.25,
+     "sup": 1260.34,
+     "ma5": 1370.63,
+     "ma20": 1394.47,
+     "ma50": 1276.87,
+     "ma200": 1121.25,
+     "vr": 0.84
+    },
+    "news": {
+     "y": [
+      {
+       "t": "항암 신약 회사 로큐스23 최대 7.25억 달러(약 9,722억 원) 인수",
+       "u": "https://www.investing.com/news/stock-market-news/why-is-eli-lilly-stock-rallying-today-93CH-5048619"
+      }
+     ],
+     "t": []
+    },
+    "ai": "일라이 릴리은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -4.6%, 최근 1달 +10.0%이고 RSI는 59입니다. 최근 20일 범위는 1260.34~1475.25 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "헬스케어 강세 +3.2%"
+   },
+   {
+    "t": "MA",
+    "n": "마스터카드",
+    "c": 647.44,
+    "won": 868185,
+    "ch": 1.88,
+    "w1": 0.3,
+    "m1": 5.5,
+    "hi": -5.1,
+    "a50": true,
+    "a200": true,
+    "rsi": 56,
+    "why": "",
+    "mini": {
+     "mn": 605.0,
+     "mx": 681.99,
+     "b": "OTsVHBUbAxADJgASOHkmZnyCXm1uu26wnqSGjLnjpuD4/6Kpe7Vtnqu4kKiyvJqymrqJucjPnJ6pv6a6zdK0vKiyhId+jGh/andDR1BqP0RXcE9lY5FajQ==",
+     "res": 681.99,
+     "sup": 605.0,
+     "ma5": 635.68,
+     "ma20": 647.28,
+     "ma50": 609.77,
+     "ma200": 545.31,
+     "vr": 0.69
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "마스터카드은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -5.1%, 최근 1달 +5.5%이고 RSI는 56입니다. 최근 20일 범위는 605.0~681.99 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.88%, 1달 +5.5% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "MCD",
+    "n": "맥도날드",
+    "c": 280.7,
+    "won": 376405,
+    "ch": 1.56,
+    "w1": 1.8,
+    "m1": 11.9,
+    "hi": -17.9,
+    "a50": true,
+    "a200": true,
+    "rsi": 67,
+    "why": "",
+    "mini": {
+     "mn": 247.98,
+     "mx": 283.5295,
+     "b": "AyMAFAgQAwsDIAASMUUpQ1lrQUlWf1R/anNdbJXujuft9cLYntuYzdD9z/Dy/9L13+G+wNDksbi+xqqs0Ne9v6ngpciuyau7l7GMr8jZsLWr0KXM1fXL6w==",
+     "res": 283.53,
+     "sup": 248.0,
+     "ma5": 275.34,
+     "ma20": 272.03,
+     "ma50": 253.18,
+     "ma200": 279.82,
+     "vr": 0.55
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "맥도날드은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -17.9%, 최근 1달 +11.9%이고 RSI는 67입니다. 최근 20일 범위는 248.0~283.53 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.56%, 1달 +11.9% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "META",
+    "n": "메타",
+    "c": 589.82,
+    "won": 790919,
+    "ch": -1.3,
+    "w1": -4.7,
+    "m1": -6.5,
+    "hi": -24.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "",
+    "mini": {
+     "mn": 558.68,
+     "mx": 648.4499,
+     "b": "4v3EzMLGrK+zu4+Zstilu5/AkqCes4iIlLySserwu8vR2UeEir6Iks78y+vh/Nrr+v/Fx73Mq7jD8rzs5+mvwLrDnKuusJOku8tpa0hVAAZefDxvWHZJWA==",
+     "res": 648.45,
+     "sup": 558.68,
+     "ma5": 592.17,
+     "ma20": 615.4,
+     "ma50": 673.68,
+     "ma200": 627.84,
+     "vr": 0.51
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "메타은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -24.4%, 최근 1달 -6.5%이고 RSI는 40입니다. 최근 20일 범위는 558.68~648.45 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -1.30%, 1달 -6.5% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "MSFT",
+    "n": "마이크로소프트",
+    "c": 496.13,
+    "won": 665286,
+    "ch": 0.74,
+    "w1": -2.0,
+    "m1": -6.8,
+    "hi": -11.3,
+    "a50": false,
+    "a200": true,
+    "rsi": 41,
+    "why": "",
+    "mini": {
+     "mn": 481.03,
+     "mx": 559.15,
+     "b": "l6qFqKivmqSmsJOjwcV+oJCTbYWMn05VW4pXgs3/yPTx+qmzkruOos/cvNHKzpSqrq96g4Off4l+lGuMkJl1eW1xM1JQYEFZfpQ4OClKAAtSXCQlHkQYMQ==",
+     "res": 559.15,
+     "sup": 481.03,
+     "ma5": 495.95,
+     "ma20": 519.19,
+     "ma50": 519.56,
+     "ma200": 444.5,
+     "vr": 0.65
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "마이크로소프트은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -11.3%, 최근 1달 -6.8%이고 RSI는 41입니다. 최근 20일 범위는 481.03~559.15 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.74%, 1달 -6.8% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "MSTR",
+    "n": "스트래티지",
+    "c": 77.55,
+    "won": 103991,
+    "ch": -8.12,
+    "w1": -19.6,
+    "m1": -44.5,
+    "hi": -60.9,
+    "a50": false,
+    "a200": false,
+    "rsi": 25,
+    "why": "비트코인 6만 달러(약 8046만 원) 아래",
+    "mini": {
+     "mn": 77.32,
+     "mx": 146.07,
+     "b": "7/re6Onw5O7n/OT87/rk7srUrcXM3sHGyePH2Nz/2fLm7a3Bu8azv6/BqLOmtpiioK6fp4idgoqBhXN/YmpaX15iR0dCQzAwOz0gISEnAQIzNBkaEhUAAQ==",
+     "res": 146.07,
+     "sup": 77.32,
+     "ma5": 83.24,
+     "ma20": 114.76,
+     "ma50": 136.82,
+     "ma200": 131.2,
+     "vr": 1.08
+    },
+    "news": {
+     "y": [
+      {
+       "t": "비트코인 6만 달러(약 8046만 원) 아래 · 2024년 초 이후 최저",
+       "u": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto"
+      }
+     ],
+     "t": []
+    },
+    "ai": "스트래티지은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -60.9%, 최근 1달 -44.5%이고 RSI는 25입니다. 과매도 구간이라 기술적 반등이 나올 수 있지만 추세 전환 신호는 아닙니다. 최근 20일 범위는 77.32~146.07 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "비트코인 6만 달러(약 8046만 원) 아래, -8.1%"
+   },
+   {
+    "t": "MU",
+    "n": "마이크론",
+    "c": 629.79,
+    "won": 844517,
+    "ch": -11.01,
+    "w1": -11.6,
+    "m1": -30.3,
+    "hi": -49.8,
+    "a50": false,
+    "a200": false,
+    "rsi": 37,
+    "why": "BNP파리바 투자의견 하향",
+    "mini": {
+     "mn": 585.2526,
+     "mx": 990.0,
+     "b": "wNC7ydTdzdjt/+z78fPX3LzKrr3AwZqcrbSkqpapfIRpbyktTlg5QkpkQl1TZUhYeZlwjnSHcYZ8hWh6XmFTVFlZM1BUV0BMYm5CQjM1AAZCVTNNNTcXHA==",
+     "res": 990.0,
+     "sup": 585.25,
+     "ma5": 665.54,
+     "ma20": 761.9,
+     "ma50": 901.98,
+     "ma200": 775.34,
+     "vr": 1.02
+    },
+    "news": {
+     "y": [
+      {
+       "t": "BNP파리바 중립 하향, 적정 주가 1,700→775달러(약 104만 원)",
+       "u": "https://www.fool.com/investing/2026/11/24/why-micron-stock-dove-today/"
+      },
+      {
+       "t": "BofA '반도체 전망 하향이 시작됐다'",
+       "u": "https://finance.yahoo.com/markets/stocks/articles/warning-micron-investors-bank-america-201039465.html"
+      }
+     ],
+     "t": []
+    },
+    "ai": "BNP파리바가 2027년 중반부터 메모리 공급과 수요가 비슷해진다며 목표가를 절반 넘게 낮추자 11% 내렸습니다. 마이크론은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -49.8%, 최근 1달 -30.3%이고 RSI는 37입니다. 최근 20일 범위는 585.25~990.0 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "BNP 하향에 -11%"
+   },
+   {
+    "t": "NFLX",
+    "n": "넷플릭스",
+    "c": 58.87,
+    "won": 78942,
+    "ch": 1.33,
+    "w1": -1.4,
+    "m1": -7.9,
+    "hi": -46.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 37,
+    "why": "",
+    "mini": {
+     "mn": 56.56,
+     "mx": 67.49,
+     "b": "ydGTq6Criot+jnN/io1xgI6Xd4GElHiHj6F9oLruruX6/73SqradoJ2xlayhqI2ck7uQurS1jI+TrIKClJZbYl1oQklJXENMTlsmLCpBAAQuMBAkH0oYNg==",
+     "res": 67.49,
+     "sup": 56.56,
+     "ma5": 58.4,
+     "ma20": 61.81,
+     "ma50": 66.58,
+     "ma200": 79.71,
+     "vr": 0.78
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "넷플릭스은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -46.4%, 최근 1달 -7.9%이고 RSI는 37입니다. 최근 20일 범위는 56.56~67.49 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.33%, 1달 -7.9% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "NKE",
+    "n": "나이키",
+    "c": 35.75,
+    "won": 47939,
+    "ch": 5.89,
+    "w1": -0.3,
+    "m1": -5.7,
+    "hi": -48.3,
+    "a50": false,
+    "a200": false,
+    "rsi": 46,
+    "why": "딕스 실적에서 풋락커 호조",
+    "mini": {
+     "mn": 32.89,
+     "mx": 41.1,
+     "b": "j66KnJmeipGEk3uEkrOPrLvFrrS+z7zCtb2drtH/zezo+MDPp8OdsbnisdnKzay0rK6Xqaqxk5ecqZOeqbWYp+PyTVxSfEBqWWEkLSczAAEPIAUbJmQgWQ==",
+     "res": 41.1,
+     "sup": 32.89,
+     "ma5": 34.61,
+     "ma20": 37.51,
+     "ma50": 36.62,
+     "ma200": 43.83,
+     "vr": 1.2
+    },
+    "news": {
+     "y": [
+      {
+       "t": "딕스 실적에서 풋락커 매장 판매 4% 넘게 증가",
+       "u": "https://finance.yahoo.com/markets/stocks/articles/nike-soars-6-competitor-calls-185716230.html"
+      }
+     ],
+     "t": []
+    },
+    "ai": "나이키은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -48.3%, 최근 1달 -5.7%이고 RSI는 46입니다. 최근 20일 범위는 32.89~41.1 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "딕스 실적 덕에 +5.9%"
+   },
+   {
+    "t": "NOW",
+    "n": "서비스나우",
+    "c": 91.74,
+    "won": 123019,
+    "ch": 0.02,
+    "w1": -1.2,
+    "m1": -42.0,
+    "hi": -47.6,
+    "a50": false,
+    "a200": false,
+    "rsi": 30,
+    "why": "",
+    "mini": {
+     "mn": 87.335,
+     "mx": 159.3,
+     "b": "/P/w+/T36O/k8Njfd3lMT01QOT8+TjxCQE46TVZZSkxKTDM1NTovNDM9MjcvNSIrLzouNzI2LC81Nyw1MTQpKyYpERQUFgcMDRcDBQAVAAENFgsQCBQIEA==",
+     "res": 155.15,
+     "sup": 87.33,
+     "ma5": 90.11,
+     "ma20": 102.2,
+     "ma50": 125.86,
+     "ma200": 113.14,
+     "vr": 0.56
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "서비스나우은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -47.6%, 최근 1달 -42.0%이고 RSI는 30입니다. 최근 20일 범위는 87.33~155.15 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.02%, 1달 -42.0% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "NVDA",
+    "n": "엔비디아",
+    "c": 155.38,
+    "won": 208357,
+    "ch": -5.86,
+    "w1": -0.1,
+    "m1": -28.1,
+    "hi": -36.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 39,
+    "why": "전날 +31% 뒤 차익 실현·SEC 조사 보도",
+    "mini": {
+     "mn": 124.5,
+     "mx": 219.99,
+     "b": "7fnr9Pv98/r///Dz8PPq7uHizNbe5M7P3+LZ29Pcycq/wJiYsryipoKUepGEhm93gY58g0dyQW95eltmXGdRVFdaRVNdXkVHTFo5OTMzAANyfldsXF9FUg==",
+     "res": 219.99,
+     "sup": 124.5,
+     "ma5": 148.58,
+     "ma20": 175.78,
+     "ma50": 204.95,
+     "ma200": 203.07,
+     "vr": 1.06
+    },
+    "news": {
+     "y": [
+      {
+       "t": "하루 -5.86%, 155.38달러(약 21만 원) · 시가총액 약 2,400억 달러(약 322조 원) 반납",
+       "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/"
+      },
+      {
+       "t": "황 CEO 직원 회의에서 사과, 치료 중이라고 밝혀",
+       "u": "https://www.investing.com/news/stock-market-news/nvidias-jensen-huang-apologizes-to-employees-says-he-is-in-therapy-5048912"
+      },
+      {
+       "t": "번스타인 시장수익률 상회 상향 · 적정 주가 200달러(약 27만 원)",
+       "u": "https://www.investing.com/news/stock-market-news/bernstein-reverses-nvidia-downgrade-on-huangs-return-valuation-5047972"
+      }
+     ],
+     "t": [
+      {
+       "t": "SEC 회계 조사 보도 · 12/1 의회 면담",
+       "u": "https://www.fool.com/investing/2026/11/24/nvidia-faces-an-sec-probe-according-to-press-reports-should-you-still-buy-the-stock/"
+      }
+     ]
+    },
+    "ai": "전날 31% 오른 뒤 하루 5.9% 되밀렸습니다. 번스타인이 등급을 올렸지만, SEC 조사 보도와 의회 면담 일정이 남아 있습니다. 엔비디아은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -36.2%, 최근 1달 -28.1%이고 RSI는 39입니다. 최근 20일 범위는 124.5~219.99 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "+31% 다음 날 -5.9%"
+   },
+   {
+    "t": "OKLO",
+    "n": "오클로",
+    "c": 19.2,
+    "won": 25746,
+    "ch": -7.56,
+    "w1": -14.2,
+    "m1": -26.0,
+    "hi": -83.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 33,
+    "why": "원전주 전날 반등 되돌림",
+    "mini": {
+     "mn": 18.535,
+     "mx": 27.73,
+     "b": "1eq+zd361/Tx9dfu3//T5bfBpbrBzYiKlaB6iYegVmNTYwASSphBi5D/dObH4K+21+fGy6K/kqSoqHiVdZtvfXSEWmpzlFdbZXk+QD5bHiRhcT0+MTMJEg==",
+     "res": 27.73,
+     "sup": 18.54,
+     "ma5": 20.49,
+     "ma20": 23.25,
+     "ma50": 29.56,
+     "ma200": 48.78,
+     "vr": 0.8
+    },
+    "news": {
+     "y": [
+      {
+       "t": "원전주 전날 반등 되돌림",
+       "u": "https://247wallst.com/investing/2026/11/24/oklo-slides-7-as-mondays-nuclear-rebound-fades-nuscale-power-and-energy-fuels-drop-6/"
+      }
+     ],
+     "t": []
+    },
+    "ai": "오클로은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -83.4%, 최근 1달 -26.0%이고 RSI는 33입니다. 최근 20일 범위는 18.54~27.73 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -7.56%, 1달 -26.0% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "ORCL",
+    "n": "오라클",
+    "c": 109.5,
+    "won": 146834,
+    "ch": -3.68,
+    "w1": -4.8,
+    "m1": -13.1,
+    "hi": -56.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 41,
+    "why": "기술주 약세",
+    "mini": {
+     "mn": 100.2505,
+     "mx": 148.48,
+     "b": "iJN8iI2qjaCk/5Xq6OvA0LC5mKGIi2Bkc5NwiXKccnx4fzxPZmcvVFlqTmddalFef6F+lXqYeY6Qk3KFd3lfZGNtRE5VW0VIV2A1NysuAAVWYkBHOz8qMQ==",
+     "res": 148.48,
+     "sup": 100.25,
+     "ma5": 109.77,
+     "ma20": 120.83,
+     "ma50": 130.9,
+     "ma200": 152.72,
+     "vr": 0.43
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "오라클은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -56.2%, 최근 1달 -13.1%이고 RSI는 41입니다. 최근 20일 범위는 100.25~148.48 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -3.68%, 1달 -13.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "PANW",
+    "n": "팔로알토 네트웍스",
+    "c": 352.99,
+    "won": 473342,
+    "ch": -0.12,
+    "w1": 14.1,
+    "m1": -9.6,
+    "hi": -18.4,
+    "a50": false,
+    "a200": true,
+    "rsi": 52,
+    "why": "",
+    "mini": {
+     "mn": 301.28,
+     "mx": 406.88,
+     "b": "yOK919n60vLy/9/ho9Wgv8bWjZyhond6eY9vdm+SYXFYWxogSUocHixMH0g4SCI9WGJFUDY9ITRHSiEzLS0YJCQkABMeYxldhKZ3koueYWaSn3d+c4ttfQ==",
+     "res": 406.88,
+     "sup": 301.28,
+     "ma5": 350.28,
+     "ma20": 341.64,
+     "ma50": 366.57,
+     "ma200": 283.29,
+     "vr": 0.66
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "팔로알토 네트웍스은(는) 20일선·200일선 위, 50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -18.4%, 최근 1달 -9.6%이고 RSI는 52입니다. 최근 20일 범위는 301.28~406.88 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.12%, 1달 -9.6% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "PEP",
+    "n": "펩시코",
+    "c": 142.68,
+    "won": 191327,
+    "ch": 1.76,
+    "w1": 0.5,
+    "m1": 5.3,
+    "hi": -16.8,
+    "a50": true,
+    "a200": false,
+    "rsi": 57,
+    "why": "",
+    "mini": {
+     "mn": 131.8536,
+     "mx": 148.25,
+     "b": "OloxOCMtChoEEAAMMDAOHkppPVVkiV6FdXxRVIK8bKS+1aOpZKBglJe1iJyZuIu3m72HvMTGoKKq2abT5//f46+8lZ6FqoCcgoJVb4WyfIduimKCj7d/qA==",
+     "res": 148.25,
+     "sup": 131.85,
+     "ma5": 140.86,
+     "ma20": 140.89,
+     "ma50": 134.34,
+     "ma200": 145.01,
+     "vr": 0.71
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "펩시코은(는) 20일선·50일선 위, 200일선 아래에서 방향을 고르는 중입니다. 고점 대비 -16.8%, 최근 1달 +5.3%이고 RSI는 57입니다. 최근 20일 범위는 131.85~148.25 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.76%, 1달 +5.3% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "PFE",
+    "n": "화이자",
+    "c": 28.46,
+    "won": 38163,
+    "ch": 3.87,
+    "w1": -0.0,
+    "m1": -4.5,
+    "hi": -9.5,
+    "a50": false,
+    "a200": true,
+    "rsi": 46,
+    "why": "",
+    "mini": {
+     "mn": 27.31,
+     "mx": 31.44,
+     "b": "prmUmYqdiJqHm3aEpbGOo8bPr8bC5rLP0OifptTeqdfp/52fbYNMgI2PZ3dygGV/bIdlhJaYXl5jaFFid3pdYEhUQEguTCsuJioIDh4xAgYPFwAGC1AERw==",
+     "res": 31.44,
+     "sup": 27.31,
+     "ma5": 27.77,
+     "ma20": 29.13,
+     "ma50": 28.83,
+     "ma200": 27.03,
+     "vr": 0.77
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "화이자은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -9.5%, 최근 1달 -4.5%이고 RSI는 46입니다. 최근 20일 범위는 27.31~31.44 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +3.87%, 1달 -4.5% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "PLTR",
+    "n": "팔란티어",
+    "c": 161.18,
+    "won": 216134,
+    "ch": 1.14,
+    "w1": 3.0,
+    "m1": -18.9,
+    "hi": -24.3,
+    "a50": false,
+    "a200": true,
+    "rsi": 43,
+    "why": "",
+    "mini": {
+     "mn": 142.28,
+     "mx": 201.83,
+     "b": "7vfZ8u//6fLq8trq8PHO6NzdpbO9wpqab5NijmGXYH5payw2Rl1ATlF6UHNvd11yho56gXiEb31+gGBuZWZGTk1XMj1ERTA+T2ovMSAsAAVAUTVJQllCUQ==",
+     "res": 198.74,
+     "sup": 142.28,
+     "ma5": 154.88,
+     "ma20": 167.97,
+     "ma50": 182.75,
+     "ma200": 154.18,
+     "vr": 0.72
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "팔란티어은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -24.3%, 최근 1달 -18.9%이고 RSI는 43입니다. 최근 20일 범위는 142.28~198.74 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.14%, 1달 -18.9% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "QCOM",
+    "n": "퀄컴",
+    "c": 164.96,
+    "won": 221203,
+    "ch": -0.25,
+    "w1": -1.0,
+    "m1": -8.2,
+    "hi": -36.5,
+    "a50": false,
+    "a200": false,
+    "rsi": 47,
+    "why": "",
+    "mini": {
+     "mn": 148.25,
+     "mx": 185.59,
+     "b": "w+C61t/31PX09drt3P/V/rW/XHF8kVpebXRTbn2wY6oMVgA6WYNKdXK/Z5+Ms4Gtzeipwbfwt8XAyIGlj6iIio6bYX6AgkZPaZpTXlliBgxyd1N1VYJUcg==",
+     "res": 185.59,
+     "sup": 148.25,
+     "ma5": 160.42,
+     "ma20": 168.18,
+     "ma50": 176.56,
+     "ma200": 170.82,
+     "vr": 0.84
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "퀄컴은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -36.5%, 최근 1달 -8.2%이고 RSI는 47입니다. 최근 20일 범위는 148.25~185.59 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.25%, 1달 -8.2% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "QQQ",
+    "n": "나스닥100 ETF(QQQ)",
+    "c": 638.1,
+    "won": 855660,
+    "ch": -1.99,
+    "w1": -2.9,
+    "m1": -10.4,
+    "hi": -16.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 39,
+    "why": "나스닥100 -2.0%",
+    "mini": {
+     "mn": 606.2293,
+     "mx": 726.14,
+     "b": "1ujT4ej45PX7//P+6+7g6MHEpLO9xp6fpq+kqK/KrrakpVdXb3xmaniid5uNn4GSrL6ks568na6vr4udioxzdnl5Vmx1eGRxipVRU0VPAAVqbUxfSFk1RA==",
+     "res": 726.14,
+     "sup": 606.23,
+     "ma5": 640.43,
+     "ma20": 671.31,
+     "ma50": 708.47,
+     "ma200": 683.39,
+     "vr": 0.83
+    },
+    "news": {
+     "y": [
+      {
+       "t": "나스닥100 하루 -1.99%",
+       "u": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+      }
+     ],
+     "t": [
+      {
+       "t": "수리수리진타리 ① 급락 초입 신호(B+) 진행 중",
+       "u": "https://stock.jintar.co.kr/c/1/"
+      }
+     ]
+    },
+    "ai": "나스닥100 ETF는 하루 2.0% 내려 1달 전보다 10% 넘게 낮습니다. 나스닥100 ETF(QQQ)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -16.4%, 최근 1달 -10.4%이고 RSI는 39입니다. 최근 20일 범위는 606.23~726.14 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "하루 -2.0%"
+   },
+   {
+    "t": "RIVN",
+    "n": "리비안",
+    "c": 11.35,
+    "won": 15220,
+    "ch": 1.16,
+    "w1": -4.5,
+    "m1": -0.7,
+    "hi": -50.0,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "",
+    "mini": {
+     "mn": 10.2842,
+     "mx": 14.31,
+     "b": "YGFISU5yTWFcX0lYWGRFSnN+T3ec2Ja4x86qvtj/0+/p6p2+xtWy09b10Oze/cnY3uDJzrfBnp+fn3Z4cIVqc3J8X2VjcFVgZGw7QC84AAMsRCc7N0wxRA==",
+     "res": 14.31,
+     "sup": 10.28,
+     "ma5": 11.2,
+     "ma20": 12.45,
+     "ma50": 13.32,
+     "ma200": 15.22,
+     "vr": 0.71
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "리비안은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -50.0%, 최근 1달 -0.7%이고 RSI는 40입니다. 최근 20일 범위는 10.28~14.31 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.16%, 1달 -0.7% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "RKLB",
+    "n": "로켓랩",
+    "c": 45.98,
+    "won": 61657,
+    "ch": -7.35,
+    "w1": -16.5,
+    "m1": -14.6,
+    "hi": -69.5,
+    "a50": false,
+    "a200": false,
+    "rsi": 38,
+    "why": "우주주 차익 실현",
+    "mini": {
+     "mn": 43.89,
+     "mx": 68.2599,
+     "b": "W3RWaGugZZeZoYmakbSQn3yPYXF1dUdWYHRebnB4RFlGSQAWLmAbYG2lX5100HTF1f/K6dHvz9PP16a5pbyLjY6aZHV+gl5gdodFSj1HDRBXVy48LjMHFg==",
+     "res": 68.26,
+     "sup": 43.89,
+     "ma5": 49.02,
+     "ma20": 55.06,
+     "ma50": 60.73,
+     "ma200": 77.45,
+     "vr": 0.77
+    },
+    "news": {
+     "y": [
+      {
+       "t": "우주주 전날 반등 되돌림 · 스페이스X-테슬라 합병 협상 보도",
+       "u": "https://247wallst.com/investing/2026/11/24/ast-spacemobile-plunges-11-rocket-lab-tumbles-9-as-space-stocks-retrace-mondays-rally-spacex-falls-6-amid-reported-tesla-merger-talks/"
+      }
+     ],
+     "t": []
+    },
+    "ai": "로켓랩은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -69.5%, 최근 1달 -14.6%이고 RSI는 38입니다. 최근 20일 범위는 43.89~68.26 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -7.35%, 1달 -14.6% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "SBUX",
+    "n": "스타벅스",
+    "c": 106.38,
+    "won": 142650,
+    "ch": 0.02,
+    "w1": -1.0,
+    "m1": 3.6,
+    "hi": -4.6,
+    "a50": true,
+    "a200": true,
+    "rsi": 54,
+    "why": "",
+    "mini": {
+     "mn": 101.04,
+     "mx": 111.5,
+     "b": "AzoAKCQzCDEyUyU1ZHMybXJ/HUBSYh5STV0mW4HWdtPd/3p9PIgoa4DfgM282prZ2OK52M7olpiJoIGEot2gu6Dekp2Z15PFt8FKVGGIKDNaj1KCdZBhgg==",
+     "res": 111.5,
+     "sup": 102.23,
+     "ma5": 105.89,
+     "ma20": 106.57,
+     "ma50": 100.26,
+     "ma200": 100.85,
+     "vr": 0.94
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "스타벅스은(는) 50일선·200일선 위, 20일선 아래에서 방향을 고르는 중입니다. 고점 대비 -4.6%, 최근 1달 +3.6%이고 RSI는 54입니다. 최근 20일 범위는 102.23~111.5 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.02%, 1달 +3.6% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "SCHD",
+    "n": "배당 ETF(SCHD)",
+    "c": 34.89,
+    "won": 46786,
+    "ch": 1.45,
+    "w1": -1.2,
+    "m1": -1.2,
+    "hi": -4.1,
+    "a50": true,
+    "a200": true,
+    "rsi": 49,
+    "why": "",
+    "mini": {
+     "mn": 33.86,
+     "mx": 36.38,
+     "b": "jJ5+koKIeH9vhmt8n7OYsdXjvMLC2MLOvsCgq9Tux+72/5ueZJlfhZ7AibWey5nHxNuz2+30zdHh5cPl6+7Eyq/CipN7hVFVUlYTIjZWAAgiPRg2NHMlaA==",
+     "res": 36.38,
+     "sup": 33.86,
+     "ma5": 34.42,
+     "ma20": 35.38,
+     "ma50": 34.35,
+     "ma200": 32.82,
+     "vr": 0.95
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "배당 ETF(SCHD)은(는) 50일선·200일선 위, 20일선 아래에서 방향을 고르는 중입니다. 고점 대비 -4.1%, 최근 1달 -1.2%이고 RSI는 49입니다. 최근 20일 범위는 33.86~36.38 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.45%, 1달 -1.2% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "SHOP",
+    "n": "쇼피파이",
+    "c": 132.31,
+    "won": 177421,
+    "ch": -1.48,
+    "w1": -6.8,
+    "m1": -21.3,
+    "hi": -26.9,
+    "a50": false,
+    "a200": true,
+    "rsi": 38,
+    "why": "",
+    "mini": {
+     "mn": 122.83,
+     "mx": 171.41,
+     "b": "8P/r7vD91uLg89ru3/DQ583Opba6yKCvR4tDaGyia5+Ymk5ubJZoiZWchJmQlWV9jI9/i4SRcX6AknJ/dZBig3+OYGRmalJXX2QtMCc/AAVCSi08Mk4rMg==",
+     "res": 169.2,
+     "sup": 122.83,
+     "ma5": 132.34,
+     "ma20": 146.52,
+     "ma50": 153.32,
+     "ma200": 130.74,
+     "vr": 0.62
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "쇼피파이은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -26.9%, 최근 1달 -21.3%이고 RSI는 38입니다. 최근 20일 범위는 122.83~169.2 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -1.48%, 1달 -21.3% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "SMCI",
+    "n": "슈퍼마이크로",
+    "c": 22.62,
+    "won": 30332,
+    "ch": -7.79,
+    "w1": -6.3,
+    "m1": -30.8,
+    "hi": -56.0,
+    "a50": false,
+    "a200": false,
+    "rsi": 34,
+    "why": "HPE 이익률 경고 여파",
+    "mini": {
+     "mn": 21.465,
+     "mx": 36.4,
+     "b": "xs2+wMvryenw/+H16vbY3b7IqMTNzZaZprmiqarBh4t1e0pgfolsfXKNYnpvf2Fsi6aDmWOBSF5gZExcRks7PUJCHy42PCcyQUomKRwjAANSVC40JykMFA==",
+     "res": 36.4,
+     "sup": 21.46,
+     "ma5": 23.4,
+     "ma20": 27.87,
+     "ma50": 34.49,
+     "ma200": 32.27,
+     "vr": 0.73
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "슈퍼마이크로은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -56.0%, 최근 1달 -30.8%이고 RSI는 34입니다. 최근 20일 범위는 21.46~36.4 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -7.79%, 1달 -30.8% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "SNDK",
+    "n": "샌디스크",
+    "c": 77.95,
+    "won": 104527,
+    "ch": -11.13,
+    "w1": -21.8,
+    "m1": -50.3,
+    "hi": -73.5,
+    "a50": false,
+    "a200": false,
+    "rsi": 28,
+    "why": "낸드 값 하락 전망·차익 실현",
+    "mini": {
+     "mn": 74.83,
+     "mx": 176.06,
+     "b": "ztnGz9Pi0N7v/+v+9/jk5sLKo66wsZSWoK+eppikg4pydEFBXmNFSlFgSVtTZEhSaIJld1twVWtka09aSEw/QkNGLz9BRDE4Q04xMSYoCQs8PR8gFBcACA==",
+     "res": 176.06,
+     "sup": 74.83,
+     "ma5": 87.26,
+     "ma20": 115.06,
+     "ma50": 163.79,
+     "ma200": 160.79,
+     "vr": 0.79,
+     "note": "1시간봉을 묶은 일봉"
+    },
+    "news": {
+     "y": [
+      {
+       "t": "트렌드포스 내년 1분기 낸드 계약가 하락 전망 · Form 144 내부자 매도 신고",
+       "u": "https://ca.investing.com/news/stock-market-news/why-is-sandisk-stock-sliding-today-93CH-4978673"
+      }
+     ],
+     "t": []
+    },
+    "ai": "분할 뒤 첫 반등 다음 날 11.1% 내렸습니다. 내년 1분기 낸드 계약가 하락 전망이 다시 거론됐습니다. 샌디스크은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -73.5%, 최근 1달 -50.3%이고 RSI는 28입니다. 과매도 구간이라 기술적 반등이 나올 수 있지만 추세 전환 신호는 아닙니다. 최근 20일 범위는 74.83~176.06 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "하루 -11.1%, 낸드 값 걱정"
+   },
+   {
+    "t": "SNOW",
+    "n": "스노우플레이크",
+    "c": 271.09,
+    "won": 363518,
+    "ch": -0.07,
+    "w1": -0.7,
+    "m1": -19.1,
+    "hi": -29.5,
+    "a50": false,
+    "a200": true,
+    "rsi": 40,
+    "why": "",
+    "mini": {
+     "mn": 252.755,
+     "mx": 343.55,
+     "b": "yu/F5+H53e7q/+f10fHF2qqvd5aWmGNrWnxXd258WmpQUCwvTU8mQUh1SGxqg155maGGiHGJZYGJiVZrW19JTktRHzlATS5LZHwrLCMxAAZHSCw0NEQsMw==",
+     "res": 343.55,
+     "sup": 252.75,
+     "ma5": 269.08,
+     "ma20": 288.73,
+     "ma50": 316.46,
+     "ma200": 246.56,
+     "vr": 0.75
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "스노우플레이크은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -29.5%, 최근 1달 -19.1%이고 RSI는 40입니다. 최근 20일 범위는 252.75~343.55 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.07%, 1달 -19.1% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "SOFI",
+    "n": "소파이",
+    "c": 12.86,
+    "won": 17245,
+    "ch": -1.76,
+    "w1": -9.9,
+    "m1": -11.1,
+    "hi": -57.7,
+    "a50": false,
+    "a200": false,
+    "rsi": 33,
+    "why": "",
+    "mini": {
+     "mn": 12.41,
+     "mx": 17.74,
+     "b": "ZmxfYqvQnL/H6Mbi2PrV+d/rwdDa+MfIz9TC0dz/2u7n8ZGusseotrzes9DCxae9x9O4uaS1mZqcoICQgYdsdXR3UFldY09RWV41Nic4AAM+Px8hGSULFg==",
+     "res": 17.74,
+     "sup": 12.41,
+     "ma5": 13.21,
+     "ma20": 15.51,
+     "ma50": 15.62,
+     "ma200": 17.05,
+     "vr": 0.72
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "소파이은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -57.7%, 최근 1달 -11.1%이고 RSI는 33입니다. 최근 20일 범위는 12.41~17.74 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -1.76%, 1달 -11.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "SOXL",
+    "n": "반도체 3배(SOXL)",
+    "c": 32.6,
+    "won": 43715,
+    "ch": -24.55,
+    "w1": -33.6,
+    "m1": -64.0,
+    "hi": -89.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 33,
+    "why": "반도체 -8%를 3배로 -24.6%",
+    "mini": {
+     "mn": 29.82,
+     "mx": 108.6,
+     "b": "tc2wxNPq0Ofw/+f76PXd66iwg5mhpnp8jpiIjIKTaXdYWyMkPT8sNDtaOVVLYUhVb4FkdWF/X3RscUlcRUo8PUNDLD5FRzY/TlYxMikpAAMxMSMrGRoBCQ==",
+     "res": 108.6,
+     "sup": 29.82,
+     "ma5": 40.25,
+     "ma20": 59.14,
+     "ma50": 100.23,
+     "ma200": 123.47,
+     "vr": 1.32
+    },
+    "news": {
+     "y": [
+      {
+       "t": "반도체 지수 -7.88%를 3배로 받아 하루 -24.55%",
+       "u": "https://finance.yahoo.com/quote/SOXL/history"
+      },
+      {
+       "t": "수리수리진타리 ⑨ 카드 새로 켜짐(B+)",
+       "u": "https://stock.jintar.co.kr/c/9/"
+      }
+     ],
+     "t": [
+      {
+       "t": "오늘 밤 PCE 물가 · 목요일 휴장",
+       "u": "https://investing.com/news/stock-market-news/key-fed-events-and-economic-data-to-watch-this-week-93CH-5046211"
+      }
+     ]
+    },
+    "ai": "반도체 지수를 하루 3배로 따라가는 상품이라 어제 하루 24.6% 내렸습니다. 이틀 새 +40%와 -25%를 오갔습니다. 반도체 3배(SOXL)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -89.2%, 최근 1달 -64.0%이고 RSI는 33입니다. 최근 20일 범위는 29.82~108.6 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "하루 -24.6%, 이틀 새 +40%·-25%"
+   },
+   {
+    "t": "SOXX",
+    "n": "반도체 ETF(SOXX)",
+    "c": 128.62,
+    "won": 172473,
+    "ch": -8.27,
+    "w1": -9.1,
+    "m1": -21.5,
+    "hi": -41.2,
+    "a50": false,
+    "a200": false,
+    "rsi": 37,
+    "why": "반도체 ETF -8.3%",
+    "mini": {
+     "mn": 122.2,
+     "mx": 174.6432,
+     "b": "vNO4y9ju1ury/+v87Pfj77e9mKqyuIuNoayan5WmeohmaSovVFg4RlB9TXdqhmZ3mLGLoYmsh5+XnG2EZWxbXGVlRF5pa1JgdYBLTT9AAAZhYkZYODsSHw==",
+     "res": 174.64,
+     "sup": 122.2,
+     "ma5": 134.41,
+     "ma20": 146.75,
+     "ma50": 166.85,
+     "ma200": 161.15,
+     "vr": 1.09
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "반도체 ETF(SOXX)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -41.2%, 최근 1달 -21.5%이고 RSI는 37입니다. 최근 20일 범위는 122.2~174.64 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "하루 -8.3%, 전날 반등 절반 반납"
+   },
+   {
+    "t": "SPY",
+    "n": "S&P500 ETF(SPY)",
+    "c": 718.78,
+    "won": 963848,
+    "ch": -0.49,
+    "w1": -1.9,
+    "m1": -6.1,
+    "hi": -8.0,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "",
+    "mini": {
+     "mn": 686.75,
+     "mx": 775.64,
+     "b": "2ejX4ufy4e7z+O316/Hl7dbWtsbR3bq7vcq8wtv/2ubi44SFip+Ji57FnL2wvKe1ydnE0sHbwMrS0q/CtLWTmZSYc4OGi3N9kZhTVE1aAAlsdk1mUWJJXA==",
+     "res": 775.64,
+     "sup": 686.75,
+     "ma5": 715.39,
+     "ma20": 743.11,
+     "ma50": 758.64,
+     "ma200": 733.04,
+     "vr": 0.89
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "S&P500 ETF(SPY)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -8.0%, 최근 1달 -6.1%이고 RSI는 40입니다. 최근 20일 범위는 686.75~775.64 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.49%, 1달 -6.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "STX",
+    "n": "씨게이트",
+    "c": 482.48,
+    "won": 646982,
+    "ch": -7.23,
+    "w1": -4.3,
+    "m1": -25.1,
+    "hi": -57.9,
+    "a50": false,
+    "a200": false,
+    "rsi": 38,
+    "why": "저장장치 동반 하락",
+    "mini": {
+     "mn": 449.28,
+     "mx": 718.65,
+     "b": "rc2jub7hvM+77KPr4f/W7sDZp7m6u4KJm6iOlXKDZGZERwsQNTgACxI8EDYqNx8yXHFPYUpnQFtRXTdLMDcoLzo+IDRFSCw/XHFERDU2BAdiZDpDMTUXHw==",
+     "res": 718.65,
+     "sup": 449.28,
+     "ma5": 499.38,
+     "ma20": 543.05,
+     "ma50": 692.42,
+     "ma200": 703.72,
+     "vr": 0.53
+    },
+    "news": {
+     "y": [
+      {
+       "t": "저장장치·메모리 동반 하락",
+       "u": "https://247wallst.com/investing/2026/11/24/micron-falls-7-as-nvidia-pullback-partially-reverses-mondays-ai-chip-rally-sandisk-and-sk-hynix-drop-6/"
+      }
+     ],
+     "t": []
+    },
+    "ai": "씨게이트은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -57.9%, 최근 1달 -25.1%이고 RSI는 38입니다. 최근 20일 범위는 449.28~718.65 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -7.23%, 1달 -25.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "TLT",
+    "n": "美 장기채 ETF(TLT)",
+    "c": 81.49,
+    "won": 109274,
+    "ch": -0.24,
+    "w1": 2.4,
+    "m1": -0.2,
+    "hi": -10.3,
+    "a50": true,
+    "a200": false,
+    "rsi": 57,
+    "why": "",
+    "mini": {
+     "mn": 79.1109,
+     "mx": 82.415,
+     "b": "xde7xsTKtsLKzH2RsNSeuNThr9PS7LzKs7WPmq7Qicy877va1v/J2fP10dycn26Jf49pjH+DLy8PKAAVHzINFQ8zCiI+WjdWS2c2YH7JebWYy5jHyOG2uA==",
+     "res": 82.42,
+     "sup": 79.11,
+     "ma5": 81.04,
+     "ma20": 80.99,
+     "ma50": 80.1,
+     "ma200": 84.07,
+     "vr": 0.73
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "美 장기채 ETF(TLT)은(는) 20일선·50일선 위, 200일선 아래에서 방향을 고르는 중입니다. 고점 대비 -10.3%, 최근 1달 -0.2%이고 RSI는 57입니다. 최근 20일 범위는 79.11~82.42 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.24%, 1달 -0.2% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "TQQQ",
+    "n": "나스닥 3배(TQQQ)",
+    "c": 46.19,
+    "won": 61938,
+    "ch": -5.93,
+    "w1": -10.8,
+    "m1": -32.5,
+    "hi": -47.6,
+    "a50": false,
+    "a200": false,
+    "rsi": 36,
+    "why": "나스닥100 -2%를 3배로",
+    "mini": {
+     "mn": 40.115,
+     "mx": 72.53,
+     "b": "1ObQ3+b34vP6//H+6Ozc5bu+nKy2v5aYn6ecoafCpa6bnFBRY29bX2uPaol9jnKBmqqToIupipucnHmKeHpjZmhoSVxkZ1Vhd35ERjpCAAlPUTlHMzkjMA==",
+     "res": 72.53,
+     "sup": 40.12,
+     "ma5": 47.59,
+     "ma20": 56.18,
+     "ma50": 67.94,
+     "ma200": 65.61,
+     "vr": 1.04
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "나스닥 3배(TQQQ)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -47.6%, 최근 1달 -32.5%이고 RSI는 36입니다. 최근 20일 범위는 40.12~72.53 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -5.93%, 1달 -32.5% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "TSLA",
+    "n": "테슬라",
+    "c": 384.68,
+    "won": 515837,
+    "ch": -0.2,
+    "w1": 1.2,
+    "m1": -1.8,
+    "hi": -22.9,
+    "a50": true,
+    "a200": true,
+    "rsi": 52,
+    "why": "",
+    "mini": {
+     "mn": 338.15,
+     "mx": 414.23,
+     "b": "mcaZs8jsv+jx9Mbd4ufR2rndpc/f/8fc5OXEyoy1fZ55eQATJFYgQ0qUSYZujGyMosCisaLTnsfV3qCvpK1+i5SWeY2eq4eZrbptemx4FRp7u3Gfma59nA==",
+     "res": 414.23,
+     "sup": 338.15,
+     "ma5": 374.82,
+     "ma20": 383.35,
+     "ma50": 376.73,
+     "ma200": 381.37,
+     "vr": 0.7
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "테슬라은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -22.9%, 최근 1달 -1.8%이고 RSI는 52입니다. 최근 20일 범위는 338.15~414.23 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.20%, 1달 -1.8% · 이평선 위 추세 유지"
+   },
+   {
+    "t": "TSM",
+    "n": "TSMC",
+    "c": 349.2,
+    "won": 468260,
+    "ch": -3.96,
+    "w1": -2.9,
+    "m1": -17.7,
+    "hi": -28.4,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "반도체 동반 하락",
+    "mini": {
+     "mn": 318.481,
+     "mx": 440.879,
+     "b": "z+bP3eL64Pf6//f87PXl7MfQqrfEyaantLuwtKvAmKGAgkRIgYJnd4WegZKSqo+jys24xp/CnbW6u5inf4xwc3BySVZnaVBcanVERik1AACMj1peT1EsQA==",
+     "res": 440.88,
+     "sup": 318.48,
+     "ma5": 349.24,
+     "ma20": 384.36,
+     "ma50": 419.77,
+     "ma200": 403.61,
+     "vr": 0.88
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "TSMC은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -28.4%, 최근 1달 -17.7%이고 RSI는 40입니다. 최근 20일 범위는 318.48~440.88 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -3.96%, 1달 -17.7% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "UBER",
+    "n": "우버",
+    "c": 64.7,
+    "won": 86759,
+    "ch": 0.98,
+    "w1": -6.0,
+    "m1": -2.2,
+    "hi": -30.3,
+    "a50": false,
+    "a200": false,
+    "rsi": 39,
+    "why": "",
+    "mini": {
+     "mn": 63.29,
+     "mx": 72.5,
+     "b": "XGdCT1ZZPEU9SCc3N0UVREBFJjZOdD9fYGZLXIr/cbbP2HuYhr6Ck6zdmtrR16O7odiezczQnKGnyJ+xutKruq+8aJmHvYOXo6U4QEWNAAU1Sg8WBkQEJw==",
+     "res": 72.5,
+     "sup": 63.29,
+     "ma5": 65.32,
+     "ma20": 67.65,
+     "ma50": 68.66,
+     "ma200": 72.3,
+     "vr": 0.7
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "우버은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -30.3%, 최근 1달 -2.2%이고 RSI는 39입니다. 최근 20일 범위는 63.29~72.5 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.98%, 1달 -2.2% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "UNH",
+    "n": "유나이티드헬스",
+    "c": 341.88,
+    "won": 458444,
+    "ch": 1.73,
+    "w1": -12.3,
+    "m1": -16.8,
+    "hi": -25.9,
+    "a50": false,
+    "a200": false,
+    "rsi": 32,
+    "why": "",
+    "mini": {
+     "mn": 319.13,
+     "mx": 420.8599,
+     "b": "+v/g5uvt3+Xc89fd7fDW5vDz2tza4bzMydjD1sLzuOLq8rzArsOtvMXIvMXI3MTY1tfD0tfay9je4Mzd6fHh6cnLqrGqqzpNUFcOHDRHMDQILQAqJUUaOQ==",
+     "res": 416.19,
+     "sup": 319.13,
+     "ma5": 339.64,
+     "ma20": 387.36,
+     "ma50": 387.07,
+     "ma200": 369.17,
+     "vr": 0.95
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "유나이티드헬스은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -25.9%, 최근 1달 -16.8%이고 RSI는 32입니다. 최근 20일 범위는 319.13~416.19 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.73%, 1달 -16.8% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "V",
+    "n": "비자",
+    "c": 416.78,
+    "won": 558881,
+    "ch": 1.8,
+    "w1": 0.0,
+    "m1": 3.1,
+    "hi": -5.8,
+    "a50": true,
+    "a200": true,
+    "rsi": 55,
+    "why": "",
+    "mini": {
+     "mn": 394.0,
+     "mx": 442.2254,
+     "b": "PkguNisyEioHOQAjOmAzV3B6XmhyrWynlp2AjLHim+H3/5SXbJ9jl5+sfZWRpIWZe6h3p7u/ioudsZeovMSlrJuldnh0fl5wWmckLDNOJio1XDVRT3lHeA==",
+     "res": 442.23,
+     "sup": 394.0,
+     "ma5": 409.1,
+     "ma20": 417.9,
+     "ma50": 396.14,
+     "ma200": 350.0,
+     "vr": 0.81
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "비자은(는) 50일선·200일선 위, 20일선 아래에서 방향을 고르는 중입니다. 고점 대비 -5.8%, 최근 1달 +3.1%이고 RSI는 55입니다. 최근 20일 범위는 394.0~442.23 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.80%, 1달 +3.1% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "VOO",
+    "n": "S&P500 ETF(VOO)",
+    "c": 660.71,
+    "won": 885979,
+    "ch": -0.48,
+    "w1": -1.9,
+    "m1": -6.1,
+    "hi": -8.0,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "",
+    "mini": {
+     "mn": 631.235,
+     "mx": 710.84,
+     "b": "3u7d5+745/T6//P88vfr9Nzcu8zW47/Aws/ByOHz4Ozo6YiJjqONj6PKoMK0wau7zt/J18bhxc/Y2LTHubqXnZicd4aJjnaAlp1VVk9dAA5vek9pVGVLXg==",
+     "res": 710.84,
+     "sup": 631.24,
+     "ma5": 657.9,
+     "ma20": 683.18,
+     "ma50": 697.6,
+     "ma200": 674.03,
+     "vr": 1.23
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "S&P500 ETF(VOO)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -8.0%, 최근 1달 -6.1%이고 RSI는 40입니다. 최근 20일 범위는 631.24~710.84 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -0.48%, 1달 -6.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "WDC",
+    "n": "웨스턴디지털",
+    "c": 273.95,
+    "won": 367353,
+    "ch": -7.84,
+    "w1": -3.3,
+    "m1": -23.1,
+    "hi": -65.8,
+    "a50": false,
+    "a200": false,
+    "rsi": 40,
+    "why": "저장장치 동반 하락",
+    "mini": {
+     "mn": 256.88,
+     "mx": 402.23,
+     "b": "nbySrrXmstrh9s/16v/n88HUt8DCw4qPpLWWn4ajcnVTVQ4TNTcDDBlAFzouQyI5XG1PY01oQ19VYTREKzYgKjI4Gi48RCc3Vmg9RjU4AAdSWjtHNTgWHg==",
+     "res": 402.23,
+     "sup": 256.88,
+     "ma5": 283.46,
+     "ma20": 308.99,
+     "ma50": 367.87,
+     "ma200": 422.35,
+     "vr": 0.76
+    },
+    "news": {
+     "y": [
+      {
+       "t": "회사 악재 없이 AI 저장장치 차익 실현",
+       "u": "https://www.investing.com/news/stock-market-news/why-is-western-digital-stock-sliding-today-93CH-5048595"
+      }
+     ],
+     "t": []
+    },
+    "ai": "웨스턴디지털은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -65.8%, 최근 1달 -23.1%이고 RSI는 40입니다. 최근 20일 범위는 256.88~402.23 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 -7.84%, 1달 -23.1% · 이평선 모두 아래 약세"
+   },
+   {
+    "t": "WMT",
+    "n": "월마트",
+    "c": 132.31,
+    "won": 177421,
+    "ch": 2.11,
+    "w1": 3.8,
+    "m1": 10.0,
+    "hi": -2.1,
+    "a50": true,
+    "a200": true,
+    "rsi": 72,
+    "why": "",
+    "mini": {
+     "mn": 118.1118,
+     "mx": 132.42,
+     "b": "G0EaJxwjDBYGFQAML0AcOFpyU2Brr2urmZxzeJ7lisXk9KWraZhYhHaMYYeHknOFb45mh5uqg5CatZGy0dGuuKfCoaiUrHylY55cjaPdoq+Y1IrM0//P/Q==",
+     "res": 132.42,
+     "sup": 118.11,
+     "ma5": 128.65,
+     "ma20": 126.44,
+     "ma50": 117.54,
+     "ma200": 119.0,
+     "vr": 0.87
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "월마트은(는) 주요 이동평균선 위에서 추세를 유지하고 있습니다. 고점 대비 -2.1%, 최근 1달 +10.0%이고 RSI는 72입니다. 과열 구간이라 단기 숨 고르기가 나올 수 있습니다. 최근 20일 범위는 118.11~132.42 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +2.11%, 1달 +10.0% · 이평선 위 추세 유지 · 과열 구간"
+   },
+   {
+    "t": "XOM",
+    "n": "엑손모빌",
+    "c": 158.23,
+    "won": 212179,
+    "ch": 0.85,
+    "w1": -5.4,
+    "m1": -14.3,
+    "hi": -16.1,
+    "a50": false,
+    "a200": true,
+    "rsi": 36,
+    "why": "",
+    "mini": {
+     "mn": 156.67,
+     "mx": 188.5,
+     "b": "yuDH39jiubrA2LvL2d7C1ev/4PXb4Li4q72kp42QVmVziERFPVE3SjlHMUEqQhw+RFE+UF1yVWl2eGRwZ21OUlZnTVRKUh8fJSsPEhEnDxsKGAACBhUDDA==",
+     "res": 188.5,
+     "sup": 156.67,
+     "ma5": 158.93,
+     "ma20": 168.76,
+     "ma50": 168.95,
+     "ma200": 156.92,
+     "vr": 0.66
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "엑손모빌은(는) 200일선 위, 20일선·50일선 아래에서 방향을 고르는 중입니다. 고점 대비 -16.1%, 최근 1달 -14.3%이고 RSI는 36입니다. 최근 20일 범위는 156.67~188.5 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +0.85%, 1달 -14.3% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "SPCX",
+    "n": "스페이스X",
+    "c": 134.75,
+    "won": 180693,
+    "ch": 1.05,
+    "w1": -6.1,
+    "m1": 0.0,
+    "hi": -40.3,
+    "a50": false,
+    "a200": false,
+    "rsi": 46,
+    "why": "",
+    "mini": {
+     "mn": 120.39,
+     "mx": 147.6,
+     "b": "pLqEhrfAhJOcy5CWotGgxHi8d5JnbAAeY4xNgkSSMI+X1ozLsOai1dfoq7Wk/6O3uc2Yr7/NkpWquImfqsyfyNbzw9nm/I6pbH43RY6QN1a4yXd5aslfhw==",
+     "res": 147.6,
+     "sup": 120.39,
+     "ma5": 132.78,
+     "ma20": 136.69,
+     "ma50": 146.44,
+     "ma200": null,
+     "vr": 0.0
+    },
+    "news": {
+     "y": [],
+     "t": []
+    },
+    "ai": "스페이스X은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -40.3%, 최근 1달 +0.0%이고 RSI는 46입니다. 최근 20일 범위는 120.39~147.6 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "어제 +1.05%, 1달 +0.0% · 이평선 사이에서 방향 탐색"
+   },
+   {
+    "t": "SNXX",
+    "n": "샌디스크 2배(SNXX)",
+    "c": 1.65,
+    "won": 2213,
+    "ch": -21.05,
+    "w1": -42.5,
+    "m1": -80.3,
+    "hi": -96.7,
+    "a50": false,
+    "a200": false,
+    "rsi": 27,
+    "why": "샌디스크 -11%를 2배로",
+    "mini": {
+     "mn": 1.49,
+     "mx": 10.4598,
+     "b": "wtC6xMnaxdfr/+X98/Xb37G6iJaZmXt9h5WFjX2LaHBZWywtQUQvMzdCMT44RTA4R1pFUjtMN0lDSTM7LjEoKiosHScpKh4jKjEeHxgZBggeIBERCwwABQ==",
+     "res": 10.46,
+     "sup": 1.49,
+     "ma5": 2.16,
+     "ma20": 4.32,
+     "ma50": 9.99,
+     "ma200": 14.0,
+     "vr": 1.15
+    },
+    "news": {
+     "y": [
+      {
+       "t": "기초자산 샌디스크 -11.1%를 2배로 반영",
+       "u": "https://ca.investing.com/news/stock-market-news/why-is-sandisk-stock-sliding-today-93CH-4978673"
+      }
+     ],
+     "t": []
+    },
+    "ai": "샌디스크 2배(SNXX)은(는) 20·50·200일선 아래에 있어 단기·중기 흐름이 모두 약합니다. 고점 대비 -96.7%, 최근 1달 -80.3%이고 RSI는 27입니다. 과매도 구간이라 기술적 반등이 나올 수 있지만 추세 전환 신호는 아닙니다. 최근 20일 범위는 1.49~10.46 사이로, 이 범위를 벗어나는 방향이 다음 흐름을 정할 가능성이 큽니다.",
+    "h": "샌디스크 -11%를 2배로 -21%"
+   }
+  ]
+ },
+ "indicators": [
+  {
+   "name": "12월 금리 인상 확률",
+   "v": 95.1,
+   "d": 1,
+   "suf": "%",
+   "src": "https://en.coinotag.com/traders-price-december-fed-rate-hike-odds-pce"
+  },
+  {
+   "name": "VIX",
+   "v": 26.36,
+   "d": 2,
+   "chg": -0.98,
+   "src": "https://finance.yahoo.com/quote/%5EVIX/history"
+  },
+  {
+   "name": "미 국채 10년",
+   "v": 4.9,
+   "d": 2,
+   "suf": "%",
+   "chg": -0.02,
+   "chgsuf": "%p",
+   "src": "https://finance.yahoo.com/quote/%5ETNX/history"
+  },
+  {
+   "name": "달러인덱스",
+   "v": 103.85,
+   "d": 2,
+   "chg": -0.45,
+   "src": "https://finance.yahoo.com/quote/DX-Y.NYB/history"
+  },
+  {
+   "name": "WTI 유가",
+   "v": 81.58,
+   "d": 2,
+   "chg": 1.76,
+   "src": "https://finance.yahoo.com/quote/CL%3DF/history"
+  },
+  {
+   "name": "금",
+   "v": 3556.6,
+   "d": 1,
+   "chg": -2.6,
+   "src": "https://finance.yahoo.com/quote/GC%3DF/history"
+  },
+  {
+   "name": "원/달러",
+   "v": 1340.95,
+   "d": 2,
+   "chg": 0.04,
+   "src": "https://finance.yahoo.com/quote/KRW%3DX/history"
+  }
+ ],
+ "treemap": {
+  "items": [
+   {
+    "t": "AAPL",
+    "w": 7.83,
+    "ch": 1.43,
+    "s": "정보기술",
+    "n": "애플",
+    "d": {
+     "o": 348.06,
+     "h": 354.4,
+     "l": 345.88,
+     "c": 354.07,
+     "ch": 1.43,
+     "v": 35275878,
+     "vr": 0.7,
+     "w1": 0.6,
+     "m1": 3.0,
+     "ma20": 348.08,
+     "ma50": 342.58,
+     "hi": 360.83,
+     "lo": 309.4
+    }
+   },
+   {
+    "t": "NVDA",
+    "w": 5.66,
+    "ch": -5.86,
+    "s": "정보기술",
+    "n": "엔비디아",
+    "d": {
+     "o": 159.1,
+     "h": 159.92,
+     "l": 150.5,
+     "c": 155.38,
+     "ch": -5.86,
+     "v": 341819709,
+     "vr": 1.06,
+     "w1": -0.1,
+     "m1": -28.1,
+     "ma20": 175.78,
+     "ma50": 204.95,
+     "hi": 243.37,
+     "lo": 124.5
+    }
+   },
+   {
+    "t": "MSFT",
+    "w": 5.62,
+    "ch": 0.74,
+    "s": "정보기술",
+    "n": "마이크로소프트",
+    "d": {
+     "o": 490.13,
+     "h": 501.82,
+     "l": 488.43,
+     "c": 496.13,
+     "ch": 0.74,
+     "v": 19920659,
+     "vr": 0.65,
+     "w1": -2.0,
+     "m1": -6.8,
+     "ma20": 519.19,
+     "ma50": 519.56,
+     "hi": 559.15,
+     "lo": 481.03
+    }
+   },
+   {
+    "t": "AMZN",
+    "w": 4.15,
+    "ch": -1.21,
+    "s": "경기소비재",
+    "n": "아마존",
+    "d": {
+     "o": 252.29,
+     "h": 255.56,
+     "l": 250.53,
+     "c": 252.29,
+     "ch": -1.21,
+     "v": 30474134,
+     "vr": 0.56,
+     "w1": -2.2,
+     "m1": 1.3,
+     "ma20": 257.7,
+     "ma50": 255.15,
+     "hi": 275.34,
+     "lo": 229.36
+    }
+   },
+   {
+    "t": "GOOGL",
+    "w": 2.69,
+    "ch": -1.08,
+    "s": "커뮤니케이션",
+    "n": "알파벳(구글)",
+    "d": {
+     "o": 281.6,
+     "h": 281.78,
+     "l": 276.03,
+     "c": 279.05,
+     "ch": -1.08,
+     "v": 28833758,
+     "vr": 0.62,
+     "w1": -0.4,
+     "m1": -11.9,
+     "ma20": 285.64,
+     "ma50": 319.64,
+     "hi": 364.17,
+     "lo": 264.22
+    }
+   },
+   {
+    "t": "GOOG",
+    "w": 2.53,
+    "ch": -1.06,
+    "s": "커뮤니케이션",
+    "n": "Alphabet Inc. Class C Capital Stock",
+    "d": {
+     "o": 279.06,
+     "h": 279.06,
+     "l": 273.91,
+     "c": 276.58,
+     "ch": -1.06,
+     "v": 20258644,
+     "vr": 0.67,
+     "w1": -0.4,
+     "m1": -12.0,
+     "ma20": 283.52,
+     "ma50": 316.65,
+     "hi": 359.98,
+     "lo": 262.27
+    }
+   },
+   {
+    "t": "TSLA",
+    "w": 2.32,
+    "ch": -0.2,
+    "s": "경기소비재",
+    "n": "테슬라",
+    "d": {
+     "o": 383.77,
+     "h": 390.09,
+     "l": 375.5,
+     "c": 384.68,
+     "ch": -0.2,
+     "v": 25596027,
+     "vr": 0.7,
+     "w1": 1.2,
+     "m1": -1.8,
+     "ma20": 383.35,
+     "ma50": 376.73,
+     "hi": 414.23,
+     "lo": 338.15
+    }
+   },
+   {
+    "t": "META",
+    "w": 2.3,
+    "ch": -1.3,
+    "s": "커뮤니케이션",
+    "n": "메타",
+    "d": {
+     "o": 589.5,
+     "h": 600.32,
+     "l": 584.26,
+     "c": 589.82,
+     "ch": -1.3,
+     "v": 10659832,
+     "vr": 0.51,
+     "w1": -4.7,
+     "m1": -6.5,
+     "ma20": 615.4,
+     "ma50": 673.68,
+     "hi": 779.82,
+     "lo": 556.1
+    }
+   },
+   {
+    "t": "AVGO",
+    "w": 2.22,
+    "ch": -3.98,
+    "s": "정보기술",
+    "n": "브로드컴",
+    "d": {
+     "o": 301.29,
+     "h": 309.18,
+     "l": 297.8,
+     "c": 301.08,
+     "ch": -3.98,
+     "v": 28284050,
+     "vr": 0.9,
+     "w1": -11.9,
+     "m1": -8.5,
+     "ma20": 329.54,
+     "ma50": 341.32,
+     "hi": 380.84,
+     "lo": 289.77
+    }
+   },
+   {
+    "t": "LLY",
+    "w": 1.91,
+    "ch": 3.15,
+    "s": "헬스케어",
+    "n": "일라이 릴리",
+    "d": {
+     "o": 1370.23,
+     "h": 1415.0,
+     "l": 1369.84,
+     "c": 1407.59,
+     "ch": 3.15,
+     "v": 2683108,
+     "vr": 0.84,
+     "w1": -0.6,
+     "m1": 10.0,
+     "ma20": 1394.47,
+     "ma50": 1276.87,
+     "hi": 1475.25,
+     "lo": 1113.29
+    }
+   },
+   {
+    "t": "BRK.B",
+    "w": 1.87,
+    "ch": 0.85,
+    "s": "금융",
+    "n": "BERKSHIRE HATHAWAY Class B",
+    "d": {
+     "o": 574.0,
+     "h": 579.79,
+     "l": 571.34,
+     "c": 577.21,
+     "ch": 0.85,
+     "v": 3787673,
+     "vr": 0.71,
+     "w1": -1.6,
+     "m1": 5.2,
+     "ma20": 571.79,
+     "ma50": 539.22,
+     "hi": 596.92,
+     "lo": 495.96
+    }
+   },
+   {
+    "t": "WMT",
+    "w": 1.6,
+    "ch": 2.11,
+    "s": "필수소비재",
+    "n": "월마트",
+    "d": {
+     "o": 129.94,
+     "h": 132.42,
+     "l": 129.74,
+     "c": 132.31,
+     "ch": 2.11,
+     "v": 21027560,
+     "vr": 0.87,
+     "w1": 3.8,
+     "m1": 10.0,
+     "ma20": 126.44,
+     "ma50": 117.54,
+     "hi": 132.42,
+     "lo": 102.27
+    }
+   },
+   {
+    "t": "JPM",
+    "w": 1.28,
+    "ch": 0.14,
+    "s": "금융",
+    "n": "JP모건",
+    "d": {
+     "o": 314.78,
+     "h": 319.01,
+     "l": 313.62,
+     "c": 317.1,
+     "ch": 0.14,
+     "v": 6282675,
+     "vr": 0.88,
+     "w1": -3.9,
+     "m1": -5.1,
+     "ma20": 334.79,
+     "ma50": 335.97,
+     "hi": 362.86,
+     "lo": 309.18
+    }
+   },
+   {
+    "t": "V",
+    "w": 1.18,
+    "ch": 1.8,
+    "s": "금융",
+    "n": "비자",
+    "d": {
+     "o": 409.0,
+     "h": 416.87,
+     "l": 407.4,
+     "c": 416.78,
+     "ch": 1.8,
+     "v": 6047965,
+     "vr": 0.81,
+     "w1": 0.0,
+     "m1": 3.1,
+     "ma20": 417.9,
+     "ma50": 396.14,
+     "hi": 442.23,
+     "lo": 356.75
+    }
+   },
+   {
+    "t": "MU",
+    "w": 1.09,
+    "ch": -11.01,
+    "s": "정보기술",
+    "n": "마이크론",
+    "d": {
+     "o": 669.39,
+     "h": 672.07,
+     "l": 622.22,
+     "c": 629.79,
+     "ch": -11.01,
+     "v": 35838787,
+     "vr": 1.02,
+     "w1": -11.6,
+     "m1": -30.3,
+     "ma20": 761.9,
+     "ma50": 901.98,
+     "hi": 1108.72,
+     "lo": 585.25
+    }
+   },
+   {
+    "t": "AMD",
+    "w": 1.05,
+    "ch": -8.86,
+    "s": "정보기술",
+    "n": "AMD",
+    "d": {
+     "o": 425.13,
+     "h": 428.87,
+     "l": 396.01,
+     "c": 413.27,
+     "ch": -8.86,
+     "v": 43664505,
+     "vr": 0.99,
+     "w1": -17.9,
+     "m1": -22.2,
+     "ma20": 497.84,
+     "ma50": 550.48,
+     "hi": 658.52,
+     "lo": 396.01
+    }
+   },
+   {
+    "t": "JNJ",
+    "w": 1.01,
+    "ch": 2.37,
+    "s": "헬스케어",
+    "n": "존슨앤드존슨",
+    "d": {
+     "o": 269.99,
+     "h": 276.85,
+     "l": 268.08,
+     "c": 276.46,
+     "ch": 2.37,
+     "v": 5789637,
+     "vr": 0.72,
+     "w1": -0.8,
+     "m1": 3.8,
+     "ma20": 275.58,
+     "ma50": 267.69,
+     "hi": 290.25,
+     "lo": 245.17
+    }
+   },
+   {
+    "t": "XOM",
+    "w": 0.98,
+    "ch": 0.85,
+    "s": "에너지",
+    "n": "엑손모빌",
+    "d": {
+     "o": 157.42,
+     "h": 159.32,
+     "l": 157.06,
+     "c": 158.23,
+     "ch": 0.85,
+     "v": 10100117,
+     "vr": 0.66,
+     "w1": -5.4,
+     "m1": -14.3,
+     "ma20": 168.76,
+     "ma50": 168.95,
+     "hi": 188.5,
+     "lo": 155.32
+    }
+   },
+   {
+    "t": "MA",
+    "w": 0.86,
+    "ch": 1.88,
+    "s": "금융",
+    "n": "마스터카드",
+    "d": {
+     "o": 635.04,
+     "h": 648.66,
+     "l": 632.05,
+     "c": 647.44,
+     "ch": 1.88,
+     "v": 2285879,
+     "vr": 0.69,
+     "w1": 0.3,
+     "m1": 5.5,
+     "ma20": 647.28,
+     "ma50": 609.77,
+     "hi": 681.99,
+     "lo": 545.4
+    }
+   },
+   {
+    "t": "ABBV",
+    "w": 0.81,
+    "ch": 4.1,
+    "s": "헬스케어",
+    "n": "ABBVIE INC.",
+    "d": {
+     "o": 291.18,
+     "h": 301.0,
+     "l": 288.7,
+     "c": 300.28,
+     "ch": 4.1,
+     "v": 4698544,
+     "vr": 0.86,
+     "w1": 2.5,
+     "m1": 4.7,
+     "ma20": 291.22,
+     "ma50": 280.28,
+     "hi": 302.93,
+     "lo": 246.77
+    }
+   },
+   {
+    "t": "COST",
+    "w": 0.74,
+    "ch": -0.56,
+    "s": "필수소비재",
+    "n": "코스트코",
+    "d": {
+     "o": 1071.38,
+     "h": 1094.75,
+     "l": 1067.92,
+     "c": 1091.71,
+     "ch": -0.56,
+     "v": 2338725,
+     "vr": 0.9,
+     "w1": -1.7,
+     "m1": 8.6,
+     "ma20": 1067.05,
+     "ma50": 994.12,
+     "hi": 1123.67,
+     "lo": 883.1
+    }
+   },
+   {
+    "t": "KO",
+    "w": 0.64,
+    "ch": 1.81,
+    "s": "필수소비재",
+    "n": "코카콜라",
+    "d": {
+     "o": 96.24,
+     "h": 98.3,
+     "l": 95.65,
+     "c": 97.62,
+     "ch": 1.81,
+     "v": 16957630,
+     "vr": 0.86,
+     "w1": -1.2,
+     "m1": 5.3,
+     "ma20": 96.33,
+     "ma50": 92.12,
+     "hi": 100.56,
+     "lo": 85.13
+    }
+   },
+   {
+    "t": "CVX",
+    "w": 0.62,
+    "ch": -1.06,
+    "s": "에너지",
+    "n": "셰브론",
+    "d": {
+     "o": 206.0,
+     "h": 209.12,
+     "l": 205.34,
+     "c": 206.17,
+     "ch": -1.06,
+     "v": 8863605,
+     "vr": 1.04,
+     "w1": -5.1,
+     "m1": -11.6,
+     "ma20": 217.58,
+     "ma50": 215.26,
+     "hi": 236.48,
+     "lo": 197.82
+    }
+   },
+   {
+    "t": "PG",
+    "w": 0.61,
+    "ch": 1.69,
+    "s": "필수소비재",
+    "n": "Procter & Gamble Company",
+    "d": {
+     "o": 170.91,
+     "h": 173.27,
+     "l": 169.83,
+     "c": 172.47,
+     "ch": 1.69,
+     "v": 6914511,
+     "vr": 0.71,
+     "w1": 0.4,
+     "m1": 7.8,
+     "ma20": 167.13,
+     "ma50": 157.83,
+     "hi": 173.59,
+     "lo": 141.86
+    }
+   },
+   {
+    "t": "PLTR",
+    "w": 0.59,
+    "ch": 1.14,
+    "s": "정보기술",
+    "n": "팔란티어",
+    "d": {
+     "o": 157.63,
+     "h": 163.02,
+     "l": 157.62,
+     "c": 161.18,
+     "ch": 1.14,
+     "v": 18463702,
+     "vr": 0.72,
+     "w1": 3.0,
+     "m1": -18.9,
+     "ma20": 167.97,
+     "ma50": 182.75,
+     "hi": 212.94,
+     "lo": 142.28
+    }
+   },
+   {
+    "t": "CSCO",
+    "w": 0.56,
+    "ch": -2.9,
+    "s": "정보기술",
+    "n": "Cisco Systems, Inc. Common Stock (DE)",
+    "d": {
+     "o": 95.7,
+     "h": 96.0,
+     "l": 92.67,
+     "c": 93.99,
+     "ch": -2.9,
+     "v": 18091030,
+     "vr": 0.8,
+     "w1": -1.2,
+     "m1": -14.7,
+     "ma20": 98.97,
+     "ma50": 105.67,
+     "hi": 118.65,
+     "lo": 89.98
+    }
+   },
+   {
+    "t": "HD",
+    "w": 0.54,
+    "ch": 2.2,
+    "s": "경기소비재",
+    "n": "Home Depot, Inc.",
+    "d": {
+     "o": 346.06,
+     "h": 354.81,
+     "l": 343.2,
+     "c": 353.69,
+     "ch": 2.2,
+     "v": 3767800,
+     "vr": 0.74,
+     "w1": 4.3,
+     "m1": 10.7,
+     "ma20": 342.59,
+     "ma50": 316.63,
+     "hi": 362.44,
+     "lo": 277.15
+    }
+   },
+   {
+    "t": "MRK",
+    "w": 0.53,
+    "ch": 4.5,
+    "s": "헬스케어",
+    "n": "Merck & Co., Inc.",
+    "d": {
+     "o": 135.85,
+     "h": 142.08,
+     "l": 134.01,
+     "c": 141.57,
+     "ch": 4.5,
+     "v": 13009207,
+     "vr": 1.39,
+     "w1": -1.3,
+     "m1": 0.7,
+     "ma20": 144.09,
+     "ma50": 145.04,
+     "hi": 154.02,
+     "lo": 131.36
+    }
+   },
+   {
+    "t": "ORCL",
+    "w": 0.52,
+    "ch": -3.68,
+    "s": "정보기술",
+    "n": "오라클",
+    "d": {
+     "o": 111.38,
+     "h": 112.25,
+     "l": 108.24,
+     "c": 109.5,
+     "ch": -3.68,
+     "v": 18514402,
+     "vr": 0.43,
+     "w1": -4.8,
+     "m1": -13.1,
+     "ma20": 120.83,
+     "ma50": 130.9,
+     "hi": 170.7,
+     "lo": 100.25
+    }
+   },
+   {
+    "t": "BAC",
+    "w": 0.51,
+    "ch": 0.87,
+    "s": "금융",
+    "n": "뱅크오브아메리카",
+    "d": {
+     "o": 47.88,
+     "h": 48.89,
+     "l": 47.81,
+     "c": 48.56,
+     "ch": 0.87,
+     "v": 34846038,
+     "vr": 0.99,
+     "w1": -1.8,
+     "m1": -3.9,
+     "ma20": 49.81,
+     "ma50": 52.25,
+     "hi": 63.83,
+     "lo": 46.88
+    }
+   },
+   {
+    "t": "GE",
+    "w": 0.5,
+    "ch": -1.01,
+    "s": "산업재",
+    "n": "GE Aerospace",
+    "d": {
+     "o": 319.73,
+     "h": 321.35,
+     "l": 312.22,
+     "c": 318.03,
+     "ch": -1.01,
+     "v": 3932699,
+     "vr": 0.81,
+     "w1": -2.6,
+     "m1": 10.3,
+     "ma20": 322.31,
+     "ma50": 314.33,
+     "hi": 353.5,
+     "lo": 278.37
+    }
+   },
+   {
+    "t": "UNH",
+    "w": 0.47,
+    "ch": 1.73,
+    "s": "헬스케어",
+    "n": "유나이티드헬스",
+    "d": {
+     "o": 334.0,
+     "h": 346.46,
+     "l": 329.5,
+     "c": 341.88,
+     "ch": 1.73,
+     "v": 6828099,
+     "vr": 0.95,
+     "w1": -12.3,
+     "m1": -16.8,
+     "ma20": 387.36,
+     "ma50": 387.07,
+     "hi": 426.55,
+     "lo": 319.13
+    }
+   },
+   {
+    "t": "INTC",
+    "w": 0.45,
+    "ch": -8.15,
+    "s": "정보기술",
+    "n": "인텔",
+    "d": {
+     "o": 57.3,
+     "h": 57.54,
+     "l": 53.54,
+     "c": 54.8,
+     "ch": -8.15,
+     "v": 118471511,
+     "vr": 0.75,
+     "w1": -0.7,
+     "m1": -39.4,
+     "ma20": 61.42,
+     "ma50": 88.63,
+     "hi": 127.44,
+     "lo": 51.1
+    }
+   },
+   {
+    "t": "PANW",
+    "w": 0.44,
+    "ch": -0.12,
+    "s": "정보기술",
+    "n": "팔로알토 네트웍스",
+    "d": {
+     "o": 349.0,
+     "h": 358.88,
+     "l": 346.44,
+     "c": 352.99,
+     "ch": -0.12,
+     "v": 5266705,
+     "vr": 0.66,
+     "w1": 14.1,
+     "m1": -9.6,
+     "ma20": 341.64,
+     "ma50": 366.57,
+     "hi": 432.32,
+     "lo": 301.28
+    }
+   },
+   {
+    "t": "PM",
+    "w": 0.44,
+    "ch": 0.79,
+    "s": "필수소비재",
+    "n": "Philip Morris International Inc.",
+    "d": {
+     "o": 182.54,
+     "h": 186.38,
+     "l": 181.44,
+     "c": 183.95,
+     "ch": 0.79,
+     "v": 6215746,
+     "vr": 1.12,
+     "w1": -5.4,
+     "m1": -8.9,
+     "ma20": 197.32,
+     "ma50": 196.24,
+     "hi": 214.35,
+     "lo": 181.01
+    }
+   },
+   {
+    "t": "RTX",
+    "w": 0.4,
+    "ch": 0.29,
+    "s": "산업재",
+    "n": "RTX Corporation",
+    "d": {
+     "o": 195.31,
+     "h": 197.71,
+     "l": 194.26,
+     "c": 195.33,
+     "ch": 0.29,
+     "v": 3422227,
+     "vr": 0.66,
+     "w1": -1.3,
+     "m1": -1.1,
+     "ma20": 197.02,
+     "ma50": 192.4,
+     "hi": 213.5,
+     "lo": 179.02
+    }
+   },
+   {
+    "t": "MS",
+    "w": 0.4,
+    "ch": -2.21,
+    "s": "금융",
+    "n": "Morgan Stanley",
+    "d": {
+     "o": 170.6,
+     "h": 174.02,
+     "l": 167.4,
+     "c": 168.79,
+     "ch": -2.21,
+     "v": 8408769,
+     "vr": 1.29,
+     "w1": -8.0,
+     "m1": -8.0,
+     "ma20": 183.57,
+     "ma50": 187.58,
+     "hi": 218.5,
+     "lo": 164.91
+    }
+   },
+   {
+    "t": "TMO",
+    "w": 0.39,
+    "ch": 1.1,
+    "s": "헬스케어",
+    "n": "Thermo Fisher Scientific, Inc.",
+    "d": {
+     "o": 688.25,
+     "h": 710.0,
+     "l": 688.25,
+     "c": 695.62,
+     "ch": 1.1,
+     "v": 1463677,
+     "vr": 0.76,
+     "w1": 1.3,
+     "m1": 1.6,
+     "ma20": 696.96,
+     "ma50": 681.07,
+     "hi": 727.56,
+     "lo": 594.82
+    }
+   },
+   {
+    "t": "AMAT",
+    "w": 0.39,
+    "ch": -6.66,
+    "s": "정보기술",
+    "n": "Applied Materials Inc",
+    "d": {
+     "o": 334.59,
+     "h": 337.05,
+     "l": 313.83,
+     "c": 323.76,
+     "ch": -6.66,
+     "v": 7334719,
+     "vr": 0.83,
+     "w1": -7.3,
+     "m1": -16.5,
+     "ma20": 362.96,
+     "ma50": 422.14,
+     "hi": 547.25,
+     "lo": 300.62
+    }
+   },
+   {
+    "t": "AMGN",
+    "w": 0.39,
+    "ch": 5.55,
+    "s": "헬스케어",
+    "n": "Amgen Inc",
+    "d": {
+     "o": 452.25,
+     "h": 474.13,
+     "l": 450.0,
+     "c": 473.94,
+     "ch": 5.55,
+     "v": 2675454,
+     "vr": 0.94,
+     "w1": 3.5,
+     "m1": 6.6,
+     "ma20": 459.87,
+     "ma50": 433.76,
+     "hi": 483.99,
+     "lo": 374.46
+    }
+   },
+   {
+    "t": "CAT",
+    "w": 0.38,
+    "ch": -1.17,
+    "s": "산업재",
+    "n": "Caterpillar Inc.",
+    "d": {
+     "o": 539.78,
+     "h": 544.29,
+     "l": 528.61,
+     "c": 540.63,
+     "ch": -1.17,
+     "v": 2845006,
+     "vr": 0.68,
+     "w1": -5.3,
+     "m1": -21.9,
+     "ma20": 587.54,
+     "ma50": 704.62,
+     "hi": 876.95,
+     "lo": 508.11
+    }
+   },
+   {
+    "t": "LRCX",
+    "w": 0.37,
+    "ch": -6.48,
+    "s": "정보기술",
+    "n": "Lam Research Corp",
+    "d": {
+     "o": 202.06,
+     "h": 203.17,
+     "l": 190.44,
+     "c": 196.16,
+     "ch": -6.48,
+     "v": 12916280,
+     "vr": 0.93,
+     "w1": -6.9,
+     "m1": -17.4,
+     "ma20": 218.9,
+     "ma50": 264.49,
+     "hi": 352.56,
+     "lo": 181.77
+    }
+   },
+   {
+    "t": "WFC",
+    "w": 0.37,
+    "ch": 1.49,
+    "s": "금융",
+    "n": "Wells Fargo & Co.",
+    "d": {
+     "o": 79.79,
+     "h": 81.46,
+     "l": 79.14,
+     "c": 81.19,
+     "ch": 1.49,
+     "v": 9355622,
+     "vr": 0.76,
+     "w1": -1.8,
+     "m1": -1.8,
+     "ma20": 83.86,
+     "ma50": 83.07,
+     "hi": 91.99,
+     "lo": 78.0
+    }
+   },
+   {
+    "t": "NFLX",
+    "w": 0.37,
+    "ch": 1.33,
+    "s": "커뮤니케이션",
+    "n": "넷플릭스",
+    "d": {
+     "o": 57.88,
+     "h": 59.72,
+     "l": 57.57,
+     "c": 58.87,
+     "ch": 1.33,
+     "v": 31911361,
+     "vr": 0.78,
+     "w1": -1.4,
+     "m1": -7.9,
+     "ma20": 61.81,
+     "ma50": 66.58,
+     "hi": 83.6,
+     "lo": 56.56
+    }
+   },
+   {
+    "t": "LIN",
+    "w": 0.36,
+    "ch": -0.03,
+    "s": "소재",
+    "n": "Linde plc Ordinary Share",
+    "d": {
+     "o": 515.48,
+     "h": 519.64,
+     "l": 511.78,
+     "c": 516.83,
+     "ch": -0.03,
+     "v": 1759865,
+     "vr": 0.78,
+     "w1": 0.3,
+     "m1": 1.8,
+     "ma20": 516.64,
+     "ma50": 496.8,
+     "hi": 533.38,
+     "lo": 454.19
+    }
+   },
+   {
+    "t": "TXN",
+    "w": 0.36,
+    "ch": -11.25,
+    "s": "정보기술",
+    "n": "Texas Instruments Incorporated",
+    "d": {
+     "o": 277.34,
+     "h": 281.38,
+     "l": 257.84,
+     "c": 258.44,
+     "ch": -11.25,
+     "v": 12810070,
+     "vr": 1.4,
+     "w1": -12.6,
+     "m1": -13.3,
+     "ma20": 295.44,
+     "ma50": 286.84,
+     "hi": 317.2,
+     "lo": 248.13
+    }
+   },
+   {
+    "t": "GS",
+    "w": 0.35,
+    "ch": -2.14,
+    "s": "금융",
+    "n": "Goldman Sachs Group Inc.",
+    "d": {
+     "o": 815.79,
+     "h": 821.11,
+     "l": 791.31,
+     "c": 806.02,
+     "ch": -2.14,
+     "v": 2706513,
+     "vr": 1.14,
+     "w1": -8.1,
+     "m1": -9.8,
+     "ma20": 884.43,
+     "ma50": 897.73,
+     "hi": 1052.55,
+     "lo": 786.66
+    }
+   },
+   {
+    "t": "IBM",
+    "w": 0.34,
+    "ch": 1.12,
+    "s": "정보기술",
+    "n": "International Business Machines Corporation",
+    "d": {
+     "o": 232.56,
+     "h": 235.91,
+     "l": 231.6,
+     "c": 235.62,
+     "ch": 1.12,
+     "v": 2660549,
+     "vr": 0.62,
+     "w1": 2.0,
+     "m1": -7.0,
+     "ma20": 243.4,
+     "ma50": 236.77,
+     "hi": 259.87,
+     "lo": 217.79
+    }
+   },
+   {
+    "t": "GILD",
+    "w": 0.34,
+    "ch": 4.51,
+    "s": "헬스케어",
+    "n": "Gilead Sciences Inc",
+    "d": {
+     "o": 171.75,
+     "h": 179.68,
+     "l": 171.14,
+     "c": 178.29,
+     "ch": 4.51,
+     "v": 7964131,
+     "vr": 1.23,
+     "w1": 4.7,
+     "m1": 12.4,
+     "ma20": 168.84,
+     "ma50": 158.38,
+     "hi": 179.68,
+     "lo": 142.6
+    }
+   },
+   {
+    "t": "CRWD",
+    "w": 0.33,
+    "ch": 0.9,
+    "s": "정보기술",
+    "n": "크라우드스트라이크",
+    "d": {
+     "o": 210.53,
+     "h": 215.5,
+     "l": 208.11,
+     "c": 210.86,
+     "ch": 0.9,
+     "v": 16267449,
+     "vr": 1.49,
+     "w1": -4.0,
+     "m1": -19.5,
+     "ma20": 232.61,
+     "ma50": 245.88,
+     "hi": 286.99,
+     "lo": 200.53
+    }
+   },
+   {
+    "t": "ANET",
+    "w": 0.32,
+    "ch": -5.47,
+    "s": "정보기술",
+    "n": "Arista Networks",
+    "d": {
+     "o": 173.38,
+     "h": 175.41,
+     "l": 164.9,
+     "c": 168.56,
+     "ch": -5.47,
+     "v": 6370163,
+     "vr": 0.68,
+     "w1": -9.6,
+     "m1": -4.9,
+     "ma20": 181.28,
+     "ma50": 191.34,
+     "hi": 217.41,
+     "lo": 158.34
+    }
+   },
+   {
+    "t": "DIS",
+    "w": 0.32,
+    "ch": 1.86,
+    "s": "커뮤니케이션",
+    "n": "디즈니",
+    "d": {
+     "o": 119.76,
+     "h": 122.87,
+     "l": 119.21,
+     "c": 122.51,
+     "ch": 1.86,
+     "v": 10183607,
+     "vr": 1.02,
+     "w1": 4.8,
+     "m1": 11.0,
+     "ma20": 117.26,
+     "ma50": 111.14,
+     "hi": 123.37,
+     "lo": 101.15
+    }
+   },
+   {
+    "t": "AXP",
+    "w": 0.31,
+    "ch": 0.56,
+    "s": "금융",
+    "n": "American Express Company",
+    "d": {
+     "o": 305.97,
+     "h": 311.09,
+     "l": 305.0,
+     "c": 308.63,
+     "ch": 0.56,
+     "v": 1973964,
+     "vr": 0.69,
+     "w1": -2.3,
+     "m1": -2.0,
+     "ma20": 319.04,
+     "ma50": 313.63,
+     "hi": 343.88,
+     "lo": 297.2
+    }
+   },
+   {
+    "t": "MCD",
+    "w": 0.3,
+    "ch": 1.56,
+    "s": "경기소비재",
+    "n": "맥도날드",
+    "d": {
+     "o": 277.73,
+     "h": 282.09,
+     "l": 276.25,
+     "c": 280.7,
+     "ch": 1.56,
+     "v": 3070282,
+     "vr": 0.55,
+     "w1": 1.8,
+     "m1": 11.9,
+     "ma20": 272.03,
+     "ma50": 253.18,
+     "hi": 283.53,
+     "lo": 229.2
+    }
+   },
+   {
+    "t": "VZ",
+    "w": 0.3,
+    "ch": 1.53,
+    "s": "커뮤니케이션",
+    "n": "Verizon Communications",
+    "d": {
+     "o": 46.8,
+     "h": 47.44,
+     "l": 46.44,
+     "c": 47.16,
+     "ch": 1.53,
+     "v": 16508881,
+     "vr": 0.73,
+     "w1": 2.7,
+     "m1": 9.4,
+     "ma20": 45.8,
+     "ma50": 45.65,
+     "hi": 51.66,
+     "lo": 40.81
+    }
+   },
+   {
+    "t": "PEP",
+    "w": 0.3,
+    "ch": 1.76,
+    "s": "필수소비재",
+    "n": "펩시코",
+    "d": {
+     "o": 141.05,
+     "h": 143.6,
+     "l": 140.0,
+     "c": 142.68,
+     "ch": 1.76,
+     "v": 7071393,
+     "vr": 0.71,
+     "w1": 0.5,
+     "m1": 5.3,
+     "ma20": 140.89,
+     "ma50": 134.34,
+     "hi": 148.25,
+     "lo": 123.47
+    }
+   },
+   {
+    "t": "DELL",
+    "w": 0.29,
+    "ch": -11.83,
+    "s": "정보기술",
+    "n": "Dell Technologies Inc.",
+    "d": {
+     "o": 311.0,
+     "h": 318.22,
+     "l": 290.5,
+     "c": 295.28,
+     "ch": -11.83,
+     "v": 15304307,
+     "vr": 1.81,
+     "w1": -8.5,
+     "m1": -36.8,
+     "ma20": 357.99,
+     "ma50": 462.14,
+     "hi": 595.51,
+     "lo": 274.35
+    }
+   },
+   {
+    "t": "GEV",
+    "w": 0.29,
+    "ch": -4.77,
+    "s": "산업재",
+    "n": "GE Vernova Inc.",
+    "d": {
+     "o": 738.09,
+     "h": 748.44,
+     "l": 708.96,
+     "c": 720.65,
+     "ch": -4.77,
+     "v": 3413483,
+     "vr": 0.75,
+     "w1": -7.6,
+     "m1": -15.7,
+     "ma20": 804.33,
+     "ma50": 888.1,
+     "hi": 1052.78,
+     "lo": 691.72
+    }
+   },
+   {
+    "t": "C",
+    "w": 0.29,
+    "ch": -0.44,
+    "s": "금융",
+    "n": "Citigroup Inc.",
+    "d": {
+     "o": 113.48,
+     "h": 114.52,
+     "l": 111.95,
+     "c": 113.85,
+     "ch": -0.44,
+     "v": 9397476,
+     "vr": 0.93,
+     "w1": -5.1,
+     "m1": -5.9,
+     "ma20": 120.49,
+     "ma50": 124.87,
+     "hi": 141.27,
+     "lo": 110.16
+    }
+   },
+   {
+    "t": "ABT",
+    "w": 0.28,
+    "ch": 1.96,
+    "s": "헬스케어",
+    "n": "Abbott Laboratories"
+   },
+   {
+    "t": "APH",
+    "w": 0.28,
+    "ch": -5.09,
+    "s": "정보기술",
+    "n": "Amphenol Corporation",
+    "d": {
+     "o": 76.09,
+     "h": 76.76,
+     "l": 72.37,
+     "c": 73.47,
+     "ch": -5.09,
+     "v": 16157375,
+     "vr": 0.98,
+     "w1": -3.8,
+     "m1": -2.4,
+     "ma20": 77.69,
+     "ma50": 80.34,
+     "hi": 89.93,
+     "lo": 69.34
+    }
+   },
+   {
+    "t": "WELL",
+    "w": 0.27,
+    "ch": 1.75,
+    "s": "부동산",
+    "n": "Welltower Inc.",
+    "d": {
+     "o": 240.52,
+     "h": 245.39,
+     "l": 238.59,
+     "c": 245.14,
+     "ch": 1.75,
+     "v": 2343945,
+     "vr": 0.69,
+     "w1": -0.3,
+     "m1": 1.9,
+     "ma20": 242.63,
+     "ma50": 235.73,
+     "hi": 249.75,
+     "lo": 217.72
+    }
+   },
+   {
+    "t": "NEE",
+    "w": 0.27,
+    "ch": 0.73,
+    "s": "유틸리티",
+    "n": "NextEra Energy, Inc.",
+    "d": {
+     "o": 83.79,
+     "h": 85.05,
+     "l": 83.27,
+     "c": 84.58,
+     "ch": 0.73,
+     "v": 7153418,
+     "vr": 0.55,
+     "w1": 0.2,
+     "m1": 3.1,
+     "ma20": 84.99,
+     "ma50": 81.07,
+     "hi": 90.04,
+     "lo": 74.41
+    }
+   },
+   {
+    "t": "TMUS",
+    "w": 0.27,
+    "ch": 0.57,
+    "s": "커뮤니케이션",
+    "n": "T-Mobile US, Inc.",
+    "d": {
+     "o": 167.06,
+     "h": 171.01,
+     "l": 166.5,
+     "c": 167.3,
+     "ch": 0.57,
+     "v": 5473077,
+     "vr": 0.91,
+     "w1": -0.4,
+     "m1": 13.9,
+     "ma20": 163.14,
+     "ma50": 161.6,
+     "hi": 189.87,
+     "lo": 143.75
+    }
+   },
+   {
+    "t": "BLK",
+    "w": 0.27,
+    "ch": 0.13,
+    "s": "금융",
+    "n": "Blackrock, Inc.",
+    "d": {
+     "o": 1135.0,
+     "h": 1158.9,
+     "l": 1131.0,
+     "c": 1146.03,
+     "ch": 0.13,
+     "v": 557135,
+     "vr": 0.82,
+     "w1": -2.9,
+     "m1": 1.6,
+     "ma20": 1178.13,
+     "ma50": 1123.74,
+     "hi": 1242.12,
+     "lo": 1017.46
+    }
+   },
+   {
+    "t": "QCOM",
+    "w": 0.27,
+    "ch": -0.25,
+    "s": "정보기술",
+    "n": "퀄컴",
+    "d": {
+     "o": 160.66,
+     "h": 167.23,
+     "l": 160.5,
+     "c": 164.96,
+     "ch": -0.25,
+     "v": 12902490,
+     "vr": 0.84,
+     "w1": -1.0,
+     "m1": -8.2,
+     "ma20": 168.18,
+     "ma50": 176.56,
+     "hi": 205.85,
+     "lo": 148.25
+    }
+   },
+   {
+    "t": "KLAC",
+    "w": 0.26,
+    "ch": -8.36,
+    "s": "정보기술",
+    "n": "KLA Corporation Common Stock",
+    "d": {
+     "o": 138.44,
+     "h": 140.0,
+     "l": 129.54,
+     "c": 133.65,
+     "ch": -8.36,
+     "v": 14658144,
+     "vr": 0.96,
+     "w1": -7.5,
+     "m1": -10.4,
+     "ma20": 148.39,
+     "ma50": 167.57,
+     "hi": 208.68,
+     "lo": 125.72
+    }
+   },
+   {
+    "t": "UNP",
+    "w": 0.26,
+    "ch": 0.67,
+    "s": "산업재",
+    "n": "Union Pacific Corp.",
+    "d": {
+     "o": 289.11,
+     "h": 291.35,
+     "l": 286.25,
+     "c": 290.83,
+     "ch": 0.67,
+     "v": 2495750,
+     "vr": 0.83,
+     "w1": -2.1,
+     "m1": -2.1,
+     "ma20": 298.82,
+     "ma50": 288.42,
+     "hi": 309.86,
+     "lo": 268.26
+    }
+   },
+   {
+    "t": "DE",
+    "w": 0.25,
+    "ch": -3.04,
+    "s": "산업재",
+    "n": "Deere & Company",
+    "d": {
+     "o": 634.08,
+     "h": 638.54,
+     "l": 607.87,
+     "c": 613.76,
+     "ch": -3.04,
+     "v": 2117819,
+     "vr": 1.7,
+     "w1": -5.5,
+     "m1": -4.3,
+     "ma20": 658.65,
+     "ma50": 661.56,
+     "hi": 721.22,
+     "lo": 605.34
+    }
+   },
+   {
+    "t": "PFE",
+    "w": 0.25,
+    "ch": 3.87,
+    "s": "헬스케어",
+    "n": "화이자",
+    "d": {
+     "o": 27.49,
+     "h": 28.6,
+     "l": 27.38,
+     "c": 28.46,
+     "ch": 3.87,
+     "v": 29191429,
+     "vr": 0.77,
+     "w1": -0.0,
+     "m1": -4.5,
+     "ma20": 29.13,
+     "ma50": 28.83,
+     "hi": 31.44,
+     "lo": 27.12
+    }
+   },
+   {
+    "t": "SCHW",
+    "w": 0.25,
+    "ch": 1.67,
+    "s": "금융",
+    "n": "The Charles Schwab Corporation",
+    "d": {
+     "o": 91.97,
+     "h": 94.44,
+     "l": 91.92,
+     "c": 93.91,
+     "ch": 1.67,
+     "v": 7841758,
+     "vr": 0.84,
+     "w1": 2.3,
+     "m1": 4.7,
+     "ma20": 91.54,
+     "ma50": 94.69,
+     "hi": 111.01,
+     "lo": 87.37
+    }
+   },
+   {
+    "t": "DHR",
+    "w": 0.25,
+    "ch": 1.52,
+    "s": "헬스케어",
+    "n": "Danaher Corporation",
+    "d": {
+     "o": 226.79,
+     "h": 232.6,
+     "l": 226.79,
+     "c": 229.09,
+     "ch": 1.52,
+     "v": 3573873,
+     "vr": 1.05,
+     "w1": 1.5,
+     "m1": -1.7,
+     "ma20": 230.58,
+     "ma50": 225.63,
+     "hi": 238.46,
+     "lo": 199.09
+    }
+   },
+   {
+    "t": "CRM",
+    "w": 0.24,
+    "ch": 4.21,
+    "s": "정보기술",
+    "n": "세일즈포스",
+    "d": {
+     "o": 183.89,
+     "h": 194.83,
+     "l": 183.89,
+     "c": 193.26,
+     "ch": 4.21,
+     "v": 7535124,
+     "vr": 1.03,
+     "w1": -0.6,
+     "m1": -21.9,
+     "ma20": 211.9,
+     "ma50": 226.96,
+     "hi": 268.27,
+     "lo": 179.91
+    }
+   },
+   {
+    "t": "COP",
+    "w": 0.24,
+    "ch": 1.85,
+    "s": "에너지",
+    "n": "ConocoPhillips",
+    "d": {
+     "o": 132.75,
+     "h": 135.69,
+     "l": 132.41,
+     "c": 134.64,
+     "ch": 1.85,
+     "v": 5201567,
+     "vr": 0.69,
+     "w1": -3.5,
+     "m1": -11.1,
+     "ma20": 139.78,
+     "ma50": 137.17,
+     "hi": 154.28,
+     "lo": 123.46
+    }
+   },
+   {
+    "t": "TJX",
+    "w": 0.24,
+    "ch": 3.31,
+    "s": "경기소비재",
+    "n": "TJX Companies, Inc. (The)",
+    "d": {
+     "o": 139.38,
+     "h": 144.68,
+     "l": 139.2,
+     "c": 143.86,
+     "ch": 3.31,
+     "v": 6831783,
+     "vr": 0.87,
+     "w1": 10.8,
+     "m1": 0.1,
+     "ma20": 138.13,
+     "ma50": 137.58,
+     "hi": 148.57,
+     "lo": 122.78
+    }
+   },
+   {
+    "t": "T",
+    "w": 0.23,
+    "ch": 2.6,
+    "s": "커뮤니케이션",
+    "n": "AT&T Inc.",
+    "d": {
+     "o": 22.49,
+     "h": 22.95,
+     "l": 22.33,
+     "c": 22.88,
+     "ch": 2.6,
+     "v": 35874644,
+     "vr": 0.8,
+     "w1": 2.6,
+     "m1": 9.7,
+     "ma20": 21.87,
+     "ma50": 23.05,
+     "hi": 26.93,
+     "lo": 20.52
+    }
+   },
+   {
+    "t": "ADI",
+    "w": 0.23,
+    "ch": -17.37,
+    "s": "정보기술",
+    "n": "Analog Devices, Inc.",
+    "d": {
+     "o": 328.0,
+     "h": 337.57,
+     "l": 304.23,
+     "c": 312.95,
+     "ch": -17.37,
+     "v": 12042505,
+     "vr": 2.19,
+     "w1": -18.4,
+     "m1": -23.3,
+     "ma20": 390.51,
+     "ma50": 395.02,
+     "hi": 433.72,
+     "lo": 304.23
+    }
+   },
+   {
+    "t": "ISRG",
+    "w": 0.23,
+    "ch": 4.38,
+    "s": "헬스케어",
+    "n": "Intuitive Surgical Inc.",
+    "d": {
+     "o": 411.12,
+     "h": 436.08,
+     "l": 410.5,
+     "c": 434.46,
+     "ch": 4.38,
+     "v": 2441820,
+     "vr": 1.0,
+     "w1": 0.9,
+     "m1": -3.8,
+     "ma20": 439.79,
+     "ma50": 425.42,
+     "hi": 485.85,
+     "lo": 345.25
+    }
+   },
+   {
+    "t": "CB",
+    "w": 0.22,
+    "ch": 1.82,
+    "s": "금융",
+    "n": "Chubb Limited",
+    "d": {
+     "o": 369.32,
+     "h": 375.92,
+     "l": 367.56,
+     "c": 375.37,
+     "ch": 1.82,
+     "v": 1324141,
+     "vr": 0.82,
+     "w1": -0.1,
+     "m1": 5.2,
+     "ma20": 369.62,
+     "ma50": 353.66,
+     "hi": 384.26,
+     "lo": 325.0
+    }
+   },
+   {
+    "t": "VRTX",
+    "w": 0.22,
+    "ch": 4.71,
+    "s": "헬스케어",
+    "n": "Vertex Pharmaceuticals Inc",
+    "d": {
+     "o": 542.24,
+     "h": 564.52,
+     "l": 540.0,
+     "c": 563.92,
+     "ch": 4.71,
+     "v": 1278201,
+     "vr": 0.8,
+     "w1": 5.6,
+     "m1": 9.0,
+     "ma20": 541.24,
+     "ma50": 524.09,
+     "hi": 568.67,
+     "lo": 484.08
+    }
+   },
+   {
+    "t": "ACN",
+    "w": 0.21,
+    "ch": 4.51,
+    "s": "정보기술",
+    "n": "Accenture PLC",
+    "d": {
+     "o": 223.44,
+     "h": 234.42,
+     "l": 223.44,
+     "c": 232.32,
+     "ch": 4.51,
+     "v": 3347084,
+     "vr": 0.64,
+     "w1": -2.9,
+     "m1": -6.0,
+     "ma20": 246.51,
+     "ma50": 223.03,
+     "hi": 271.76,
+     "lo": 172.11
+    }
+   },
+   {
+    "t": "PGR",
+    "w": 0.21,
+    "ch": 2.31,
+    "s": "금융",
+    "n": "Progressive Corporation",
+    "d": {
+     "o": 231.55,
+     "h": 236.12,
+     "l": 229.38,
+     "c": 235.68,
+     "ch": 2.31,
+     "v": 1908859,
+     "vr": 0.8,
+     "w1": 0.4,
+     "m1": 2.8,
+     "ma20": 231.89,
+     "ma50": 222.04,
+     "hi": 241.02,
+     "lo": 200.96
+    }
+   },
+   {
+    "t": "LMT",
+    "w": 0.21,
+    "ch": 2.62,
+    "s": "산업재",
+    "n": "Lockheed Martin Corp.",
+    "d": {
+     "o": 575.72,
+     "h": 591.1,
+     "l": 574.54,
+     "c": 586.63,
+     "ch": 2.62,
+     "v": 1093777,
+     "vr": 0.78,
+     "w1": -0.6,
+     "m1": -7.6,
+     "ma20": 599.08,
+     "ma50": 560.47,
+     "hi": 657.0,
+     "lo": 497.0
+    }
+   },
+   {
+    "t": "SPGI",
+    "w": 0.2,
+    "ch": 0.71,
+    "s": "금융",
+    "n": "S&P Global Inc.",
+    "d": {
+     "o": 451.0,
+     "h": 460.8,
+     "l": 449.03,
+     "c": 455.17,
+     "ch": 0.71,
+     "v": 1357605,
+     "vr": 0.86,
+     "w1": 0.6,
+     "m1": 1.0,
+     "ma20": 463.05,
+     "ma50": 432.89,
+     "hi": 485.99,
+     "lo": 382.21
+    }
+   },
+   {
+    "t": "UBER",
+    "w": 0.2,
+    "ch": 0.98,
+    "s": "산업재",
+    "n": "우버",
+    "d": {
+     "o": 63.5,
+     "h": 65.73,
+     "l": 63.43,
+     "c": 64.7,
+     "ch": 0.98,
+     "v": 14007666,
+     "vr": 0.7,
+     "w1": -6.0,
+     "m1": -2.2,
+     "ma20": 67.65,
+     "ma50": 68.66,
+     "hi": 79.0,
+     "lo": 63.29
+    }
+   },
+   {
+    "t": "BA",
+    "w": 0.2,
+    "ch": 0.74,
+    "s": "산업재",
+    "n": "보잉",
+    "d": {
+     "o": 161.87,
+     "h": 165.85,
+     "l": 161.07,
+     "c": 163.59,
+     "ch": 0.74,
+     "v": 5351370,
+     "vr": 0.5,
+     "w1": -0.2,
+     "m1": -13.1,
+     "ma20": 169.04,
+     "ma50": 182.21,
+     "hi": 215.29,
+     "lo": 155.56
+    }
+   },
+   {
+    "t": "LOW",
+    "w": 0.2,
+    "ch": 2.17,
+    "s": "경기소비재",
+    "n": "Lowe's Companies Inc.",
+    "d": {
+     "o": 226.19,
+     "h": 232.37,
+     "l": 224.34,
+     "c": 231.04,
+     "ch": 2.17,
+     "v": 2582069,
+     "vr": 0.7,
+     "w1": 4.8,
+     "m1": 16.6,
+     "ma20": 222.18,
+     "ma50": 203.37,
+     "hi": 235.0,
+     "lo": 178.45
+    }
+   },
+   {
+    "t": "BMY",
+    "w": 0.19,
+    "ch": 3.64,
+    "s": "헬스케어",
+    "n": "Bristol-Myers Squibb Co.",
+    "d": {
+     "o": 59.9,
+     "h": 62.09,
+     "l": 59.69,
+     "c": 62.02,
+     "ch": 3.64,
+     "v": 11118608,
+     "vr": 1.06,
+     "w1": 1.1,
+     "m1": 0.7,
+     "ma20": 61.75,
+     "ma50": 61.33,
+     "hi": 68.24,
+     "lo": 56.15
+    }
+   },
+   {
+    "t": "APP",
+    "w": 0.19,
+    "ch": 1.92,
+    "s": "정보기술",
+    "n": "Applovin Corporation Class A Common Stock",
+    "d": {
+     "o": 373.35,
+     "h": 390.56,
+     "l": 372.95,
+     "c": 381.11,
+     "ch": 1.92,
+     "v": 4115020,
+     "vr": 0.66,
+     "w1": -4.5,
+     "m1": 46.2,
+     "ma20": 346.86,
+     "ma50": 311.05,
+     "hi": 418.77,
+     "lo": 225.19
+    }
+   },
+   {
+    "t": "ETN",
+    "w": 0.19,
+    "ch": -5.08,
+    "s": "산업재",
+    "n": "Eaton Corporation, plc Ordinary Shares",
+    "d": {
+     "o": 328.39,
+     "h": 329.75,
+     "l": 316.41,
+     "c": 319.27,
+     "ch": -5.08,
+     "v": 3093614,
+     "vr": 0.91,
+     "w1": -5.3,
+     "m1": -14.2,
+     "ma20": 351.61,
+     "ma50": 390.16,
+     "hi": 452.0,
+     "lo": 308.22
+    }
+   },
+   {
+    "t": "MO",
+    "w": 0.19,
+    "ch": 1.38,
+    "s": "필수소비재",
+    "n": "Altria Group, Inc.",
+    "d": {
+     "o": 74.04,
+     "h": 75.15,
+     "l": 73.65,
+     "c": 74.82,
+     "ch": 1.38,
+     "v": 6710594,
+     "vr": 0.76,
+     "w1": -3.4,
+     "m1": 1.6,
+     "ma20": 76.52,
+     "ma50": 73.15,
+     "hi": 79.97,
+     "lo": 65.78
+    }
+   },
+   {
+    "t": "MDT",
+    "w": 0.19,
+    "ch": -4.56,
+    "s": "헬스케어",
+    "n": "Medtronic plc",
+    "d": {
+     "o": 97.4,
+     "h": 100.93,
+     "l": 94.49,
+     "c": 96.13,
+     "ch": -4.56,
+     "v": 18952718,
+     "vr": 2.54,
+     "w1": -6.0,
+     "m1": 1.4,
+     "ma20": 100.57,
+     "ma50": 94.82,
+     "hi": 106.2,
+     "lo": 85.22
+    }
+   },
+   {
+    "t": "SYK",
+    "w": 0.19,
+    "ch": 2.51,
+    "s": "헬스케어",
+    "n": "Stryker Corporation",
+    "d": {
+     "o": 313.97,
+     "h": 326.71,
+     "l": 311.0,
+     "c": 324.08,
+     "ch": 2.51,
+     "v": 1791034,
+     "vr": 0.54,
+     "w1": 2.1,
+     "m1": 5.9,
+     "ma20": 316.31,
+     "ma50": 297.17,
+     "hi": 349.48,
+     "lo": 267.0
+    }
+   },
+   {
+    "t": "ADP",
+    "w": 0.19,
+    "ch": 2.87,
+    "s": "산업재",
+    "n": "Automatic Data Processing",
+    "d": {
+     "o": 302.79,
+     "h": 311.61,
+     "l": 301.65,
+     "c": 310.79,
+     "ch": 2.87,
+     "v": 2021780,
+     "vr": 0.85,
+     "w1": 0.8,
+     "m1": 3.2,
+     "ma20": 302.45,
+     "ma50": 286.25,
+     "hi": 316.14,
+     "lo": 255.96
+    }
+   },
+   {
+    "t": "SBUX",
+    "w": 0.18,
+    "ch": 0.02,
+    "s": "경기소비재",
+    "n": "스타벅스",
+    "d": {
+     "o": 105.82,
+     "h": 106.96,
+     "l": 105.0,
+     "c": 106.38,
+     "ch": 0.02,
+     "v": 7982078,
+     "vr": 0.94,
+     "w1": -1.0,
+     "m1": 3.6,
+     "ma20": 106.57,
+     "ma50": 100.26,
+     "hi": 111.5,
+     "lo": 87.35
+    }
+   },
+   {
+    "t": "MCK",
+    "w": 0.18,
+    "ch": 2.83,
+    "s": "헬스케어",
+    "n": "McKesson Corporation",
+    "d": {
+     "o": 1049.55,
+     "h": 1082.86,
+     "l": 1043.0,
+     "c": 1078.09,
+     "ch": 2.83,
+     "v": 547838,
+     "vr": 0.75,
+     "w1": -1.2,
+     "m1": 8.6,
+     "ma20": 1053.86,
+     "ma50": 980.64,
+     "hi": 1121.5,
+     "lo": 847.28
+    }
+   },
+   {
+    "t": "PLD",
+    "w": 0.18,
+    "ch": 1.74,
+    "s": "부동산",
+    "n": "PROLOGIS, INC.",
+    "d": {
+     "o": 124.54,
+     "h": 127.36,
+     "l": 123.62,
+     "c": 127.32,
+     "ch": 1.74,
+     "v": 3791579,
+     "vr": 1.01,
+     "w1": 1.4,
+     "m1": 0.8,
+     "ma20": 127.57,
+     "ma50": 129.13,
+     "hi": 142.87,
+     "lo": 122.18
+    }
+   },
+   {
+    "t": "MRVL",
+    "w": 0.18,
+    "ch": -9.1,
+    "s": "정보기술",
+    "n": "Marvell Technology, Inc. Common Stock",
+    "d": {
+     "o": 139.54,
+     "h": 140.75,
+     "l": 128.14,
+     "c": 131.57,
+     "ch": -9.1,
+     "v": 26230812,
+     "vr": 0.77,
+     "w1": -11.5,
+     "m1": -43.7,
+     "ma20": 161.0,
+     "ma50": 216.99,
+     "hi": 301.27,
+     "lo": 120.56
+    }
+   },
+   {
+    "t": "PH",
+    "w": 0.17,
+    "ch": -1.3,
+    "s": "산업재",
+    "n": "Parker-Hannifin Corporation",
+    "d": {
+     "o": 914.79,
+     "h": 919.96,
+     "l": 895.23,
+     "c": 906.24,
+     "ch": -1.3,
+     "v": 496298,
+     "vr": 0.64,
+     "w1": -1.6,
+     "m1": 0.2,
+     "ma20": 925.95,
+     "ma50": 941.01,
+     "hi": 1036.42,
+     "lo": 868.49
+    }
+   },
+   {
+    "t": "CME",
+    "w": 0.17,
+    "ch": 1.58,
+    "s": "기타",
+    "n": "CME Group Inc.",
+    "d": {
+     "o": 306.23,
+     "h": 312.73,
+     "l": 303.91,
+     "c": 309.25,
+     "ch": 1.58,
+     "v": 1625445,
+     "vr": 0.83,
+     "w1": -0.7,
+     "m1": 0.4,
+     "ma20": 307.85,
+     "ma50": 290.59,
+     "hi": 321.39,
+     "lo": 258.87
+    }
+   }
+  ],
+  "asof": "2026-11-24 16:00 ET 종가",
+  "src": "https://www.slickcharts.com/sp500",
+  "note": "S&P 500 시가총액 비중 상위 100개 종목 · 크기=지수 비중, 색=전일 등락",
+  "comment": {
+   "h": "100개 중 64개 상승 — 반도체만 크게 빠지고 헬스케어가 받친 날",
+   "t": "어제는 상위 100개 중 64개가 올랐습니다. 가장 크게 내린 곳은 아날로그디바이스(-17.37%)·델(-11.83%)·텍사스인스트루먼트(-11.25%)·마이크론(-11.01%)·마벨(-9.1%)·AMD(-8.86%)로 거의 모두 반도체·AI 하드웨어였습니다. 반대로 암젠(+5.55%)·애브비(+4.1%)·일라이 릴리(+3.15%) 같은 제약주가 올랐습니다. 업종별로는 정보기술 -2.5%가 가장 약했고 헬스케어는 +3.0%였습니다.",
+   "src": [
+    {
+     "t": "slickcharts",
+     "u": "https://www.slickcharts.com/sp500"
+    },
+    {
+     "t": "Motley Fool 마감",
+     "u": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-tech-sell-off-drags-nasdaq-as-dow-gains-on-value-rotation/"
+    },
+    {
+     "t": "StockTitan",
+     "u": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    }
+   ]
+  }
+ },
+ "site_v": 11,
+ "jintari": {
+  "cards": [
+   {
+    "g": "B+",
+    "t": "QQQ",
+    "kn": "나스닥100",
+    "s": "① 급락 초입",
+    "ln": [
+     743.6,
+     729,
+     728,
+     709.8,
+     718.4,
+     717.6,
+     725.2,
+     704.5,
+     704.4,
+     712.2,
+     721.3,
+     725.6,
+     715.3,
+     690.5,
+     681.1,
+     685.3,
+     692,
+     647,
+     656.1,
+     679.4,
+     674.8,
+     690.4,
+     688.2,
+     679.9,
+     661.8,
+     657,
+     659.5,
+     645,
+     608.5,
+     651
+    ],
+    "rows": [
+     [
+      "신호 기준가",
+      "635.66달러(약 85만 원)"
+     ],
+     [
+      "어제 종가",
+      "638.1달러(약 86만 원) · 기준가 대비 +0.4%"
+     ],
+     [
+      "익절 · 손절",
+      "+20.0%(762.79달러, 약 102만 원) · −15.0%(540.31달러, 약 72만 원)"
+     ],
+     [
+      "보유 기간",
+      "최대 40거래일"
+     ]
+    ],
+    "h": "① 급락 초입 — 기준가 대비 +0.4%",
+    "why": "11/19 S&P 500이 60일 고점보다 8.1% 낮아져 켜진 ① 급락 초입 카드입니다. 2014~2026년 23번 중 40거래일 뒤 평균 +7.1%, 74%가 올랐다는 기록입니다. 과거 기록일 뿐 미래를 보장하지 않습니다.",
+    "img": "https://stock.jintar.co.kr/c/1.jpg",
+    "u": "https://stock.jintar.co.kr/c/1/"
+   },
+   {
+    "g": "A",
+    "t": "UGL",
+    "kn": "금 2배",
+    "s": "⑤ 금·금리 동반 하락",
+    "ln": [
+     45.7,
+     44.32,
+     45.9,
+     45.78,
+     45.16,
+     44.68,
+     44.97,
+     42.63,
+     41.98,
+     42.28,
+     43.29,
+     43.59,
+     42.43,
+     39.46,
+     40.75,
+     40.26,
+     43.19,
+     43.92,
+     43.2,
+     44.84,
+     42.43,
+     41.46,
+     39.12,
+     39.16,
+     38.63,
+     38.54,
+     36.09,
+     34.79,
+     32.26,
+     34.17
+    ],
+    "rows": [
+     [
+      "신호 기준가",
+      "32.67달러(약 4.4만 원)"
+     ],
+     [
+      "카드 시세(05:20 KST)",
+      "32.7달러(약 4.4만 원) · 기준가 대비 +0.1%"
+     ],
+     [
+      "익절 · 손절",
+      "+15.0%(37.57달러, 약 5만 원) · −10.0%(29.4달러, 약 3.9만 원)"
+     ],
+     [
+      "보유 기간",
+      "최대 20거래일"
+     ]
+    ],
+    "h": "⑤ 금·금리 동반 하락 — 기준가 대비 +0.1%",
+    "why": "금리·금·은이 함께 급락하고 S&P 500도 내린 날(11/20) 켜진 ⑤ 카드입니다. 과거 UGL 20거래일 뒤 평균 +7.0%, 77%가 올랐다는 기록입니다. 과거 기록일 뿐 미래를 보장하지 않습니다.",
+    "img": "https://stock.jintar.co.kr/c/5.jpg",
+    "u": "https://stock.jintar.co.kr/c/5/"
+   },
+   {
+    "g": "B+",
+    "t": "SOXL",
+    "kn": "반도체 3배",
+    "s": "⑨ 반도체 급락 반등",
+    "ln": [],
+    "rows": [
+     [
+      "신호 기준가",
+      "43.21달러(약 5.8만 원)"
+     ],
+     [
+      "어제 종가",
+      "32.6달러(약 4.4만 원) · 기준가 대비 -24.6%"
+     ],
+     [
+      "익절 · 손절",
+      "+40%(52.36달러, 약 7만 원) · −20%(필수)(29.92달러, 약 4만 원)"
+     ],
+     [
+      "보유 기간",
+      "최대 15거래일"
+     ]
+    ],
+    "h": "⑨ 반도체 급락 반등 — 기준가 대비 -24.6%",
+    "why": "반도체 ETF가 최근 20일 최고 종가보다 19.4% 낮아져 다시 켜진 ⑨ 카드입니다. 나스닥 선물이 싸게 거래돼 한 단계 낮춘 B+ 등급이고, 이런 때는 반등이 약했다는 기록도 함께 적혀 있습니다. 과거 기록일 뿐 미래를 보장하지 않습니다.",
+    "img": "https://stock.jintar.co.kr/c/9.jpg",
+    "u": "https://stock.jintar.co.kr/c/9/"
+   }
+  ],
+  "cash": [],
+  "note": "발행인이 직접 만든 규칙 카드입니다. 정해진 조건이 켜졌다는 기록일 뿐 투자 권유가 아니며, 결과는 본인 책임입니다.",
+  "u": "https://stock.jintar.co.kr/",
+  "asof": "2026-11-24 장 종료 가격 · 카드 내용은 11/25 05:20 KST 판"
+ },
+ "top2": {
+  "kicker": "두 번째 큰 뉴스 · 장 마감 후 실적",
+  "title": "델, AI 수주잔고 1,323억 달러(약 177조 원)…연매출 전망 2,020억 달러로 상향",
+  "img": "img/2026-11-25-top2.jpg",
+  "points": [
+   {
+    "t": "3분기 매출은 549.4억 달러(약 74조 원)로 1년 전보다 103% 늘었고, 조정 주당순이익은 9.45달러(약 1.3만 원)였습니다. 시장 예상(매출 506억 달러, 주당 6.63달러 · 약 0.9만 원)을 크게 넘었습니다.",
+    "src": "https://financefeeds.com/dell-stock-rises-after-q3-revenue-of-54-94b-beats-50-6b-estimate/"
+   },
+   {
+    "t": "분기 AI 서버 신규 주문이 602억 달러(약 81조 원), 쌓인 AI 수주잔고가 1,323억 달러로 사상 최대입니다. 지난 분기 말 950억 달러(약 127조 원)에서 늘었습니다.",
+    "src": "https://www.stocktitan.net/news/DELL/dell-technologies-delivers-third-quarter-fiscal-2027-financial-1b9dmbjoh63j.html"
+   },
+   {
+    "t": "연간 매출 전망을 1,920억 달러에서 2,020억 달러(약 271조 원)로, AI 서버 매출 전망을 740억에서 780억 달러로 올렸습니다. 4분기 매출 전망은 563억 달러(약 75조 원)입니다.",
+    "src": "https://www.stocktitan.net/news/DELL/dell-technologies-delivers-third-quarter-fiscal-2027-financial-1b9dmbjoh63j.html"
+   },
+   {
+    "t": "정규장에서는 HPE의 이익률 경고 여파로 -11.83% 내려 295.28달러(약 40만 원)였고, 발표 직후 시간외에서 1.79% 오른 300.57달러(미 동부 16:37)로 반등했습니다.",
+    "src": "https://financefeeds.com/dell-stock-rises-after-q3-revenue-of-54-94b-beats-50-6b-estimate/"
+   },
+   {
+    "t": "250억 달러(약 34조 원) 규모의 자사주 매입 한도를 새로 승인했습니다.",
+    "src": "https://www.stocktitan.net/news/DELL/dell-technologies-delivers-third-quarter-fiscal-2027-financial-1b9dmbjoh63j.html"
+   }
+  ],
+  "risks": [
+   {
+    "t": "4분기 AI 서버 매출 전망(약 234억 달러, 약 31조 원)이 3분기보다 약 6% 많은 데 그쳐, 성장 속도가 정점을 지났다는 해석도 나왔습니다.",
+    "src": "https://www.techi.com/dell-q3-results-ai-backlog-132-billion-forecast-implies-slower-growth/"
+   },
+   {
+    "t": "재고가 294억 달러(약 39조 원)로 연초 104억 달러의 세 배 가까이 늘었고, 메모리 값 상승이 이익률을 누를 수 있다는 지적이 있습니다.",
+    "src": "https://247wallst.com/cards/dell-technologies-q3-2027-earnings-dell-01m87pfs2c9c73wyprgqr5d02e"
+   }
+  ],
+  "why": "AI 서버 주문이 꺾였는지 보여줄 첫 대형 실적이었는데, 주문과 수주잔고가 오히려 사상 최대였습니다. 반도체가 밀린 날 나온 숫자라 오늘 밤 AI 하드웨어 분위기를 가를 수 있습니다.",
+  "watch": [
+   "정규장에서 시간외 반등(300달러 안팎, 약 40만 원)이 이어지는지",
+   "메모리 값 상승이 4분기 이익률에 주는 영향",
+   "수주잔고 중 다음 4분기에 실제 출하되는 몫(회사는 밝히지 않음)"
+  ],
+  "src": [
+   {
+    "t": "델 실적 발표(BusinessWire)",
+    "u": "https://www.stocktitan.net/news/DELL/dell-technologies-delivers-third-quarter-fiscal-2027-financial-1b9dmbjoh63j.html"
+   },
+   {
+    "t": "델 IR",
+    "u": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results"
+   },
+   {
+    "t": "FinanceFeeds",
+    "u": "https://financefeeds.com/dell-stock-rises-after-q3-revenue-of-54-94b-beats-50-6b-estimate/"
+   },
+   {
+    "t": "Investing.com",
+    "u": "https://uk.investing.com/news/stock-market-news/dell-q3-fy27-slides-revenue-doubles-ai-backlog-hits-132b-93CH-5002787"
+   },
+   {
+    "t": "Motley Fool",
+    "u": "https://www.fool.com/investing/2026/11/24/dell-just-reported-earnings-and-raised-its-forecast-by-usd10-billion-is-the-stock-a-buy-after-tuesday-s-selloff/"
+   }
+  ],
+  "react": [
+   {
+    "p": "스톡트윗",
+    "t": "개인 투자자 분위기 \"매우 낙관\", 글 수는 약 160% 늘어 \"매우 많음\"",
+    "u": "https://stocktwits.com/news-articles/markets/equity/dell-stock-gains-after-hours-as-ai-server-boom-leads-record-q3-prompts-third-annual-forecast-hike/cNbsV6sR9lG"
+   },
+   {
+    "p": "X",
+    "t": "\"델이 3분기를 박살냈다\"며 예상 대비 숫자를 나열한 글이 빠르게 퍼짐",
+    "u": "https://x.com/StockSavvyShay/status/2125336154858037691"
+   },
+   {
+    "p": "X",
+    "t": "매출·주당순이익·연간 전망이 모두 예상을 넘었다는 요약 게시물",
+    "u": "https://x.com/wallstengine/status/2125335489888526589"
+   },
+   {
+    "p": "회사",
+    "t": "델 공식 계정: 매출·주당순이익·3분기 영업현금흐름 모두 사상 최대",
+    "u": "https://x.com/Dell/status/2125343747969871959"
+   },
+   {
+    "p": "TV",
+    "t": "야후 파이낸스 소치: '압도적인 분기', 시장이 HPE를 잘못 읽었다",
+    "u": "https://finance.yahoo.com/video/anthropic-falls-below-ipo-price-as-nvidia-gives-back-gains-214558309.html"
+   },
+   {
+    "p": "분석",
+    "t": "TipRanks 집계: 긍정 의견 14·중립 7, 평균 적정 주가는 종가보다 크게 높음",
+    "u": "https://www.tipranks.com/news/dell-crushes-earnings-estimates-heres-how-high-wall-street-thinks-the-stock-can-go"
+   },
+   {
+    "p": "분석",
+    "t": "모건스탠리·씨티는 실적 직전 적정 주가를 낮춰 잡았음",
+    "u": "https://moneycheck.com/dell-stock-morgan-stanley-and-citi-cut-targets-ahead-of-earnings-today"
+   },
+   {
+    "p": "분석",
+    "t": "에버코어는 AI 인프라 조정을 이유로 실적 전 적정 주가를 650→400달러(약 54만 원)로 낮춤",
+    "u": "https://www.thestreet.com/latest-news/dell-technologies-q3-2027-earnings-call-stock-updates"
+   },
+   {
+    "p": "전문가",
+    "t": "Techi: 4분기 AI 서버 성장 둔화가 보인다며 정점 가능성 경계",
+    "u": "https://www.techi.com/dell-q3-results-ai-backlog-132-billion-forecast-implies-slower-growth/"
+   },
+   {
+    "p": "전문가",
+    "t": "모틀리풀: 이익 대비 10배 안팎이라 싸 보이지만 재고·빚·부품값은 위험",
+    "u": "https://www.fool.com/investing/2026/11/24/dell-just-reported-earnings-and-raised-its-forecast-by-usd10-billion-is-the-stock-a-buy-after-tuesday-s-selloff/"
+   },
+   {
+    "p": "전문가",
+    "t": "StreetSignal: 콜에서 'AI 투자 정점론'을 뒷받침할 근거는 거의 없었다",
+    "u": "https://streetsignal.substack.com/p/dell-eps-q-and-a"
+   },
+   {
+    "p": "시장",
+    "t": "정규장 급락은 HPE 이익률 경고·메모리 값·차익 실현이 겹친 결과라는 분석",
+    "u": "https://www.tradingkey.com/news/market-movers/262320518-market-movers-dell-20261124"
+   }
+  ]
+ },
+ "lead": ""
+}
