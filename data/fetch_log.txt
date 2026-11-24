@@ -1,3 +1,8 @@
+당일 봉 보충 CL=F 2026-11-24
+당일 봉 보충 DX-Y.NYB 2026-11-24
+당일 봉 보충 GC=F 2026-11-24
+당일 봉 보충 KRW=X 2026-11-24
+당일 봉 보충 ^TNX 2026-11-24
 /home/runner/work/usstock-news/usstock-news/scripts/fetch_market.py:251: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump({'fetched_utc': dt.datetime.utcnow().isoformat(timespec='seconds'), 'last_session': last,
 마지막 거래일 2026-11-23 빠진 종목 []
