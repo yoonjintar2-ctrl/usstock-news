@@ -424,9 +424,9 @@ def qtts_job(name):
     for take in (1, 2):
         for _, lines in SCRIPT:
             for _, n, lid in lines:
-                items.append({"id": f"{lid}_c{take}", "text": n.rstrip(".!?") + ("!" if n.endswith("!") else ("?" if n.endswith("?") else ".")) + " 음.", "gen": {"non_streaming_mode": True}})
+                items.append({"id": f"{lid}_c{take}", "text": n.rstrip(".!?") + ("!" if n.endswith("!") else ("?" if n.endswith("?") else ".")), "gen": {"non_streaming_mode": True}})
     return {"name": name, "mode": "clone", "ref_audio": "out/casual1/E_think.wav", "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
-            "gen": {"temperature": 0.75, "top_p": 0.9}, "reload_every": 4, "retries": 4, "items": items}
+            "gen": {"temperature": 0.65, "top_p": 0.9}, "reload_every": 4, "retries": 4, "items": items}
 
 if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "full"

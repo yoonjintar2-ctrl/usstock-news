@@ -3,12 +3,21 @@ python3 prep_sum.py <cand_dir> <out_dir>"""
 import sys, os, glob, re, wave
 import numpy as np
 from scipy.signal import resample_poly
-sys.path.insert(0, os.environ.get('PIXEL_KIT', '/home/claude/pixel_kit'))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from narr_prep import load, clean
 
+from pitch_check import table, pick_by_pitch
+
 cdir, odir = sys.argv[1:3]; os.makedirs(odir, exist_ok=True)
-for p in sorted(glob.glob(os.path.join(cdir, 's*_c1.wav'))):
-    m = re.search(r's(\d+)_(\d+)_c1', p); si, li = m.groups()
+# 11/26 발행인: 피치가 튀어 다른 사람 목소리처럼 들리는 테이크를 피한다 — 줄마다 후보(c1, c2…) 중 전체 중앙 음높이에 가장 가까운 것
+T = table(cdir); REF = float(np.median([v for v in T.values() if v]))
+lines = {}
+for p in sorted(glob.glob(os.path.join(cdir, 's*_c*.wav'))):
+    m = re.search(r's(\d+)_(\d+)_c\d+\.wav$', os.path.basename(p))
+    if m: lines.setdefault(m.groups(), []).append(p)
+for (si, li), cands in sorted(lines.items()):
+    p = pick_by_pitch(cands, T, REF)
+    if T.get(p) and abs(T[p] / REF - 1) > 0.15: print(f'  ⚠ 피치 튐 {os.path.basename(p)} {T[p]:.0f}Hz (기준 {REF:.0f}Hz) — 다시 만들기 권장')
     x, sr = load(p); y = clean(x, sr, '')
     y = resample_poly(y, 147, 80).astype(np.float32)
     y *= 0.11 / (np.sqrt((y ** 2).mean()) + 1e-9)
