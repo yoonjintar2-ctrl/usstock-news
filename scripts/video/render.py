@@ -145,6 +145,37 @@ def header(d, date, wd):
     d.line((X0, 350, X1, 350), fill=INK, width=5)
 
 
+def load_chart_series(date):
+    """11/26 발행인: '차트 3개' 장면은 말·글만이 아니라 실제 차트를 보여 줄 것.
+    data/charts.json(나스닥·S&P 500·SOXX 종가 120일 + 20/50/200일선)을 쓴다. 영상 날짜보다 1~5일 전 장이어야 쓴다."""
+    import datetime as _dt
+    try:
+        C = json.load(open(os.path.join(ROOT, 'data', 'charts.json')))
+        last = C[0]['series']['dates'][-1]
+        gap = (_dt.date.fromisoformat(date) - _dt.date.fromisoformat(last)).days
+        return C if 1 <= gap <= 5 else None
+    except Exception:
+        return None
+
+
+def draw_mini_chart(d, c, box):
+    x0, y0, x1, y1 = box
+    s = c['series']; cl = s['close']; n = len(cl)
+    step, off = c.get('ma_step', 3), c.get('ma_offset', 2)
+    mas = {k: s.get(k) or [] for k in ('ma20', 'ma50', 'ma200')}
+    vals = list(cl) + [v for k in mas for v in mas[k] if v]
+    lo, hi = min(vals), max(vals); pad = (hi - lo) * 0.08 or 1; lo -= pad; hi += pad
+    X = lambda i: x0 + (x1 - x0) * i / (n - 1)
+    Y = lambda v: y1 - (y1 - y0) * (v - lo) / (hi - lo)
+    d.rectangle(box, outline=(205, 205, 205), width=2)
+    for k, col, w in (('ma200', (200, 40, 40), 4), ('ma50', (150, 150, 150), 3), ('ma20', (190, 190, 190), 3)):
+        m = mas[k]
+        pts = [(X(min(n - 1, off + i * step)), Y(v)) for i, v in enumerate(m) if v]
+        if len(pts) > 1: d.line(pts, fill=col, width=w)
+    d.line([(X(i), Y(v)) for i, v in enumerate(cl)], fill=INK, width=4)
+    lx, ly = X(n - 1), Y(cl[-1]); d.ellipse((lx - 9, ly - 9, lx + 9, ly + 9), fill=INK)
+
+
 def scene_base(sc, V):
     """장면 바탕(움직이지 않는 부분)과 줌할 그림을 만든다."""
     im = Image.new('RGB', (W, H), PAPER); d = ImageDraw.Draw(im)
@@ -169,7 +200,21 @@ def scene_base(sc, V):
             d.text((X0, y), name, font=f1, fill=INK)
             d.text((X1, y), c, font=f2, fill=chg_col(c), anchor='ra')
             y += 96; d.line((X0, y - 12, X1, y - 12), fill=(200, 200, 200), width=2)
-    if sc.get('items') and sc['kind'] != 'quotes':
+    CH = load_chart_series(V['date']) if (sc.get('charts') or sc.get('tag') == '차트 3개') and sc.get('items') else None
+    if CH:
+        boxes = []; f1, f2 = F('ExtraBold', 40), F('SemiBold', 34)
+        ph = (SUB_Y - 130 - y) // len(sc['items'])
+        for (a, b), c in zip(sc['items'], CH):
+            y0 = y
+            d.text((X0 + 24, y), a, font=f2, fill=MUTE)
+            lx = X0 + 34 + d.textlength(a, font=f2); fl = F('Bold', 26)
+            if lx + d.textlength('— 200일선', font=fl) + 24 < X1 - d.textlength(b, font=f1):
+                d.text((lx, y + 4), '— 200일선', font=fl, fill=(200, 40, 40))
+            d.text((X1, y - 4), b, font=f1, fill=INK, anchor='ra')
+            draw_mini_chart(d, c, (X0 + 24, y + 48, X1, y + ph - 18))
+            boxes.append((y0 - 8, y + ph - 12)); y += ph
+        sc['_boxes'] = boxes
+    elif sc.get('items') and sc['kind'] != 'quotes':
         f1, f2 = F('ExtraBold', 52), F('SemiBold', 38)
         boxes = []
         for a, b in sc['items']:
