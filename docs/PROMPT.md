@@ -41,7 +41,7 @@
 
 ## 매일 영상 3편 (2026-11-21 발행인 지시)
 
-> **최우선 (2026-11-25 발행인):** 매일 3편(① 신문 요약 쇼츠 ② 1면 첫 기사 8비트 ③ 1면 두 번째 기사 8비트)을 하나도 빠짐없이 올린다. **① 요약은 가장 빠르게** — 신문이 나오면 바로 만들어 예약 없이 즉시 공개하고, ②③은 그다음 순서대로. 요약은 반드시 맥 qtts 마스코트 목소리로 다시 렌더한다(prep_sum.py → VOICE_DIR render.py). **Actions 'daily-video'(video-out 브랜치) 렌더본은 기계음이라 절대 올리지 않는다.** 길이는 2분 55초 이하. 신문이 늦게 나오면(큰 실적 날 08:20 이후) 12:00 까지 기다려서라도 그날 올린다. 본보기: scripts/video/shorts/d1125_video.py, docs/MAC_DAILY_TASK_PROMPT.md.
+> **최우선 (2026-11-25 발행인):** 매일 3편(① 신문 요약 쇼츠 ② 1면 첫 기사 8비트 ③ 1면 두 번째 기사 8비트)을 하나도 빠짐없이 올린다. **① 요약은 가장 빠르게** — 신문이 나오면 바로 만들어 예약 없이 즉시 공개하고, ②③은 그다음 순서대로. 요약은 반드시 맥 qtts 마스코트 목소리로 다시 렌더한다(prep_sum.py → VOICE_DIR render.py). **Actions 'daily-video'(video-out 브랜치) 렌더본은 기계음이라 절대 올리지 않는다.** 길이는 2분 55초 이하. 신문이 늦게 나오면(큰 실적 날 08:20 이후) 12:00 까지 기다려서라도 그날 올린다. 본보기: scripts/video/shorts/d1125_video.py, docs/MAC_DAILY_TASK_PROMPT.md. 맥 qtts 작업 파일 이름은 숫자 0 으로 시작(예 0us1126_1sum.json) — 문학늬우스 a-/b-/c- 작업보다 먼저 처리되게. 최신 코드 묶음: 맥 ~/Downloads/daily_kit_1125.tgz.
 - ① **간밤 미장 요약**(세로, 길이 제한 없음 — 60초에 맞추느라 알아듣기 어렵게 줄이지 않는다) ② 1면 첫 기사 8비트 쇼츠 ③ 1면 두 번째 기사 8비트 쇼츠. 채널 '샌디스크 올인'에 매일.
 - 제목과 썸네일에는 **날짜를 크게**. 제목엔 해시태그.
 - ① 은 호 발행 직후 `video/D.json`(형식: scripts/video/render.py 맨 위 설명, 본보기 video/2026-11-21.json)을 써서 push → Actions `daily-video`가 6번 여성 목소리(Supertonic F1, +2음)로 렌더 → 결과는 `video-out` 브랜치(D-summary.mp4·D-thumb.jpg·D-sheet.jpg·log.txt).
