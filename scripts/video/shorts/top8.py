@@ -148,14 +148,15 @@ def with_badge(fn):
     def g(img, d, t, seg, dur):
         r = fn(img, d, t, seg, dur)
         w = int(d.textlength(BADGE, font=F12)) + 14; x0 = CX - w // 2
-        d.rectangle([x0, 318, x0 + w, 340], fill=(10, 14, 30), outline=YEL); d.text((CX, 322), BADGE, font=F12, fill=YEL, anchor="ma")
+        # 위치: 화면 위쪽(자막 1296px 줄과 겹치지 않게). 마스코트 전체 화면 장면(stage)은 제목 자리라 넣지 않는다
+        d.rectangle([x0, 30, x0 + w, 48], fill=(10, 14, 30), outline=YEL); d.text((CX, 32), BADGE, font=F9 if w > 200 else F12, fill=YEL, anchor="ma")
         return r
     return g
 
 MAKERS = dict(stage=g_stage, line=g_line, names=g_names, react=g_react, bars=g_bars, compare=g_compare, cards=g_cards)
 SCRIPT, HOST = [], set()
 for k, S in enumerate(SP["scenes"]):
-    fn = with_badge(MAKERS[S["type"]](S)); fn.__name__ = f"g{k:02d}_{S['type']}"
+    fn = MAKERS[S["type"]](S) if S["type"] == "stage" else with_badge(MAKERS[S["type"]](S)); fn.__name__ = f"g{k:02d}_{S['type']}"
     if S["type"] == "stage": HOST.add(fn.__name__)
     SCRIPT.append((fn, [(ln[0], ln[1], f"s{k:02d}_{i}") for i, ln in enumerate(S["lines"])]))
 V.SCRIPT, V.HOST = SCRIPT, HOST
