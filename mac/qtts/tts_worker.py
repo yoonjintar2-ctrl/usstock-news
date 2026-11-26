@@ -45,6 +45,27 @@ def gh_pull():
     except Exception as e:
         print(f'깃허브 작업 확인 실패(넘어감): {str(e)[:80]}', flush=True)
 
+def gh_push_result(name):
+    """0us* 작업이 끝나면 결과 wav 묶음을 깃허브 tts-out 브랜치에 올린다 — 클라우드 작업이 맥 연결 없이 받아 가게.
+    qtts/.gh_token(파일 안에 usstock-news 저장소 contents 쓰기 권한 토큰 한 줄)이 있을 때만. 없으면 아무것도 안 함."""
+    tok_p = os.path.join(HERE, '.gh_token')
+    if not name.startswith('0us') or not os.path.exists(tok_p): return
+    try:
+        import io, zipfile, base64, requests
+        tok = open(tok_p).read().strip(); H = {'Authorization': f'Bearer {tok}', 'User-Agent': 'qtts', 'Accept': 'application/vnd.github+json'}
+        buf = io.BytesIO(); od = os.path.join(HERE, 'out', name)
+        with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as z:
+            for f in sorted(os.listdir(od)):
+                if f.endswith('.wav'): z.write(os.path.join(od, f), f)
+        api = f'https://api.github.com/repos/yoonjintar2-ctrl/usstock-news/contents/{name}.zip'
+        old = requests.get(api + '?ref=tts-out', headers=H, timeout=30)
+        body = {'message': f'TTS 결과 {name}', 'branch': 'tts-out', 'content': base64.b64encode(buf.getvalue()).decode()}
+        if old.status_code == 200: body['sha'] = old.json()['sha']
+        r = requests.put(api, headers=H, json=body, timeout=120); r.raise_for_status()
+        print(f'깃허브에 결과 올림: tts-out/{name}.zip', flush=True)
+    except Exception as e:
+        print(f'깃허브 결과 올리기 실패(넘어감): {str(e)[:80]}', flush=True)
+
 class Preempt(Exception): pass
 def urgent_waiting(cur_name):
     """급한 작업(이름이 0으로 시작)이 들어왔는데 지금 작업이 급한 게 아니면 잠시 멈추고 급한 것부터(완료분은 다음에 건너뜀)."""
@@ -143,6 +164,7 @@ def run(job):
         for i in ids: segs += [clips[i][0], np.zeros(int(sr * 0.6), np.float32)]
         sf.write(os.path.join(out, cname + '.wav'), np.concatenate(segs), sr)
     open(os.path.join(out, 'DONE'), 'w').write(time.strftime('%H:%M:%S'))
+    gh_push_result(job['name'])
 
 
 
