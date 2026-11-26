@@ -17,6 +17,17 @@ from sandisk_video import box, slam, CX, WHT2, chip
 from nike_video import stamp_slam, debris, dk, DARK, render_low, shutter_mask, dissolve_mask, clamp, TR, warn_icon
 from bgm_kit import bgm as bgm_make, level_plan
 
+# 배경 규칙(2026-11-26 발행인): 모눈·격자 배경 금지 → 단색 + 아주 살짝 세로 그라데이션만.
+_GRAD = {}
+def grad_bg(w=None, h=None, top=(28, 26, 46), bot=(16, 14, 26)):
+    """단색에 가까운 세로 그라데이션 배경(위→아래 밝기 차이 작게). render_low 의 배경 대신 이것을 붙인다."""
+    w = w or W; h = h or H; key = (w, h, top, bot)
+    if key not in _GRAD:
+        g = np.linspace(0, 1, h)[:, None, None]
+        a = (np.array(top)[None, None, :] * (1 - g) + np.array(bot)[None, None, :] * g)
+        _GRAD[key] = Image.fromarray(np.repeat(a, w, axis=1).astype(np.uint8))
+    return _GRAD[key].copy()
+
 VID = os.environ.get("VID", "nvda")
 BASE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(BASE, f"d1121_{VID}/out"); os.makedirs(OUT, exist_ok=True)
