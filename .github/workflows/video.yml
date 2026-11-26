@@ -3,7 +3,7 @@ name: daily-video
 # 결과 영상·썸네일·점검 시트는 video-out 브랜치(매번 덮어씀)에, 업로드 기록은 video/uploaded.json 에 남긴다.
 on:
   push:
-    paths: ['video/*.json', '!video/uploaded.json']
+    paths: ['video/*.json', '!video/uploaded.json', '!video/*.remap.json']
   workflow_dispatch:
     inputs:
       spec: {description: 'video/<날짜>.json 경로', required: true}
@@ -21,7 +21,7 @@ jobs:
         id: pick
         run: |
           if [ -n "${{ github.event.inputs.spec }}" ]; then echo "specs=${{ github.event.inputs.spec }}" >> $GITHUB_OUTPUT; exit 0; fi
-          S=$(git diff --name-only HEAD~1 HEAD -- 'video/*.json' | grep -v uploaded.json | tr '\n' ' ')
+          S=$(git diff --name-only HEAD~1 HEAD -- 'video/*.json' | grep -v uploaded.json | grep -v remap | tr '\n' ' ')
           echo "specs=$S" >> $GITHUB_OUTPUT
       - name: 준비
         if: steps.pick.outputs.specs != ''

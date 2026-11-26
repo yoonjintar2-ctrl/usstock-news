@@ -554,6 +554,9 @@ function render(D){
    const up=R.filter(r=>r.dir>0),dn=R.filter(r=>r.dir<0),kp=R.filter(r=>!r.dir);
    return `<div class="bcols"><div><div class="bct">▲ 올린 곳 <small>${up.length}건</small></div>${up.map(cd).join('')}</div><div><div class="bct">▼ 내린 곳 <small>${dn.length}건</small></div>${dn.map(cd).join('')}</div>${kp.length?`<div><div class="bct">● 유지 <small>${kp.length}건</small></div>${kp.map(cd).join('')}</div>`:''}</div><p class="src">큰 숫자 = 목표주가가 어제 종가보다 몇 % 위(아래)인지</p>`})()}
   <div class="src">출처: ${[W.summary_src,...(W.rows||[]).map(r=>r.src)].filter((u,i,a)=>u&&a.indexOf(u)===i).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(' · ')}</div></div>`;
+ // 휴장일 등: 그날 자료가 없는 칸은 통째로 숨긴다(전날 차트·트리맵·지난 발언이 헷갈리지 않게)
+ { const noC=!(D.charts||[]).length, noT=!D.treemap; if(noC){$('charts').hidden=true;$('chart-asof').hidden=true} const tw=$('tm-wrap'); if(noT&&tw)tw.hidden=true; if(noC&&noT)$('s-chart').hidden=true;
+   const W2=D.street||{}, cp=W2.camps||{}; if(!((cp.long||[]).length||(cp.short||[]).length||(W2.rows||[]).length))$('s-street').hidden=true; }
  safe('jin',()=>{const J=D.jintari;if(!J){$('jin').innerHTML='<p class="none">오늘은 카드가 없습니다.</p>';return}$('jin-asof').textContent=J.asof;
   const spark=a=>{if(!a||a.length<2)return '';const mn=Math.min(...a),mx=Math.max(...a),W=120,H=34;return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline fill="none" stroke="#141414" stroke-width="1.6" points="${a.map((v,i)=>`${(i/(a.length-1)*W).toFixed(1)},${(H-2-(v-mn)/(mx-mn||1)*(H-4)).toFixed(1)}`).join(' ')}"/></svg>`};
   $('jin').innerHTML=J.cards.map(c=>`<div class="jcard">${c.img?`<a href="${esc(c.u)}" target="_blank" rel="noopener"><img src="${esc(c.img)}" alt="${esc(c.s)} 카드" loading="lazy"></a>`:''}

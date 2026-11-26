@@ -47,6 +47,16 @@ fetch)
   python3 -c "import zipfile;zipfile.ZipFile('/tmp/$N.zip').extractall('$DIR')"; ls $DIR | wc -l ;;
 sum)
   D=$1; C=$2; V=/tmp/sumclips_$D; rm -rf $V
+  if [ -f $R/video/$D.remap.json ]; then   # 목소리를 만든 뒤 대본에서 장면을 뺀 경우: 클립 번호를 새 대본에 맞춤
+    python3 - $C /tmp/remap_$D $R/video/$D.remap.json <<'PY'
+import json, os, shutil, sys
+src, dst, rp = sys.argv[1:4]; R = json.load(open(rp)); shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst)
+for f in os.listdir(src):
+    k = f[:3]
+    if k in R.get('drop', []): continue
+    shutil.copy(os.path.join(src, f), os.path.join(dst, R.get('map', {}).get(k, k) + f[3:]))
+PY
+    C=/tmp/remap_$D; fi
   python3 $R/scripts/video/pitch_check.py $C | tail -5 || true
   python3 $R/scripts/video/prep_sum.py $C $V | tail -3
   VOICE_DIR=$V python3 $R/scripts/video/render.py $R/video/$D.json /tmp/sumout_$D | tail -3
