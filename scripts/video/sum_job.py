@@ -17,6 +17,7 @@ for k, sc in enumerate(S['scenes']):
         if retake is not None and lid not in retake: continue
         t = read(line).replace('최고가', '가장 높았던 때').strip()
         if t[-1] not in '.!?': t += '.'
+        t += ' ,'   # 11/27 시험: 끝에 ' ,'를 붙이면 '다'가 잘리지 않음(잘림 6번 중 0번, 붙이지 않으면 2번)
         items.append({'id': f'{lid}_{"c2" if retake is not None else "c1"}', 'text': t, 'gen': {'non_streaming_mode': True}})
 job = {'name': name, 'mode': 'clone', 'ref_audio': 'out/casual1/E_think.wav', 'ref_text': '음… 그럼 데이터센터는 이제 못 짓는 건가?',
        'gen': {'temperature': 0.65, 'top_p': 0.9}, 'reload_every': 4, 'retries': 4, 'items': items}

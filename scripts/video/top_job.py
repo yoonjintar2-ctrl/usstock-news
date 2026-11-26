@@ -9,7 +9,7 @@ for k, sc in enumerate(S['scenes']):
     for i, ln in enumerate(sc['lines']):
         lid = f's{k:02d}_{i}'; n = ln[1]
         if retake is not None and lid not in retake: continue
-        t = n.rstrip('.!?') + ('!' if n.endswith('!') else ('?' if n.endswith('?') else '.'))
+        t = n.rstrip('.!?') + ('!' if n.endswith('!') else ('?' if n.endswith('?') else '.')) + ' ,'   # 11/27: 말 끝 잘림 방지
         items.append({'id': f'{lid}_{"c2" if retake is not None else "c1"}', 'text': t, 'gen': {'non_streaming_mode': True}})
 json.dump({'name': name, 'mode': 'clone', 'ref_audio': 'out/casual1/E_think.wav', 'ref_text': '음… 그럼 데이터센터는 이제 못 짓는 건가?',
            'gen': {'temperature': 0.65, 'top_p': 0.9}, 'reload_every': 4, 'retries': 4, 'items': items},

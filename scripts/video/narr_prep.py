@@ -31,6 +31,7 @@ def clean(x, sr, text):
     if len(R) >= 2:
         a, b = R[-1]; pa, pb = R[-2]
         if text.rstrip().endswith('음.') and (b - a) / sr <= 0.6 and (a - pb) / sr >= 0.45: R = R[:-1]   # 옛 ' 음.' 꼬리만 제거(11/26 뒤로는 안 붙임)
+        elif (b - a) / sr <= 0.3 and (a - pb) / sr >= 0.6: R = R[:-1]      # 문장 끝 ' ,' 뒤에 가끔 붙는 짧은 잡음 제거
     ell = '…' in text
     out = []; pad = int(0.06 * sr)
     s0 = max(0, R[0][0] - pad)
