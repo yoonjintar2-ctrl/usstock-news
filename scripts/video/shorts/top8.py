@@ -141,10 +141,21 @@ def g_cards(S):
         return {}
     return f
 
+# 매일 시리즈 배지(11/26 발행인: 날짜 + '매일' 뉘앙스로 구독 유도) — 모든 장면 아래쪽 안전 영역에 고정
+_d = datetime.date.fromisoformat(SP["date"]); _wd = "월화수목금토일"[_d.weekday()]
+BADGE = SP.get("badge") or f"{_d.month}.{_d.day}({_wd}) · 매일 아침 미장 이슈" + (f" {SP['no']}" if SP.get("no") else "")
+def with_badge(fn):
+    def g(img, d, t, seg, dur):
+        r = fn(img, d, t, seg, dur)
+        w = int(d.textlength(BADGE, font=F12)) + 14; x0 = CX - w // 2
+        d.rectangle([x0, 318, x0 + w, 340], fill=(10, 14, 30), outline=YEL); d.text((CX, 322), BADGE, font=F12, fill=YEL, anchor="ma")
+        return r
+    return g
+
 MAKERS = dict(stage=g_stage, line=g_line, names=g_names, react=g_react, bars=g_bars, compare=g_compare, cards=g_cards)
 SCRIPT, HOST = [], set()
 for k, S in enumerate(SP["scenes"]):
-    fn = MAKERS[S["type"]](S); fn.__name__ = f"g{k:02d}_{S['type']}"
+    fn = with_badge(MAKERS[S["type"]](S)); fn.__name__ = f"g{k:02d}_{S['type']}"
     if S["type"] == "stage": HOST.add(fn.__name__)
     SCRIPT.append((fn, [(ln[0], ln[1], f"s{k:02d}_{i}") for i, ln in enumerate(S["lines"])]))
 V.SCRIPT, V.HOST = SCRIPT, HOST

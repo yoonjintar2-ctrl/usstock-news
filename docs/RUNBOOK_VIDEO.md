@@ -7,15 +7,15 @@
 
 ## 0. 공통 준비
 1. 저장소 `yoonjintar2-ctrl/usstock-news` 를 /home/claude/usstock-news 에 clone/pull. `D` = 오늘 한국 날짜, `M` = MMDD.
-2. 이미 올렸는지: `video/uploaded.json` 에 `D:summary`·`D:top`(일요일 `D:week`·`D:concept`) 키가 있으면 그 편은 건너뛴다. 유튜브 스튜디오 쇼츠 목록 첫 화면도 get_page_text 로 한 번 확인(중복 금지).
+2. 이미 올렸는지: `video/uploaded.json` 에 `D:summary`·`D:top`·`D:top2`(일요일 `D:week`·`D:concept`) 키가 있으면 그 편은 건너뛴다. 유튜브 스튜디오 쇼츠 목록 첫 화면도 get_page_text 로 한 번 확인(중복 금지).
 3. 키트: 맥 `~/Downloads/daily_kit_1125.tgz` 를 device_stage_files 로 가져와 `bash scripts/video/daily.sh setup <스테이징 경로>` (저장소의 최신 top8.py·prep_sum.py 등이 덮어써짐).
 4. 맥 TTS 대기기 확인: device_bash `tail -3 $HOME/mnt/Downloads/qtts/worker_log.txt`. 꺼져 있으면 computer-use 로 Finder 에서 `~/Downloads/qtts/TTS_작업대기.command` 더블클릭.
 
 ## 월~토
 ### A. 대본·목소리 (발행 작업이 06:45 전에 해 둠)
-1. `archive/D.json`·`video/D.json`·`video/top/D.json` 이 올 때까지 `for i in $(seq 9); do git pull -q; [ -f video/top/$D.json ] && break; sleep 60; done` 를 반복(09:30 까지). 일요일·휴장 다음 날은 신문이 없으니 끝낸다.
-   - `video/D.json` 은 있는데 `video/top/D.json` 이 07:00 까지 없으면 직접 쓴다(형식·규칙: PROMPT.md '8비트 대본 규칙', 본보기 video/top/EXAMPLE-2026-11-26.json, 내용은 archive top).
-2. `bash scripts/video/daily.sh jobs $D` (이미 있으면 건너뜀). 맥 대기기가 2분 안에 tts/queue 의 `0us${M}_1sum`·`0us${M}_2top` 을 스스로 가져간다.
+1. `archive/D.json`·`video/D.json`·`video/top/D.json`·`video/top/D-top2.json` 이 올 때까지 `for i in $(seq 9); do git pull -q; [ -f video/top/$D.json ] && break; sleep 60; done` 를 반복(09:30 까지). 일요일·휴장 다음 날은 신문이 없으니 끝낸다.
+   - `video/D.json` 은 있는데 8비트 대본(top·top2)이 07:00 까지 없으면 직접 쓴다(형식·규칙: PROMPT.md '8비트 대본 규칙', 본보기 video/top/EXAMPLE-2026-11-26.json, 내용은 archive top).
+2. `bash scripts/video/daily.sh jobs $D` (이미 있으면 건너뜀). 맥 대기기가 2분 안에 tts/queue 의 `0us${M}_1sum`·`0us${M}_2top`·`0us${M}_3top2` 를 스스로 가져간다(이름순 = 요약 → top → top2).
 3. 목소리 받기: 먼저 `bash scripts/video/daily.sh fetch 0us${M}_1sum /tmp/c_sum` (맥 대기기가 깃허브 tts-out 에 올렸으면 바로 됨). exit 4 면 맥에서: device_bash 로 `out/0us${M}_1sum/DONE` 이 생길 때까지 기다린 뒤 `cd $HOME/mnt/Downloads/qtts/out && tar czf 0us${M}_1sum.tgz 0us${M}_1sum` → device_stage_files → /tmp/c_sum 에 풀기.
 
 ### B. ① 요약 (07:30 전에 공개가 목표)
@@ -28,8 +28,11 @@
 2. **백그라운드 도구 실행으로** `bash scripts/video/daily.sh top $D /tmp/c_top` (마스코트 렌더 프레임당 약 9초). 60초 넘으면 exit 3 → video/top/D.json 줄을 빼고 다시. compose 는 한 번에 하나만.
 3. sheet 확인 → 썸네일(`/home/claude/vid/$D-top-thumb.jpg`) Read 로 확인 → 업로드 → 공개.
 
+### D. ③ 1면 두 번째 8비트
+1. `bash scripts/video/daily.sh fetch 0us${M}_3top2 /tmp/c_top2`(또는 맥 방식) → C 의 compose 가 끝난 뒤 **백그라운드로** `bash scripts/video/daily.sh top $D /tmp/c_top2 video/top/$D-top2.json` → `/home/claude/vid/$D-top2.mp4` sheet·썸네일 확인 → 업로드(② 다음), 키 `D:top2`.
+
 ## 일요일
-1. **주간 정리 롱폼:** 맥 `~/Downloads/usstock_videos/` 에서 이번 주(월~토) `*-top.mp4` 를 device_stage_files 로 가져와, 제목은 uploaded.json 의 `D:top` 제목에서 해시태그를 뺀 짧은 문구로
+1. **주간 정리 롱폼:** 맥 `~/Downloads/usstock_videos/` 에서 이번 주(월~토) `*-top.mp4`·`*-top2.mp4` 를 device_stage_files 로 가져와, 제목은 uploaded.json 의 `D:top` 제목에서 해시태그를 뺀 짧은 문구로
    `python3 scripts/video/weekly_long.py /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg "11/24~11/29" a.mp4 "11/25(화) …" b.mp4 "…" …`
    → 일반 동영상으로 업로드(제목 `주간 미장 정리｜M/D~M/D 이번 주 큰 이슈 N개 #미국주식 #미장`, 설명에 날짜별 쇼츠 링크), 키 `D:week`. 3편 미만이면 건너뛴다.
 2. **상시용 개념 쇼츠:** docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/queue/0us${M}_3concept.json` push → 받기 → `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json` → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
@@ -50,7 +53,7 @@
 
 ## 마무리
 0. **어제 댓글 고르기(월~토):** 전날 요약 영상 페이지의 고정 댓글 답글·댓글을 get_page_text 로 읽어 '롱/숏' 같은 가장 많은 의견의 뜻을 한 줄로 → `data/comment_pick.json` = {"date": "어제 D", "gist": "…", "count": N}(아이디·원문 저장 금지, 욕설·권유성 글 제외). 댓글이 3개 미만이면 만들지 않는다. 다음 날 발행 작업이 요약 대본에 한 줄로 쓴다.
-1. 최종 mp4(`$D-top.mp4`, 일요일엔 개념 영상도)를 /mnt/user-data/outputs 에 복사 → device_commit_files 로 맥 `~/Downloads/usstock_videos/` 에 둔다(일요일 롱폼 재료).
+1. 최종 mp4(`$D-top.mp4`·`$D-top2.mp4`, 일요일엔 개념 영상도)를 /mnt/user-data/outputs 에 복사 → device_commit_files 로 맥 `~/Downloads/usstock_videos/` 에 둔다(일요일 롱폼 재료).
 2. `video/uploaded.json` 에 `{key, id, title, publishAt, variant?}` 추가 → commit·push(사이트 '오늘의 영상' 칸에 자동으로 뜬다).
 3. 크롬 탭 모두 닫기. 보고 3줄: 편별 제목·공개 시각(유튜브·틱톡), 문제와 조치, 검수 결과. 막힌 게 있으면 맨 앞에.
 4. **12/11(목) 실행에서만:** 업로드 뒤 스튜디오 분석으로 11/27~12/10 요약 짧은 판(화·목·토) vs 긴 판(수·금)의 평균 시청 비율·조회수·구독 전환을 비교해 보고에 덧붙인다.

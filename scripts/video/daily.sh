@@ -37,6 +37,9 @@ PY
   if [ -f $R/video/top/$D.json ] && [ ! -f $R/tts/queue/0us${M}_2top.json ]; then
     python3 $R/scripts/video/top_job.py $R/video/top/$D.json 0us${M}_2top $R/tts/queue/0us${M}_2top.json
   fi
+  if [ -f $R/video/top/$D-top2.json ] && [ ! -f $R/tts/queue/0us${M}_3top2.json ]; then
+    python3 $R/scripts/video/top_job.py $R/video/top/$D-top2.json 0us${M}_3top2 $R/tts/queue/0us${M}_3top2.json
+  fi
   cd $R && git add tts/queue && (git diff --cached --quiet || (git commit -qm "TTS 작업 $D" && git pull -q --rebase && git push -q)); echo "queue ok" ;;
 fetch)
   N=$1; DIR=$2; mkdir -p $DIR
