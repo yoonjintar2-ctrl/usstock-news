@@ -1,144 +1,106 @@
 {
- "date": "2026-11-26",
- "no": 6,
- "weekday": "목",
- "session": "2026-11-25(수) 뉴욕장",
+ "date": "2026-11-27",
+ "no": 7,
+ "weekday": "금",
+ "session": "2026-11-26(목) 미국 휴장 · 추수감사절 (시세는 11/25 종가)",
  "publisher": "샌디스크 올인",
  "fx": {
   "usdkrw": {
    "v": 1344.26,
    "src": "https://finance.yahoo.com/quote/KRW%3DX/history",
-   "asof": "2026-11-26 06:40 KST 시세"
+   "asof": "2026-11-26 06:40 KST 시세(휴장으로 갱신 없음)"
   }
  },
  "top": {
-  "kicker": "지금 가장 중요한 뉴스",
-  "title": "AI 신용 공포에 반도체 장중 -8%…마감 땐 -0.65%로 대부분 되돌려",
-  "img": "img/2026-11-26-top.jpg",
+  "kicker": "휴장일 특집 · 선물이 말해 주는 것",
+  "title": "추수감사절 휴장…S&P 500 선물 +0.7%, 수요일 급락 뒤 안정 찾나",
+  "img": "img/2026-11-27-top.jpg",
   "points": [
    {
-    "t": "장 초반 나스닥은 4% 넘게, 다우는 1,000포인트 넘게 빠졌고 나스닥100은 10월 고점보다 20% 가까이 낮아져 약세장 문턱까지 갔습니다. 마감은 나스닥 -0.62%, S&P 500 -0.25%, 다우 +0.33%였습니다.",
-    "src": "https://www.kitco.com/news/off-the-wire/2026-11-25/nasdaq-sinks-about-4-ai-rout-fresh-trump-tariffs-spook-wall-st"
+    "t": "미국 증시는 11/26(목) 추수감사절로 쉬었습니다. 지수·차트는 11/25(수) 종가 그대로입니다.",
+    "src": "https://www.goodreturns.in/news/us-stock-market-holiday-today-november-26-dow-nasdaq-s-p-500-shut-thanksgiving-wall-street-outlook-1549901.html"
    },
    {
-    "t": "필라델피아 반도체 지수는 장중 8,129(전날보다 -8.0%)까지 밀렸다가 8,774.86(-0.65%)로 끝났습니다. VIX도 장중 34.95까지 올랐다가 28.29로 내려왔습니다.",
-    "src": "https://ca.investing.com/news/stock-market-news/wall-street-rebounds-amid-fragile-sentiment-as-nasdaq-recovers-from-steep-morning-drop-93CH-4981517"
+    "t": "휴장 중 S&P 500 선물은 0.7% 안팎 올랐고 유럽 증시도 올랐다고 보도됐습니다.",
+    "src": "https://thecompanychronicle.com/story/before-the-bell-thanksgiving-november-26-2026"
    },
    {
-    "t": "불씨는 신용시장이었습니다. S&P 글로벌 집계로 코어위브 5년 신용부도스와프(CDS)가 1,314bp로 사상 최고가 됐고, 오라클·알파벳·엔비디아 CDS도 기록을 새로 썼습니다. AI 투자를 빚으로 대는 구조에 대한 걱정입니다.",
-    "src": "https://www.fool.com/investing/2026/11/25/why-nvidia-stock-is-falling-again/"
+    "t": "S&P 500 선물은 7,225.50 근처에서 거래됐습니다. 관세 걱정이 조금 누그러진 점이 거론됐습니다.",
+    "src": "https://journalarta.com/en/2026/11/26/sp-500-futures-edge-higher-as-tariff-relief-offsets-nvidia-risks/"
    },
    {
-    "t": "엔비디아는 장중 141.17달러(-9.1%)까지 내렸다가 149.3달러(약 20만 원), -3.91%로 마감했습니다. 이틀 사이 월요일 +31.5% 상승분의 절반 넘게를 돌려줬습니다.",
-    "src": "https://stockanalysis.com/news/nvidia-gives-back-half-huang-rally/"
+    "t": "수요일 다우는 장중 저점에서 1,270포인트 되오르며 끝났고, 그 반등이 선물로 이어졌다는 해석입니다.",
+    "src": "https://www.airnews.in/articles/f3481d6e23-nyse-and-nasdaq-close-for-thanksgiving-following-1-270-point-dow-intraday-rebound"
    },
    {
-    "t": "장중 나스닥100 하락분의 60% 넘게가 엔비디아·마이크론·인텔·AMD·램리서치·어플라이드머티어리얼즈 6개 반도체주에서 나왔습니다(블룸버그 집계).",
-    "src": "https://stocktwits.com/news-articles/markets/equity/nasdaq-100-flirts-with-bear-market-territory-drops-20-from-october-highs/cNbHVpRR9mM"
+    "t": "나스닥 100·다우 선물의 정확한 등락률은 확인 중입니다. 휴장일 선물은 거래가 얇아 금요일 현물 개장 때 달라질 수 있습니다.",
+    "src": "https://finviz.com/news/239512/stock-futures-climb-ahead-of-thanksgiving-break"
    }
   ],
   "risks": [
    {
-    "t": "바닥에서 사려는 돈이 들어오며 소재·에너지·부동산이 1% 넘게 올랐고 다우는 플러스로 끝났습니다. 다만 나스닥 신저가 종목이 465개로 신고가(34개)보다 훨씬 많아 '불안한 반등'이라는 평가입니다.",
-    "src": "https://ca.investing.com/news/stock-market-news/wall-street-rebounds-amid-fragile-sentiment-as-nasdaq-recovers-from-steep-morning-drop-93CH-4981517"
+    "t": "같은 날 일부 보도는 기술주 선물이 약하고 다우 선물만 버틴다고 전해, 업종별로 방향이 엇갈렸습니다.",
+    "src": "https://journalarta.com/en/2026/11/26/sp-500-futures-slip-as-tech-selloff-splits-wall-street/"
    },
    {
-    "t": "모하메드 엘에리언은 '길게 보면 기회'라며 기술주를 아주 천천히 사고 있다고 했고, 소시에테제네랄은 VIX가 30을 넘은 뒤 S&P 500이 12개월 동안 평균 22% 올랐다는 과거 통계를 냈습니다.",
-    "src": "https://stocktwits.com/news-articles/markets/equity/mohamed-el-erian-is-buying-the-tech-dip-very-slowly-says-nvidia-is-too-big-to-wobble/cNbHNilR9mp"
+    "t": "연휴 거래량이 적어 작은 주문에도 값이 크게 움직일 수 있습니다. 엔비디아·AI 신용 걱정은 그대로입니다.",
+    "src": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-and-gold-price-forecast-why-daily-technicals-flash-sell-amid-hawkish-fed-and-thanksgiving-liquidity-202611261718"
    }
   ],
-  "why": "주가보다 먼저 회사채·CDS 같은 신용시장이 AI 투자에 경고를 보냈다는 점이 새롭습니다. 주가는 하루 만에 대부분 되돌렸지만, 빚으로 지은 데이터센터의 돈줄이 흔들리면 칩 주문도 흔들릴 수 있다는 걱정이 남았습니다.",
+  "why": "수요일 장중 급락을 대부분 되돌린 뒤 하루를 쉬었습니다. 선물이 오르면 금요일 짧은 장에서 반등이 이어질 수 있지만, 거래가 얇아 방향을 확정하긴 이릅니다.",
   "watch": [
-   "코어위브·오라클 CDS가 더 오르는지(신용시장 신호)",
-   "12/1(미국) 황 CEO 하원 비공개 면담 · 12/3 상원 은행위 공개 청문회",
-   "반도체 ETF(SOXX)가 어제 장중 저점 118.18달러(약 16만 원)를 지키는지"
+   "금요일 개장 직후 나스닥 100 선물이 수요일 종가 위를 지키는지",
+   "반도체 ETF(SOXX)가 수요일 장중 저점을 다시 시험하는지",
+   "조기 폐장(한국 토요일 03:00) 전 거래량"
   ],
   "src": [
    {
-    "t": "Kitco(로이터)",
-    "u": "https://www.kitco.com/news/off-the-wire/2026-11-25/nasdaq-sinks-about-4-ai-rout-fresh-trump-tariffs-spook-wall-st"
+    "t": "Company Chronicle",
+    "u": "https://thecompanychronicle.com/story/before-the-bell-thanksgiving-november-26-2026"
    },
    {
-    "t": "Investing.com 마감",
-    "u": "https://ca.investing.com/news/stock-market-news/wall-street-rebounds-amid-fragile-sentiment-as-nasdaq-recovers-from-steep-morning-drop-93CH-4981517"
+    "t": "JournalArta",
+    "u": "https://journalarta.com/en/2026/11/26/sp-500-futures-edge-higher-as-tariff-relief-offsets-nvidia-risks/"
    },
    {
-    "t": "Motley Fool(엔비디아·CDS)",
-    "u": "https://www.fool.com/investing/2026/11/25/why-nvidia-stock-is-falling-again/"
+    "t": "AirNews",
+    "u": "https://www.airnews.in/articles/f3481d6e23-nyse-and-nasdaq-close-for-thanksgiving-following-1-270-point-dow-intraday-rebound"
    },
    {
-    "t": "StockAnalysis",
-    "u": "https://stockanalysis.com/news/nvidia-gives-back-half-huang-rally/"
-   },
-   {
-    "t": "Stocktwits(나스닥100)",
-    "u": "https://stocktwits.com/news-articles/markets/equity/nasdaq-100-flirts-with-bear-market-territory-drops-20-from-october-highs/cNbHVpRR9mM"
-   },
-   {
-    "t": "야후 파이낸스 실시간",
-    "u": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    "t": "Goodreturns",
+    "u": "https://www.goodreturns.in/news/us-stock-market-holiday-today-november-26-dow-nasdaq-s-p-500-shut-thanksgiving-wall-street-outlook-1549901.html"
    }
   ],
   "react": [
    {
-    "p": "스톡트윗",
-    "t": "엔비디아 게시판 분위기가 '매우 낙관'에서 '낙관'으로 한 단계 식고 글 수도 줄었음(11:40 ET)",
-    "u": "https://stocktwits.com/news-articles/markets/equity/mohamed-el-erian-is-buying-the-tech-dip-very-slowly-says-nvidia-is-too-big-to-wobble/cNbHNilR9mp"
-   },
-   {
-    "p": "스톡트윗",
-    "t": "마이크론·샌디스크 게시판은 트렌드포스 하향에도 '낙관' 유지, 요즘 시장은 실적대로 안 움직인다는 푸념도",
-    "u": "https://finance.yahoo.com/markets/stocks/articles/mu-skhy-sndk-stocks-focus-082710611.html"
-   },
-   {
-    "p": "스톡트윗",
-    "t": "AI 칩 고객이 빚을 내 사는 것이라 수요가 아니라 '신용 사슬'이라는 경고 글",
-    "u": "https://stocktwits.com/news-articles/markets/equity/nvda-dip-buyers-still-fighting-break-even-after-huang-return-analyst-says/cNbHEckR9lm"
-   },
-   {
-    "p": "X",
-    "t": "헤지아이: 나스닥100이 고점 대비 -19.5%, 약세장 직전이라고 알림(09:58 ET)",
-    "u": "https://247wallst.com/cards/xpost-01m89km0ncjhxgb172yg75d7zw"
-   },
-   {
-    "p": "X",
-    "t": "로스 거버(거버 가와사키): 지금 공포는 지나치다며 일축",
-    "u": "https://stocktwits.com/news-articles/markets/equity/nasdaq-100-flirts-with-bear-market-territory-drops-20-from-october-highs/cNbHVpRR9mM"
-   },
-   {
-    "p": "TV",
-    "t": "CNBC 엘에리언: 기술주를 아주 천천히 산다, 엔비디아는 '흔들리기엔 너무 크다'",
-    "u": "https://stocktwits.com/news-articles/markets/equity/mohamed-el-erian-is-buying-the-tech-dip-very-slowly-says-nvidia-is-too-big-to-wobble/cNbHNilR9mp"
-   },
-   {
-    "p": "TV",
-    "t": "CNBC 리즈 앤 손더스(슈왑): AI 매도는 황 뉴스 전부터 시작됐다, 지배구조 문제만이 아니다",
-    "u": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
-   },
-   {
-    "p": "전문가",
-    "t": "노무라 맥엘리곳: 분위기가 나쁘고, 월요일 황 복귀로 바뀐 건 별로 없다",
-    "u": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
-   },
-   {
-    "p": "전문가",
-    "t": "골드만 뮐러글리스만: AI 매도를 사기엔 이르다, 시장이 깨지기 쉬운 상태",
-    "u": "https://www.roic.ai/news/goldman-strategist-warns-its-too-early-to-buy-the-ai-selloff-as-markets-remain-fragile-11-25-2026"
+    "p": "시장",
+    "t": "휴장 앞두고 선물이 올라 \"숨 고르기 반등\" 기대가 나옴",
+    "u": "https://finviz.com/news/239512/stock-futures-climb-ahead-of-thanksgiving-break"
    },
    {
     "p": "분석",
-    "t": "BTIG 크린스키: S&P 7,250~7,350까지 반등을 보지만 7,300 위에선 AI 비중을 줄이라고",
-    "u": "https://www.roic.ai/news/btigs-krinsky-says-use-rallies-above-7300-to-cut-ai-and-tech-exposure-11-25-2026"
+    "t": "관세 걱정 완화가 엔비디아 위험을 상쇄한다는 해석",
+    "u": "https://journalarta.com/en/2026/11/26/sp-500-futures-edge-higher-as-tariff-relief-offsets-nvidia-risks/"
+   },
+   {
+    "p": "분석",
+    "t": "기술주 선물은 약하고 다우만 버텨 업종별로 갈린다는 시각",
+    "u": "https://journalarta.com/en/2026/11/26/sp-500-futures-slip-as-tech-selloff-splits-wall-street/"
    },
    {
     "p": "시장",
-    "t": "올스프링 클레그: AI 회사채가 '블랙프라이데이 세일', 싼 건지 떨어지는 칼인지 묻는다",
-    "u": "https://finance.yahoo.com/technology/ai/articles/coreweave-nvidia-credit-risk-hit-164402586.html"
+    "t": "수요일 장중 급락을 되돌린 반등을 긍정적으로 보는 분위기",
+    "u": "https://www.airnews.in/articles/f3481d6e23-nyse-and-nasdaq-close-for-thanksgiving-following-1-270-point-dow-intraday-rebound"
    },
    {
     "p": "분석",
-    "t": "인터랙티브브로커스 소스닉: 엔비디아를 받치는 '정치적 풋'은 수명이 짧다",
-    "u": "https://stockanalysis.com/news/nvidia-gives-back-half-huang-rally/"
+    "t": "휴장 전날엔 나스닥 선물이 2% 넘게 빠지기도 해 변동성 경계",
+    "u": "https://startupfortune.com/nasdaq-futures-sink-over-2-as-the-dow-sits-at-50000-before-thanksgiving/"
+   },
+   {
+    "p": "분석",
+    "t": "연휴 얇은 거래 탓에 기술적 신호가 약세를 가리킨다는 경고",
+    "u": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-and-gold-price-forecast-why-daily-technicals-flash-sell-amid-hawkish-fed-and-thanksgiving-liquidity-202611261718"
    }
   ]
  },
@@ -909,158 +871,51 @@
    ]
   }
  ],
- "chart_summary": "세 지수 모두 **20·50·200일선 아래**지만, 어제는 셋 다 **긴 아래꼬리 양봉**이었습니다. 반도체 ETF는 장중 저점에서 **+8.3%** 되올랐고, 나스닥은 **고점 대비 -14.9%**입니다.",
+ "chart_summary": "**휴장**으로 차트는 11/25(수) 종가 그대로입니다. 세 지수 모두 **20·50·200일선 아래**지만, 어제는 셋 다 **긴 아래꼬리 양봉**이었습니다. 반도체 ETF는 장중 저점에서 **+8.3%** 되올랐고, 나스닥은 **고점 대비 -14.9%**입니다.",
  "news": [
   {
-   "tag": "메모리",
-   "img": "img/2026-11-26-memory.jpg",
-   "title": "트렌드포스, 내년 메모리 값 전망 낮춰…샌디스크 -5.57%, 마이크론 -4.53%",
-   "line": "중국 클라우드 회사들이 2027년 서버 메모리 주문을 줄여 내년 D램 계약가 상승 폭이 좁아지고, 내년 1분기 낸드 계약가는 보합~5% 하락으로 봤습니다. 샌디스크는 73.61달러로 끝났고 에버코어는 적정 주가를 200→175달러(약 24만 원)로 낮췄습니다.",
+   "tag": "금",
+   "img": "img/2026-11-27-gold.jpg",
+   "title": "금값, 휴장 중 온스당 3,600달러(약 484만 원) 시험",
+   "line": "얇은 거래 속에 공매도 되사기가 들어오며 금값이 V자로 반등해 3,600달러(약 484만 원) 선을 시험했다고 보도됐습니다.",
    "src": [
     {
-     "t": "Motley Fool(샌디스크)",
-     "u": "https://www.fool.com/investing/2026/11/25/why-sandisk-stock-just-dropped-again/"
+     "t": "FX Leaders",
+     "u": "https://www.fxleaders.com/news/2026/11/26/gold-price-forecast-xau-usd-tests-3600-on-thanksgiving-short-covering/"
     },
     {
-     "t": "Parameter(에버코어)",
-     "u": "https://parameter.io/sandisk-sndk-stock-falls-8-after-trendforce-trims-nand-price-outlook/"
-    },
-    {
-     "t": "야후 파이낸스(트렌드포스)",
-     "u": "https://finance.yahoo.com/markets/stocks/articles/mu-skhy-sndk-stocks-focus-082710611.html"
+     "t": "ATFX",
+     "u": "https://www.atfxcapital.com/en/analysis/market-news/20261126-daily-market-highlight"
     }
-   ],
-   "body": "중국 클라우드 회사들이 2027년 서버 메모리 주문을 줄여 내년 D램 계약가 상승 폭이 좁아지고, 내년 1분기 낸드 계약가는 보합~5% 하락으로 봤습니다. 샌디스크는 73.61달러로 끝났고 에버코어는 적정 주가를 200→175달러(약 24만 원)로 낮췄습니다."
+   ]
   },
   {
-   "tag": "실적",
-   "img": "img/2026-11-26-earn.jpg",
-   "title": "HP +11.4% S&P 500 1위, 디어 +4.44%, 뉴타닉스 약 -18%",
-   "line": "HP는 분기 매출 160억 달러(약 22조 원), 조정 주당순이익 0.83달러(예상 약 0.74달러)로 예상을 넘었고 메모리·저장장치가 PC 부품값의 약 40%가 됐다고 밝혔습니다. 디어는 주당순이익이 3.89달러로 예상에 못 미쳤지만 매출 121.2억 달러(약 16조 원)가 예상을 넘어 반등했고, 뉴타닉스는 CEO 사임 예고에 급락했습니다.",
+   "tag": "일정",
+   "img": "img/2026-11-27-bf.jpg",
+   "title": "금요일은 미 동부 13:00 조기 폐장(한국 토요일 03:00)",
+   "line": "블랙프라이데이 짧은 장입니다. 거래가 얇아 움직임이 커질 수 있습니다.",
    "src": [
     {
-     "t": "Kiplinger(HP)",
-     "u": "https://www.kiplinger.com/investing/stocks/stocks-rally-off-lows-despite-inflation-and-ai-gloom-stock-market-today"
+     "t": "BigGo",
+     "u": "https://finance.biggo.com/news/bef38756-5740-4079-8784-f2d501914c9b"
     },
     {
-     "t": "HP 실적 발표",
-     "u": "https://www.stocktitan.net/news/HPQ/hp-inc-reports-fiscal-2026-full-year-and-fourth-quarter-results-uf92ayljaqtq.html"
-    },
-    {
-     "t": "디어 실적(SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/0000315189/000110465926131741/de-ex99d1.htm"
-    },
-    {
-     "t": "Parameter(뉴타닉스)",
-     "u": "https://parameter.io/nutanix-ntnx-stock-drops-17-as-ceo-exit-and-flat-guidance-overshadow-earnings-beat/"
+     "t": "IBTimes",
+     "u": "https://www.ibtimes.com.au/us-markets-closed-thanksgiving-2026-1879444"
     }
-   ],
-   "body": "HP는 분기 매출 160억 달러(약 22조 원), 조정 주당순이익 0.83달러(예상 약 0.74달러)로 예상을 넘었고 메모리·저장장치가 PC 부품값의 약 40%가 됐다고 밝혔습니다. 디어는 주당순이익이 3.89달러로 예상에 못 미쳤지만 매출 121.2억 달러(약 16조 원)가 예상을 넘어 반등했고, 뉴타닉스는 CEO 사임 예고에 급락했습니다."
+   ]
   },
   {
-   "tag": "신용",
-   "img": "img/2026-11-26-orcl.jpg",
-   "title": "오라클 -5.13%, 52주 신저가…CDS 약 360bp 사상 최고",
-   "line": "오라클 5년 CDS는 11/24 약 360bp로 2025년 중반 35bp의 10배가 됐습니다. 잉여현금흐름이 마이너스이고, 주가 103.88달러(약 14만 원)는 11/2 유상증자 가격 116달러보다 낮습니다.",
+   "tag": "코인",
+   "img": "img/2026-11-27-btc.jpg",
+   "title": "비트코인·금, 일봉 기술 신호는 약세",
+   "line": "연준의 매파적 분위기와 연휴 얇은 거래로 단기 기술 지표가 약세를 가리킨다는 분석이 나왔습니다.",
    "src": [
     {
-     "t": "Motley Fool(오라클)",
-     "u": "https://www.fool.com/investing/2026/11/25/why-oracle-stock-slumped-today/"
-    },
-    {
-     "t": "Unusual Whales",
-     "u": "https://unusualwhales.com/news/oracle-stock-falls-new-52-week-low-2026-11-25"
+     "t": "FXStreet",
+     "u": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-and-gold-price-forecast-why-daily-technicals-flash-sell-amid-hawkish-fed-and-thanksgiving-liquidity-202611261718"
     }
-   ],
-   "body": "오라클 5년 CDS는 11/24 약 360bp로 2025년 중반 35bp의 10배가 됐습니다. 잉여현금흐름이 마이너스이고, 주가 103.88달러(약 14만 원)는 11/2 유상증자 가격 116달러보다 낮습니다."
-  },
-  {
-   "tag": "빅테크",
-   "img": "img/2026-11-26-bigtech.jpg",
-   "title": "메타 +3.40%, 아마존 -3.12%…빅테크 엇갈림",
-   "line": "메타와 아마존이 메타의 AI 쇼핑 에이전트 'Muse' 차단을 풀기 위한 협상을 한다는 포춘 보도가 나왔습니다(두 회사 모두 확인 안 함). 아마존은 장중 약 5%까지 밀렸고 알파벳 -2.13%, 마이크로소프트 -1.25%였습니다.",
-   "src": [
-    {
-     "t": "JournalArta(메타)",
-     "u": "https://journalarta.com/en/2026/11/26/meta-platforms-shares-rise-2-5-as-ai-loan-and-amazon-talks-draw-focus/"
-    },
-    {
-     "t": "Kitco(로이터)",
-     "u": "https://www.kitco.com/news/off-the-wire/2026-11-25/nasdaq-sinks-about-4-ai-rout-fresh-trump-tariffs-spook-wall-st"
-    }
-   ],
-   "body": "메타와 아마존이 메타의 AI 쇼핑 에이전트 'Muse' 차단을 풀기 위한 협상을 한다는 포춘 보도가 나왔습니다(두 회사 모두 확인 안 함). 아마존은 장중 약 5%까지 밀렸고 알파벳 -2.13%, 마이크로소프트 -1.25%였습니다."
-  },
-  {
-   "tag": "상장",
-   "img": "img/2026-11-26-ipo.jpg",
-   "title": "앤트로픽, 장중 -9%에서 반등해 공모가 83달러(약 11만 원) 언저리",
-   "line": "장중 약 75.6달러까지 밀렸다가 약 82.8달러(약 11만 원), +1.1% 안팎으로 끝났습니다. 모건스탠리가 주가 안정 매수를 일찍 끝낸 것이 부담으로 거론됐고, 아레테는 '매수'·적정 주가 300달러(약 40만 원)로 분석을 시작했습니다.",
-   "src": [
-    {
-     "t": "ABC 뉴스",
-     "u": "https://abcnews.com/Business/stocks-tumble-tech-sell-off-resumes-nvidia-falls/story?id=138442070"
-    },
-    {
-     "t": "24/7 Wall St.",
-     "u": "https://247wallst.com/investing/2026/11/25/anthropics-sharp-reversal-up-4-ant-stock-reclaims-83-ipo-price-after-early-8-drop-coreweave-slides-2-iren-holds-steady/"
-    },
-    {
-     "t": "TechTimes",
-     "u": "https://www.techtimes.com/articles/331481/20261125/anthropic-stock-falls-below-83-ipo-price-after-morgan-stanley-ended-price-support-early.htm"
-    },
-    {
-     "t": "FourWeekMBA(아레테)",
-     "u": "https://fourweekmba.com/ai-arete-starts-anthropic-at-300-3-7x-tuesdays-81-91-close/"
-    }
-   ],
-   "body": "장중 약 75.6달러까지 밀렸다가 약 82.8달러(약 11만 원), +1.1% 안팎으로 끝났습니다. 모건스탠리가 주가 안정 매수를 일찍 끝낸 것이 부담으로 거론됐고, 아레테는 '매수'·적정 주가 300달러(약 40만 원)로 분석을 시작했습니다."
-  },
-  {
-   "tag": "반등",
-   "img": "img/2026-11-26-rebound.jpg",
-   "title": "ADI +6.44% 반등, AST 스페이스모바일 +10.25%",
-   "line": "전날 1998년 이후 최악(-17.37%)이었던 아날로그디바이스가 일부 되돌렸지만 트루이스트·모건스탠리 등은 적정 주가를 낮췄습니다. AST 스페이스모바일은 52주 신저가에서 이사의 약 103만 달러(약 14억 원) 자사주 매입 공시 뒤 반등했습니다.",
-   "src": [
-    {
-     "t": "24/7 Wall St.(ADI)",
-     "u": "https://247wallst.com/investing/2026/11/25/analog-devices-stock-just-had-its-worst-day-since-1998/"
-    },
-    {
-     "t": "Investing.com(트루이스트)",
-     "u": "https://www.investing.com/news/analyst-ratings/truist-cuts-analog-devices-stock-price-target-to-323-on-cyclical-peak-signals-93CH-5050894"
-    },
-    {
-     "t": "24/7 Wall St.(ASTS)",
-     "u": "https://247wallst.com/investing/2026/11/25/ast-spacemobile-surges-9-erasing-early-losses-as-space-stocks-diverge-spacex-eases-rocket-lab-holds-steady/"
-    },
-    {
-     "t": "Stocktwits(ASTS)",
-     "u": "https://stocktwits.com/news-articles/markets/equity/asts-stock-bulls-director-dip-buy-bet-on-launch-fueled-comeback/cNbHb6dR9lO"
-    }
-   ],
-   "body": "전날 1998년 이후 최악(-17.37%)이었던 아날로그디바이스가 일부 되돌렸지만 트루이스트·모건스탠리 등은 적정 주가를 낮췄습니다. AST 스페이스모바일은 52주 신저가에서 이사의 약 103만 달러(약 14억 원) 자사주 매입 공시 뒤 반등했습니다."
-  },
-  {
-   "tag": "자산",
-   "img": "img/2026-11-26-gold.jpg",
-   "title": "금 장중 3,425달러(약 460만 원) 1년여 최저 뒤 반등, 비트코인 5.9만 달러 안팎(약 7931만 원)",
-   "line": "뜨거운 물가로 금리 인상 전망이 굳자 금 선물은 장중 3,425.2달러(약 460만 원)까지 밀렸다가 3,567.7달러로 끝났습니다(선물 마지막 체결가). 비트코인은 ETF 자금 유출 속에 5만 8~9천 달러대(약 7931만 원 안팎)였습니다.",
-   "src": [
-    {
-     "t": "야후 파이낸스(금)",
-     "u": "https://finance.yahoo.com/markets/commodities/articles/gold-price-today-november-25-110850194.html"
-    },
-    {
-     "t": "Longbridge(금 선물)",
-     "u": "https://longbridge.com/en/news/306811592"
-    },
-    {
-     "t": "Fortune(비트코인)",
-     "u": "https://fortune.com/article/price-of-bitcoin-11-25-2026/"
-    }
-   ],
-   "body": "뜨거운 물가로 금리 인상 전망이 굳자 금 선물은 장중 3,425.2달러(약 460만 원)까지 밀렸다가 3,567.7달러로 끝났습니다(선물 마지막 체결가). 비트코인은 ETF 자금 유출 속에 5만 8~9천 달러대(약 7931만 원 안팎)였습니다."
+   ]
   }
  ],
  "movers": [
@@ -1314,20 +1169,20 @@
  },
  "schedule": [
   {
-   "kst": "11/26(목) 밤",
-   "type": "휴장",
-   "name": "추수감사절 미국 증시 휴장",
+   "kst": "11/27(금) 23:30",
+   "type": "개장",
+   "name": "미국 증시 금요일 개장(블랙프라이데이)",
    "star": 2,
-   "why": "오늘 밤은 미국 증시가 쉬어 11/27(금) 호는 쉽니다.",
-   "src": "https://www.nyse.com/markets/hours-calendars"
+   "why": "휴장 뒤 첫 거래. 선물 흐름이 현물로 이어지는지.",
+   "src": "https://www.ibtimes.com.au/us-markets-closed-thanksgiving-2026-1879444"
   },
   {
    "kst": "11/28(토) 03:00",
    "type": "단축",
-   "name": "금요일 조기 폐장(미 동부 13:00) · 블랙프라이데이",
+   "name": "조기 폐장(미 동부 13:00)",
    "star": 2,
-   "why": "어도비 예상 블랙프라이데이 온라인 판매 129억 달러(약 17조 원, +9.2%). 거래가 얇아 움직임이 커질 수 있습니다.",
-   "src": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+   "why": "거래가 얇아 움직임이 커질 수 있습니다.",
+   "src": "https://finance.biggo.com/news/bef38756-5740-4079-8784-f2d501914c9b"
   },
   {
    "kst": "11/30(월) 밤",
@@ -1396,7 +1251,7 @@
  ],
  "schedule_note": "시각은 한국 시간이며 발표 기관·회사 일정에 따라 바뀔 수 있습니다. 예상치는 집계 기관마다 조금씩 다릅니다.",
  "calendar": {
-  "today": "2026-11-26",
+  "today": "2026-11-27",
   "days": [
    {
     "d": "2026-11-23",
@@ -1457,12 +1312,8 @@
     "d": "2026-11-27",
     "ev": [
      {
-      "k": "단축",
-      "t": "조기 폐장(13:00 ET)"
-     },
-     {
-      "k": "소비",
-      "t": "블랙프라이데이"
+      "k": "휴장",
+      "t": "추수감사절 · 선물 +0.7%"
      }
     ]
    },
@@ -1617,7 +1468,7 @@
    "done": false
   }
  ],
- "disclaimer": "투자 권유가 아니며, 투자 판단과 책임은 본인에게 있습니다. 시세는 CNBC 일봉(11/25 종가) 기준이며, 장중 수치·증권사·전문가 의견은 보도된 내용을 옮긴 것입니다. 샌디스크는 8:1 액면분할을 반영한 가격입니다.",
+ "disclaimer": "투자 권유가 아니며, 투자 판단과 책임은 본인에게 있습니다. 미국 11/26 휴장으로 시세는 CNBC 일봉(11/25 종가) 기준이며, 선물·아시아 증시는 보도된 내용을 옮긴 것입니다. 샌디스크는 8:1 액면분할을 반영한 가격입니다.",
  "quotes": {
   "asof": "2026-11-25 16:00 ET 종가",
   "src": "https://finance.yahoo.com",
@@ -6406,128 +6257,68 @@
   "asof": "2026-11-25 장 종료 가격 · 카드 내용은 11/25 05:20 KST 판(오늘 판은 받지 못함)"
  },
  "top2": {
-  "kicker": "두 번째 큰 뉴스 · 물가·성장·관세",
-  "title": "근원 PCE 3.3%·GDP 4.3%로 예상 웃돌아…관세 최대 35% 예고, 12월 인상 확률 약 95%",
-  "img": "img/2026-11-26-top2.jpg",
+  "kicker": "두 번째 큰 뉴스 · 아시아 반도체",
+  "title": "아시아 반도체 반등…대만 +2.5%, 일본 닛케이 +0.9%",
+  "img": "img/2026-11-27-top2.jpg",
   "points": [
    {
-    "t": "10월 PCE 물가는 전년 대비 3.8%로 예상과 같았지만(9월 3.6%), 연준이 중시하는 근원 PCE는 3.3%로 예상 3.2%를 넘어 2023년 11월 이후 가장 높았습니다. 전월 대비는 둘 다 0.3%였습니다.",
-    "src": "https://finance.yahoo.com/economy/policy/article/feds-favored-inflation-gauge-heats-up-solidifying-a-rate-hike-in-december-with-more-likely-next-year-135510084.html"
+    "t": "미국이 쉬는 동안 아시아 증시는 AI·반도체주를 중심으로 반등했습니다.",
+    "src": "https://www.click2houston.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/"
    },
    {
-    "t": "3분기 GDP 수정치는 연율 4.3%로 속보치 3.4%와 예상 3.5%를 크게 넘었습니다. 실업수당 청구는 18.9만 건(예상 20만), 10월 신규주택판매는 70.1만 채(예상 66만)였습니다.",
-    "src": "https://duke.fm/2026/11/25/us-inflation-rises-further-in-october-2/"
+    "t": "대만 가권지수는 2.5% 올랐고 일본 닛케이는 0.9% 올랐습니다.",
+    "src": "https://mlq.ai/news/taiex-jumps-25-and-nikkei-gains-09-as-asian-chip-stocks-rebound/"
    },
    {
-    "t": "미 무역대표부(USTR)는 14개 경제권에 301조 관세를 제안했습니다. 중국 최대 20%, 베트남 최대 35%, 인도 최대 25%이고 한국·일본·EU·대만은 15% 상한을 유지했습니다. 반도체·자동차·철강은 빠졌고 의견 접수는 2027년 1/5까지입니다.",
-    "src": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
-   },
-   {
-    "t": "12월 FOMC 0.25%p 인상 확률은 발표 전 97.8%에서 오후 약 95.8%로 조금 내려왔습니다(CME 선물 기준 계산). 기준금리는 지금 3.75~4.00%입니다.",
-    "src": "https://predictionmarketspicks.com/articles/fed-hike-odds-october-pce-gdp-december-2026-kalshi-polymarket-futures"
-   },
-   {
-    "t": "연준 베이지북은 12개 지역 중 8곳이 소폭~완만하게 성장했고 물가는 완만히 올랐다고 했습니다. 에너지·운송·보험·관세 비용 압박을 꼽았고, AI 데이터센터 투자는 강했습니다.",
-    "src": "https://www.investing.com/news/economy-news/fed-beige-book-shows-slight-growth-sticky-inflation-ahead-of-dec-meeting-5051430"
+    "t": "미국 수요일 장이 장중 급락을 대부분 되돌린 것이 아시아 반등의 계기로 꼽혔습니다.",
+    "src": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
    }
   ],
   "risks": [
    {
-    "t": "뜨거운 물가에도 미 국채 10년 금리는 4.85%로 -0.05%p 내렸습니다. 주식이 급락하자 돈이 채권으로 몰렸습니다.",
-    "src": "https://longbridge.com/en/news/306824440"
-   },
-   {
-    "t": "실질 소비는 거의 제자리(예상 +0.1%)였고 베이지북도 소비가 보합이라고 해, 수요 과열만 있는 것은 아니라는 신호도 있습니다.",
-    "src": "https://stockanalysis.com/news/us-pce-inflation-october-2026/"
+    "t": "전날 아시아는 AI주 급락으로 대부분 내렸습니다. 이틀 사이 방향이 바뀌어 아직 흔들리는 장입니다.",
+    "src": "https://www.click2houston.com/business/2026/11/25/asian-stocks-mostly-decline-as-ai-shares-tumble-after-a-retreat-on-wall-street/"
    }
   ],
-  "why": "연준이 12월 인상에 이어 내년 추가 인상까지 열어둘 근거가 쌓였습니다. 새 관세는 빨라야 1월부터지만 2027년 물가를 더 밀어올릴 수 있어, AI 신용 걱정과 금리 부담이 동시에 주식을 누르는 구도입니다.",
+  "why": "대만·일본 반도체주는 엔비디아·마이크론 같은 미국 반도체주와 함께 움직이는 일이 많아, 금요일 미국 반도체 흐름을 미리 보여 주는 신호로 볼 수 있습니다.",
   "watch": [
-   "12/4(금) 11월 고용보고서(예상 +9.5만 개, 실업률 4.1%)",
-   "12/8~9 FOMC 점도표의 내년 인상 횟수",
-   "1/10 미·중 관세 휴전 만료 · 1/5 관세 의견 마감"
+   "금요일 미국 반도체 ETF 출발",
+   "한국 반도체주(삼성전자·SK하이닉스) 금요일 흐름"
   ],
   "src": [
    {
-    "t": "야후 파이낸스(PCE)",
-    "u": "https://finance.yahoo.com/economy/policy/article/feds-favored-inflation-gauge-heats-up-solidifying-a-rate-hike-in-december-with-more-likely-next-year-135510084.html"
+    "t": "MLQ",
+    "u": "https://mlq.ai/news/taiex-jumps-25-and-nikkei-gains-09-as-asian-chip-stocks-rebound/"
    },
    {
-    "t": "StockAnalysis(PCE)",
-    "u": "https://stockanalysis.com/news/us-pce-inflation-october-2026/"
+    "t": "AP(Click2Houston)",
+    "u": "https://www.click2houston.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/"
    },
    {
-    "t": "로이터(Duke.fm)",
-    "u": "https://duke.fm/2026/11/25/us-inflation-rises-further-in-october-2/"
-   },
-   {
-    "t": "USTR 발표",
-    "u": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
-   },
-   {
-    "t": "Investing.com(베이지북)",
-    "u": "https://www.investing.com/news/economy-news/fed-beige-book-shows-slight-growth-sticky-inflation-ahead-of-dec-meeting-5051430"
-   },
-   {
-    "t": "코리아타임스(한국 15%)",
-    "u": "https://www.koreatimes.co.kr/world/20261126/us-proposes-tariffs-over-excess-production-retains-15-cap-for-korea-japan-eu"
+    "t": "BNN 블룸버그",
+    "u": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
    }
   ],
   "react": [
    {
-    "p": "X",
-    "t": "비스포크: 월 0.3%씩 끈적한 PCE라 연준이 내릴 핑계가 없다, 금리 민감주가 대가를 치른다",
-    "u": "https://247wallst.com/cards/xpost-01m89nbay65fxr3t4wwdd6xy1p"
-   },
-   {
-    "p": "X",
-    "t": "헤지아이: GDP 4.3%는 2분기의 거의 두 배, 매파에게 기름을 붓는 숫자",
-    "u": "https://247wallst.com/cards/xpost-01m89g6kktekms4fjnv7rb8408"
-   },
-   {
-    "p": "스톡트윗",
-    "t": "SPY·다우 게시판은 비관, 나스닥이 4% 빠지는데도 QQQ는 낙관 — 기술주 저가 매수 심리",
-    "u": "https://stocktwits.com/news-articles/markets/equity/dow-craters-over-1000-points-nasdaq-slips-4-as-ai-trade-unravels-investors-digest-pce-inflation-fresh-tariff-proposal/cNbHjJvR9mj"
-   },
-   {
-    "p": "전문가",
-    "t": "FWDBONDS 럽키: 수요를 식히려면 연준이 인상 속도를 높여야 한다",
-    "u": "https://duke.fm/2026/11/25/us-inflation-rises-further-in-october-2/"
-   },
-   {
-    "p": "전문가",
-    "t": "RSM 브루수엘라스: 12월 인상은 끝난 이야기, 3월도 예상하고 관세가 2027년 물가를 높인다",
-    "u": "https://realeconomy.rsmus.com/inflation-rises-and-income-is-stout-as-u-s-imposes-new-tariffs/"
-   },
-   {
-    "p": "전문가",
-    "t": "노스라이트 자카렐리: 물가는 너무 높지만 관세발 주식 불안이 쉬어갈 여지를 줄 수도",
-    "u": "https://www.investmentnews.com/equities/pce-inflation-gauge-still-running-hot-as-december-rate-hike-looms/269173"
-   },
-   {
-    "p": "전문가",
-    "t": "야데니: 0.25%p는 확실, 오히려 0.5%p를 해야 한다는 쪽(11/24)",
-    "u": "https://stocktwits.com/news-articles/markets/equity/fed-december-rate-hike-oil-prices-nvidia-rally-inflation/cNbuClGR9l5"
+    "p": "시장",
+    "t": "\"기술주가 다시 주도권\" — 아시아가 또 반등했다는 평",
+    "u": "https://www.france24.com/en/live-news/20261126-asian-stocks-enjoy-another-bounce-as-tech-holds-court"
    },
    {
     "p": "분석",
-    "t": "도이치방크는 12·1·3월 세 번 연속 인상, 골드만은 GDP 수정치를 연착륙 신호로 해석",
-    "u": "https://longbridge.com/en/news/306802027"
-   },
-   {
-    "p": "분석",
-    "t": "레이먼드 제임스 밀스: 새 관세는 대법원 판결 이전 구조를 되돌리는 성격",
-    "u": "https://finance.yahoo.com/markets/article/us-announces-new-tariffs-of-up-to-20-on-china-the-eu-and-12-other-nations-131802359.html"
-   },
-   {
-    "p": "정부",
-    "t": "중국 외교부: 과잉생산이라는 전제가 '거짓'이라고 반박, 보복 언급은 없음",
-    "u": "https://www.newsminimalist.com/articles/china-rejects-us-tariffs-on-false-overcapacity-premise-90c3bc22"
+    "t": "AI주가 이끈 반등, 미국 낙폭 축소가 계기라는 해석",
+    "u": "https://www.click2houston.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/"
    },
    {
     "p": "시장",
-    "t": "팔켄슈타인 마켓: 외환시장은 관세·PCE 둘 다 무시했고 채권만 강세",
-    "u": "https://falkenstein.substack.com/p/tariffs-a-tech-bear-market-and-a"
+    "t": "미국 휴장 속 세계 증시가 오르고 기술주가 돌아왔다는 분위기",
+    "u": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
+   },
+   {
+    "p": "분석",
+    "t": "대만·일본 칩주 반등 폭이 커 \"저가 매수\" 성격이라는 시각",
+    "u": "https://mlq.ai/news/taiex-jumps-25-and-nikkei-gains-09-as-asian-chip-stocks-rebound/"
    }
   ]
  },
