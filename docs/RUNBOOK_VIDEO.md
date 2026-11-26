@@ -8,8 +8,9 @@
 ## 0. 공통 준비
 1. 저장소 `yoonjintar2-ctrl/usstock-news` 를 /home/claude/usstock-news 에 clone/pull. `D` = 오늘 한국 날짜, `M` = MMDD.
 2. 이미 올렸는지: `video/uploaded.json` 에 `D:summary`·`D:top`·`D:top2`(일요일 `D:week`·`D:concept`) 키가 있으면 그 편은 건너뛴다. 유튜브 스튜디오 쇼츠 목록 첫 화면도 get_page_text 로 한 번 확인(중복 금지).
-3. 키트: 맥 `~/Downloads/daily_kit_1125.tgz` 를 device_stage_files 로 가져와 `bash scripts/video/daily.sh setup <스테이징 경로>` (저장소의 최신 top8.py·prep_sum.py 등이 덮어써짐).
-4. 맥 TTS 대기기 확인: device_bash `tail -3 $HOME/mnt/Downloads/qtts/worker_log.txt`. 꺼져 있으면 computer-use 로 Finder 에서 `~/Downloads/qtts/TTS_작업대기.command` 더블클릭.
+3. 키트: **저장소 안의 `kit/daily_kit.tgz` 를 쓴다** → `bash scripts/video/daily.sh setup kit/daily_kit.tgz` (맥 폴더가 필요 없음. 저장소의 최신 top8.py·prep_sum.py 등이 덮어써짐).
+**맥 폴더 접근이 거부·실패해도 멈추지 않는다**(11/27 사고: 지시문 재승인 때 작업의 맥 폴더 연결이 풀려 1분 만에 끝남). 목소리는 `daily.sh fetch`(깃허브 tts-out)로 받고, 그것도 없으면 보고 맨 앞에 '맥 폴더 연결 끊김 — 작업 설정에서 다운로드 폴더 연결 필요'라고 분명히 적는다. 업로드(크롬)는 폴더 없이도 된다.
+4. 맥 TTS 대기기 확인(폴더 접근 될 때만): device_bash `tail -3 $HOME/mnt/Downloads/qtts/worker_log.txt`. 꺼져 있으면 computer-use 로 Finder 에서 `~/Downloads/qtts/TTS_작업대기.command` 더블클릭.
 
 ## 월~토
 ### A. 대본·목소리 (발행 작업이 06:45 전에 해 둠)
