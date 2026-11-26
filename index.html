@@ -303,6 +303,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 .cblock .cscroll{background:#fff;border:1px solid var(--ink);padding:6px 4px 0}
 .sch3 summary{grid-template-columns:78px minmax(0,1fr) auto 12px}.sch3 .t{white-space:normal;word-break:keep-all;line-height:1.25;font-size:12.5px}.sch3 .body{padding-left:88px}
 @media(max-width:560px){.sch3 summary{grid-template-columns:64px minmax(0,1fr) auto 10px;gap:8px}.sch3 .t{font-size:11.5px}.sch3 .body{padding-left:2px}}
+.vids{display:flex;gap:10px;margin:10px 0 4px;overflow-x:auto}.vids a{flex:0 0 auto;display:flex;gap:8px;align-items:center;border:1px solid #111;padding:6px 10px 6px 6px;text-decoration:none;color:#111;background:#fff;max-width:340px}.vids img{width:44px;height:78px;object-fit:cover;background:#ddd}.vids b{display:block;font-size:12px}.vids span{font-size:12.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 </style></head><body><div class="wrap">
 
 <header class="mast">
@@ -314,6 +315,7 @@ details.it .body{padding:0 2px 12px;font-size:14px}
 <nav class="tape" id="tape"></nav>
 <nav class="tape tape2" id="tape2"></nav>
 <p class="lead" id="lead" hidden></p>
+<div class="vids" id="vids" hidden></div>
 
 <div class="row"><section id="s-top"><h2>1면 <small>지금 시장이 가장 주목하는 한 건</small></h2><div id="top"></div></section></div>
 
@@ -507,6 +509,7 @@ const SITE_V=11;
 function render(D){
  if((D.site_v||0)>SITE_V&&!sessionStorage.getItem('usn_r')){try{sessionStorage.setItem('usn_r','1')}catch(e){}location.replace(location.pathname+'?r='+Date.now()+(location.search.includes('d=')?'&'+location.search.slice(1):''));return}
  document.title=`미국주식 늬우스 제${D.no}호 · ${D.date}`;
+ fetch('video/uploaded.json?v='+Date.now()).then(r=>r.json()).then(U=>{const L={summary:'출근길 요약',top:'1면 이슈',top2:'1면 두 번째',week:'주간 정리',concept:'개념 정리'};const v=U.filter(x=>x.id&&(x.key||'').startsWith(D.date+':'));if(!v.length)return;const el=$('vids');el.innerHTML=v.map(x=>`<a href="https://youtube.com/shorts/${esc(x.id)}" target="_blank" rel="noopener"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/${esc(x.id)}/oar2.jpg" onerror="this.src='https://i.ytimg.com/vi/${esc(x.id)}/hqdefault.jpg'"><span><b>▶ 영상 · ${L[(x.key||'').split(':')[1]]||'영상'}</b>${esc((x.title||'').replace(/#\S+/g,'').trim())}</span></a>`).join('');el.hidden=false}).catch(()=>{});
  const dt=new Date(D.date+'T00:00:00');$('date').textContent=`${dt.getFullYear()}년 ${dt.getMonth()+1}월 ${dt.getDate()}일 ${D.weekday||''}요일`;
  $('no').textContent=`제${D.no}호`;$('pub').textContent=D.publisher||'샌디스크 올인';$('session').textContent=`${D.session||''} 마감 기준`;
  $('lead').textContent=D.lead||'';setTimeout(marquee,0);
