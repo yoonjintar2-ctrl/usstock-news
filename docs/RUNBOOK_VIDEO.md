@@ -34,6 +34,11 @@
    → 일반 동영상으로 업로드(제목 `주간 미장 정리｜M/D~M/D 이번 주 큰 이슈 N개 #미국주식 #미장`, 설명에 날짜별 쇼츠 링크), 키 `D:week`. 3편 미만이면 건너뛴다.
 2. **상시용 개념 쇼츠:** docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/queue/0us${M}_3concept.json` push → 받기 → `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json` → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
 
+3. **주간 채널 분석(매주 일요일, 업로드 끝난 뒤):** 유튜브 스튜디오 → 분석(지난 7일)·콘텐츠 탭을 get_page_text 로 읽는다(캡처 최소). 영상별 조회수·평균 시청 비율(%)·좋아요·구독 전환·유입(쇼츠 피드/검색/채널), 채널 전체 조회수·구독자 증감, 틱톡 스튜디오 지난 7일 조회수도.
+   - docs/ANALYTICS.md 맨 위에 그 주 표 + **잘 된 3편 / 안 된 3편의 공통점**(첫 2초 문구·주제·길이·올린 시각·썸네일 틀) + **다음 주 바로 적용할 개선 3~5개**(구체적으로: 무엇을 어떻게 바꿀지)를 적고 push.
+   - 데이터로 뒷받침되는 작은 개선(제목 문구 틀, 첫 줄 패턴, 장면 순서, 썸네일 틀 비중)은 PROMPT.md·이 문서에 바로 반영해도 된다. 편수·길이 규칙·목소리·업로드 시각처럼 큰 변경은 제안만 하고 발행인 결정을 기다린다.
+   - 보고 첫 줄에 '이번 주 채널: 조회수 N(전주 대비 ±%), 구독 +N' 과 개선 제안 요약.
+
 ## 올리기 (맥 크롬 — chrome-browser 스킬, macOS 브라우저)
 - 파일이 3.8MB 넘으면 `bash scripts/video/daily.sh split <mp4>` 조각을 임시 `input[type=file]`(id cc_partN)에 file_upload → JS 로 `new File(조각들,'D.mp4',{type:'video/mp4'})` 을 DataTransfer 로 진짜 입력에 넣고 change.
 - 유튜브: 제목·설명은 video JSON 의 title·description(설명에 ASCII < > 금지) → `execCommand('insertText')`, 아동용 아님(`VIDEO_MADE_FOR_KIDS_NOT_MFK`), '자세히' → 변경/합성 콘텐츠 '예', 썸네일 file-input, **재생목록**(요약 → '출근길 미장 요약', 8비트·개념 → '1면 이슈 1분 정리', 롱폼 → '주간 미장 정리'; 없으면 그 자리에서 새로 만든다), `#next-button` ×3 → 공개 → `#done-button`. 올린 뒤 youtube.com/shorts/ID 로 쇼츠 재생 확인(get_page_text).
