@@ -1,0 +1,1 @@
+{"name": "0us_ghtest", "mode": "clone", "ref_audio": "out/casual1/E_think.wav", "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?", "gen": {"temperature": 0.65, "top_p": 0.9}, "items": [{"id": "t1_c1", "text": "깃허브 연결 시험입니다.", "gen": {"non_streaming_mode": true}}]}

@@ -14,6 +14,43 @@ SRC = {'design': HERE, 'clone': os.environ.get('QTTS_BASE', 'Qwen/Qwen3-TTS-12Hz
 cur = {'mode': None, 'tts': None, 'prompt': None}
 MY_MTIME = os.path.getmtime(ME)
 
+# 11/26 맥 없이 돌리기: 미국주식 늬우스 발행 작업(클라우드)이 깃허브 tts/queue/0us*.json 에 올린 작업을 대기기가 직접 가져온다.
+# 저장소가 공개라 로그인 없이 읽기만 한다. 2분에 한 번, 실패해도 조용히 넘어간다.
+GH_LIST = 'https://api.github.com/repos/yoonjintar2-ctrl/usstock-news/contents/tts/queue'
+_gh = {'t': 0}
+def _get(url):
+    try:
+        import requests
+        r = requests.get(url, timeout=20, headers={'User-Agent': 'qtts'}); r.raise_for_status(); return r.content
+    except ImportError:
+        import urllib.request, ssl
+        try:
+            import certifi; ctx = ssl.create_default_context(cafile=certifi.where())
+        except Exception:
+            ctx = ssl.create_default_context()
+        return urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'qtts'}), timeout=20, context=ctx).read()
+def gh_pull():
+    if time.time() - _gh['t'] < 120: return
+    _gh['t'] = time.time()
+    try:
+        for f in json.loads(_get(GH_LIST)):
+            n = f.get('name', '')
+            if not (n.startswith('0us') and n.endswith('.json')): continue
+            name = n[:-5]
+            if os.path.exists(os.path.join(JOBS, n)) or os.path.exists(os.path.join(DONE, n)) \
+               or os.path.exists(os.path.join(HERE, 'out', name, 'DONE')): continue
+            data = _get(f['download_url']); json.loads(data)
+            tmp = os.path.join(JOBS, n + '.new'); open(tmp, 'wb').write(data); os.replace(tmp, os.path.join(JOBS, n))
+            print(f'깃허브에서 작업 가져옴: {n}', flush=True)
+    except Exception as e:
+        print(f'깃허브 작업 확인 실패(넘어감): {str(e)[:80]}', flush=True)
+
+class Preempt(Exception): pass
+def urgent_waiting(cur_name):
+    """급한 작업(이름이 0으로 시작)이 들어왔는데 지금 작업이 급한 게 아니면 잠시 멈추고 급한 것부터(완료분은 다음에 건너뜀)."""
+    if str(cur_name).startswith('0'): return False
+    return any(os.path.basename(p).startswith('0') for p in glob.glob(os.path.join(JOBS, '*.json')))
+
 
 DT = {'bfloat16': torch.bfloat16, 'float16': torch.float16, 'float32': torch.float32}
 
@@ -75,6 +112,9 @@ def run(job):
         if job.get('resume', True) and os.path.exists(done_p):
             w, sr = sf.read(done_p, dtype='float32'); clips[it['id']] = (w, sr); continue
         if n_it and every and n_it % every == 0: fresh(force=True)
+        gh_pull()
+        if urgent_waiting(job.get('_file') or job.get('name', '')):
+            print(f"급한 작업 도착 → [{job['name']}] 잠시 멈춤(이어서 다시)", flush=True); raise Preempt()
         if os.path.getmtime(ME) != MY_MTIME:      # 작업 중이라도 코드가 바뀌면 남은 작업은 새 코드로
             print('새 버전 감지(작업 중) → 재시작, 이 작업은 처음부터 다시', flush=True); os.execv(sys.executable, [sys.executable, ME])
         cap = {'max_new_tokens': int(12 * (3 + 0.22 * len(it['text'])))}   # 12Hz 코덱: 문장 길이 기준 상한
@@ -134,13 +174,14 @@ print(f'작업 대기기 v2 시작 ({DEV}) — 이 창은 열어 두세요.', fl
 open(os.path.join(HERE, 'WORKER_READY'), 'w').write(time.strftime('%Y-%m-%d %H:%M:%S') + ' v2')
 last_clean = 0
 while True:
+    gh_pull()
     if time.time() - last_clean > 3600:
         cleanup(); last_clean = time.time()
     if os.path.getmtime(ME) != MY_MTIME:          # 코드가 업데이트되면 새 코드로 재시작
         print('새 버전 감지 → 재시작', flush=True); os.execv(sys.executable, [sys.executable, ME])
     for jp in sorted(glob.glob(os.path.join(JOBS, '*.json'))):
         try:
-            J = json.load(open(jp, encoding='utf-8'))
+            J = json.load(open(jp, encoding='utf-8')); J['_file'] = os.path.basename(jp)
             if J.get('kind') in ('image', 'probe'):   # 11/18 문학늬우스 삽화: 그림 작업은 별도 프로세스(img_worker.py)로 — TTS 모델을 내려 메모리를 비우고 돌린다
                 cur['tts'] = None; cur['prompt'] = None; cur['mode'] = None; gc.collect()
                 if DEV == 'mps': torch.mps.empty_cache()
@@ -149,6 +190,8 @@ while True:
                 subprocess.run([sys.executable, os.path.join(HERE, 'img_worker.py'), jp], cwd=HERE)
             else:
                 run(J)
+        except Preempt:
+            break                                   # 작업 파일은 jobs/ 에 그대로 두고 처음부터 다시 훑는다(급한 것 먼저)
         except Exception:
             err = traceback.format_exc(); print(err, flush=True)
             os.makedirs(os.path.join(HERE, 'out'), exist_ok=True)
