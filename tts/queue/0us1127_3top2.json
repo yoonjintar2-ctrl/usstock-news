@@ -1,0 +1,77 @@
+{
+ "name": "0us1127_3top2",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_0_c1",
+   "text": "미국이 쉬는 동안, 대만 증시가 이 점 오 퍼센트 올랐어요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_0_c1",
+   "text": "대만은 이 점 오 퍼센트, 일본 닛케이는 영 점 구 퍼센트 올랐어요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_0_c1",
+   "text": "하루 전엔 인공지능주 급락에 내렸는데, 하루 만에 반등했어요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_0_c1",
+   "text": "미국 반도체 지수가 장중 팔 퍼센트 빠졌다가 영 점 육오 퍼센트 하락으로 회복한 게 계기였어요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_0_c1",
+   "text": "근데 말이죠, 이틀 사이에 방향이 바뀐 흔들리는 장이에요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_0_c1",
+   "text": "기술주가 돌아왔다는 말도, 싸져서 산 저가 매수라는 시각도 나왔어요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_0_c1",
+   "text": "오늘 한국 반도체주, 그리고 밤에 미국 반도체 출발을 보세요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_0_c1",
+   "text": "반도체, 다시 살아날까요? 여러분 생각을 댓글로 알려주세요!",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_1_c1",
+   "text": "매일 아침 미장 이슈, 내일도 들고 올게요. 구독해 두세요!",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}

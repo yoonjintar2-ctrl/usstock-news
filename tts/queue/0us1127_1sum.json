@@ -1,0 +1,133 @@
+{
+ "name": "0us1127_1sum",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_00_c1",
+   "text": "십일월 이십칠일 금요일, 출근길 미장 휴장일 특집입니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s00_01_c1",
+   "text": "어젯밤 미국 증시는 추수감사절이라 쉬었습니다. 그래서 오늘은 선물로 분위기를 보겠습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s00_02_c1",
+   "text": "휴장 중 에스앤피 오백 선물은 영 점 칠 퍼센트 안팎 올랐습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_00_c1",
+   "text": "첫 번째 소식입니다. 수요일 장중 급락을 대부분 되돌린 반등이 선물로 이어졌다는 해석입니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_01_c1",
+   "text": "다만 연휴라 거래가 얇아서, 오늘 밤 실제 장에서는 달라질 수 있습니다. 자세한 건 이슈 영상에서 볼게요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_00_c1",
+   "text": "두 번째 소식입니다. 미국이 쉬는 동안 대만 증시는 이 점 오 퍼센트, 일본 닛케이는 영 점 구 퍼센트 올랐습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_01_c1",
+   "text": "인공지능과 반도체주가 반등을 이끌었습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_00_c1",
+   "text": "그 밖의 소식입니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_01_c1",
+   "text": "금값은 얇은 거래 속에 반등하며 온스당 삼천육백달러, 약 사백팔십사만 원 선을 시험했습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_02_c1",
+   "text": "비트코인과 금의 단기 기술 신호는 약하다는 분석도 나왔습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_00_c1",
+   "text": "주요 차트 세 개는 휴장이라 수요일 그대로입니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_01_c1",
+   "text": "세 지수 모두 장중 저점에서 크게 끌어올린 긴 아래꼬리 양봉이었습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_00_c1",
+   "text": "오늘 밤 일정입니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_01_c1",
+   "text": "밤 열한 시 반에 문을 열고, 블랙프라이데이라 토요일 새벽 세 시에 일찍 닫습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_00_c1",
+   "text": "매일 아침 미장 소식, 내일도 들고 올게요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_01_c1",
+   "text": "구독하고, 매일 아침 미국주식 소식을 받아보세요.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_02_c1",
+   "text": "투자 판단과 책임은 본인에게 있습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}
