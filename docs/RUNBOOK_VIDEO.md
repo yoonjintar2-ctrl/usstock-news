@@ -13,7 +13,7 @@
 
 ## 월~토
 ### A. 대본·목소리 (발행 작업이 06:45 전에 해 둠)
-1. `archive/D.json`·`video/D.json`·`video/top/D.json`·`video/top/D-top2.json` 이 올 때까지 `for i in $(seq 9); do git pull -q; [ -f video/top/$D.json ] && break; sleep 60; done` 를 반복(09:30 까지). 일요일·휴장 다음 날은 신문이 없으니 끝낸다.
+1. `archive/D.json`·`video/D.json`·`video/top/D.json`·`video/top/D-top2.json` 이 올 때까지 `for i in $(seq 9); do git pull -q; [ -f video/top/$D.json ] && break; sleep 60; done` 를 반복(09:30 까지). 일요일엔 '일요일' 절로 간다. 미국 휴장 다음 날도 '휴장일 호'와 대본이 나오니 평소처럼 기다린다.
    - `video/D.json` 은 있는데 8비트 대본(top·top2)이 07:00 까지 없으면 직접 쓴다(형식·규칙: PROMPT.md '8비트 대본 규칙', 본보기 video/top/EXAMPLE-2026-11-26.json, 내용은 archive top).
 2. `bash scripts/video/daily.sh jobs $D` (이미 있으면 건너뜀). 맥 대기기가 2분 안에 tts/queue 의 `0us${M}_1sum`·`0us${M}_2top`·`0us${M}_3top2` 를 스스로 가져간다(이름순 = 요약 → top → top2).
 3. 목소리 받기: 먼저 `bash scripts/video/daily.sh fetch 0us${M}_1sum /tmp/c_sum` (맥 대기기가 깃허브 tts-out 에 올렸으면 바로 됨). exit 4 면 맥에서: device_bash 로 `out/0us${M}_1sum/DONE` 이 생길 때까지 기다린 뒤 `cd $HOME/mnt/Downloads/qtts/out && tar czf 0us${M}_1sum.tgz 0us${M}_1sum` → device_stage_files → /tmp/c_sum 에 풀기.
