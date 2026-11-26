@@ -22,7 +22,7 @@ im.save(f'img/{D}-top.jpg',quality=88)
 im=Image.new('RGB',(1200,750),P); d=ImageDraw.Draw(im)
 d.text((50,30),'ASIA CHIPS',font=F(BL,140),fill=K); d.text((60,210),'미국 휴장 중 아시아 반도체 반등 · 11/26',font=F(BO,34),fill=K)
 for i,(n,p) in enumerate([('대만 가권',2.5),('일본 닛케이',0.9)]):
-    y=330+i*190; d.text((60,y+20),n,font=F(BL,54),fill=K); w=int(p/2.5*560)
+    y=330+i*190; d.text((60,y+20),n,font=F(BL,54),fill=K); w=int(p/2.5*380)
     d.rectangle((420,y,420+w,y+120),fill=K if i==0 else G); d.text((440+w,y+20),f'▲ {p}%',font=F(BL,70),fill=K)
 d.line((60,700,1140,700),fill=K,width=3)
 im.save(f'img/{D}-top2.jpg',quality=88)
