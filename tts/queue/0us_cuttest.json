@@ -1,0 +1,182 @@
+{
+ "name": "0us_cuttest",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "a0_c1",
+   "text": "선물은 0.7% 안팎 올랐습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "a0_c2",
+   "text": "선물은 0.7% 안팎 올랐습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "a1_c1",
+   "text": "아시아 반도체가 반등했습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "a1_c2",
+   "text": "아시아 반도체가 반등했습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "a2_c1",
+   "text": "오늘 밤 일찍 문을 닫습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "a2_c2",
+   "text": "오늘 밤 일찍 문을 닫습니다.",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "b0_c1",
+   "text": "선물은 0.7% 안팎 올랐습니다..",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "b0_c2",
+   "text": "선물은 0.7% 안팎 올랐습니다..",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "b1_c1",
+   "text": "아시아 반도체가 반등했습니다..",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "b1_c2",
+   "text": "아시아 반도체가 반등했습니다..",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "b2_c1",
+   "text": "오늘 밤 일찍 문을 닫습니다..",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "b2_c2",
+   "text": "오늘 밤 일찍 문을 닫습니다..",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "c0_c1",
+   "text": "선물은 0.7% 안팎 올랐습니다…",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "c0_c2",
+   "text": "선물은 0.7% 안팎 올랐습니다…",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "c1_c1",
+   "text": "아시아 반도체가 반등했습니다…",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "c1_c2",
+   "text": "아시아 반도체가 반등했습니다…",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "c2_c1",
+   "text": "오늘 밤 일찍 문을 닫습니다…",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "c2_c2",
+   "text": "오늘 밤 일찍 문을 닫습니다…",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "d0_c1",
+   "text": "선물은 0.7% 안팎 올랐습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "d0_c2",
+   "text": "선물은 0.7% 안팎 올랐습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "d1_c1",
+   "text": "아시아 반도체가 반등했습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "d1_c2",
+   "text": "아시아 반도체가 반등했습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "d2_c1",
+   "text": "오늘 밤 일찍 문을 닫습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "d2_c2",
+   "text": "오늘 밤 일찍 문을 닫습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}

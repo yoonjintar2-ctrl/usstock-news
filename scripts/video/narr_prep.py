@@ -30,7 +30,7 @@ def clean(x, sr, text):
     R = regions(x, sr)
     if len(R) >= 2:
         a, b = R[-1]; pa, pb = R[-2]
-        if (b - a) / sr <= 0.6 and (a - pb) / sr >= 0.45: R = R[:-1]          # ' 음.' 꼬리 제거
+        if text.rstrip().endswith('음.') and (b - a) / sr <= 0.6 and (a - pb) / sr >= 0.45: R = R[:-1]   # 옛 ' 음.' 꼬리만 제거(11/26 뒤로는 안 붙임)
     ell = '…' in text
     out = []; pad = int(0.06 * sr)
     s0 = max(0, R[0][0] - pad)
@@ -42,9 +42,24 @@ def clean(x, sr, text):
             if keep < gap: out.append(np.zeros(max(0, int((keep - 0.12) * sr)), np.float32))
             else: seg = x[R[i - 1][1] + pad: min(len(x), b + pad)]
         out.append(seg)
+    # 11/27 발행인 지적: 문장 끝 '다'가 울림이 다 끝나기 전에 잘려 말이 끊긴 듯 들림.
+    # 원인 — 끝 경계를 큰 문턱(0.02)으로 잡고 60ms만 더 남긴 뒤 40ms로 급히 줄였기 때문.
+    # 고침 — 마지막 덩어리 뒤로 작은 문턱(0.004)까지 울림을 따라가 끝을 찾고, 150ms를 더 남긴 뒤 120ms 동안 서서히 줄인다.
+    hop = int(sr * 0.01); e = R[-1][1]; lim = min(len(x), e + int(0.6 * sr))
+    while e + hop <= lim and np.sqrt((x[e:e + hop] ** 2).mean()) > 0.004: e += hop
+    tail_end = min(len(x), e + int(0.15 * sr)); cur_end = min(len(x), R[-1][1] + pad)
+    if tail_end > cur_end: out.append(x[cur_end:tail_end])
     y = np.concatenate(out)
-    fo = int(0.04 * sr); y[-fo:] *= np.linspace(1, 0, fo)
+    fo = min(len(y), int(0.12 * sr)); y[-fo:] *= np.linspace(1, 0, fo) ** 1.5
     return y
+
+def raw_cut(x, sr):
+    """TTS 원본 자체가 소리 나는 중에 끝났는지(마지막 30ms 세기 > 0.008) — 모델이 말 끝을 다 만들기 전에 멈춘 경우. 다시 만들어야 한다."""
+    n = int(0.03 * sr); return len(x) > n and float(np.sqrt((x[-n:] ** 2).mean())) > 0.008
+
+def tail_cut(y, sr):
+    """검수용: 끝 60ms 평균 세기 — 0.01 넘으면 아직 소리가 나는 중에 잘린 것(끝 잘림 의심)."""
+    n = int(0.06 * sr); return float(np.sqrt((y[-n * 2:-n] ** 2).mean())) if len(y) > 2 * n else 0.0
 
 if __name__ == '__main__':
     cdir, picks, mod = sys.argv[1:4]
@@ -68,7 +83,9 @@ if __name__ == '__main__':
             md = np.median([len(v) for v in cl.values()])
             from pitch_check import f0_median            # 11/26: 피치가 튄 테이크는 피한다
             F = {c: f0_median(c) for c in cl}; ref = REF_HZ or np.median([v for v in F.values() if v] or [200])
-            pick = min(cl, key=lambda c: abs(len(cl[c]) - md) / 24000 + (3 if F[c] and abs(F[c] / ref - 1) > 0.15 else 0) + (0 if c.endswith('_c1.wav') else 0.01))
+            CUT = {c: raw_cut(*load(c)) for c in cl}                # 11/27: 말 끝이 잘린 테이크도 피한다
+            pick = min(cl, key=lambda c: abs(len(cl[c]) - md) / 24000 + (3 if F[c] and abs(F[c] / ref - 1) > 0.15 else 0) + (2 if CUT[c] else 0) + (0 if c.endswith('_c1.wav') else 0.01))
+            if CUT[pick]: print(f'  ⚠ 끝 잘림 {os.path.basename(pick)} — 다시 만들기(--retake {lid})')
         y = resample_poly(cl[pick], 147, 80).astype(np.float32)               # 24000 → 44100
         sp = float(os.environ.get('SPEED', 1.0))                              # 예: SPEED=1.05 (60초 맞추기, 피치 유지)
         if abs(sp - 1) > 1e-3:

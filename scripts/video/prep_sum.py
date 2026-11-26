@@ -4,7 +4,7 @@ import sys, os, glob, re, wave
 import numpy as np
 from scipy.signal import resample_poly
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from narr_prep import load, clean
+from narr_prep import load, clean, raw_cut
 
 from pitch_check import table, pick_by_pitch
 
@@ -16,7 +16,9 @@ for p in sorted(glob.glob(os.path.join(cdir, 's*_c*.wav'))):
     m = re.search(r's(\d+)_(\d+)_c\d+\.wav$', os.path.basename(p))
     if m: lines.setdefault(m.groups(), []).append(p)
 for (si, li), cands in sorted(lines.items()):
-    p = pick_by_pitch(cands, T, REF)
+    ok = [c for c in cands if not raw_cut(*load(c))] or cands           # 11/27: 말 끝이 잘린 테이크는 피한다
+    p = pick_by_pitch(ok, T, REF)
+    if raw_cut(*load(p)): print(f'  ⚠ 끝 잘림 {os.path.basename(p)} — 다시 만들기 권장(--retake s{si}_{li})')
     if T.get(p) and abs(T[p] / REF - 1) > 0.15: print(f'  ⚠ 피치 튐 {os.path.basename(p)} {T[p]:.0f}Hz (기준 {REF:.0f}Hz) — 다시 만들기 권장')
     x, sr = load(p); y = clean(x, sr, '')
     y = resample_poly(y, 147, 80).astype(np.float32)
