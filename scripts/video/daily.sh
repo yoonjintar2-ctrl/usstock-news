@@ -11,6 +11,12 @@ set -e
 R=$(cd "$(dirname "$0")/../.." && pwd); K=/home/claude/pixel_kit; OUTV=/home/claude/vid; mkdir -p $OUTV
 cmd=$1; shift
 mmdd() { echo "${1:5:2}${1:8:2}"; }
+# 0초 화면 = 표지: 썸네일 0.4초를 영상 맨 앞에 붙인다(쇼츠 피드 첫 화면). cover <mp4> <thumb.jpg>
+cover() { local F=$1 T=$2 X=/tmp/cover_$$; mkdir -p $X
+  ffmpeg -y -loglevel error -loop 1 -t 0.4 -i $T -f lavfi -t 0.4 -i anullsrc=r=48000:cl=stereo -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,format=yuv420p" -c:v libx264 -preset veryfast -crf 18 -c:a aac -b:a 192k -shortest $X/c.mp4
+  ffmpeg -y -loglevel error -i $F -c:v libx264 -preset veryfast -crf 20 -vf fps=30,format=yuv420p -c:a aac -b:a 192k -ar 48000 -ac 2 $X/m.mp4
+  printf "file '%s'\nfile '%s'\n" $X/c.mp4 $X/m.mp4 > $X/l.txt
+  ffmpeg -y -loglevel error -f concat -safe 0 -i $X/l.txt -c copy -movflags +faststart $F.tmp.mp4 && mv $F.tmp.mp4 $F; rm -rf $X; }
 case $cmd in
 setup)
   T=$1; [ -n "$T" ] && tar xzf "$T" -C /home/claude
@@ -42,6 +48,7 @@ sum)
   python3 $R/scripts/video/prep_sum.py $C $V | tail -3
   VOICE_DIR=$V python3 $R/scripts/video/render.py $R/video/$D.json /tmp/sumout_$D | tail -3
   cp /tmp/sumout_$D/$D-summary.mp4 $OUTV/$D-summary.mp4; cp /tmp/sumout_$D/$D-thumb.jpg $OUTV/$D-summary-thumb.jpg
+  cover $OUTV/$D-summary.mp4 $OUTV/$D-summary-thumb.jpg
   L=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $OUTV/$D-summary.mp4)
   echo "summary $L 초"; python3 -c "import sys; sys.exit(0 if float('$L') <= 175 else 1)" || { echo '!! 2분 55초 넘음 — 덜 중요한 줄을 빼고 다시'; exit 3; } ;;
 top)
@@ -58,6 +65,7 @@ top)
   python3 host_compose.py $O/spec.json $O/px $O/m $O/mix.wav $OUTV/$D-$TAG-raw.mp4
   ffmpeg -y -loglevel error -i $OUTV/$D-$TAG-raw.mp4 -c:v copy -af loudnorm=I=-16:TP=-1.5:LRA=11 -c:a aac -b:a 192k -ar 48000 -movflags +faststart $OUTV/$D-$TAG.mp4
   python3 top8.py $S thumb $OUTV/$D-$TAG-thumb.jpg
+  cover $OUTV/$D-$TAG.mp4 $OUTV/$D-$TAG-thumb.jpg
   echo "top $(ffprobe -v error -show_entries format=duration -of csv=p=0 $OUTV/$D-$TAG.mp4) 초" ;;
 sheet)
   F=$1; L=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $F); rm -rf /tmp/sh && mkdir -p /tmp/sh
