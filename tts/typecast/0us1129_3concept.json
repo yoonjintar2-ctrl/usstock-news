@@ -1,0 +1,84 @@
+{
+ "name": "0us1129_3concept",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_0_c1",
+   "text": "연준의 물가 목표 이 퍼센트, 사실 씨피아이 기준이 아니에요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_0_c1",
+   "text": "연준이 보는 건 피씨이, 개인소비지출 물가예요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_1_c1",
+   "text": "이천십이 년에 이 퍼센트 목표를 정할 때 이걸 기준으로 삼았죠. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_0_c1",
+   "text": "가장 큰 차이는 집세예요. 씨피아이에선 삼분의 일쯤, 피씨이에선 그 절반쯤이에요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_0_c1",
+   "text": "또 피씨이는 사람들이 싼 걸로 갈아타는 걸 매달 반영해요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_0_c1",
+   "text": "회사나 정부가 대신 내주는 의료비까지 넣어서 범위도 더 넓죠. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_0_c1",
+   "text": "그래서 보통 씨피아이가 조금 더 높게 나와요. 씨피아이만 보고 연준을 짐작하면 헷갈릴 수 있어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_0_c1",
+   "text": "다음 피씨이 발표는 한국 시간 십이월 이십삼일 밤 열 시 반이에요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_0_c1",
+   "text": "다음에 궁금한 개념, 댓글로 알려주세요! ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_1_c1",
+   "text": "매일 아침 미장 이슈도 들고 올게요. 구독해 두세요! ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}
