@@ -56,7 +56,7 @@
   · **어제 댓글 한 줄:** data/comment_pick.json(맥 영상 작업이 전날 요약 고정 댓글의 답글을 읽어 남김: {date, gist, count})이 있고 날짜가 어제면, 요약 대본 마무리 앞에 '어제 댓글에선 … 의견이 가장 많았어요' 한 줄(아이디·원문 인용 없이 뜻만, 투자 권유로 들리지 않게).
   · **월요일 ② top 8비트 = '이번 주 실적·일정 달력', ③ top2 = 주말 가장 큰 이슈:** 월요일엔 첫 8비트를 1면 이슈 대신 이번 주 큰 실적·경제지표·연준 일정을 요일별로(cards·names 장면, 한국 시간, 원화 환산). 주말 큰 이슈는 요약에서 다룬다. 제목 예 `이번 주 미장 달력｜엔비디아 실적·PCE… M/D~M/D #미국주식 #실적 #shorts`.
   · **제목엔 한글 이름(티커):** 예 '엔비디아(NVDA)', '브로드컴(AVGO)' — 두 방식 검색에 다 걸리게. 해시태그도 한글 이름.
-- 업로드는 맥 크롬(유튜브·틱톡). 유튜브 API 시크릿(YT_CLIENT_ID·YT_CLIENT_SECRET·YT_REFRESH_TOKEN)이 생기면 Actions 가 유튜브는 맥 없이 올린다(scripts/video/upload.py).
+- 업로드: 유튜브만(11/27부터 틱톡 중단). 유튜브는 맥 없이 API — `bash scripts/video/yt_queue.sh D:kind mp4 thumb 대본json` → Actions 'yt-upload'. 목소리는 타입캐스트 한영(Actions 'typecast-tts'). 맥은 쓰지 않는다.
 
 ### 요약 영상 고정 규칙 (11/22~11/24 발행인)
 - 목소리: 모든 편 마스코트 목소리(맥 Qwen 클론). Supertonic(6번)·Actions 렌더본은 기계음이 섞여 쓰지 않는다 → `VOICE_DIR` 로 렌더(scripts/video/prep_sum.py).

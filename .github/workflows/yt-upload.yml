@@ -28,9 +28,20 @@ jobs:
             K=$(python3 -c "import json;print(json.load(open('$d/job.json'))['key'])")
             PA=$(python3 -c "import json;print(json.load(open('$d/job.json')).get('publish_at') or '')")
             python3 scripts/video/upload.py "$d/video.mp4" "$d/thumb.jpg" "$d/spec.json" --key "$K" ${PA:+--publish-at $PA} 2>&1 | tee -a /tmp/log.txt
+            mkdir -p /tmp/wk && cp "$d/video.mp4" "/tmp/wk/${K//:/_}.mp4"
             rm -rf "$d"
           done
           if [ -n "$(git status --porcelain video/uploaded.json)" ]; then
             git add video/uploaded.json && git commit -qm "유튜브 업로드 기록(API)" && for i in 1 2 3 4; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
           fi
           cd /tmp/q && git add -A && (git diff --cached --quiet || git commit -qm "업로드 완료분 비움") && git push -q origin HEAD:yt-queue || true
+      - name: 주간 롱폼 재료 보관(8일치)
+        if: always()
+        run: |
+          ls /tmp/wk/*.mp4 >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/keep
+          if git fetch -q origin vid-week 2>/dev/null; then git --work-tree=/tmp/keep checkout origin/vid-week -- . 2>/dev/null || true; fi
+          cp /tmp/wk/*.mp4 /tmp/keep/
+          CUT=$(date -u -d '8 days ago' +%F)
+          for f in /tmp/keep/*.mp4; do b=$(basename $f); [[ "${b:0:10}" < "$CUT" ]] && rm -f $f; done
+          cd /tmp/keep && git init -q && git checkout -q -b vid-week && git add *.mp4 && git -c user.name=yt-bot -c user.email=yt-bot@users.noreply.github.com commit -qm "주간 재료 $(date -u +%F)" && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" vid-week
