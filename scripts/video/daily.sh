@@ -21,7 +21,7 @@ case $cmd in
 setup)
   T=$1; [ -n "$T" ] && tar xzf "$T" -C /home/claude
   pip install -q bpy==5.2.3 librosa soundfile scipy --break-system-packages 2>/dev/null || pip install -q librosa soundfile scipy --break-system-packages
-  cp $R/scripts/video/shorts/top8.py $R/scripts/video/narr_prep.py $R/scripts/video/pitch_check.py $R/scripts/video/prep_sum.py $K/ 2>/dev/null || true
+  cp $R/scripts/video/shorts/top8.py $R/scripts/video/shorts/d1121_video.py $R/scripts/video/narr_prep.py $R/scripts/video/pitch_check.py $R/scripts/video/prep_sum.py $K/ 2>/dev/null || true
   echo "setup ok" ;;
 jobs)
   D=$1; M=$(mmdd $D); mkdir -p $R/tts/typecast
