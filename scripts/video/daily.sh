@@ -1,7 +1,7 @@
 #!/bin/bash
 # 매일 영상 2편(① 요약 ② 1면 최대 이슈 8비트) 실행기 — docs/RUNBOOK_VIDEO.md 순서대로 부른다.
 #   bash scripts/video/daily.sh setup <kit.tgz>      키트 풀기·설치·저장소 최신 스크립트 덮어쓰기
-#   bash scripts/video/daily.sh jobs D              맥 qtts 작업 파일을 tts/queue/ 에 만들고 push (발행 작업이 이미 했으면 건너뜀)
+#   bash scripts/video/daily.sh jobs D              타입캐스트 TTS 작업 파일을 tts/typecast/ 에 만들고 push (발행 작업이 이미 했으면 건너뜀)
 #   bash scripts/video/daily.sh fetch NAME DIR      맥 대기기가 깃허브 tts-out 에 올린 결과를 받아 DIR 에 풂(없으면 exit 4 → 맥에서 직접 가져오기)
 #   bash scripts/video/daily.sh sum D <후보폴더>      요약: 클립 정리 → 렌더 → 길이·피치 점검 → /home/claude/vid/D-summary.mp4
 #   bash scripts/video/daily.sh top D <후보폴더> [대본]  8비트(대본 기본 video/top/D.json, 일요일 개념 영상은 video/top/D-concept.json): 내레이션 → 오디오 → 마스코트 → 합성 → /home/claude/vid/D-top.mp4 + 썸네일
@@ -24,8 +24,8 @@ setup)
   cp $R/scripts/video/shorts/top8.py $R/scripts/video/narr_prep.py $R/scripts/video/pitch_check.py $R/scripts/video/prep_sum.py $K/ 2>/dev/null || true
   echo "setup ok" ;;
 jobs)
-  D=$1; M=$(mmdd $D); mkdir -p $R/tts/queue
-  python3 - $R/tts/queue $D <<'PY'
+  D=$1; M=$(mmdd $D); mkdir -p $R/tts/typecast
+  python3 - $R/tts/typecast $D <<'PY'
 import os, sys, glob, datetime
 q, D = sys.argv[1:3]; d = datetime.date.fromisoformat(D)
 keep = {(d - datetime.timedelta(days=i)).strftime('%m%d') for i in range(3)}
@@ -33,14 +33,14 @@ for f in glob.glob(os.path.join(q, '0us*.json')):
     b = os.path.basename(f)
     if b[3:7].isdigit() and b[3:7] not in keep: os.remove(f)
 PY
-  [ -f $R/tts/queue/0us${M}_1sum.json ] || python3 $R/scripts/video/sum_job.py $R/video/$D.json 0us${M}_1sum $R/tts/queue/0us${M}_1sum.json
-  if [ -f $R/video/top/$D.json ] && [ ! -f $R/tts/queue/0us${M}_2top.json ]; then
-    python3 $R/scripts/video/top_job.py $R/video/top/$D.json 0us${M}_2top $R/tts/queue/0us${M}_2top.json
+  [ -f $R/tts/typecast/0us${M}_1sum.json ] || python3 $R/scripts/video/sum_job.py $R/video/$D.json 0us${M}_1sum $R/tts/typecast/0us${M}_1sum.json
+  if [ -f $R/video/top/$D.json ] && [ ! -f $R/tts/typecast/0us${M}_2top.json ]; then
+    python3 $R/scripts/video/top_job.py $R/video/top/$D.json 0us${M}_2top $R/tts/typecast/0us${M}_2top.json
   fi
-  if [ -f $R/video/top/$D-top2.json ] && [ ! -f $R/tts/queue/0us${M}_3top2.json ]; then
-    python3 $R/scripts/video/top_job.py $R/video/top/$D-top2.json 0us${M}_3top2 $R/tts/queue/0us${M}_3top2.json
+  if [ -f $R/video/top/$D-top2.json ] && [ ! -f $R/tts/typecast/0us${M}_3top2.json ]; then
+    python3 $R/scripts/video/top_job.py $R/video/top/$D-top2.json 0us${M}_3top2 $R/tts/typecast/0us${M}_3top2.json
   fi
-  cd $R && git add tts/queue && (git diff --cached --quiet || (git commit -qm "TTS 작업 $D" && git pull -q --rebase && git push -q)); echo "queue ok" ;;
+  cd $R && git add tts/typecast && (git diff --cached --quiet || (git commit -qm "TTS 작업 $D" && git pull -q --rebase && git push -q)); echo "queue ok" ;;
 fetch)
   N=$1; DIR=$2; mkdir -p $DIR
   curl -fsSL -o /tmp/$N.zip "https://raw.githubusercontent.com/yoonjintar2-ctrl/usstock-news/tts-out/$N.zip?$(date +%s)" || { echo "tts-out/$N.zip 없음"; exit 4; }

@@ -1,0 +1,44 @@
+name: typecast-tts
+# tts/typecast/*.json 이 올라오면 타입캐스트 API(한영 목소리)로 음성을 만들어 tts-out 브랜치에 <name>.zip 으로 올린다. 맥 필요 없음.
+# 수동: Actions → typecast-tts → Run workflow (job 칸에 파일 경로, 비우면 목소리 목록만 갱신)
+on:
+  push:
+    paths: ['tts/typecast/*.json']
+  workflow_dispatch:
+    inputs:
+      job: {description: 'tts/typecast/<name>.json (비우면 목소리 목록만)', required: false}
+permissions:
+  contents: write
+concurrency: {group: typecast-tts, cancel-in-progress: false}
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TYPECAST_API_KEY: ${{ secrets.TYPECAST_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - name: 대상 찾기
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "jobs=${{ github.event.inputs.job }}" >> $GITHUB_OUTPUT; exit 0; fi
+          J=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'tts/typecast/*.json' | tr '\n' ' ')
+          echo "jobs=$J" >> $GITHUB_OUTPUT
+      - name: 목소리 목록
+        if: steps.pick.outputs.jobs == '' || hashFiles('tts/typecast_voices.json') == ''
+        run: pip install -q requests && python3 scripts/tts/typecast_job.py voices
+      - name: 음성 만들기
+        if: steps.pick.outputs.jobs != ''
+        run: pip install -q requests && python3 scripts/tts/typecast_job.py run ${{ steps.pick.outputs.jobs }}
+      - name: 결과 올리기
+        if: always()
+        run: |
+          git config user.name "tts-bot"; git config user.email "tts-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain tts/typecast_voices.json)" ]; then
+            git add tts/typecast_voices.json && git commit -qm "타입캐스트 목소리 목록" && for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          fi
+          ls out/*.zip >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/z && cp out/*.zip /tmp/z/
+          git fetch -q origin tts-out && git checkout -q -B tts-out origin/tts-out
+          cp /tmp/z/*.zip . && git add *.zip && git commit -qm "타입캐스트 TTS $(ls /tmp/z | tr '\n' ' ')" && for i in 1 2 3; do git pull -q --rebase origin tts-out && git push -q origin tts-out && break; sleep 5; done

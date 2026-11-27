@@ -16,11 +16,11 @@
 ### A. 대본·목소리 (발행 작업이 06:45 전에 해 둠)
 1. `archive/D.json`·`video/D.json`·`video/top/D.json`·`video/top/D-top2.json` 이 올 때까지 `for i in $(seq 9); do git pull -q; [ -f video/top/$D.json ] && break; sleep 60; done` 를 반복(09:30 까지). 일요일엔 '일요일' 절로 간다. 미국 휴장 다음 날도 '휴장일 호'와 대본이 나오니 평소처럼 기다린다.
    - `video/D.json` 은 있는데 8비트 대본(top·top2)이 07:00 까지 없으면 직접 쓴다(형식·규칙: PROMPT.md '8비트 대본 규칙', 본보기 video/top/EXAMPLE-2026-11-26.json, 내용은 archive top).
-2. `bash scripts/video/daily.sh jobs $D` (이미 있으면 건너뜀). 맥 대기기가 2분 안에 tts/queue 의 `0us${M}_1sum`·`0us${M}_2top`·`0us${M}_3top2` 를 스스로 가져간다(이름순 = 요약 → top → top2).
+2. `bash scripts/video/daily.sh jobs $D` (이미 있으면 건너뜀). 깃허브 Actions(typecast)가 몇 분 안에 tts/typecast 의 `0us${M}_1sum`·`0us${M}_2top`·`0us${M}_3top2` 를 스스로 가져간다(이름순 = 요약 → top → top2).
 3. 목소리 받기: 먼저 `bash scripts/video/daily.sh fetch 0us${M}_1sum /tmp/c_sum` (맥 대기기가 깃허브 tts-out 에 올렸으면 바로 됨). exit 4 면 맥에서: device_bash 로 `out/0us${M}_1sum/DONE` 이 생길 때까지 기다린 뒤 `cd $HOME/mnt/Downloads/qtts/out && tar czf 0us${M}_1sum.tgz 0us${M}_1sum` → device_stage_files → /tmp/c_sum 에 풀기.
 
 ### B. ① 요약 (07:30 전에 공개가 목표)
-1. `bash scripts/video/daily.sh sum $D /tmp/c_sum` — 피치 경고(⚠)가 난 줄은 `python3 scripts/video/sum_job.py video/$D.json 0us${M}_1sumr tts/queue/0us${M}_1sumr.json --retake s03_01,...` → push → 받아서 /tmp/c_sum 에 합친 뒤 다시 sum. 2분 55초 넘으면 exit 3 → video/D.json 에서 덜 중요한 줄을 빼고(클립 번호 맞춰) 다시.
+1. `bash scripts/video/daily.sh sum $D /tmp/c_sum` — 피치 경고(⚠)가 난 줄은 `python3 scripts/video/sum_job.py video/$D.json 0us${M}_1sumr tts/typecast/0us${M}_1sumr.json --retake s03_01,...` → push → 받아서 /tmp/c_sum 에 합친 뒤 다시 sum. 2분 55초 넘으면 exit 3 → video/D.json 에서 덜 중요한 줄을 빼고(클립 번호 맞춰) 다시.
 2. `bash scripts/video/daily.sh sheet /home/claude/vid/$D-summary.mp4` → 시트를 Read 로 보고 글자 겹침·잘림·빈 화면 확인.
 3. 업로드(아래 '올리기') → 공개.
 
@@ -36,7 +36,7 @@
 1. **주간 정리 롱폼:** 맥 `~/Downloads/usstock_videos/` 에서 이번 주(월~토) `*-top.mp4`·`*-top2.mp4` 를 device_stage_files 로 가져와, 제목은 uploaded.json 의 `D:top` 제목에서 해시태그를 뺀 짧은 문구로
    `python3 scripts/video/weekly_long.py /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg "11/24~11/29" a.mp4 "11/25(화) …" b.mp4 "…" …`
    → 일반 동영상으로 업로드(제목 `주간 미장 정리｜M/D~M/D 이번 주 큰 이슈 N개 #미국주식 #미장`, 설명에 날짜별 쇼츠 링크), 키 `D:week`. 3편 미만이면 건너뛴다.
-2. **상시용 개념 쇼츠:** docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/queue/0us${M}_3concept.json` push → 받기 → `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json` → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
+2. **상시용 개념 쇼츠:** docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/typecast/0us${M}_3concept.json` push → 받기 → `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json` → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
 
 3. **주간 채널 분석(매주 일요일, 업로드 끝난 뒤):** 유튜브 스튜디오 → 분석(지난 7일)·콘텐츠 탭을 get_page_text 로 읽는다(캡처 최소). 영상별 조회수·평균 시청 비율(%)·좋아요·구독 전환·유입(쇼츠 피드/검색/채널), 채널 전체 조회수·구독자 증감, 틱톡 스튜디오 지난 7일 조회수도.
    - docs/ANALYTICS.md 맨 위에 그 주 표 + **잘 된 3편 / 안 된 3편의 공통점**(첫 2초 문구·주제·길이·올린 시각·썸네일 틀) + **다음 주 바로 적용할 개선 3~5개**(구체적으로: 무엇을 어떻게 바꿀지)를 적고 push.
