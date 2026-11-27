@@ -9,4 +9,7 @@ D=$W/q/${KEY//:/_}; mkdir -p $D
 cp "$MP4" $D/video.mp4; cp "$TH" $D/thumb.jpg 2>/dev/null || true; cp "$SPEC" $D/spec.json
 python3 -c "import json,sys;json.dump({'key':sys.argv[1],'publish_at':sys.argv[2]},open(sys.argv[3],'w'))" "$KEY" "$PA" $D/job.json
 cd $W && git add -A q && git commit -qm "업로드 대기 $KEY" && for i in 1 2 3; do git push -q origin HEAD:yt-queue && break; git pull -q --rebase origin yt-queue; done
-cd $R && git worktree remove --force $W; echo "yt-queue 에 올림: $KEY (몇 분 뒤 video/uploaded.json 확인)"
+cd $R && git worktree remove --force $W
+# push 트리거는 yt-queue 브랜치에 워크플로 파일이 없어 안 돈다 → main 의 yt-upload 를 직접 실행
+gh api -X POST repos/yoonjintar2-ctrl/usstock-news/actions/workflows/yt-upload.yml/dispatches -f ref=main >/dev/null && echo "yt-upload 실행 요청함"
+echo "yt-queue 에 올림: $KEY (몇 분 뒤 video/uploaded.json 확인)"

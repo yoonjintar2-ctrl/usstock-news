@@ -1,9 +1,7 @@
 name: yt-upload
 # yt-queue 브랜치의 q/<key>/ (video.mp4, thumb.jpg, spec.json, job.json) 를 유튜브 API로 올리고, 기록 후 대기열에서 지운다. 맥 필요 없음.
 on:
-  push:
-    branches: [yt-queue]
-  workflow_dispatch:
+  workflow_dispatch:   # yt_queue.sh 가 올린 뒤 직접 실행한다
 permissions:
   contents: write
 concurrency: {group: yt-upload, cancel-in-progress: false}
