@@ -21,16 +21,16 @@ def token():
     return r.json()['access_token']
 
 
-def main(mp4, thumb, spec, publish_at=None):
+def main(mp4, thumb, spec, publish_at=None, key=None):
     V = json.load(open(spec, encoding='utf-8'))
     log = json.load(open(LOG, encoding='utf-8')) if os.path.exists(LOG) else []
-    key = V.get('key') or V['date'] + ':' + V.get('kind', 'summary')
+    key = key or V.get('key') or V['date'] + ':' + V.get('kind', 'summary')
     if any(x.get('key') == key for x in log):
         print('이미 올림 — 건너뜀', key); return
     at = token(); H = {'Authorization': f'Bearer {at}'}
     status = {'privacyStatus': 'private' if publish_at else 'public', 'selfDeclaredMadeForKids': False, 'containsSyntheticMedia': True}
     if publish_at: status['publishAt'] = publish_at
-    meta = {'snippet': {'title': V['title'][:100], 'description': V['description'][:4900], 'tags': V.get('tags', [])[:15],
+    meta = {'snippet': {'title': V['title'][:100], 'description': V['description'][:4900], 'tags': (V.get('tags') if isinstance(V.get('tags'), list) else [])[:15],
                         'categoryId': '25', 'defaultLanguage': 'ko', 'defaultAudioLanguage': 'ko'}, 'status': status}
     size = os.path.getsize(mp4)
     r = requests.post(UP + '?uploadType=resumable&part=snippet,status', headers={**H, 'Content-Type': 'application/json; charset=UTF-8',
@@ -57,4 +57,7 @@ if __name__ == '__main__':
     a = sys.argv[1:]; pa = None
     if '--publish-at' in a:
         i = a.index('--publish-at'); pa = a[i + 1]; del a[i:i + 2]
-    main(*a, publish_at=pa)
+    k = None
+    if '--key' in a:
+        i = a.index('--key'); k = a[i + 1]; del a[i:i + 2]
+    main(*a, publish_at=pa, key=k)

@@ -1,0 +1,36 @@
+name: yt-upload
+# yt-queue 브랜치의 q/<key>/ (video.mp4, thumb.jpg, spec.json, job.json) 를 유튜브 API로 올리고, 기록 후 대기열에서 지운다. 맥 필요 없음.
+on:
+  push:
+    branches: [yt-queue]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: {group: yt-upload, cancel-in-progress: false}
+jobs:
+  up:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - name: 올리기
+        run: |
+          pip install -q requests
+          git fetch -q origin yt-queue && git worktree add -q /tmp/q origin/yt-queue
+          git config user.name "yt-bot"; git config user.email "yt-bot@users.noreply.github.com"
+          for d in /tmp/q/q/*/; do
+            [ -f "$d/job.json" ] || continue
+            K=$(python3 -c "import json;print(json.load(open('$d/job.json'))['key'])")
+            PA=$(python3 -c "import json;print(json.load(open('$d/job.json')).get('publish_at') or '')")
+            python3 scripts/video/upload.py "$d/video.mp4" "$d/thumb.jpg" "$d/spec.json" --key "$K" ${PA:+--publish-at $PA} 2>&1 | tee -a /tmp/log.txt
+            rm -rf "$d"
+          done
+          if [ -n "$(git status --porcelain video/uploaded.json)" ]; then
+            git add video/uploaded.json && git commit -qm "유튜브 업로드 기록(API)" && for i in 1 2 3 4; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
+          fi
+          cd /tmp/q && git add -A && (git diff --cached --quiet || git commit -qm "업로드 완료분 비움") && git push -q origin HEAD:yt-queue || true
