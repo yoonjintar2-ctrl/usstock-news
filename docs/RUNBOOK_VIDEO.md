@@ -24,17 +24,17 @@
 
 ### C. ② 1면 8비트 (월요일은 '이번 주 실적·일정 달력')
 1. `bash scripts/video/daily.sh fetch 0us${M}_2top /tmp/c_top` .
-2. **백그라운드 도구 실행으로** `bash scripts/video/daily.sh top $D /tmp/c_top` (마스코트 렌더 프레임당 약 9초). 60초 넘으면 exit 3 → video/top/D.json 줄을 빼고 다시. compose 는 한 번에 하나만.
+2. **백그라운드 도구 실행으로(반드시 `timeout` 7200000 — 기본값 30분이면 렌더 중간에 강제 종료된다. 끊겼으면 같은 명령을 다시 돌리면 이미 그린 프레임은 건너뛴다)** `bash scripts/video/daily.sh top $D /tmp/c_top` (마스코트 렌더 프레임당 약 9초). 60초 넘으면 exit 3 → video/top/D.json 줄을 빼고 다시. compose 는 한 번에 하나만.
 3. sheet 확인 → 썸네일(`/home/claude/vid/$D-top-thumb.jpg`) Read 로 확인 → 업로드 → 공개.
 
 ### D. ③ 1면 두 번째 8비트
-1. `bash scripts/video/daily.sh fetch 0us${M}_3top2 /tmp/c_top2` → C 의 compose 가 끝난 뒤 **백그라운드로** `bash scripts/video/daily.sh top $D /tmp/c_top2 video/top/$D-top2.json` → `/home/claude/vid/$D-top2.mp4` sheet·썸네일 확인 → 업로드(② 다음), 키 `D:top2`.
+1. `bash scripts/video/daily.sh fetch 0us${M}_3top2 /tmp/c_top2` → C 의 compose 가 끝난 뒤 **백그라운드로(timeout 7200000)** `bash scripts/video/daily.sh top $D /tmp/c_top2 video/top/$D-top2.json` → `/home/claude/vid/$D-top2.mp4` sheet·썸네일 확인 → 업로드(② 다음), 키 `D:top2`.
 
 ## 일요일
 1. **주간 정리 롱폼:** 재료 = `video/uploaded.json` 에서 키가 `<이번 주 월~토 날짜>:top` 또는 `:top2` 인 것만(`early`·테스트 키는 절대 넣지 않는다). 그중 깃허브 `vid-week` 브랜치에 `<D>_<kind>.mp4` 가 있는 것만 쓴다(yt-upload 가 8일치 보관, 11/27까지 맥으로 올린 영상은 없음): `curl -fsSL -o a.mp4 https://raw.githubusercontent.com/yoonjintar2-ctrl/usstock-news/vid-week/<D>_top.mp4`. **3편 미만이면 롱폼은 만들지 않고 건너뛴다**(11/29 는 11/28 두 편뿐 → 건너뜀, 12/6 부터 정상). 날짜 오름차순, 카드 문구는 그 키 제목에서 'MM/DD 미장 이슈①｜' 머리와 해시태그를 뺀 짧은 문구 앞에 'MM/DD(요일) '.
    `python3 scripts/video/weekly_long.py /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg "M/D~M/D" a.mp4 "12/1(화) …" b.mp4 "…" …`
    → 업로드용 정보 파일 `/tmp/week.json` = `{"title": "주간 미장 정리｜M/D~M/D 이번 주 큰 이슈 N개 #미국주식 #미장", "description": "날짜별 쇼츠: https://youtu.be/<id> 줄을 날짜순으로 + 빈 줄 + '※ 투자 판단과 책임은 본인에게 있습니다.'", "tags": ["미국주식","미장","주간정리"]}` → `bash scripts/video/yt_queue.sh $D:week /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg /tmp/week.json`.
-2. **상시용 개념 쇼츠:** **`video/top/$D-concept.json` 이 이미 있고 `bash scripts/video/daily.sh fetch 0us${M}_3concept /tmp/c_con` 이 되면(전날 미리 준비해 둔 경우) 대본 쓰기·TTS 를 건너뛰고 바로 렌더로 간다.** 없을 때만: docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/typecast/0us${M}_3concept.json` push → 받기 → `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json` → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
+2. **상시용 개념 쇼츠:** **`video/top/$D-concept.json` 이 이미 있고 `bash scripts/video/daily.sh fetch 0us${M}_3concept /tmp/c_con` 이 되면(전날 미리 준비해 둔 경우) 대본 쓰기·TTS 를 건너뛰고 바로 렌더로 간다.** 없을 때만: docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/typecast/0us${M}_3concept.json` push → 받기 → **백그라운드로(timeout 7200000)** `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json`(약 50분) → sheet·썸네일 확인 → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
 
 3. **주간 채널 분석(매주 일요일, 업로드 끝난 뒤) — 11/27부터 크롬을 쓰지 않으므로 유튜브 분석 API 권한이 생기기 전까지 건너뛴다.** 권한이 생기면: 유튜브 스튜디오 → 분석(지난 7일)·콘텐츠 탭을 get_page_text 로 읽는다(캡처 최소). 영상별 조회수·평균 시청 비율(%)·좋아요·구독 전환·유입(쇼츠 피드/검색/채널), 채널 전체 조회수·구독자 증감.
    - docs/ANALYTICS.md 맨 위에 그 주 표 + **잘 된 3편 / 안 된 3편의 공통점**(첫 2초 문구·주제·길이·올린 시각·썸네일 틀) + **다음 주 바로 적용할 개선 3~5개**(구체적으로: 무엇을 어떻게 바꿀지)를 적고 push.
