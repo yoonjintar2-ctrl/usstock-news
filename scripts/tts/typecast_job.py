@@ -39,6 +39,7 @@ def pick_voice():
     data = json.load(open(VOICES, encoding='utf-8')) if os.path.exists(VOICES) else voices()
     for v in data:
         nm = v.get('voice_name') or v.get('name') or ''
+        if isinstance(nm, dict): nm = nm.get('kor') or nm.get('eng') or ''
         if nm == NAME or nm.startswith(NAME):
             models = [m.get('version') or m.get('name') or m for m in v.get('models', [])] if isinstance(v.get('models'), list) else []
             return v.get('voice_id') or v.get('id'), models
@@ -69,7 +70,7 @@ def run(job):
     name = J['name']; tc = J.get('tc', {})
     vid, models = pick_voice()
     vid = tc.get('voice', vid)
-    model = os.environ.get('TC_MODEL') or tc.get('model') or ('ssfm-v30' if not models or 'ssfm-v30' in models else models[-1])
+    model = os.environ.get('TC_MODEL') or tc.get('model') or ('ssfm-v31' if 'ssfm-v31' in (models or []) else 'ssfm-v30')
     od = os.path.join(ROOT, 'out', name); os.makedirs(od, exist_ok=True)
     chars = 0
     for it in J['items']:
