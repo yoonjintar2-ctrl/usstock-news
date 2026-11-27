@@ -1,0 +1,70 @@
+{
+ "name": "0us1127_4early",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_0_c1",
+   "text": "오늘 밤 미국 증시는, 한국 시간 새벽 세 시에 끝나요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_0_c1",
+   "text": "평소엔 새벽 여섯 시에 끝나는데, 오늘은 세 시간 일찍 닫아요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_0_c1",
+   "text": "미국 시간으로 주식은 오후 한 시, 채권시장은 오후 두 시에 닫아요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_0_c1",
+   "text": "그럼 왜 일찍 닫을까요? ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_0_c1",
+   "text": "어제는 추수감사절이라 쉬었고, 오늘도 연휴를 이어서 쉬는 사람이 많아요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_0_c1",
+   "text": "거래가 적은 날이라, 뉴욕증권거래소가 매년 일찍 닫는 날로 미리 정해 뒀어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_0_c1",
+   "text": "그리고 오늘은 미국 연말 쇼핑이 시작되는 블랙프라이데이예요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_0_c1",
+   "text": "마감은 새벽 세 시, 잊지 마세요. 내일도 미장 소식 들고 올게요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}
