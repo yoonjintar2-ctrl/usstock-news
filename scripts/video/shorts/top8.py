@@ -19,6 +19,19 @@ SP = json.load(open(SPEC_PATH, encoding="utf-8"))
 VIDNAME = SP.get("vid") or ("top" + SP["date"][5:7] + SP["date"][8:10])
 os.environ["VID"] = "nvda"                      # 엔진 모듈 로드용(곧 덮어씀)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# 배경 규칙(발행인 11/26, 11/27 재지적): 모눈·격자 무늬 금지 → 단색에 아주 살짝 세로 그라데이션만.
+# 엔진 모듈들이 make_video.bg_img 를 import 하기 전에 바꿔 끼운다(이후 모든 장면 배경에 적용).
+import make_video as _MV
+from functools import lru_cache as _lru
+from PIL import Image as _Im
+@_lru(None)
+def _grad_bg(kind="grid", top=(28, 26, 46), bot=(16, 14, 26)):
+    im = _Im.new("RGB", (_MV.W, _MV.H)); px = im.load()
+    for y in range(_MV.H):
+        u = y / max(1, _MV.H - 1); c = tuple(int(top[i] + (bot[i] - top[i]) * u) for i in range(3))
+        for x in range(_MV.W): px[x, y] = c
+    return im
+_MV.bg_img = _grad_bg
 import d1121_video as V
 from d1121_video import (head, tag, stage, path, punch, seg_len, slam, stamp_slam, debris, box, CX, WHT2,
                          YEL, CYAN, WHITE, GRAY, DIM, NEU, GOLD, F24, F12, F9, prog, ease, dk)
