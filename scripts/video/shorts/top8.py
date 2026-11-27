@@ -16,6 +16,15 @@ import os, sys, json, datetime
 if os.environ.get("TOP8_SPEC"): SPEC_PATH = os.environ["TOP8_SPEC"]; ARGS = (sys.argv[2:] if len(sys.argv) > 1 and sys.argv[1].endswith(".json") else sys.argv[1:]) if __name__ == "__main__" else []
 else: SPEC_PATH = sys.argv[1]; ARGS = sys.argv[2:]; os.environ["TOP8_SPEC"] = os.path.abspath(SPEC_PATH)
 SP = json.load(open(SPEC_PATH, encoding="utf-8"))
+# 11/28: 픽셀 폰트에 한자가 없어 네모(⊠)로 나옴 → 자주 쓰는 한 글자 약칭은 한글로, 나머지 한자는 지움
+_HJ = {"中": "중국", "美": "미국", "日": "일본", "韓": "한국", "英": "영국", "獨": "독일", "佛": "프랑스", "台": "대만", "對": "대"}
+def _dehan(o):
+    import re
+    if isinstance(o, str): return re.sub(r"[\u4e00-\u9fff]", "", "".join(_HJ.get(c, c) for c in o))
+    if isinstance(o, list): return [_dehan(x) for x in o]
+    if isinstance(o, dict): return {k: _dehan(v) for k, v in o.items()}
+    return o
+SP = _dehan(SP)
 VIDNAME = SP.get("vid") or ("top" + SP["date"][5:7] + SP["date"][8:10])
 os.environ["VID"] = "nvda"                      # 엔진 모듈 로드용(곧 덮어씀)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -191,9 +200,10 @@ def thumb(out):
         d.rectangle([0, 0, W, H // 2], fill=(240, 200, 40))
         ctext(d, 170, date, fit(d, date, BLK, 84), (20, 20, 20))
         ctext(d, 400, top, fit(d, top, BLK, 260), (20, 20, 20))
-        ctext(d, 1080, bot, fit(d, bot, BLK, 260), (120, 200, 255))
-        ctext(d, 1500, small, fit(d, small, BLK, 76), (255, 255, 255))
-        m = mascot(280); im.paste(m, (W - m.width - 60, H // 2 - m.height // 2 + 120), m)
+        ctext(d, 1010, big or bot, fit(d, big or bot, BLK, 260), (120, 200, 255))   # 11/28: big 이 빠지고 마스코트가 숫자를 가리던 문제
+        if big and bot: ctext(d, 1400, bot, fit(d, bot, BLK, 84), (255, 255, 255))
+        ctext(d, 1540, small, fit(d, small, BLD, 64, W - 600), (200, 205, 215))
+        m = mascot(260); im.paste(m, (W - m.width - 50, H - m.height - 90), m)
     elif st == "receipt":
         im = Image.new("RGB", (W, H), (40, 44, 52)); d = ImageDraw.Draw(im)
         d.rectangle([110, 160, W - 110, 1560], fill=(250, 248, 240))
