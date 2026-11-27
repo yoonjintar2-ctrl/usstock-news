@@ -1,0 +1,84 @@
+{
+ "name": "0us1128_1sum",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_00_c1",
+   "text": "십일월 이십팔일 토요일, 출근길 미장입니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s00_01_c1",
+   "text": "블랙프라이데이 짧은 장에서 나스닥이 이 점 삼 퍼센트, 반도체 지수는 사 점 칠 퍼센트 올랐습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_00_c1",
+   "text": "첫 번째, 샌디스크가 십육 퍼센트 뛰며 메모리 반등을 이끌었습니다. 마이크론도 칠 점 육 퍼센트 올랐습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_01_c1",
+   "text": "다만 고점보다는 여전히 칠십 퍼센트 넘게 낮습니다. 자세한 건 이슈 영상에서 볼게요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_00_c1",
+   "text": "두 번째, 에스앤피 오백은 일년 반 만에 가장 좋은 한 주를 보냈고, 앤트로픽은 십일 퍼센트 올라 공모가 위로 돌아왔습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_00_c1",
+   "text": "그 밖에, 중국 반도체주는 정부 지원 신호에 하루 십칠 점 육 퍼센트 올라 사상 최대 폭을 기록했습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_00_c1",
+   "text": "다음 주엔 마벨 실적과 황 씨이오 의회 출석, 금요일 고용보고서가 기다립니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_00_c1",
+   "text": "매일 아침 미장 소식, 내일도 들고 올게요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_01_c1",
+   "text": "구독하고, 매일 아침 미국주식 소식을 받아보세요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_02_c1",
+   "text": "투자 판단과 책임은 본인에게 있습니다. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}

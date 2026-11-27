@@ -1,0 +1,84 @@
+{
+ "name": "0us1128_3top2",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_0_c1",
+   "text": "11월 28일, S&P 오백이 일 점 육 퍼센트 오르며 일 년 반 만에 가장 좋은 한 주를 보냈어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_0_c1",
+   "text": "나스닥은 이 점 삼 퍼센트, 다우는 일 점 이 퍼센트 올랐어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_0_c1",
+   "text": "앤트로픽은 십일 퍼센트 올라, 구십일 점 팔팔 달러, 약 십이만 이천 원이 됐어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_1_c1",
+   "text": "공모가 팔십삼 달러 위로 돌아왔죠. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_0_c1",
+   "text": "공포 지표 빅스는 이십삼 점 팔로, 하루 십일 퍼센트 내렸어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_0_c1",
+   "text": "근데 말이죠, 나스닥은 이번 달 칠 개월 연속 상승이 끊길 처지예요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_0_c1",
+   "text": "최고의 한 주라는 안도와, 시험은 이제부터라는 경계가 함께 나왔어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_0_c1",
+   "text": "다음 주 금요일 고용보고서, 그리고 십이월 연준 회의를 보세요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_0_c1",
+   "text": "이 반등, 연말까지 갈까요? 여러분 생각을 댓글로 알려주세요! ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_1_c1",
+   "text": "매일 아침 미장 이슈, 내일도 들고 올게요. 구독해 두세요! ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}

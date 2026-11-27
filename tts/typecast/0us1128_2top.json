@@ -1,0 +1,84 @@
+{
+ "name": "0us1128_2top",
+ "mode": "clone",
+ "ref_audio": "out/casual1/E_think.wav",
+ "ref_text": "음… 그럼 데이터센터는 이제 못 짓는 건가?",
+ "gen": {
+  "temperature": 0.65,
+  "top_p": 0.9
+ },
+ "reload_every": 4,
+ "retries": 4,
+ "items": [
+  {
+   "id": "s00_0_c1",
+   "text": "11월 28일, 샌디스크가 하루 만에 십육 퍼센트 뛰었어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s01_0_c1",
+   "text": "칠십삼 달러에서 팔십오 달러, 약 십일만 사천 원으로 올랐어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_0_c1",
+   "text": "마이크론은 칠 점 육 퍼센트, 씨게이트는 칠 점 구 퍼센트 올랐어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s02_1_c1",
+   "text": "반도체 지수도 사 점 칠 퍼센트 올랐죠. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s03_0_c1",
+   "text": "너무 많이 빠진 뒤 나온 반등에, 중국 반도체주 급등이 불을 붙였다는 해석이에요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s04_0_c1",
+   "text": "근데 말이죠, 아직 가장 높았던 때보다 칠십일 퍼센트 낮고, 짧은 장이라 거래도 적었어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s05_0_c1",
+   "text": "메모리주가 돌아왔다는 반응도, 과매도 반등일 뿐이라는 말도 나왔어요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s06_0_c1",
+   "text": "백 달러, 약 십삼만 원을 되찾는지, 다음 주 마벨 실적까지 보세요. ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_0_c1",
+   "text": "메모리주, 바닥 찍었을까요? 여러분 생각을 댓글로 알려주세요! ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  },
+  {
+   "id": "s07_1_c1",
+   "text": "매일 아침 미장 이슈, 내일도 들고 올게요. 구독해 두세요! ,",
+   "gen": {
+    "non_streaming_mode": true
+   }
+  }
+ ]
+}
