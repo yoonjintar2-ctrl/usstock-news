@@ -31,9 +31,9 @@
 1. `bash scripts/video/daily.sh fetch 0us${M}_3top2 /tmp/c_top2` → C 의 compose 가 끝난 뒤 **백그라운드로** `bash scripts/video/daily.sh top $D /tmp/c_top2 video/top/$D-top2.json` → `/home/claude/vid/$D-top2.mp4` sheet·썸네일 확인 → 업로드(② 다음), 키 `D:top2`.
 
 ## 일요일
-1. **주간 정리 롱폼:** 이번 주(월~토) 8비트 영상은 깃허브 `vid-week` 브랜치에 있다(yt-upload 가 8일치 보관): `curl -fsSL -o a.mp4 https://raw.githubusercontent.com/yoonjintar2-ctrl/usstock-news/vid-week/<D>_top.mp4` (top2 는 `<D>_top2.mp4`). 제목은 uploaded.json 의 `D:top` 제목에서 해시태그를 뺀 짧은 문구로
-   `python3 scripts/video/weekly_long.py /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg "11/24~11/29" a.mp4 "11/25(화) …" b.mp4 "…" …`
-   → 일반 동영상으로 업로드(제목 `주간 미장 정리｜M/D~M/D 이번 주 큰 이슈 N개 #미국주식 #미장`, 설명에 날짜별 쇼츠 링크), 키 `D:week`. 3편 미만이면 건너뛴다.
+1. **주간 정리 롱폼:** 재료 = `video/uploaded.json` 에서 키가 `<이번 주 월~토 날짜>:top` 또는 `:top2` 인 것만(`early`·테스트 키는 절대 넣지 않는다). 그중 깃허브 `vid-week` 브랜치에 `<D>_<kind>.mp4` 가 있는 것만 쓴다(yt-upload 가 8일치 보관, 11/27까지 맥으로 올린 영상은 없음): `curl -fsSL -o a.mp4 https://raw.githubusercontent.com/yoonjintar2-ctrl/usstock-news/vid-week/<D>_top.mp4`. **3편 미만이면 롱폼은 만들지 않고 건너뛴다**(11/29 는 11/28 두 편뿐 → 건너뜀, 12/6 부터 정상). 날짜 오름차순, 카드 문구는 그 키 제목에서 'MM/DD 미장 이슈①｜' 머리와 해시태그를 뺀 짧은 문구 앞에 'MM/DD(요일) '.
+   `python3 scripts/video/weekly_long.py /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg "M/D~M/D" a.mp4 "12/1(화) …" b.mp4 "…" …`
+   → 업로드용 정보 파일 `/tmp/week.json` = `{"title": "주간 미장 정리｜M/D~M/D 이번 주 큰 이슈 N개 #미국주식 #미장", "description": "날짜별 쇼츠: https://youtu.be/<id> 줄을 날짜순으로 + 빈 줄 + '※ 투자 판단과 책임은 본인에게 있습니다.'", "tags": ["미국주식","미장","주간정리"]}` → `bash scripts/video/yt_queue.sh $D:week /home/claude/vid/$D-week.mp4 /home/claude/vid/$D-week-thumb.jpg /tmp/week.json`.
 2. **상시용 개념 쇼츠:** docs/EVERGREEN.md 에서 [ ] 첫 주제 → 웹 검색으로 사실 확인 → `video/top/$D-concept.json`(top8 형식, vid `concept$M`) → `python3 scripts/video/top_job.py video/top/$D-concept.json 0us${M}_3concept tts/typecast/0us${M}_3concept.json` push → 받기 → `bash scripts/video/daily.sh top $D /tmp/c_con video/top/$D-concept.json` → 업로드, 키 `D:concept`, EVERGREEN.md 에 [x].
 
 3. **주간 채널 분석(매주 일요일, 업로드 끝난 뒤) — 11/27부터 크롬을 쓰지 않으므로 유튜브 분석 API 권한이 생기기 전까지 건너뛴다.** 권한이 생기면: 유튜브 스튜디오 → 분석(지난 7일)·콘텐츠 탭을 get_page_text 로 읽는다(캡처 최소). 영상별 조회수·평균 시청 비율(%)·좋아요·구독 전환·유입(쇼츠 피드/검색/채널), 채널 전체 조회수·구독자 증감.
