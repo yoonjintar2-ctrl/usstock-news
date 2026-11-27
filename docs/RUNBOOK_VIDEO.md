@@ -46,7 +46,8 @@
 
 ## 올리기 (맥 크롬 — chrome-browser 스킬, macOS 브라우저)
 - 파일이 3.8MB 넘으면 `bash scripts/video/daily.sh split <mp4>` 조각을 임시 `input[type=file]`(id cc_partN)에 file_upload → JS 로 `new File(조각들,'D.mp4',{type:'video/mp4'})` 을 DataTransfer 로 진짜 입력에 넣고 change.
-- 유튜브: 제목·설명은 video JSON 의 title·description(설명에 ASCII < > 금지) → `execCommand('insertText')`, 아동용 아님(`VIDEO_MADE_FOR_KIDS_NOT_MFK`), '자세히' → 변경/합성 콘텐츠 '예', 썸네일 file-input, **재생목록**(요약 → '출근길 미장 요약', 8비트·개념 → '1면 이슈 1분 정리', 롱폼 → '주간 미장 정리'; 없으면 그 자리에서 새로 만든다), `#next-button` ×3 → 공개 → `#done-button`. 올린 뒤 youtube.com/shorts/ID 로 쇼츠 재생 확인(get_page_text).
+- **유튜브는 맥 없이 API로 (11/27~):** `bash scripts/video/yt_queue.sh D:kind <mp4> <thumb.jpg> <대본 json>` (kind = summary·top·top2·week·concept) → Actions 'yt-upload'가 채널 '샌디스크 올인'에 바로 공개로 올리고 video/uploaded.json 에 기록(3~5분 뒤 pull 해 id 확인, 없으면 Actions 로그 확인). 아동용 아님·합성 콘텐츠 '예'·썸네일은 자동. 재생목록·고정 댓글은 API 권한 밖이라 크롬이 있을 때만 덧붙인다(없으면 건너뜀). API 업로드가 실패했을 때만 아래 크롬 방식으로 올린다.
+- (예비) 유튜브 크롬 방식: 제목·설명은 video JSON 의 title·description(설명에 ASCII < > 금지) → `execCommand('insertText')`, 아동용 아님(`VIDEO_MADE_FOR_KIDS_NOT_MFK`), '자세히' → 변경/합성 콘텐츠 '예', 썸네일 file-input, **재생목록**(요약 → '출근길 미장 요약', 8비트·개념 → '1면 이슈 1분 정리', 롱폼 → '주간 미장 정리'; 없으면 그 자리에서 새로 만든다), `#next-button` ×3 → 공개 → `#done-button`. 올린 뒤 youtube.com/shorts/ID 로 쇼츠 재생 확인(get_page_text).
 - **고정 댓글(채널 키우기):** 영상 페이지 댓글에 `오늘 롱? 숏? 여러분 생각을 댓글로 남겨 주세요 👇` + 줄바꿈 + `신문 전체 보기: stocknews.jintar.co.kr` + `※ 투자 권유 아님` → 등록 → ⋮ → 고정.
 - **관련 동영상:** 8비트·개념 쇼츠는 스튜디오 세부정보 '관련 동영상'에 가장 최근 '주간 미장 정리' 롱폼을 건다(아직 없으면 그날 요약).
 - 틱톡: 같은 순서로 바로 게시(캡션 클릭 → cmd+a → 지우고 입력, 해시태그 5개는 하나마다 Escape, 커버 편집 → 업로드 → 저장, 설정 펼치기 → AI 생성 콘텐츠 켬 → 게시). 중복 게시 금지.
