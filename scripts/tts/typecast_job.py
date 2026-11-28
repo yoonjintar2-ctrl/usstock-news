@@ -46,9 +46,20 @@ def pick_voice():
     sys.exit(f'목소리 "{NAME}"를 찾지 못함 — tts/typecast_voices.json 확인')
 
 
+# 11/28: 'S&P' 를 'SLP'처럼 읽음 → 영문 약어는 한글 발음으로 바꿔서 보낸다
+_WORDS = {'S&P': '에스앤피', 'VIX': '빅스', 'NASDAQ': '나스닥', 'NYSE': '뉴욕증권거래소', 'IPO': '아이피오'}
+_LET = dict(zip('ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    ['에이','비','씨','디','이','에프','지','에이치','아이','제이','케이','엘','엠','엔','오','피','큐','알','에스','티','유','브이','더블유','엑스','와이','지']))
+def say_en(t):
+    for k, v in _WORDS.items(): t = t.replace(k, v)
+    t = t.replace('&', ' 앤 ')
+    t = re.sub(r'\s*\([A-Z]{1,5}\)', '', t)   # '엔비디아(NVDA)' 괄호 티커는 읽지 않음
+    # 남은 대문자 약어(2~5자, 예 FOMC·CPI·AI·ETF)는 한 글자씩 읽는다
+    return re.sub(r'(?<![A-Za-z])[A-Z]{2,5}(?![A-Za-z])', lambda m: ''.join(_LET[c] for c in m.group(0)), t)
+
 def clean(t):
     t = re.sub(r'\s*,\s*$', '', t.strip())   # 예전 맥 TTS용 ' ,' 꼬리 제거
-    return t
+    return say_en(t)
 
 
 def tts(text, vid, model, emo='normal', tempo=1.0, fmt='wav'):
